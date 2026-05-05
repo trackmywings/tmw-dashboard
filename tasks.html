@@ -554,6 +554,7 @@ const activeTasks = [
             { id: '**TMW-221**', task: 'TMW-220 sprint kickoff trigger. S092 ran end-to-end via this trigger; 142 frames built but founder rejected aesthetically (see TMW-220 + DEC-122). Original "ready to fire" status no longer applies.', owner: 'Rohan', department: 'Operations', priority: '—', status: 'Superseded · S092 ran but rejected — see TMW-220 / DEC-122', deadline: '—', created: '2026-05-05' }
         ];
 const completedTasks = [
+            { id: 'TMW-222', task: 'Dashboard rebuild silent-corruption fix + 8-layer integrity install (DEC-123). Root cause: rebuild_dashboard.py read and wrote the same tasks.html path; once truncated to 0 bytes (May 3 09:45→15:45 U…', owner: 'Claude + Rohan', department: 'Operations', completed: '2026-05-05' },
             { id: 'TMW-183', task: 'Mid-Fi end-to-end prototype assembly + design system map — all 9 deliverables shipped to Design/TMW_App_Screens_V1/phase_3/prototype/ (542 KB). Atom registry + composition maps + organism-screen matr…', owner: 'Rohan + Claude', department: 'Design / Product', completed: '2026-05-04' },
             { id: 'TMW-145', task: 'Daily Opus burn monitoring during sprint. Sprint closed; ~595 cumulative Figma calls, 0 hard 429s.', owner: 'Claude + Rohan', department: 'Operations', completed: '2026-05-04' },
             { id: 'TMW-143', task: 'Execute TMW_App_Screens_V1 sprint — 142/142 mid-fi (100%), 120/142 PASS ≥8 (85%), audit-clean. Batches 17-20 all PASS. Library v14. 93 invariants. 0 hard 429s.', owner: 'Rohan + Claude', department: 'Design', completed: '2026-05-04' },
@@ -811,7 +812,8 @@ const backlogTasks = [
             { id: 'TMW-B05', task: 'Create onboarding docs for new team members', owner: 'Rohan', department: 'People', priority: 'Low' },
             { id: 'TMW-025', task: 'Complete Google Ads campaign setup — upload logo, bid strategy, budget, payment, launch', owner: 'Rohan', department: 'Marketing', priority: 'Medium' },
             { id: 'TMW-033', task: 'Review insurance guide and decide on coverage', owner: 'Rohan', department: 'Legal', priority: 'Low' },
-            { id: 'TMW-164', task: 'Harden tmw-dashboard auth. Current model is a client-side JS gate (SHA256 password literal in published HTML, brute-forceable in seconds). Move to real auth: (a) make kingerosah-arch/tmw-dashboard re…', owner: 'Rohan + Amol', department: 'Operations', priority: 'Low' }
+            { id: 'TMW-164', task: 'Harden tmw-dashboard auth. Current model is a client-side JS gate (SHA256 password literal in published HTML, brute-forceable in seconds). Move to real auth: (a) make kingerosah-arch/tmw-dashboard re…', owner: 'Rohan + Amol', department: 'Operations', priority: 'Low' },
+            { id: 'TMW-223', task: 'Retrofit DEC-123 8-layer integrity pattern across sibling rebuild scripts: rebuild_claude_usage.py, rebuild_finance_mis.py, rebuild_folder_map.py, rebuild_founder_control_panel.py. Each likely carrie…', owner: 'Claude + Rohan', department: 'Operations', priority: 'Medium' }
         ];
 const selfLearningTasks = [
             { id: 'SL-001', task: 'Advanced Claude API prompt engineering', owner: 'Rohan', department: '', priority: 'Medium', status: 'Not Started', deadline: '—' },
@@ -820,6 +822,13 @@ const selfLearningTasks = [
             { id: 'SL-004', task: 'Claude SEO skill — learn and apply', owner: 'Rohan', department: '', priority: 'Medium', status: 'Not Started', deadline: '—' }
         ];
 const activityFeed = [
+            {
+                        "date": "2026-05-05",
+                        "task_id": "TMW-222",
+                        "event": "completed",
+                        "department": "Operations",
+                        "task_name": "**Dashboard rebuild silent-corruption..."
+            },
             {
                         "date": "2026-05-04",
                         "task_id": "TMW-183",
@@ -952,13 +961,6 @@ const activityFeed = [
                         "event": "completed",
                         "department": "Legal",
                         "task_name": "CA chase fully closed \u2014 all remaining..."
-            },
-            {
-                        "date": "2026-04-27",
-                        "task_id": "TMW-155",
-                        "event": "completed",
-                        "department": "Engineering / Product",
-                        "task_name": "Review and verify airport + airlines ..."
             }
 ];
 const calendarEvents = [
@@ -1091,8 +1093,8 @@ const analyticsData = {
                         },
                         {
                                     "date": "2026-05-05",
-                                    "completed": 1,
-                                    "added": 252
+                                    "completed": 2,
+                                    "added": 253
                         }
             ],
             "weeklyVelocity": [
@@ -1113,8 +1115,8 @@ const analyticsData = {
                         },
                         {
                                     "week": "2026-05-04",
-                                    "completed": 5,
-                                    "added": 263
+                                    "completed": 6,
+                                    "added": 264
                         }
             ],
             "statusDistribution": [
@@ -1637,8 +1639,8 @@ const analyticsData = {
                         }
             ],
             "velocity": {
-                        "today": 1,
-                        "this_week": 5,
+                        "today": 2,
+                        "this_week": 6,
                         "overdue": 1,
                         "stale": 15
             }

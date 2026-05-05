@@ -495,7 +495,7 @@ const activeTasks = [
             { id: '**TMW-201**', task: 'Systems Upgrade Plan v2.2 + 8 custom TMW skills built. v2.0 (3,013 lines) → v2.1 (5,773 lines, 60 dimensions, 21 critique passes, 8 appendices) → v2.2 (5,848 lines with deepening + benchmark integrat…', owner: 'Rohan + Claude', department: 'Operations', priority: 'High', status: 'Completed 2026-05-03', deadline: '—', created: '2026-05-02' },
             { id: 'TMW-204', task: 'Build Operations/AI System/LAUNCH_READINESS.md — single source of truth for Day-1 launch readiness across 7 functions. Initial scaffold; populated as we approach 2026-07-15. v2.1 Phase 1 + Phase 2 de…', owner: 'Rohan + Claude', department: 'Operations', priority: 'Medium', status: 'In Progress', deadline: '2026-07-01', created: '2026-05-03' },
             { id: 'TMW-205', task: 'Build Operations/Investor Readiness/ skeleton folder structure (Cap Table, Cap Table History, Corporate Documents, Financial Statements, 60-Month Plan, Decision Log Snapshot, Product Roadmap Snapshot…', owner: 'Rohan + Claude', department: 'Operations / Finance / Legal', priority: 'Medium', status: 'Not Started', deadline: '2026-06-30', created: '2026-05-03' },
-            { id: 'TMW-206', task: 'Decision: git init ~/tmw? v2.1 Appendix C Q2. Pro: enables worktrees (Dim 7), time-machine (Dim 30), Ultraplan compatibility. Con: nested-repo concerns with Engineering/Codebase/. Recommendation: yes…', owner: 'Rohan', department: 'Operations', priority: 'Medium', status: 'Not Started', deadline: '2026-05-31', created: '2026-05-03' },
+            { id: 'TMW-206', task: 'Decision: git init ~/tmw? v2.1 Appendix C Q2. Pro: enables worktrees (Dim 7), time-machine (Dim 30), Ultraplan compatibility. Con: nested-repo concerns with Engineering/Codebase/. Recommendation: yes…', owner: 'Rohan', department: 'Operations', priority: 'Medium', status: 'Deferred 2026-05-05 per Rohan — re-evaluate after Amol resignation effective (p…', deadline: '2026-05-31', created: '2026-05-03' },
             { id: 'TMW-207', task: 'Install zellij (or tmux) + create tmw saved layout for 5-pane setup (T1 strategic / T2 code worktree / T3 design worktree / T4 local Ollama / T5 monitoring). Per v2.1 Dim 7. Blocked on TMW-206.', owner: 'Rohan', department: 'Operations', priority: 'Medium', status: 'Blocked on TMW-206', deadline: '2026-06-15', created: '2026-05-03' },
             { id: 'TMW-208', task: 'Phase 2 custom TMW skills (~9 skills): tmw-multiai-router, tmw-local-ollama-runner, tmw-bg-orchestrator, tmw-kb-search (with nomic embeddings), tmw-time-machine, tmw-launch-readiness-tracker, tmw-fli…', owner: 'Rohan + Claude', department: 'Operations', priority: 'Medium', status: 'Not Started', deadline: '2026-07-14', created: '2026-05-03' },
             { id: 'TMW-210', task: 'Initiate Anshul B\'s DSC application via Raman / eMudhra-Sify-NSDL eGov / Capricorn. Binding § 149(1)(a) gate — every day\'s slip = ~1 day slip on DIR-12 effective date → Amol resignation slip → restru…', owner: 'Rohan + Anshul B + Raman', department: 'Legal', priority: '**CRITICAL**', status: 'Sent — awaiting response', deadline: '2026-05-08 (Raman back today)', created: '2026-05-04' },
@@ -1099,8 +1099,13 @@ const analyticsData = {
                         },
                         {
                                     "date": "2026-05-05",
-                                    "completed": 2,
-                                    "added": 258
+                                    "completed": 1,
+                                    "added": 3
+                        },
+                        {
+                                    "date": "2026-05-06",
+                                    "completed": 1,
+                                    "added": 255
                         }
             ],
             "weeklyVelocity": [
@@ -1128,7 +1133,7 @@ const analyticsData = {
             "statusDistribution": [
                         {
                                     "status": "Not Started",
-                                    "count": 26
+                                    "count": 25
                         },
                         {
                                     "status": "Blocked",
@@ -1184,6 +1189,10 @@ const analyticsData = {
                         },
                         {
                                     "status": "In Progress",
+                                    "count": 1
+                        },
+                        {
+                                    "status": "Deferred 2026-05-05 per Rohan \u2014 re-evaluate after Amol resignation effective (post TMW-193 + TMW-190 DIR-12 sequence). Founder direction: 'I dont think we need to make entire whole tmw a git repo, we will think about this after amol resigns.' Trade-offs not compelling enough to act mid-restructure. Blocks TMW-207 (zellij layout) which is also low-pressure.",
                                     "count": 1
                         },
                         {
@@ -1274,7 +1283,7 @@ const analyticsData = {
                                     "owner": "Claude",
                                     "active": 24,
                                     "high_priority": 7,
-                                    "overdue": 1
+                                    "overdue": 2
                         },
                         {
                                     "owner": "Naik",
@@ -1292,7 +1301,7 @@ const analyticsData = {
                                     "owner": "Rohan",
                                     "active": 61,
                                     "high_priority": 18,
-                                    "overdue": 1
+                                    "overdue": 2
                         },
                         {
                                     "owner": "Ruchi",
@@ -1307,9 +1316,9 @@ const analyticsData = {
                                     "active": 6,
                                     "wip": 0,
                                     "not_started": 2,
-                                    "overdue": 0,
+                                    "overdue": 1,
                                     "stale": 1,
-                                    "avg_age_days": 17
+                                    "avg_age_days": 18
                         },
                         {
                                     "department": "Design / Engineering",
@@ -1318,7 +1327,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 1
+                                    "avg_age_days": 2
                         },
                         {
                                     "department": "Design / Operations",
@@ -1327,7 +1336,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 0
+                                    "avg_age_days": 1
                         },
                         {
                                     "department": "Design / Product",
@@ -1336,7 +1345,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 1,
                                     "stale": 0,
-                                    "avg_age_days": 4
+                                    "avg_age_days": 5
                         },
                         {
                                     "department": "Engineering",
@@ -1345,7 +1354,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 9
+                                    "avg_age_days": 10
                         },
                         {
                                     "department": "Engineering / Product",
@@ -1354,7 +1363,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 1
+                                    "avg_age_days": 2
                         },
                         {
                                     "department": "Engineering / Security",
@@ -1363,7 +1372,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 1
+                                    "avg_age_days": 2
                         },
                         {
                                     "department": "Finance",
@@ -1372,7 +1381,7 @@ const analyticsData = {
                                     "not_started": 3,
                                     "overdue": 0,
                                     "stale": 3,
-                                    "avg_age_days": 49
+                                    "avg_age_days": 50
                         },
                         {
                                     "department": "Finance / Legal",
@@ -1381,7 +1390,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 3
+                                    "avg_age_days": 4
                         },
                         {
                                     "department": "Finance / Strategy",
@@ -1390,7 +1399,7 @@ const analyticsData = {
                                     "not_started": 1,
                                     "overdue": 0,
                                     "stale": 1,
-                                    "avg_age_days": 12
+                                    "avg_age_days": 13
                         },
                         {
                                     "department": "Legal",
@@ -1398,8 +1407,8 @@ const analyticsData = {
                                     "wip": 1,
                                     "not_started": 4,
                                     "overdue": 0,
-                                    "stale": 2,
-                                    "avg_age_days": 12
+                                    "stale": 3,
+                                    "avg_age_days": 13
                         },
                         {
                                     "department": "Legal / Finance",
@@ -1408,7 +1417,7 @@ const analyticsData = {
                                     "not_started": 1,
                                     "overdue": 0,
                                     "stale": 1,
-                                    "avg_age_days": 12
+                                    "avg_age_days": 13
                         },
                         {
                                     "department": "Legal / Operations",
@@ -1417,7 +1426,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 3
+                                    "avg_age_days": 4
                         },
                         {
                                     "department": "Marketing",
@@ -1425,8 +1434,8 @@ const analyticsData = {
                                     "wip": 2,
                                     "not_started": 6,
                                     "overdue": 0,
-                                    "stale": 5,
-                                    "avg_age_days": 32
+                                    "stale": 6,
+                                    "avg_age_days": 33
                         },
                         {
                                     "department": "Marketing / Eng",
@@ -1435,16 +1444,16 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 27
+                                    "avg_age_days": 28
                         },
                         {
                                     "department": "Operations",
                                     "active": 12,
                                     "wip": 0,
-                                    "not_started": 5,
+                                    "not_started": 4,
                                     "overdue": 0,
-                                    "stale": 0,
-                                    "avg_age_days": 4
+                                    "stale": 1,
+                                    "avg_age_days": 5
                         },
                         {
                                     "department": "Operations / Design",
@@ -1452,8 +1461,8 @@ const analyticsData = {
                                     "wip": 0,
                                     "not_started": 1,
                                     "overdue": 0,
-                                    "stale": 0,
-                                    "avg_age_days": 5
+                                    "stale": 1,
+                                    "avg_age_days": 6
                         },
                         {
                                     "department": "Operations / Finance / Legal",
@@ -1462,7 +1471,7 @@ const analyticsData = {
                                     "not_started": 1,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 2
+                                    "avg_age_days": 3
                         },
                         {
                                     "department": "Operations / Legal",
@@ -1471,7 +1480,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 3
+                                    "avg_age_days": 4
                         },
                         {
                                     "department": "Product",
@@ -1480,7 +1489,7 @@ const analyticsData = {
                                     "not_started": 1,
                                     "overdue": 0,
                                     "stale": 1,
-                                    "avg_age_days": 48
+                                    "avg_age_days": 49
                         },
                         {
                                     "department": "Product / Eng",
@@ -1489,7 +1498,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 36
+                                    "avg_age_days": 37
                         },
                         {
                                     "department": "Sales",
@@ -1498,7 +1507,7 @@ const analyticsData = {
                                     "not_started": 1,
                                     "overdue": 0,
                                     "stale": 1,
-                                    "avg_age_days": 53
+                                    "avg_age_days": 54
                         },
                         {
                                     "department": "Sales / Operations",
@@ -1507,7 +1516,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 5
+                                    "avg_age_days": 6
                         },
                         {
                                     "department": "Strategy",
@@ -1516,7 +1525,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 3
+                                    "avg_age_days": 4
                         }
             ],
             "staleTasks": [
@@ -1524,99 +1533,127 @@ const analyticsData = {
                                     "id": "TMW-008",
                                     "task": "Populate Sales/Pipeline with CRM structure",
                                     "department": "Sales",
-                                    "age_days": 53
+                                    "age_days": 54
                         },
                         {
                                     "id": "TMW-053",
                                     "task": "Set up Razorpay \u2014 signup, KYC, Subscriptions, plans, Flutter SDK",
                                     "department": "Finance",
-                                    "age_days": 48
+                                    "age_days": 49
                         },
                         {
                                     "id": "TMW-054",
                                     "task": "Complete Stripe account activation + Stripe Billing for international web payments",
                                     "department": "Finance",
-                                    "age_days": 48
+                                    "age_days": 49
                         },
                         {
                                     "id": "TMW-055",
                                     "task": "Set up App Store billing \u2014 Google Play + Apple IAP + Google alt billing (Razorpay)",
                                     "department": "Finance",
-                                    "age_days": 48
+                                    "age_days": 49
                         },
                         {
                                     "id": "TMW-056",
                                     "task": "Define exact ad placements on Stitch UI screens",
                                     "department": "Product",
-                                    "age_days": 48
+                                    "age_days": 49
                         },
                         {
                                     "id": "TMW-090",
                                     "task": "Add og:image meta tag to all website pages (staging)",
                                     "department": "Marketing",
-                                    "age_days": 43
+                                    "age_days": 44
                         },
                         {
                                     "id": "TMW-114",
                                     "task": "Build ManyChat DM automation via Claude",
                                     "department": "Marketing",
-                                    "age_days": 36
+                                    "age_days": 37
                         },
                         {
                                     "id": "TMW-117",
                                     "task": "A/B test framework for social content",
                                     "department": "Marketing",
-                                    "age_days": 36
+                                    "age_days": 37
                         },
                         {
                                     "id": "TMW-120",
                                     "task": "Create full T-15 to T+7 content backlog for all 12 platforms (stockpile)",
                                     "department": "Marketing",
-                                    "age_days": 36
+                                    "age_days": 37
                         },
                         {
                                     "id": "TMW-123",
                                     "task": "File trademark application for \"TrackMyWings\" \u2014 coordinate with Anshul Bansal",
                                     "department": "Legal",
-                                    "age_days": 36
+                                    "age_days": 37
                         },
                         {
                                     "id": "TMW-128",
                                     "task": "Test content pipeline end-to-end \u2014 produce 1 real video through full Claude \u2192 Eleven Labs \u2192 Gemini \u2192 Nano Banana \u2192 Google Flow \u2192 Capcut flow (Path B)",
                                     "department": "Marketing",
-                                    "age_days": 29
+                                    "age_days": 30
                         },
                         {
                                     "id": "TMW-140",
                                     "task": "Create PWA icons (192px, 512px, maskable) from TMW logo for Website V0",
                                     "department": "Design",
-                                    "age_days": 26
+                                    "age_days": 27
                         },
                         {
                                     "id": "TMW-152",
                                     "task": "Register for UDHYAM + GST + MSME certificates post bank account opening",
                                     "department": "Legal / Finance",
-                                    "age_days": 12
+                                    "age_days": 13
                         },
                         {
                                     "id": "TMW-153",
                                     "task": "File copyright application for TrackMyWings (app, content, brand) \u2014 coordinate with Anshul Bansal",
                                     "department": "Legal",
-                                    "age_days": 12
+                                    "age_days": 13
                         },
                         {
                                     "id": "TMW-154",
                                     "task": "Apply for startup funding \u2014 Startup India, grants, angel/seed \u2014 run in parallel post bank account",
                                     "department": "Finance / Strategy",
-                                    "age_days": 12
+                                    "age_days": 13
+                        },
+                        {
+                                    "id": "TMW-192",
+                                    "task": "ADT-1 Auditor appointment \u2014 Raman's firm as statutory auditor for FY 2026-27. BR-07 passed \u2192 ADT-1 filed before 22-May-2026. **Statutory deadline 23-May-2026.**",
+                                    "department": "Legal",
+                                    "age_days": 6
+                        },
+                        {
+                                    "id": "TMW-168",
+                                    "task": "Build 5 backlog skills on top of Legal Registry (S083): `nda-counterparty-tracker`, `dpdp-compliance-tracker` (HIGH \u2014 DPDP Act 2023), `employment-agreement-tracker`, `vendor-agreement-tracker`, `tmw-status-snapshot`.",
+                                    "department": "Operations",
+                                    "age_days": 6
+                        },
+                        {
+                                    "id": "TMW-176",
+                                    "task": "Internal Dashboards Design System (DEC-100) monthly drift audit (CSS bundle, mid-fi library version, palette consistency). Real checklist. Quarterly mini-grooming touchpoint.",
+                                    "department": "Operations / Design",
+                                    "age_days": 6
+                        },
+                        {
+                                    "id": "TMW-179",
+                                    "task": "Per-platform marketing drafting helpers (Twitter thread / LinkedIn / Reddit / YouTube short script). Filed against TMW-007 broader content task.",
+                                    "department": "Marketing",
+                                    "age_days": 6
                         }
             ],
             "deadlineStats": {
-                        "overdue": 1,
-                        "due_3days": 36,
+                        "overdue": 2,
+                        "due_3days": 35,
                         "deadline_hit_rate": "0%"
             },
             "burndownData": [
+                        {
+                                    "date": "2026-05-06",
+                                    "remaining": 66
+                        },
                         {
                                     "date": "2026-05-05",
                                     "remaining": 66
@@ -1668,17 +1705,13 @@ const analyticsData = {
                         {
                                     "date": "2026-04-23",
                                     "remaining": 29
-                        },
-                        {
-                                    "date": "2026-04-22",
-                                    "remaining": 26
                         }
             ],
             "velocity": {
-                        "today": 2,
+                        "today": 1,
                         "this_week": 7,
-                        "overdue": 1,
-                        "stale": 15
+                        "overdue": 2,
+                        "stale": 19
             }
 };
 

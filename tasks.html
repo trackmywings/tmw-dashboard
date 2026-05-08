@@ -516,7 +516,6 @@ const activeTasks = [
             { id: 'TMW-139', task: 'Deploy Website V0 to ECS — Dockerfile + CI/CD + CloudFront. Codebase at Engineering/Codebase/Website_v0/V0_NextJS/. Spec at Engineering/Architecture/Website_V0/.', owner: 'Rohan + Claude', department: 'Engineering', priority: 'High', status: 'Parked', deadline: 'Post-trademarks', created: '2026-04-09' },
             { id: 'TMW-117', task: 'A/B test framework for social content', owner: 'Rohan + Claude', department: 'Marketing', priority: 'Low', status: 'Not Started', deadline: 'Post-inc', created: '2026-03-30' },
             { id: 'TMW-119', task: 'Accounts on Snapchat / Threads / Discord / Quora / Pinterest', owner: 'Rohan + Claude', department: 'Marketing', priority: 'Medium', status: 'Blocked stealth', deadline: 'Post-inc', created: '2026-03-30' },
-            { id: 'TMW-120', task: 'T-15 → T+7 content backlog for 12 platforms (stockpile)', owner: 'Rohan + Claude', department: 'Marketing', priority: 'High', status: 'Not Started', deadline: '2026-06-25', created: '2026-03-30' },
             { id: 'TMW-123', task: 'File trademark application for "TrackMyWings" — coordinate with Anshul Bansal', owner: 'Rohan', department: 'Legal', priority: 'High', status: 'Not Started', deadline: 'Post TMW-152', created: '2026-03-30' },
             { id: 'TMW-126', task: 'Data provider comparison matrix — Tier 1 + Tier 2 partial shipped. T1 stack locked (DEC-106). Bulk exports + API samples filed at Engineering/Data Sources/. T2 mapping for AviationStack + OpenSky sti…', owner: 'Rohan + Claude', department: 'Eng / Product', priority: 'Medium', status: 'T1 done; T2 deferred to TMW-216', deadline: 'Post V1 backend resume', created: '2026-04-06' },
             { id: 'TMW-128', task: 'End-to-end content pipeline test — 1 video through Claude → ElevenLabs → Gemini → Nano Banana → Google Flow → Capcut', owner: 'Rohan + Claude', department: 'Marketing', priority: 'High', status: 'Not Started', deadline: 'Pre-July 1', created: '2026-04-06' },
@@ -530,7 +529,8 @@ const activeTasks = [
         ];
 const completedTasks = [
             { id: 'TMW-210', task: 'Anshul B DSC application — confirmed complete 2026-05-08; DSC token expected delivery Mon 2026-05-11. Unblocks TMW-190 Anshul B DIR-12.', owner: 'Rohan + Anshul B + Raman', department: 'Legal', completed: '2026-05-08' },
-            { id: 'TMW-168', task: 'Build 5 backlog skills on top of Legal Registry — 5/5 SHIPPED S098 2026-05-08: ~/.claude/skills/nda-counterparty-tracker/ (124 lines) · dpdp-compliance-tracker/ (143 lines, DPDP Act 2023 §§ 5-8 launc…', owner: 'Claude', department: 'Operations', completed: '2026-05-08' },
+            { id: 'TMW-120', task: 'T-15 → T+7 content backlog stockpile — 55 stealth-safe drafts SHIPPED S098 2026-05-08 at Marketing/Content/Pre-Launch_Stockpile_2026-07-15/ across 12 platforms (Twitter 10 · LinkedIn 8 · YouTube Shor…', owner: 'Rohan + Claude', department: 'Marketing', completed: '2026-05-08' },
+            { id: 'TMW-168', task: 'Build 5 backlog skills on top of Legal Registry — 5/5 SHIPPED S098 2026-05-08: SKILL.md + Python helper + JSONL state per skill (where applicable). nda-counterparty-tracker (P1) · dpdp-compliance-tra…', owner: 'Claude', department: 'Operations', completed: '2026-05-08' },
             { id: 'TMW-179', task: 'Per-platform marketing drafting helpers — 4/4 SHIPPED S098 2026-05-08: ~/.claude/skills/twitter-thread-helper/ (249 lines) · linkedin-post-helper/ (275 lines) · reddit-post-helper/ (293 lines) · yout…', owner: 'Rohan + Claude', department: 'Marketing', completed: '2026-05-08' },
             { id: 'TMW-176', task: 'Internal Dashboards Design System monthly drift audit — Yellow verdict; report at Operations/Internal Dashboards/Design System/Drift_Audit_2026-05-08.md. Findings: (1) ✅ canonical CSS bundle wired to…', owner: 'Claude', department: 'Operations / Design', completed: '2026-05-08' },
             { id: 'TMW-182', task: 'Send Anshul B ADT-1 email — CANCELLED 2026-05-08 (S098). Overtaken by events: Raman\'s firm = auditor (BR-07); Raman handles ADT-1 filing end-to-end; Raman already briefed; no separate Anshul B email…', owner: 'Rohan', department: 'Legal', completed: '2026-05-08' },
@@ -868,6 +868,13 @@ const activityFeed = [
                         "task_name": "Internal Dashboards Design System mon..."
             },
             {
+                        "date": "2026-05-08",
+                        "task_id": "TMW-120",
+                        "event": "completed",
+                        "department": "Marketing",
+                        "task_name": "T-15 \u2192 T+7 content backlog stockpile ..."
+            },
+            {
                         "date": "2026-05-07",
                         "task_id": "TMW-164",
                         "event": "completed",
@@ -957,13 +964,6 @@ const activityFeed = [
                         "event": "completed",
                         "department": "Operations",
                         "task_name": "TMW-220 sprint kickoff trigger \u2014 supe..."
-            },
-            {
-                        "date": "2026-05-05",
-                        "task_id": "TMW-171",
-                        "event": "completed",
-                        "department": "Sales / Operations",
-                        "task_name": "CRM stack decision: no CRM pre-launch..."
             }
 ];
 const calendarEvents = [];
@@ -1075,8 +1075,8 @@ const analyticsData = {
                         },
                         {
                                     "date": "2026-05-08",
-                                    "completed": 7,
-                                    "added": 282
+                                    "completed": 8,
+                                    "added": 283
                         }
             ],
             "weeklyVelocity": [
@@ -1097,14 +1097,14 @@ const analyticsData = {
                         },
                         {
                                     "week": "2026-05-04",
-                                    "completed": 34,
-                                    "added": 289
+                                    "completed": 35,
+                                    "added": 290
                         }
             ],
             "statusDistribution": [
                         {
                                     "status": "Not Started",
-                                    "count": 13
+                                    "count": 12
                         },
                         {
                                     "status": "WIP",
@@ -1222,8 +1222,8 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Claude",
-                                    "active": 22,
-                                    "high_priority": 6,
+                                    "active": 21,
+                                    "high_priority": 5,
                                     "overdue": 0
                         },
                         {
@@ -1246,8 +1246,8 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Rohan",
-                                    "active": 45,
-                                    "high_priority": 15,
+                                    "active": 44,
+                                    "high_priority": 14,
                                     "overdue": 0
                         }
             ],
@@ -1362,12 +1362,12 @@ const analyticsData = {
                         },
                         {
                                     "department": "Marketing",
-                                    "active": 11,
+                                    "active": 10,
                                     "wip": 2,
-                                    "not_started": 4,
+                                    "not_started": 3,
                                     "overdue": 0,
-                                    "stale": 4,
-                                    "avg_age_days": 40
+                                    "stale": 3,
+                                    "avg_age_days": 41
                         },
                         {
                                     "department": "Marketing / Eng",
@@ -1462,12 +1462,6 @@ const analyticsData = {
                                     "age_days": 39
                         },
                         {
-                                    "id": "TMW-120",
-                                    "task": "T-15 \u2192 T+7 content backlog for 12 platforms (stockpile)",
-                                    "department": "Marketing",
-                                    "age_days": 39
-                        },
-                        {
                                     "id": "TMW-123",
                                     "task": "File trademark application for \"TrackMyWings\" \u2014 coordinate with Anshul Bansal",
                                     "department": "Legal",
@@ -1506,66 +1500,66 @@ const analyticsData = {
             "burndownData": [
                         {
                                     "date": "2026-05-08",
-                                    "remaining": 46
+                                    "remaining": 45
                         },
                         {
                                     "date": "2026-05-07",
-                                    "remaining": 44
+                                    "remaining": 43
                         },
                         {
                                     "date": "2026-05-06",
-                                    "remaining": 42
-                        },
-                        {
-                                    "date": "2026-05-05",
                                     "remaining": 41
                         },
                         {
-                                    "date": "2026-05-04",
+                                    "date": "2026-05-05",
                                     "remaining": 40
                         },
                         {
+                                    "date": "2026-05-04",
+                                    "remaining": 39
+                        },
+                        {
                                     "date": "2026-05-03",
-                                    "remaining": 37
+                                    "remaining": 36
                         },
                         {
                                     "date": "2026-05-02",
-                                    "remaining": 35
+                                    "remaining": 34
                         },
                         {
                                     "date": "2026-05-01",
-                                    "remaining": 27
+                                    "remaining": 26
                         },
                         {
                                     "date": "2026-04-30",
-                                    "remaining": 27
+                                    "remaining": 26
                         },
                         {
                                     "date": "2026-04-29",
-                                    "remaining": 26
+                                    "remaining": 25
                         },
                         {
                                     "date": "2026-04-28",
-                                    "remaining": 26
+                                    "remaining": 25
                         },
                         {
                                     "date": "2026-04-27",
-                                    "remaining": 26
+                                    "remaining": 25
                         },
                         {
                                     "date": "2026-04-26",
-                                    "remaining": 26
+                                    "remaining": 25
                         },
                         {
                                     "date": "2026-04-25",
-                                    "remaining": 26
+                                    "remaining": 25
                         }
             ],
             "velocity": {
-                        "today": 7,
-                        "this_week": 34,
+                        "today": 8,
+                        "this_week": 35,
                         "overdue": 0,
-                        "stale": 12
+                        "stale": 11
             }
 };
 

@@ -56,7 +56,7 @@
   </form>
 </div>
 
-<div class="fm-truth">Truth at 2026-05-08 08:34 IST · Cash ₹0 · YTD spend ₹91,181 · Receivable ₹91,181 · Burn rate ₹47,541/mo · Runway: pre-launch (no revenue yet)</div>
+<div class="fm-truth">Truth at 2026-05-08 08:37 IST · Cash ₹0 · YTD spend ₹91,181 · Receivable ₹91,181 · Burn rate ₹47,541/mo · Runway: pre-launch (no revenue yet)</div>
 
 <div class="ds-wrap">
   <header class="ds-top">
@@ -160,7 +160,7 @@
   <section class="ds-section">
     <div class="ds-section-head">
       <div class="ds-section-title">Subscriptions</div>
-      <div class="ds-section-aside">Monthly: <b>₹15,556</b> · Annual: <b>₹1,86,672</b></div>
+      <div class="ds-section-aside">Monthly: <b>₹25,056</b> · Annual: <b>₹3,00,672</b></div>
     </div>
     <div class="ds-frame ds-frame-flush">
       <table class="ds-table">
@@ -168,10 +168,10 @@
         <tbody>
         <tr>
           <td>Claude Max (Anthropic)</td>
-          <td>Max 5x</td>
+          <td>Max 20x</td>
           <td>Monthly</td>
-          <td class="num">₹9,500</td>
-          <td class="num">2026-04-16</td>
+          <td class="num">₹19,000</td>
+          <td class="num">2026-05-29 (Max 20x cycle; upgraded 2026-04-29 from Max 5x — net $143.24 + ₹2,449 GST partial-cycle delta logged in Expenses R22)</td>
           <td><span class="ds-badge ds-badge-pri-low">Active</span></td>
         </tr>
         
@@ -420,7 +420,7 @@
     <div class="ds-metrics fm-pnl-band">
       <div class="ds-metric ds-metric-lead tone-danger">
         <div class="ds-metric-lbl">EBITDA · Apr-26</div>
-        <div class="ds-metric-val num">₹-42,443</div>
+        <div class="ds-metric-val num">₹-51,943</div>
         <div class="ds-metric-sub">Burn-and-build phase. Negative until launch.</div>
       </div>
       <div class="ds-metric">
@@ -435,7 +435,7 @@
       </div>
       <div class="ds-metric">
         <div class="ds-metric-lbl">OpEx</div>
-        <div class="ds-metric-val num">₹42,443</div>
+        <div class="ds-metric-val num">₹51,943</div>
         <div class="ds-metric-sub">SaaS + legal + marketing + people.</div>
       </div>
     </div>
@@ -585,7 +585,7 @@
     <div class="ds-metrics fm-health">
       <div class="ds-metric ds-metric-lead ">
         <div class="ds-metric-lbl">MIS xlsx</div>
-        <div class="ds-metric-val num">2026-05-08 08:34</div>
+        <div class="ds-metric-val num">2026-05-08 08:37</div>
         <div class="ds-metric-sub">0.0d old. Stale &gt; 7 days.</div>
       </div>
       <div class="ds-metric">
@@ -595,7 +595,7 @@
       </div>
       <div class="ds-metric">
         <div class="ds-metric-lbl">Generator last run</div>
-        <div class="ds-metric-val num">2026-05-08 08:34</div>
+        <div class="ds-metric-val num">2026-05-08 08:37</div>
         <div class="ds-metric-sub">launchd · hourly :20.</div>
       </div>
       <div class="ds-metric ">
@@ -616,7 +616,7 @@
   </div>
 
   <div class="ds-meta">
-    <span>Generated <span id="generatedAt">2026-05-08T08:34:04</span></span>
+    <span>Generated <span id="generatedAt">2026-05-08T08:37:22</span></span>
     <span>Finance MIS v1 · launchd twice daily</span>
   </div>
 </div>
@@ -648,7 +648,7 @@ document.getElementById('loginForm').addEventListener('submit', async e => {
 });
 
 // --- Stale banner: warn if generator >150 min old ---
-const GENERATED_EPOCH = 1778209444;
+const GENERATED_EPOCH = 1778209642;
 (function(){
   const ageMin = (Date.now()/1000 - GENERATED_EPOCH) / 60;
   if (ageMin > 150) {

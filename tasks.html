@@ -483,10 +483,10 @@ const heroMilestones = [
 const activeTasks = [
             { id: '**TMW-189**', task: 'RESTRUCTURE MASTER (umbrella) — Amol exit + Anshul B appointment + ICICI + INC-20A + INC-22 + ADT-1 + share transfer + IP assignment + director loan + handover. Sub-tasks TMW-190 → TMW-200 + TMW-225.', owner: 'Rohan + Anshul B + Raman', department: 'Legal / Ops', priority: '**CRITICAL**', status: 'Active', deadline: '2026-06-15 (target close)', created: '2026-05-02' },
             { id: 'TMW-190', task: 'Anshul B Additional Director — DSC + DIN + DIR-3 KYC + BR-02 + DIR-12 within 30d. MUST precede Amol DIR-12 (§ 149(1)(a)).', owner: 'Rohan + Anshul B + Raman', department: 'Legal', priority: 'Critical', status: 'Not Started — DSC-gated', deadline: '2026-05-15', created: '2026-05-02' },
-            { id: 'TMW-191', task: 'ICICI Current Account opening + ₹1L Director Loan deposit + INC-20A 30-day clock starts on deposit. Sole signatory: Rohan.', owner: 'Rohan + Naik + Raman', department: 'Operations / Legal', priority: 'Critical', status: 'Today Thu 2026-05-07', deadline: '2026-05-07 (account live); INC-20A close target 2026-06-06', created: '2026-05-02' },
+            { id: 'TMW-191', task: 'ICICI Current Account opening + paid-up cap + DL principal. Sole signatory: Rohan. Documents signed 2026-05-07; account live target Mon 2026-05-11; Tue 2026-05-12 deposits per DEC-126: Rohan ₹62k pai…', owner: 'Rohan + Naik + Raman + Amol', department: 'Operations / Legal', priority: 'Critical', status: 'Account live Mon; deposits Tue', deadline: '2026-05-12 (deposits live); INC-20A close target ~2026-06-12', created: '2026-05-02' },
             { id: 'TMW-192', task: 'ADT-1 Auditor appointment — Raman\'s firm as statutory auditor FY 2026-27. Gated on TMW-225 (INC-22) per Pawan 2026-05-06.', owner: 'Rohan + Raman', department: 'Legal', priority: '**URGENT**', status: 'Gated on TMW-225', deadline: '**2026-05-23**', created: '2026-04-30' },
             { id: 'TMW-193', task: 'Amol exit bundle — Resignation + MoU Termination + IP Assignment + 3yr NCNS + SH-4 Share Transfer + Final Settlement + Handover. DIR-12 sequenced AFTER Anshul B DIR-12 effective.', owner: 'Rohan + Amol + Anshul B + Raman', department: 'Legal', priority: 'Critical', status: 'Sequenced post-TMW-190', deadline: '2026-05-31', created: '2026-05-02' },
-            { id: 'TMW-194', task: 'Director Loan Agreement (0% interest, on-demand) + Expense Schedule (B.1 pre-inc + B.2 post-inc; running ≥ ₹16,655). Annual DPT-3 tracked.', owner: 'Rohan + Raman', department: 'Finance / Legal', priority: 'High', status: 'Today, paired with TMW-191', deadline: '2026-05-31', created: '2026-05-02' },
+            { id: 'TMW-194', task: 'Director Loan Agreement (0% interest, on-demand) + Expense Schedule (B.1 pre-inc + B.2 post-inc; running ≥ ₹17,055 incl. S095 ₹400). Signed 2026-05-07; Tue 2026-05-12 = ₹1L principal drawdown per DEC…', owner: 'Rohan + Raman', department: 'Finance / Legal', priority: 'High', status: 'Signed; Tue principal drawdown', deadline: '2026-05-31', created: '2026-05-02' },
             { id: 'TMW-196', task: 'POA in favour of Anshul B (limited, dormant, trigger-activated). Stamped + notarised + registered. Sealed-envelope custody with spouse + Anshul B.', owner: 'Rohan + Anshul B', department: 'Legal', priority: 'Medium', status: 'Sequenced post-TMW-190', deadline: '2026-06-15', created: '2026-05-02' },
             { id: 'TMW-199', task: 'Email + credential migration — Workspace suspend (Amol/Adhi/Ruchi) + GitHub org transfer + AWS root rotation + IAM cleanup + Mapbox/Razorpay/Stripe/Cloudflare under Company. Checklist at Legal/Restru…', owner: 'Rohan', department: 'Operations', priority: 'High', status: 'Sequenced post-TMW-193', deadline: '2026-05-31', created: '2026-05-02' },
             { id: 'TMW-200', task: 'Mihir sir briefing — team change + launch timeline re-baseline. AFTER Amol DIR-12 effective to avoid premature surface.', owner: 'Rohan', department: 'Strategy', priority: 'Medium', status: 'Sequenced post-TMW-199', deadline: '2026-06-01', created: '2026-05-02' },
@@ -496,6 +496,7 @@ const activeTasks = [
             { id: 'TMW-216', task: 'V1 Flutter mobile build (fresh) in trackmywings/client_app against Figma mid-fi/high-fi + current Go backend + Mapbox (DEC-073). V0 reference at _local_pre_clone_archive/mobile_flutter_REFERENCE_ONLY…', owner: 'Rohan + Claude', department: 'Eng / Product', priority: 'High', status: 'Blocked on TMW-220/224 verdict', deadline: '2026-07-15 (launch)', created: '2026-05-04' },
             { id: '**TMW-224**', task: 'TMW-220 V2 Aero Nocturne Phase 0 probe — founder verdict on Design/Stitch/Outputs/v2_phase_0/REVIEW.html (5 base + 12 variants). 3 branches: A=Phase 1 ultraplan / B=iterate / C=diagnose.', owner: 'Rohan', department: 'Design', priority: 'High', status: 'Awaiting verdict', deadline: '2026-05-13', created: '2026-05-06' },
             { id: '**TMW-225**', task: 'INC-22 registered office verification under § 12(2) Companies Act. Artifacts: rent agreement ✅ + NOC ✅ + nameplate photo (Company Name + CIN + address) ⏳ + director-working photo ⏳. Gates TMW-192 ADT…', owner: 'Rohan + Raman + Pawan', department: 'Legal', priority: '**CRITICAL**', status: 'Nameplate + photos pending', deadline: '**2026-05-23**', created: '2026-05-07' },
+            { id: 'TMW-227', task: 'BR-22 post-restructure ratification — narrowed scope per DEC-126 (paid-up cap NOT in BR-22; SH-4 share-transfer ratification + DL running balance housekeeping only). Passed by new board (Rohan + Ansh…', owner: 'Rohan + Anshul B + Raman', department: 'Legal', priority: 'Medium', status: 'Sequenced post-Amol DIR-12', deadline: '2026-06-15', created: '2026-05-08' },
             { id: '**TMW-226**', task: 'MASTER PLAN — End-to-end V0 launch execution. Umbrella: (1) Backend build — 6 Go services per DEC-070 (auth/user/flight/ingestion/payment/subscription) + ingestion pipeline activation per tmw-flight-…', owner: 'Rohan + Claude', department: 'Engineering / Product / Operations', priority: '**CRITICAL**', status: 'Not Started — awaiting V2 design verdict (TMW-224)', deadline: '2026-07-15 (launch)', created: '2026-05-07' },
             { id: 'TMW-008', task: 'Populate Sales/Pipeline with CRM structure', owner: 'Rohan', department: 'Sales', priority: 'Low', status: 'Deprioritized — stealth', deadline: 'Post-launch', created: '2026-03-13' },
             { id: 'TMW-010', task: 'Review + update 60-Month Operating Plan', owner: 'Rohan', department: 'Finance', priority: 'Medium', status: 'WIP', deadline: 'Quarterly', created: '2026-03-13' },
@@ -1073,7 +1074,7 @@ const analyticsData = {
                         {
                                     "date": "2026-05-08",
                                     "completed": 1,
-                                    "added": 274
+                                    "added": 275
                         }
             ],
             "weeklyVelocity": [
@@ -1095,7 +1096,7 @@ const analyticsData = {
                         {
                                     "week": "2026-05-04",
                                     "completed": 28,
-                                    "added": 282
+                                    "added": 283
                         }
             ],
             "statusDistribution": [
@@ -1128,7 +1129,7 @@ const analyticsData = {
                                     "count": 1
                         },
                         {
-                                    "status": "**Today Thu 2026-05-07**",
+                                    "status": "Account live Mon; deposits Tue",
                                     "count": 1
                         },
                         {
@@ -1136,7 +1137,7 @@ const analyticsData = {
                                     "count": 1
                         },
                         {
-                                    "status": "**Today, paired with TMW-191**",
+                                    "status": "Signed; Tue principal drawdown",
                                     "count": 1
                         },
                         {
@@ -1169,6 +1170,10 @@ const analyticsData = {
                         },
                         {
                                     "status": "Nameplate + photos pending",
+                                    "count": 1
+                        },
+                        {
+                                    "status": "Sequenced post-Amol DIR-12",
                                     "count": 1
                         },
                         {
@@ -1207,13 +1212,13 @@ const analyticsData = {
             "ownerWorkload": [
                         {
                                     "owner": "Amol",
-                                    "active": 1,
+                                    "active": 2,
                                     "high_priority": 0,
                                     "overdue": 0
                         },
                         {
                                     "owner": "Anshul B",
-                                    "active": 5,
+                                    "active": 6,
                                     "high_priority": 0,
                                     "overdue": 0
                         },
@@ -1237,13 +1242,13 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Raman",
-                                    "active": 8,
+                                    "active": 9,
                                     "high_priority": 1,
                                     "overdue": 0
                         },
                         {
                                     "owner": "Rohan",
-                                    "active": 47,
+                                    "active": 48,
                                     "high_priority": 14,
                                     "overdue": 0
                         }
@@ -1332,12 +1337,12 @@ const analyticsData = {
                         },
                         {
                                     "department": "Legal",
-                                    "active": 10,
+                                    "active": 11,
                                     "wip": 1,
                                     "not_started": 2,
                                     "overdue": 0,
                                     "stale": 2,
-                                    "avg_age_days": 14
+                                    "avg_age_days": 13
                         },
                         {
                                     "department": "Legal / Finance",
@@ -1530,7 +1535,7 @@ const analyticsData = {
             "burndownData": [
                         {
                                     "date": "2026-05-08",
-                                    "remaining": 49
+                                    "remaining": 50
                         },
                         {
                                     "date": "2026-05-07",

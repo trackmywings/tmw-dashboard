@@ -85,7 +85,7 @@
   </form>
 </div>
 
-<div class="fc-truth">T-67 launch · TMW-151 on-call · Phase 3 100% · ₹0 cash / ₹91,181 receivable · 6 priorities · 0 overdue · last sync 61m ago</div>
+<div class="fc-truth">T-67 launch · TMW-151 on-call · Phase 3 100% · ₹0 cash / ₹91,181 receivable · 6 priorities · 0 overdue · last sync 60m ago</div>
 
 <div class="ds-wrap">
   <header class="ds-top">
@@ -346,7 +346,7 @@
         <div class="ds-metric ds-metric-lead">
           <div class="ds-metric-lbl">Claude burn (Opus output)</div>
           <div class="ds-metric-val num">10.83M</div>
-          <div class="ds-metric-sub">168 sessions · last 4.5h ago.</div>
+          <div class="ds-metric-sub">168 sessions · last 5.5h ago.</div>
         </div>
         <div class="ds-metric">
           <div class="ds-metric-lbl">Tasks completed</div>
@@ -451,15 +451,15 @@
         <tbody>
         <tr>
           <td><code>tasks</code></td>
-          <td class="num">2026-05-09 04:13</td>
-          <td>17m ago</td>
+          <td class="num">2026-05-09 05:13</td>
+          <td>18m ago</td>
           <td><span class="ds-badge ds-badge-pri-low">✓ ok</span></td>
           <td class="num"><span class="num" style="color:var(--ink-low);">0</span></td>
         </tr>
         
         <tr>
           <td><code>founder-control-panel</code></td>
-          <td class="num">2026-05-09 03:28</td>
+          <td class="num">2026-05-09 04:30</td>
           <td>1.0h ago</td>
           <td><span class="ds-badge ds-badge-pri-low">✓ ok</span></td>
           <td class="num"><span class="num" style="color:var(--ink-low);">0</span></td>
@@ -467,23 +467,23 @@
         
         <tr>
           <td><code>claude-usage</code></td>
-          <td class="num">2026-05-09 03:40</td>
-          <td>50m ago</td>
+          <td class="num">2026-05-09 04:41</td>
+          <td>49m ago</td>
           <td><span class="ds-badge ds-badge-pri-medium">◉ stale</span></td>
           <td class="num"><span class="num">1</span></td>
         </tr>
         
         <tr>
           <td><code>finance-mis</code></td>
-          <td class="num">2026-05-09 03:28</td>
-          <td>1.0h ago</td>
+          <td class="num">2026-05-09 05:31</td>
+          <td>0m ago</td>
           <td><span class="ds-badge ds-badge-pri-low">✓ ok</span></td>
           <td class="num"><span class="num" style="color:var(--ink-low);">0</span></td>
         </tr>
         
         <tr>
           <td><code>folder-map-generator</code></td>
-          <td class="num">2026-05-09 03:56</td>
+          <td class="num">2026-05-09 04:57</td>
           <td>33m ago</td>
           <td><span class="ds-badge ds-badge-pri-medium">◉ stale</span></td>
           <td class="num"><span class="num">2</span></td>
@@ -491,7 +491,7 @@
         
         <tr>
           <td><code>file-watcher</code></td>
-          <td class="num">2026-05-09 04:30</td>
+          <td class="num">2026-05-09 05:31</td>
           <td>0m ago</td>
           <td><span class="ds-badge ds-badge-pri-medium">◉ stale</span></td>
           <td class="num"><span class="num">240</span></td>
@@ -500,7 +500,7 @@
         <tr>
           <td><code>calendar-sync</code></td>
           <td class="num">2026-05-08 21:00</td>
-          <td>7.5h ago</td>
+          <td>8.5h ago</td>
           <td><span class="ds-badge ds-badge-pri-medium">◉ stale</span></td>
           <td class="num"><span class="num">40</span></td>
         </tr>
@@ -526,7 +526,7 @@
   </div>
 
   <div class="ds-meta">
-    <span>Generated <span id="generatedAt">2026-05-09T04:30:23</span></span>
+    <span>Generated <span id="generatedAt">2026-05-09T05:31:06</span></span>
     <span>Founder Control v1 · launchd hourly</span>
   </div>
 </div>
@@ -558,7 +558,7 @@ document.getElementById('loginForm').addEventListener('submit', async e => {
 });
 
 // --- Stale banner: warn if >150 min old (hourly @ :15 schedule) ---
-const GENERATED_EPOCH = 1778281223;
+const GENERATED_EPOCH = 1778284866;
 (function(){
   const ageMin = (Date.now()/1000 - GENERATED_EPOCH) / 60;
   if (ageMin > 150) {

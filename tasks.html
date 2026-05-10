@@ -496,7 +496,6 @@ const activeTasks = [
             { id: '**TMW-224**', task: 'TMW-220 V2 Aero Nocturne Phase 0 probe — founder verdict on Design/Stitch/Outputs/v2_phase_0/REVIEW.html (5 base + 12 variants). 3 branches: A=Phase 1 ultraplan / B=iterate / C=diagnose.', owner: 'Rohan', department: 'Design', priority: 'High', status: 'Awaiting verdict', deadline: '2026-05-13', created: '2026-05-06' },
             { id: '**TMW-225**', task: 'INC-22 registered office verification under § 12(2) Companies Act. Artifacts: rent agreement ✅ + NOC ✅ + nameplate design ✅ + nameplate fabricated + delivered ✅ + 3 photos captured + saved 2026-05-08…', owner: 'Rohan + Raman + Pawan', department: 'Legal', priority: '**CRITICAL**', status: 'Photos in; ready to send Pawan/Raman', deadline: '**2026-05-23**', created: '2026-05-07' },
             { id: 'TMW-227', task: 'BR-22 post-restructure ratification — narrowed scope per DEC-126. DRAFT SHIPPED S098 2026-05-08 appended to Legal/Restructure_May_2026/03_Board_Resolutions/Board_Resolutions_Pack.md as MEETING #3 (BR…', owner: 'Rohan + Anshul B + Raman', department: 'Legal', priority: 'Medium', status: 'Draft ready; review by Anshul ji + Raman; pass at Meeting #3 post-2026-05-31', deadline: '2026-06-15', created: '2026-05-08' },
-            { id: '~~TMW-229~~', task: 'CANCELLED 2026-05-09 — independent Anshul-Attri review of Section B not needed per founder. § 184(1) conflict items handled within main pack flow. Files retained at Legal/Restructure_May_2026/_Lawyer…', owner: 'Rohan', department: 'Legal', priority: '—', status: 'Cancelled', deadline: '—', created: '2026-05-08' },
             { id: 'TMW-008', task: 'Populate Sales/Pipeline with CRM structure', owner: 'Rohan', department: 'Sales', priority: 'Low', status: 'Deprioritized — stealth', deadline: 'Post-launch', created: '2026-03-13' },
             { id: 'TMW-010', task: 'Review + update 60-Month Operating Plan', owner: 'Rohan', department: 'Finance', priority: 'Medium', status: 'WIP', deadline: 'Quarterly', created: '2026-03-13' },
             { id: 'TMW-038', task: 'Update website to new brand guidelines (staging site). Brand metadata layer shipped S099+ in V0_NextJS app/layout.tsx — full Aero Nocturne theme (#0B0F14), Open Graph + Twitter card + viewport + cano…', owner: 'Rohan + Claude', department: 'Design', priority: 'Medium', status: 'Metadata shipped · visual brand-pass blocked on TMW-224 verdict', deadline: 'Post-inc', created: '2026-03-17' },
@@ -525,6 +524,9 @@ const activeTasks = [
             { id: '**TMW-220**', task: 'High-fi sprint — S092 built 142/142 in Figma but founder rejected aesthetically. Paused per DEC-122 (frames preserved on Page-5 2867:39). S094 V2 Stitch Aero Nocturne pivot Phase 0 shipped per DEC-12…', owner: 'Rohan + Claude', department: 'Design / Ops', priority: '**CRITICAL**', status: 'Paused — verdict via TMW-224', deadline: 'TBD post-verdict', created: '2026-05-05' }
         ];
 const completedTasks = [
+            { id: 'TMW-049', task: 'OG image system — app/opengraph-image.tsx + app/twitter-image.tsx + lib/og.ts + 8 Nano Banana prompts + 3-layer override system. Aero Nocturne aligned, locked tagline integrated. Bundled in S099+ lau…', owner: 'Rohan + Claude', department: 'Marketing', completed: '2026-05-10' },
+            { id: 'TMW-090', task: 'og:image meta tag — full Metadata API in app/layout.tsx emits og:image (1200×630), twitter:card, locale alternates (en_US/en_GB/en_IN), canonical. Bundled with TMW-049 in S099+.', owner: 'Rohan + Claude', department: 'Marketing', completed: '2026-05-10' },
+            { id: 'TMW-229', task: 'CANCELLED — independent Anshul-Attri review of Section B not needed; § 184(1) items handled within main pack. Files retained at Legal/Restructure_May_2026/_Lawyer_Pack_2026-05-08/_excluded_from_anshu…', owner: 'Rohan', department: 'Legal', completed: '2026-05-09' },
             { id: 'TMW-210', task: 'Anshul B DSC — DSC CREATED 2026-05-09 (ahead of Mon 5/11 expected). DIR-3 KYC fee ₹550 paid by Rohan (founder OOP, DL B.2 row 17). DIN expected by Tue 2026-05-12. Unblocks TMW-190 DIR-12 chain.', owner: 'Rohan + Anshul B + Raman', department: 'Legal', completed: '2026-05-09' },
             { id: 'TMW-120', task: 'T-15 → T+7 content backlog stockpile — 55 stealth-safe drafts SHIPPED S098 2026-05-08 at Marketing/Content/Pre-Launch_Stockpile_2026-07-15/ across 12 platforms (Twitter 10 · LinkedIn 8 · YouTube Shor…', owner: 'Rohan + Claude', department: 'Marketing', completed: '2026-05-08' },
             { id: 'TMW-168', task: 'Build 5 backlog skills on top of Legal Registry — 5/5 SHIPPED S098 2026-05-08: SKILL.md + Python helper + JSONL state per skill (where applicable). nda-counterparty-tracker (P1) · dpdp-compliance-tra…', owner: 'Claude', department: 'Operations', completed: '2026-05-08' },
@@ -823,6 +825,27 @@ const selfLearningTasks = [
         ];
 const activityFeed = [
             {
+                        "date": "2026-05-10",
+                        "task_id": "TMW-049",
+                        "event": "completed",
+                        "department": "Marketing",
+                        "task_name": "OG image system \u2014 `app/opengraph-imag..."
+            },
+            {
+                        "date": "2026-05-10",
+                        "task_id": "TMW-090",
+                        "event": "completed",
+                        "department": "Marketing",
+                        "task_name": "og:image meta tag \u2014 full Metadata API..."
+            },
+            {
+                        "date": "2026-05-09",
+                        "task_id": "TMW-229",
+                        "event": "completed",
+                        "department": "Legal",
+                        "task_name": "CANCELLED \u2014 independent Anshul-Attri ..."
+            },
+            {
                         "date": "2026-05-08",
                         "task_id": "TMW-210",
                         "event": "completed",
@@ -940,27 +963,6 @@ const activityFeed = [
                         "event": "completed",
                         "department": "Operations",
                         "task_name": "Phase 2 custom TMW skills \u2014 **11/11 S..."
-            },
-            {
-                        "date": "2026-05-05",
-                        "task_id": "TMW-222",
-                        "event": "completed",
-                        "department": "Operations",
-                        "task_name": "**Dashboard rebuild silent-corruption..."
-            },
-            {
-                        "date": "2026-05-05",
-                        "task_id": "TMW-219",
-                        "event": "completed",
-                        "department": "Design",
-                        "task_name": "Adhi's Stitch 3\u00d7 variant review folde..."
-            },
-            {
-                        "date": "2026-05-05",
-                        "task_id": "TMW-221",
-                        "event": "completed",
-                        "department": "Operations",
-                        "task_name": "TMW-220 sprint kickoff trigger \u2014 supe..."
             }
 ];
 const calendarEvents = [];
@@ -1062,17 +1064,17 @@ const analyticsData = {
                         {
                                     "date": "2026-05-08",
                                     "completed": 6,
-                                    "added": 2
+                                    "added": 1
                         },
                         {
                                     "date": "2026-05-09",
-                                    "completed": 1,
+                                    "completed": 2,
                                     "added": 0
                         },
                         {
                                     "date": "2026-05-10",
-                                    "completed": 1,
-                                    "added": 281
+                                    "completed": 3,
+                                    "added": 284
                         }
             ],
             "weeklyVelocity": [
@@ -1088,8 +1090,8 @@ const analyticsData = {
                         },
                         {
                                     "week": "2026-05-04",
-                                    "completed": 35,
-                                    "added": 289
+                                    "completed": 38,
+                                    "added": 291
                         }
             ],
             "statusDistribution": [
@@ -1170,10 +1172,6 @@ const analyticsData = {
                                     "count": 1
                         },
                         {
-                                    "status": "Cancelled",
-                                    "count": 1
-                        },
-                        {
                                     "status": "Deprioritized \u2014 stealth",
                                     "count": 1
                         },
@@ -1249,7 +1247,7 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Rohan",
-                                    "active": 41,
+                                    "active": 40,
                                     "high_priority": 13,
                                     "overdue": 0
                         }
@@ -1329,12 +1327,12 @@ const analyticsData = {
                         },
                         {
                                     "department": "Legal",
-                                    "active": 10,
+                                    "active": 9,
                                     "wip": 1,
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 15
+                                    "avg_age_days": 16
                         },
                         {
                                     "department": "Legal / Finance",
@@ -1476,15 +1474,15 @@ const analyticsData = {
             "burndownData": [
                         {
                                     "date": "2026-05-10",
-                                    "remaining": 42
+                                    "remaining": 41
                         },
                         {
                                     "date": "2026-05-09",
-                                    "remaining": 42
+                                    "remaining": 41
                         },
                         {
                                     "date": "2026-05-08",
-                                    "remaining": 42
+                                    "remaining": 41
                         },
                         {
                                     "date": "2026-05-07",
@@ -1532,8 +1530,8 @@ const analyticsData = {
                         }
             ],
             "velocity": {
-                        "today": 1,
-                        "this_week": 35,
+                        "today": 3,
+                        "this_week": 38,
                         "overdue": 0,
                         "stale": 8
             }

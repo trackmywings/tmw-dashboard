@@ -482,8 +482,8 @@ const heroMilestones = [
 ];
 const activeTasks = [
             { id: '**TMW-189**', task: 'RESTRUCTURE MASTER (umbrella) — Amol exit + Anshul B appointment + ICICI + INC-20A + INC-22 + ADT-1 + share transfer + IP assignment + director loan + handover. Sub-tasks TMW-190 → TMW-200 + TMW-225.…', owner: 'Rohan + Anshul B + Raman', department: 'Legal / Ops', priority: '**CRITICAL**', status: 'Active — lawyer pack-back due 2026-05-16', deadline: '2026-06-15 (target close)', created: '2026-05-02' },
-            { id: 'TMW-190', task: 'Anshul B Additional Director — DSC ✅ (5/9) + DIR-3 KYC fee ✅ (5/9) + DIN expected Tue 5/12 → BR-02 + DIR-12. MUST precede Amol DIR-12 (§ 149(1)(a)).', owner: 'Rohan + Anshul B + Raman', department: 'Legal', priority: 'Critical', status: 'In Progress — DIN-gated', deadline: '2026-05-15', created: '2026-05-02' },
-            { id: 'TMW-191', task: 'ICICI Current Account opening + paid-up cap + DL principal. Sole signatory: Rohan. Documents signed 2026-05-07; account live target Mon 2026-05-11; Tue 2026-05-12 deposits per DEC-126: Rohan ₹62k pai…', owner: 'Rohan + Naik + Raman + Amol', department: 'Operations / Legal', priority: 'Critical', status: 'Form EOD Mon · deposits Tue', deadline: '2026-05-12 (deposits live); INC-20A close target ~2026-06-12', created: '2026-05-02' },
+            { id: 'TMW-190', task: 'Anshul B Additional Director — DSC ✅ (5/9) + DIR-3 KYC fee ✅ (5/9) + DIN ✅ 2026-05-12 → BR-02 + DIR-12. MUST precede Amol DIR-12 (§ 149(1)(a)). S105 2026-05-12: Raman to lead appointment + share-tran…', owner: 'Rohan + Anshul B + Raman', department: 'Legal', priority: 'Critical', status: 'DIN ✅ — appointment queued by Raman post-ICICI-active', deadline: '2026-05-15', created: '2026-05-02' },
+            { id: 'TMW-191', task: 'ICICI Current Account opening + paid-up cap + DL principal. Sole signatory: Rohan. Documents signed 2026-05-07; additional bank form ✅ submitted S105 2026-05-12. Deposits per DEC-126: Rohan ₹62k paid…', owner: 'Rohan + Naik + Raman + Amol', department: 'Operations / Legal', priority: 'Critical', status: 'Form ✅ submitted — awaiting account-active confirmation', deadline: 'INC-20A close target ~2026-06-12', created: '2026-05-02' },
             { id: 'TMW-192', task: 'ADT-1 Auditor appointment — Raman\'s firm as statutory auditor FY 2026-27 (BR-07). Raman handles filing end-to-end; no Rohan action required other than INC-22 close (TMW-225). Gated on TMW-225 per Paw…', owner: 'Raman', department: 'Legal', priority: 'High', status: 'Raman owns; gated on TMW-225', deadline: '**2026-05-23**', created: '2026-04-30' },
             { id: 'TMW-193', task: 'Amol exit bundle — Resignation + MoU Termination + IP Assignment + 3yr NCNS + SH-4 Share Transfer + Final Settlement + Handover. DIR-12 sequenced AFTER Anshul B DIR-12 effective. Notes (S098 2026-05-…', owner: 'Rohan + Amol + Anshul B + Raman', department: 'Legal', priority: 'Critical', status: 'Sequenced — Amol pack arriving 2026-05-16 from lawyer', deadline: '2026-05-31', created: '2026-05-02' },
             { id: 'TMW-194', task: 'Director Loan Agreement (0% interest, on-demand) + Expense Schedule (B.1 pre-inc + B.2 post-inc; running ≥ ₹17,996.46 incl. S098 ₹941.46 INC-22 nameplate). Signed 2026-05-07; Tue 2026-05-12 = ₹1L pri…', owner: 'Rohan + Raman', department: 'Finance / Legal', priority: 'High', status: 'Signed; Tue principal drawdown', deadline: '2026-05-31', created: '2026-05-02' },
@@ -492,12 +492,11 @@ const activeTasks = [
             { id: 'TMW-200', task: 'Mihir sir briefing — team change + launch timeline re-baseline. AFTER Amol DIR-12 effective. DRAFT SHIPPED S098 2026-05-08 at Operations/Briefings/2026-06-01_Mihir_Briefing.{md,docx} (380 words, stat…', owner: 'Rohan + Claude', department: 'Strategy', priority: 'Medium', status: 'Draft ready; send post-2026-05-31', deadline: '2026-06-01', created: '2026-05-02' },
             { id: 'TMW-206', task: 'Decision: git init ~/tmw? Recommendation: yes, with .gitignore excluding Engineering codebase + secrets. .gitignore pre-staged at ~/tmw/.gitignore S098 2026-05-08 (Engineering codebase + secrets + iC…', owner: 'Rohan', department: 'Operations', priority: 'Medium', status: 'Deferred — post-Amol exit; .gitignore staged', deadline: '2026-05-31', created: '2026-05-03' },
             { id: 'TMW-207', task: 'Install zellij (or tmux) + create tmw saved layout for 5-pane setup (T1 strategic / T2 code worktree / T3 design worktree / T4 local Ollama / T5 monitoring). Per v2.1 Dim 7. Blocked on TMW-206.', owner: 'Rohan', department: 'Operations', priority: 'Medium', status: 'Blocked on TMW-206', deadline: '2026-06-15', created: '2026-05-03' },
-            { id: 'TMW-216', task: 'V1 Flutter mobile build (fresh) in trackmywings/client_app against Figma mid-fi/high-fi + current Go backend + Mapbox (DEC-073). V0 reference at _local_pre_clone_archive/mobile_flutter_REFERENCE_ONLY…', owner: 'Rohan + Claude', department: 'Eng / Product', priority: 'High', status: 'Blocked on TMW-220/224 verdict', deadline: '2026-08-15 (launch)', created: '2026-05-04' },
-            { id: '**TMW-224**', task: 'Methodology + DESIGN.md v2.0 LOCKED 2026-05-11 (DEC-142 + DEC-143 + DEC-144 + DEC-145): single-screen craft + Open Design (direction probe ONLY per DEC-143) + Stitch + Figma + FE↔BE concurrent specs.…', owner: 'Rohan + Claude', department: 'Design', priority: '**CRITICAL**', status: 'Active — Stitch generation pending founder go-signal', deadline: 'TBD post-first-screen-ship', created: '2026-05-06' },
-            { id: '**TMW-225**', task: 'INC-22 registered office verification under § 12(2) Companies Act. Artifacts complete: signed rent agreement ✅ (Legal/Incorporation/Rent Agreement/Active/TMW_Rent_Agreement_Signed_2026-05-11.pdf) + s…', owner: 'Rohan + Raman + Pawan', department: 'Legal', priority: '**CRITICAL**', status: 'Founder drafting email today w/ INC-22 pack (decoupled from bank statement)', deadline: '**2026-05-23**', created: '2026-05-07' },
+            { id: 'TMW-216', task: 'V1 Flutter mobile build (fresh). Now consumes OD HTML composition + 6-section per-screen spec directly per DEC-146 (no Figma intermediate). First screen 2.20 home dashboard with active flight (H2 Bre…', owner: 'Rohan + Claude', department: 'Eng / Product', priority: '**CRITICAL**', status: 'Active — screen 2.20 widget translation starts S105', deadline: '2026-08-15 (launch)', created: '2026-05-04' },
+            { id: '**TMW-225**', task: 'INC-22 registered office verification under § 12(2) Companies Act. Artifacts complete: signed rent agreement ✅ + signed NOC ✅ + nameplate ✅ + 3 photos ✅. Pawan/Raman email DRAFT ✅ written by founder…', owner: 'Rohan + Raman + Pawan', department: 'Legal', priority: '**CRITICAL**', status: 'Draft ✅ ready — send when bank statement available', deadline: '**2026-05-23**', created: '2026-05-07' },
             { id: 'TMW-227', task: 'BR-22 post-restructure ratification — narrowed scope per DEC-126. DRAFT SHIPPED S098 2026-05-08 appended to Legal/Restructure/03_Board_Resolutions/Board_Resolutions_Pack.md as MEETING #3 (BR-22 with…', owner: 'Rohan + Anshul B + Raman', department: 'Legal', priority: 'Medium', status: 'Refined version in 2026-05-16 lawyer pack-back; pass at Meeting #3 post-2026-05…', deadline: '2026-06-15', created: '2026-05-08' },
             { id: 'TMW-010', task: 'Review + update 60-Month Operating Plan', owner: 'Rohan', department: 'Finance', priority: 'Medium', status: 'WIP', deadline: 'Quarterly', created: '2026-03-13' },
-            { id: 'TMW-038', task: 'Update website to new brand guidelines (staging site). Brand metadata layer shipped S099+ in V0_NextJS app/layout.tsx — full Aero Nocturne theme (#0B0F14), Open Graph + Twitter card + viewport + cano…', owner: 'Rohan + Claude', department: 'Design', priority: 'Medium', status: 'Metadata shipped · visual brand-pass blocked on TMW-224 verdict', deadline: 'Post-inc', created: '2026-03-17' },
+            { id: 'TMW-038', task: 'Update website to new brand guidelines (staging site). Brand metadata layer shipped S099+ in V0_NextJS app/layout.tsx — full Aero Nocturne theme (#0B0F14), Open Graph + Twitter card + viewport + cano…', owner: 'Rohan + Claude', department: 'Design', priority: 'Medium', status: 'Metadata shipped · visual brand-pass uses DESIGN.md v2.0 tokens', deadline: 'Post-inc', created: '2026-03-17' },
             { id: 'TMW-048', task: 'Submit TrackMyWings to startup directories (18 directories, kit ready)', owner: 'Rohan', department: 'Marketing', priority: 'Medium', status: 'Blocked', deadline: 'Post-inc', created: '2026-03-18' },
             { id: 'TMW-053', task: 'Razorpay setup — signup + KYC + Subscriptions + plans + Flutter SDK', owner: 'Rohan + Claude', department: 'Finance', priority: 'High', status: 'Not Started', deadline: 'Post-inc', created: '2026-03-18' },
             { id: 'TMW-054', task: 'Complete Stripe account activation + Stripe Billing for international web payments', owner: 'Rohan', department: 'Finance', priority: 'Medium', status: 'Not Started', deadline: 'Post-inc', created: '2026-03-18' },
@@ -518,12 +517,13 @@ const activeTasks = [
             { id: 'TMW-152', task: 'Register for UDHYAM + GST + MSME certificates post bank account opening', owner: 'Rohan', department: 'Legal / Finance', priority: 'High', status: 'Not Started', deadline: 'Post TMW-151', created: '2026-04-23' },
             { id: 'TMW-153', task: 'File copyright application for TrackMyWings (app, content, brand) — coordinate with Anshul Bansal. Filing package DRAFTED S098 2026-05-08 at Legal/IP/Copyright_Filing_2026/: 6 files / ~9,465 words (S…', owner: 'Rohan', department: 'Legal', priority: 'High', status: 'Drafts ready; Anshul ji review pending', deadline: 'Post TMW-152', created: '2026-04-23' },
             { id: 'TMW-154', task: 'Apply for startup funding — Startup India, grants, angel/seed — run in parallel post bank account', owner: 'Rohan', department: 'Finance / Strategy', priority: 'Medium', status: 'Not Started', deadline: 'Post TMW-151', created: '2026-04-23' },
-            { id: 'TMW-217', task: 'Run TMW Prototype Wiring plugin in Figma Desktop. Plugin bundle ready at Design/App Screens/tools/figma_wiring_plugin/. Iterates 838 hotspots → applies ~617 reactions (221 architectural exclusions).', owner: 'Rohan', department: 'Design / Eng', priority: 'High', status: 'Deferred indefinitely', deadline: '2026-05-11', created: '2026-05-04' },
-            { id: 'TMW-218', task: 'Library v15 backlog patches — 8 candidates: gift glyph · country flag sprite · browser-chrome-bar · stat-tile widget variant · tab-bar-top skeleton-state · loader/spinner · surface/map/canvas alias ·…', owner: 'Rohan + Claude', department: 'Design', priority: 'Medium', status: 'Not Started', deadline: '2026-06-15', created: '2026-05-04' },
-            { id: '**TMW-220**', task: 'High-fi sprint REFRAMED 2026-05-11 per DEC-142 — per-screen craft pipeline (Open Design direction probe + Stitch generation + Figma assembly + Open Design polish + FE↔BE concurrent specs) starting wi…', owner: 'Rohan + Claude', department: 'Design / Ops', priority: '**CRITICAL**', status: 'Active — HM1 first-screen kickoff prep', deadline: 'TBD per Q4 pace empirical signal', created: '2026-05-05' },
-            { id: 'TMW-231', task: 'Open Design — walk-through to configure each agent CLI for direction probes. Per founder ask S104 2026-05-11: document setup steps for Gemini CLI (gemini auth login Google AI Studio flow + free-tier…', owner: 'Rohan + Claude', department: 'Design / Operations', priority: 'Medium', status: 'Not Started', deadline: 'Indicative — pre-batch-probe phase', created: '2026-05-11' }
+            { id: 'TMW-218', task: 'Library v15 catalog promotion per DEC-146 — DESIGN.md v2.0 token additions (Aero Nocturne accents: Cockpit Cyan, Deep Night Canvas) + LIBRARY_MANIFEST.json component catalog expansion (v2.0 organisms…', owner: 'Rohan + Claude', department: 'Design / Eng', priority: 'Medium', status: 'Not Started — accrue per-screen', deadline: '2026-06-15', created: '2026-05-04' },
+            { id: '**TMW-220**', task: 'High-fi sprint REFRAMED 2026-05-12 per DEC-146 — OD-HTML-direct pipeline (OD direction probe → composition lock + 6-section spec → concurrent Flutter widget tree + Go backend). Stitch + Figma assembl…', owner: 'Rohan + Claude', department: 'Design / Eng', priority: '**CRITICAL**', status: 'Active — screen 2.20 Flutter widget translation starts S105', deadline: 'TBD per first-screen empirical signal', created: '2026-05-05' },
+            { id: 'TMW-231', task: 'Open Design — walk-through to configure each agent CLI for direction probes. Promoted Medium → HIGH per DEC-146 (OD is now the central pipeline tool; agent routing matters for quota preservation). Pe…', owner: 'Rohan + Claude', department: 'Design / Operations', priority: '**HIGH**', status: 'Not Started — needed before batch-probe phase scales', deadline: 'Indicative — pre-batch-probe phase', created: '2026-05-11' }
         ];
 const completedTasks = [
+            { id: 'TMW-224', task: 'CLOSED 2026-05-12 per DEC-146 — methodology + DESIGN.md v2.0 + 6-section per-screen template work fully delivered. Original DEC-142 5-step pipeline (OD probe → Stitch → Figma → review → FE+BE) supers…', owner: 'Rohan + Claude', department: 'Design', completed: '2026-05-12' },
+            { id: 'TMW-217', task: 'CANCELLED 2026-05-12 per DEC-146 — Figma prototype wiring plugin obsolete under OD-HTML-direct → Flutter+Go pipeline. Figma intermediate step dropped; no need to wire 838 hotspots / 617 reactions in…', owner: 'Rohan', department: 'Design / Eng', completed: '2026-05-12' },
             { id: 'TMW-008', task: 'CANCELLED 2026-05-10 — Sales/Pipeline CRM structure killed permanently per S101 Q41. No need pre-launch (DEC-067 stealth deprioritization superseded by permanent kill). Revisit post-launch only if CR…', owner: 'Rohan', department: 'Sales', completed: '2026-05-10' },
             { id: 'TMW-033', task: 'CANCELLED 2026-05-10 — Insurance review skipped per S101 Q13 (founder call). Revisit when company has employees or material physical assets to insure. Research at Legal/Compliance/Startup_Insurance_G…', owner: 'Rohan', department: 'Legal', completed: '2026-05-10' },
             { id: 'TMW-049', task: 'OG image system — app/opengraph-image.tsx + app/twitter-image.tsx + lib/og.ts + 8 Nano Banana prompts + 3-layer override system. Aero Nocturne aligned, locked tagline integrated. Bundled in S099+ lau…', owner: 'Rohan + Claude', department: 'Marketing', completed: '2026-05-10' },
@@ -826,6 +826,20 @@ const selfLearningTasks = [
         ];
 const activityFeed = [
             {
+                        "date": "2026-05-12",
+                        "task_id": "TMW-224",
+                        "event": "completed",
+                        "department": "Design",
+                        "task_name": "CLOSED 2026-05-12 per **DEC-146** \u2014 m..."
+            },
+            {
+                        "date": "2026-05-12",
+                        "task_id": "TMW-217",
+                        "event": "completed",
+                        "department": "Design / Eng",
+                        "task_name": "CANCELLED 2026-05-12 per **DEC-146** ..."
+            },
+            {
                         "date": "2026-05-10",
                         "task_id": "TMW-049",
                         "event": "completed",
@@ -950,20 +964,6 @@ const activityFeed = [
                         "event": "completed",
                         "department": "Design",
                         "task_name": "PWA icons generated from canonical lo..."
-            },
-            {
-                        "date": "2026-05-07",
-                        "task_id": "TMW-211",
-                        "event": "completed",
-                        "department": "Operations",
-                        "task_name": "tmw-decision-cascade-checker skill SH..."
-            },
-            {
-                        "date": "2026-05-07",
-                        "task_id": "TMW-198",
-                        "event": "completed",
-                        "department": "Operations",
-                        "task_name": "Custom TMW skills parent \u2014 superseded..."
             }
 ];
 const calendarEvents = [];
@@ -1040,16 +1040,11 @@ const analyticsData = {
                         {
                                     "date": "2026-05-04",
                                     "completed": 6,
-                                    "added": 3
+                                    "added": 2
                         },
                         {
                                     "date": "2026-05-05",
                                     "completed": 11,
-                                    "added": 1
-                        },
-                        {
-                                    "date": "2026-05-06",
-                                    "completed": 0,
                                     "added": 1
                         },
                         {
@@ -1075,7 +1070,12 @@ const analyticsData = {
                         {
                                     "date": "2026-05-11",
                                     "completed": 1,
-                                    "added": 287
+                                    "added": 289
+                        },
+                        {
+                                    "date": "2026-05-12",
+                                    "completed": 2,
+                                    "added": 0
                         }
             ],
             "weeklyVelocity": [
@@ -1092,18 +1092,18 @@ const analyticsData = {
                         {
                                     "week": "2026-05-04",
                                     "completed": 39,
-                                    "added": 7
+                                    "added": 5
                         },
                         {
                                     "week": "2026-05-11",
-                                    "completed": 1,
-                                    "added": 287
+                                    "completed": 3,
+                                    "added": 289
                         }
             ],
             "statusDistribution": [
                         {
                                     "status": "Not Started",
-                                    "count": 9
+                                    "count": 7
                         },
                         {
                                     "status": "Blocked stealth",
@@ -1126,11 +1126,11 @@ const analyticsData = {
                                     "count": 1
                         },
                         {
-                                    "status": "In Progress \u2014 DIN-gated",
+                                    "status": "DIN \u2705 \u2014 appointment queued by Raman post-ICICI-active",
                                     "count": 1
                         },
                         {
-                                    "status": "Form EOD Mon \u00b7 deposits Tue",
+                                    "status": "Form \u2705 submitted \u2014 awaiting account-active confirmation",
                                     "count": 1
                         },
                         {
@@ -1166,15 +1166,11 @@ const analyticsData = {
                                     "count": 1
                         },
                         {
-                                    "status": "Blocked on TMW-220/224 verdict",
+                                    "status": "Active \u2014 screen 2.20 widget translation starts S105",
                                     "count": 1
                         },
                         {
-                                    "status": "Active \u2014 Stitch generation pending founder go-signal",
-                                    "count": 1
-                        },
-                        {
-                                    "status": "Founder drafting email today w/ INC-22 pack (decoupled from bank statement)",
+                                    "status": "Draft \u2705 ready \u2014 send when bank statement available",
                                     "count": 1
                         },
                         {
@@ -1182,7 +1178,7 @@ const analyticsData = {
                                     "count": 1
                         },
                         {
-                                    "status": "**Metadata shipped \u00b7 visual brand-pass blocked on TMW-224 verdict**",
+                                    "status": "**Metadata shipped \u00b7 visual brand-pass uses DESIGN.md v2.0 tokens**",
                                     "count": 1
                         },
                         {
@@ -1206,11 +1202,15 @@ const analyticsData = {
                                     "count": 1
                         },
                         {
-                                    "status": "Deferred indefinitely",
+                                    "status": "Not Started \u2014 accrue per-screen",
                                     "count": 1
                         },
                         {
-                                    "status": "Active \u2014 HM1 first-screen kickoff prep",
+                                    "status": "Active \u2014 screen 2.20 Flutter widget translation starts S105",
+                                    "count": 1
+                        },
+                        {
+                                    "status": "Not Started \u2014 needed before batch-probe phase scales",
                                     "count": 1
                         }
             ],
@@ -1229,8 +1229,8 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Claude",
-                                    "active": 20,
-                                    "high_priority": 5,
+                                    "active": 19,
+                                    "high_priority": 4,
                                     "overdue": 0
                         },
                         {
@@ -1253,47 +1253,38 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Rohan",
-                                    "active": 40,
-                                    "high_priority": 12,
+                                    "active": 38,
+                                    "high_priority": 10,
                                     "overdue": 0
                         }
             ],
             "departmentHealth": [
                         {
                                     "department": "Design",
-                                    "active": 3,
-                                    "wip": 0,
-                                    "not_started": 1,
-                                    "overdue": 0,
-                                    "stale": 1,
-                                    "avg_age_days": 22
-                        },
-                        {
-                                    "department": "Design / Eng",
                                     "active": 1,
                                     "wip": 0,
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 7
+                                    "avg_age_days": 55
                         },
                         {
-                                    "department": "Design / Operations",
-                                    "active": 1,
-                                    "wip": 0,
-                                    "not_started": 1,
-                                    "overdue": 0,
-                                    "stale": 0,
-                                    "avg_age_days": 0
-                        },
-                        {
-                                    "department": "Design / Ops",
-                                    "active": 1,
+                                    "department": "Design / Eng",
+                                    "active": 2,
                                     "wip": 0,
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
                                     "avg_age_days": 6
+                        },
+                        {
+                                    "department": "Design / Operations",
+                                    "active": 1,
+                                    "wip": 0,
+                                    "not_started": 0,
+                                    "overdue": 0,
+                                    "stale": 0,
+                                    "avg_age_days": 0
                         },
                         {
                                     "department": "Eng / Product",
@@ -1464,17 +1455,11 @@ const analyticsData = {
                                     "task": "Apply for startup funding \u2014 Startup India, grants, angel/seed \u2014 run in parallel post bank account",
                                     "department": "Finance / Strategy",
                                     "age_days": 18
-                        },
-                        {
-                                    "id": "TMW-218",
-                                    "task": "Library v15 backlog patches \u2014 8 candidates: gift glyph \u00b7 country flag sprite \u00b7 browser-chrome-bar \u00b7 stat-tile widget variant \u00b7 tab-bar-top skeleton-state \u00b7 loader/spinner \u00b7 surface/map/canvas alias \u00b7 LIBRARY_MANIFEST.json doc fixes.",
-                                    "department": "Design",
-                                    "age_days": 7
                         }
             ],
             "deadlineStats": {
                         "overdue": 0,
-                        "due_3days": 30,
+                        "due_3days": 28,
                         "deadline_hit_rate": "0%"
             },
             "burndownData": [
@@ -1484,31 +1469,31 @@ const analyticsData = {
                         },
                         {
                                     "date": "2026-05-10",
-                                    "remaining": 40
-                        },
-                        {
-                                    "date": "2026-05-09",
-                                    "remaining": 40
-                        },
-                        {
-                                    "date": "2026-05-08",
-                                    "remaining": 40
-                        },
-                        {
-                                    "date": "2026-05-07",
-                                    "remaining": 39
-                        },
-                        {
-                                    "date": "2026-05-06",
                                     "remaining": 38
                         },
                         {
-                                    "date": "2026-05-05",
+                                    "date": "2026-05-09",
+                                    "remaining": 38
+                        },
+                        {
+                                    "date": "2026-05-08",
+                                    "remaining": 38
+                        },
+                        {
+                                    "date": "2026-05-07",
                                     "remaining": 37
                         },
                         {
-                                    "date": "2026-05-04",
+                                    "date": "2026-05-06",
                                     "remaining": 36
+                        },
+                        {
+                                    "date": "2026-05-05",
+                                    "remaining": 36
+                        },
+                        {
+                                    "date": "2026-05-04",
+                                    "remaining": 35
                         },
                         {
                                     "date": "2026-05-03",
@@ -1537,9 +1522,9 @@ const analyticsData = {
             ],
             "velocity": {
                         "today": 1,
-                        "this_week": 1,
+                        "this_week": 3,
                         "overdue": 0,
-                        "stale": 8
+                        "stale": 7
             }
 };
 

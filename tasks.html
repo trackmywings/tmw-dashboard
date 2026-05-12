@@ -517,11 +517,11 @@ const activeTasks = [
             { id: 'TMW-152', task: 'Register for UDHYAM + GST + MSME certificates post bank account opening', owner: 'Rohan', department: 'Legal / Finance', priority: 'High', status: 'Not Started', deadline: 'Post TMW-151', created: '2026-04-23' },
             { id: 'TMW-153', task: 'File copyright application for TrackMyWings (app, content, brand) — coordinate with Anshul Bansal. Filing package DRAFTED S098 2026-05-08 at Legal/IP/Copyright_Filing_2026/: 6 files / ~9,465 words (S…', owner: 'Rohan', department: 'Legal', priority: 'High', status: 'Drafts ready; Anshul ji review pending', deadline: 'Post TMW-152', created: '2026-04-23' },
             { id: 'TMW-154', task: 'Apply for startup funding — Startup India, grants, angel/seed — run in parallel post bank account', owner: 'Rohan', department: 'Finance / Strategy', priority: 'Medium', status: 'Not Started', deadline: 'Post TMW-151', created: '2026-04-23' },
-            { id: 'TMW-218', task: 'Library v15 catalog promotion per DEC-146 — DESIGN.md v2.0 token additions (Aero Nocturne accents: Cockpit Cyan, Deep Night Canvas) + LIBRARY_MANIFEST.json component catalog expansion (v2.0 organisms…', owner: 'Rohan + Claude', department: 'Design / Eng', priority: 'Medium', status: 'Not Started — accrue per-screen', deadline: '2026-06-15', created: '2026-05-04' },
             { id: '**TMW-220**', task: 'High-fi sprint REFRAMED 2026-05-12 per DEC-146 — OD-HTML-direct pipeline (OD direction probe → composition lock + 6-section spec → concurrent Flutter widget tree + Go backend). Stitch + Figma assembl…', owner: 'Rohan + Claude', department: 'Design / Eng', priority: '**CRITICAL**', status: 'Active — screen 2.20 Flutter widget translation starts S105', deadline: 'TBD per first-screen empirical signal', created: '2026-05-05' },
             { id: 'TMW-231', task: 'Open Design — walk-through to configure each agent CLI for direction probes. Promoted Medium → HIGH per DEC-146 (OD is now the central pipeline tool; agent routing matters for quota preservation). Pe…', owner: 'Rohan + Claude', department: 'Design / Operations', priority: '**HIGH**', status: 'Not Started — needed before batch-probe phase scales', deadline: 'Indicative — pre-batch-probe phase', created: '2026-05-11' }
         ];
 const completedTasks = [
+            { id: 'TMW-218', task: 'CANCELLED 2026-05-12 per DEC-146 — Library v15 catalog promotion obsolete under OD-HTML→Flutter pipeline. Reasoning: (a) Figma component sets dormant (no longer built); (b) color_tokens.json sync no…', owner: 'Rohan + Claude', department: 'Design / Eng', completed: '2026-05-12' },
             { id: 'TMW-224', task: 'CLOSED 2026-05-12 per DEC-146 — methodology + DESIGN.md v2.0 + 6-section per-screen template work fully delivered. Original DEC-142 5-step pipeline (OD probe → Stitch → Figma → review → FE+BE) supers…', owner: 'Rohan + Claude', department: 'Design', completed: '2026-05-12' },
             { id: 'TMW-217', task: 'CANCELLED 2026-05-12 per DEC-146 — Figma prototype wiring plugin obsolete under OD-HTML-direct → Flutter+Go pipeline. Figma intermediate step dropped; no need to wire 838 hotspots / 617 reactions in…', owner: 'Rohan', department: 'Design / Eng', completed: '2026-05-12' },
             { id: 'TMW-008', task: 'CANCELLED 2026-05-10 — Sales/Pipeline CRM structure killed permanently per S101 Q41. No need pre-launch (DEC-067 stealth deprioritization superseded by permanent kill). Revisit post-launch only if CR…', owner: 'Rohan', department: 'Sales', completed: '2026-05-10' },
@@ -840,6 +840,13 @@ const activityFeed = [
                         "task_name": "CANCELLED 2026-05-12 per **DEC-146** ..."
             },
             {
+                        "date": "2026-05-12",
+                        "task_id": "TMW-218",
+                        "event": "completed",
+                        "department": "Design / Eng",
+                        "task_name": "CANCELLED 2026-05-12 per **DEC-146** ..."
+            },
+            {
                         "date": "2026-05-10",
                         "task_id": "TMW-049",
                         "event": "completed",
@@ -957,13 +964,6 @@ const activityFeed = [
                         "event": "completed",
                         "department": "Operations",
                         "task_name": "Statutory Calendar \u2014 verified existin..."
-            },
-            {
-                        "date": "2026-05-07",
-                        "task_id": "TMW-140",
-                        "event": "completed",
-                        "department": "Design",
-                        "task_name": "PWA icons generated from canonical lo..."
             }
 ];
 const calendarEvents = [];
@@ -1003,11 +1003,6 @@ const milestones = [
 const analyticsData = {
             "dailyVelocity": [
                         {
-                                    "date": "2026-04-27",
-                                    "completed": 2,
-                                    "added": 0
-                        },
-                        {
                                     "date": "2026-04-28",
                                     "completed": 4,
                                     "added": 0
@@ -1040,7 +1035,7 @@ const analyticsData = {
                         {
                                     "date": "2026-05-04",
                                     "completed": 6,
-                                    "added": 2
+                                    "added": 1
                         },
                         {
                                     "date": "2026-05-05",
@@ -1069,13 +1064,13 @@ const analyticsData = {
                         },
                         {
                                     "date": "2026-05-11",
-                                    "completed": 1,
-                                    "added": 289
+                                    "completed": 0,
+                                    "added": 1
                         },
                         {
                                     "date": "2026-05-12",
-                                    "completed": 2,
-                                    "added": 0
+                                    "completed": 4,
+                                    "added": 289
                         }
             ],
             "weeklyVelocity": [
@@ -1092,12 +1087,12 @@ const analyticsData = {
                         {
                                     "week": "2026-05-04",
                                     "completed": 39,
-                                    "added": 5
+                                    "added": 4
                         },
                         {
                                     "week": "2026-05-11",
-                                    "completed": 3,
-                                    "added": 289
+                                    "completed": 4,
+                                    "added": 290
                         }
             ],
             "statusDistribution": [
@@ -1202,10 +1197,6 @@ const analyticsData = {
                                     "count": 1
                         },
                         {
-                                    "status": "Not Started \u2014 accrue per-screen",
-                                    "count": 1
-                        },
-                        {
                                     "status": "Active \u2014 screen 2.20 Flutter widget translation starts S105",
                                     "count": 1
                         },
@@ -1229,7 +1220,7 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Claude",
-                                    "active": 19,
+                                    "active": 18,
                                     "high_priority": 4,
                                     "overdue": 0
                         },
@@ -1253,7 +1244,7 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Rohan",
-                                    "active": 38,
+                                    "active": 37,
                                     "high_priority": 10,
                                     "overdue": 0
                         }
@@ -1266,16 +1257,16 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 55
+                                    "avg_age_days": 56
                         },
                         {
                                     "department": "Design / Eng",
-                                    "active": 2,
+                                    "active": 1,
                                     "wip": 0,
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 6
+                                    "avg_age_days": 7
                         },
                         {
                                     "department": "Design / Operations",
@@ -1284,7 +1275,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 0
+                                    "avg_age_days": 1
                         },
                         {
                                     "department": "Eng / Product",
@@ -1293,7 +1284,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 21
+                                    "avg_age_days": 22
                         },
                         {
                                     "department": "Engineering",
@@ -1302,7 +1293,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 32
+                                    "avg_age_days": 33
                         },
                         {
                                     "department": "Finance",
@@ -1311,7 +1302,7 @@ const analyticsData = {
                                     "not_started": 3,
                                     "overdue": 0,
                                     "stale": 3,
-                                    "avg_age_days": 55
+                                    "avg_age_days": 56
                         },
                         {
                                     "department": "Finance / Legal",
@@ -1320,7 +1311,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 9
+                                    "avg_age_days": 10
                         },
                         {
                                     "department": "Finance / Strategy",
@@ -1329,7 +1320,7 @@ const analyticsData = {
                                     "not_started": 1,
                                     "overdue": 0,
                                     "stale": 1,
-                                    "avg_age_days": 18
+                                    "avg_age_days": 19
                         },
                         {
                                     "department": "Legal",
@@ -1338,7 +1329,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 17
+                                    "avg_age_days": 18
                         },
                         {
                                     "department": "Legal / Finance",
@@ -1347,7 +1338,7 @@ const analyticsData = {
                                     "not_started": 1,
                                     "overdue": 0,
                                     "stale": 1,
-                                    "avg_age_days": 18
+                                    "avg_age_days": 19
                         },
                         {
                                     "department": "Legal / Ops",
@@ -1356,7 +1347,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 9
+                                    "avg_age_days": 10
                         },
                         {
                                     "department": "Marketing",
@@ -1365,7 +1356,7 @@ const analyticsData = {
                                     "not_started": 1,
                                     "overdue": 0,
                                     "stale": 1,
-                                    "avg_age_days": 42
+                                    "avg_age_days": 43
                         },
                         {
                                     "department": "Marketing / Eng",
@@ -1374,7 +1365,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 33
+                                    "avg_age_days": 34
                         },
                         {
                                     "department": "Operations",
@@ -1383,7 +1374,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 8
+                                    "avg_age_days": 9
                         },
                         {
                                     "department": "Operations / Legal",
@@ -1392,7 +1383,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 9
+                                    "avg_age_days": 10
                         },
                         {
                                     "department": "Product",
@@ -1401,7 +1392,7 @@ const analyticsData = {
                                     "not_started": 1,
                                     "overdue": 0,
                                     "stale": 1,
-                                    "avg_age_days": 54
+                                    "avg_age_days": 55
                         },
                         {
                                     "department": "Strategy",
@@ -1410,7 +1401,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 9
+                                    "avg_age_days": 10
                         }
             ],
             "staleTasks": [
@@ -1418,82 +1409,86 @@ const analyticsData = {
                                     "id": "TMW-053",
                                     "task": "Razorpay setup \u2014 signup + KYC + Subscriptions + plans + Flutter SDK",
                                     "department": "Finance",
-                                    "age_days": 54
+                                    "age_days": 55
                         },
                         {
                                     "id": "TMW-054",
                                     "task": "Complete Stripe account activation + Stripe Billing for international web payments",
                                     "department": "Finance",
-                                    "age_days": 54
+                                    "age_days": 55
                         },
                         {
                                     "id": "TMW-055",
                                     "task": "App Store billing \u2014 Google Play + Apple IAP + Razorpay alt billing",
                                     "department": "Finance",
-                                    "age_days": 54
+                                    "age_days": 55
                         },
                         {
                                     "id": "TMW-056",
                                     "task": "Define exact ad placements on Stitch UI screens",
                                     "department": "Product",
-                                    "age_days": 54
+                                    "age_days": 55
                         },
                         {
                                     "id": "TMW-117",
                                     "task": "A/B test framework for social content",
                                     "department": "Marketing",
-                                    "age_days": 42
+                                    "age_days": 43
                         },
                         {
                                     "id": "TMW-152",
                                     "task": "Register for UDHYAM + GST + MSME certificates post bank account opening",
                                     "department": "Legal / Finance",
-                                    "age_days": 18
+                                    "age_days": 19
                         },
                         {
                                     "id": "TMW-154",
                                     "task": "Apply for startup funding \u2014 Startup India, grants, angel/seed \u2014 run in parallel post bank account",
                                     "department": "Finance / Strategy",
-                                    "age_days": 18
+                                    "age_days": 19
                         }
             ],
             "deadlineStats": {
                         "overdue": 0,
-                        "due_3days": 28,
+                        "due_3days": 29,
                         "deadline_hit_rate": "0%"
             },
             "burndownData": [
                         {
+                                    "date": "2026-05-12",
+                                    "remaining": 38
+                        },
+                        {
                                     "date": "2026-05-11",
-                                    "remaining": 41
+                                    "remaining": 38
                         },
                         {
                                     "date": "2026-05-10",
-                                    "remaining": 38
-                        },
-                        {
-                                    "date": "2026-05-09",
-                                    "remaining": 38
-                        },
-                        {
-                                    "date": "2026-05-08",
-                                    "remaining": 38
-                        },
-                        {
-                                    "date": "2026-05-07",
                                     "remaining": 37
                         },
                         {
-                                    "date": "2026-05-06",
+                                    "date": "2026-05-09",
+                                    "remaining": 37
+                        },
+                        {
+                                    "date": "2026-05-08",
+                                    "remaining": 37
+                        },
+                        {
+                                    "date": "2026-05-07",
                                     "remaining": 36
+                        },
+                        {
+                                    "date": "2026-05-06",
+                                    "remaining": 35
                         },
                         {
                                     "date": "2026-05-05",
-                                    "remaining": 36
+                                    "remaining": 35
                         },
                         {
                                     "date": "2026-05-04",
-                                    "remaining": 35
+                                    "remaining": 34
                         },
                         {
                                     "date": "2026-05-03",
@@ -1514,15 +1509,11 @@ const analyticsData = {
                         {
                                     "date": "2026-04-29",
                                     "remaining": 22
-                        },
-                        {
-                                    "date": "2026-04-28",
-                                    "remaining": 22
                         }
             ],
             "velocity": {
-                        "today": 1,
-                        "this_week": 3,
+                        "today": 4,
+                        "this_week": 4,
                         "overdue": 0,
                         "stale": 7
             }

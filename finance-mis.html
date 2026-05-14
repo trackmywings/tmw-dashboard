@@ -56,7 +56,7 @@
   </form>
 </div>
 
-<div class="fm-truth">Truth at 2026-05-14 12:33 IST · Cash ₹1,00,000 · YTD spend ₹94,885 · Receivable ₹94,885 · Burn rate ₹56,903/mo · Runway: pre-launch (no revenue yet)</div>
+<div class="fm-truth">Truth at 2026-05-14 13:02 IST · Cash ₹1,00,000 · YTD spend ₹94,885 · Receivable ₹94,885 · Burn rate ₹56,903/mo · Runway: pre-launch (no revenue yet)</div>
 
 <div class="ds-wrap">
   <header class="ds-top">
@@ -87,7 +87,7 @@
       <div class="ds-metric ds-metric-lead ">
         <div class="ds-metric-lbl">Cash on hand</div>
         <div class="ds-metric-val num">₹1,00,000</div>
-        <div class="ds-metric-sub">Company bank balance. Pre-bank — becomes ₹1,00,000 after TMW-151 deposit (T--12d).</div>
+        <div class="ds-metric-sub">Company bank balance. Pre-bank — becomes ₹0 after TMW-151 deposit (T--12d).</div>
       </div>
       <div class="ds-metric">
         <div class="ds-metric-lbl">YTD spend</div>
@@ -101,7 +101,7 @@
       </div>
       <div class="ds-metric">
         <div class="ds-metric-lbl">Pending capital</div>
-        <div class="ds-metric-val num">₹1,00,000</div>
+        <div class="ds-metric-val num">₹0</div>
         <div class="ds-metric-sub">Bank visit unblocks ₹62K + ₹38K paid-up.</div>
       </div>
     </div>
@@ -121,7 +121,7 @@
       </div>
       <div class="ds-metric">
         <div class="ds-metric-lbl">Paid-up capital</div>
-        <div class="ds-metric-val num">₹0 / ₹1,00,000</div>
+        <div class="ds-metric-val num">₹0 / ₹0</div>
         <div class="ds-metric-sub">Today vs promised. Bank visit T--12d unlocks deposit.</div>
       </div>
       <div class="ds-metric">
@@ -131,7 +131,7 @@
       </div>
       <div class="ds-metric">
         <div class="ds-metric-lbl">Authorized capital</div>
-        <div class="ds-metric-val num">₹1,00,000</div>
+        <div class="ds-metric-val num">₹0</div>
         <div class="ds-metric-sub">MoA filing. Can amend post-funding.</div>
       </div>
     </div>
@@ -521,9 +521,9 @@
       <div class="fm-runway-row">
         <div>
           <div class="ds-metric-lbl">Months of runway</div>
-          <div class="fm-runway-num">3.5 months</div>
+          <div class="fm-runway-num">1.8 months</div>
         </div>
-        <div class="fm-runway-sub">Given current cash ₹1,00,000 + pending capital ₹1,00,000, at observed burn ₹56,903/mo. Bank visit T--12d unlocks ₹1L paid-up.</div>
+        <div class="fm-runway-sub">Given current cash ₹1,00,000 + pending capital ₹0, at observed burn ₹56,903/mo. Bank visit T--12d unlocks ₹1L paid-up.</div>
       </div>
     </div>
   </section>
@@ -596,7 +596,7 @@
       </div>
       <div class="ds-metric">
         <div class="ds-metric-lbl">Generator last run</div>
-        <div class="ds-metric-val num">2026-05-14 12:33</div>
+        <div class="ds-metric-val num">2026-05-14 13:02</div>
         <div class="ds-metric-sub">launchd · hourly :20.</div>
       </div>
       <div class="ds-metric ">
@@ -617,7 +617,7 @@
   </div>
 
   <div class="ds-meta">
-    <span>Generated <span id="generatedAt">2026-05-14T12:33:18</span></span>
+    <span>Generated <span id="generatedAt">2026-05-14T13:02:57</span></span>
     <span>Finance MIS v1 · launchd twice daily</span>
   </div>
 </div>
@@ -649,7 +649,7 @@ document.getElementById('loginForm').addEventListener('submit', async e => {
 });
 
 // --- Stale banner: warn if generator >150 min old ---
-const GENERATED_EPOCH = 1778742198;
+const GENERATED_EPOCH = 1778743977;
 (function(){
   const ageMin = (Date.now()/1000 - GENERATED_EPOCH) / 60;
   if (ageMin > 150) {

@@ -493,7 +493,7 @@ const activeTasks = [
             { id: 'TMW-200', task: 'Mihir sir briefing — team change + launch timeline re-baseline. AFTER Amol DIR-12 effective. DRAFT SHIPPED S098 2026-05-08 at Operations/Briefings/2026-06-01_Mihir_Briefing.{md,docx} (380 words, stat…', owner: 'Rohan + Claude', department: 'Strategy', priority: 'Medium', status: 'Draft ready; send post-2026-05-31', deadline: '2026-06-01', created: '2026-05-02' },
             { id: 'TMW-206', task: 'Decision: git init ~/tmw? Recommendation: yes, with .gitignore excluding Engineering codebase + secrets. .gitignore pre-staged at ~/tmw/.gitignore S098 2026-05-08 (Engineering codebase + secrets + iC…', owner: 'Rohan', department: 'Operations', priority: 'Medium', status: 'Deferred — post-Amol exit; .gitignore staged', deadline: '2026-05-31', created: '2026-05-03' },
             { id: 'TMW-207', task: 'Install zellij (or tmux) + create tmw saved layout for 5-pane setup (T1 strategic / T2 code worktree / T3 design worktree / T4 local Ollama / T5 monitoring). Per v2.1 Dim 7. Blocked on TMW-206.', owner: 'Rohan', department: 'Operations', priority: 'Medium', status: 'Blocked on TMW-206', deadline: '2026-06-15', created: '2026-05-03' },
-            { id: 'TMW-216', task: 'V1 Flutter mobile build (fresh). Now consumes OD HTML composition + 6-section per-screen spec directly per DEC-146 (no Figma intermediate). First screen 2.20 home dashboard with active flight (H2 Bre…', owner: 'Rohan + Claude', department: 'Eng / Product', priority: '**CRITICAL**', status: 'Active — screen 2.20 widget translation starts S105', deadline: '2026-08-15 (launch)', created: '2026-05-04' },
+            { id: 'TMW-216', task: 'V1 Flutter mobile build — Phase 2 single-pass post-OD-lock per DEC-148. Pilot S105-S109 (3 screens: 2.20 home dashboard + 7.8 boarding pass + 9.5 paywall) ARCHIVED to Engineering/Codebase/_Archive/V1…', owner: 'Rohan + Claude', department: 'Eng / Product', priority: '**CRITICAL**', status: 'Blocked on TMW-220 (OD-lock all 142)', deadline: '2026-08-15 (launch)', created: '2026-05-04' },
             { id: '**TMW-225**', task: 'INC-22 registered office verification under § 12(2) Companies Act. Artifacts complete: signed rent agreement ✅ + signed NOC ✅ + nameplate ✅ + 3 photos ✅ + bank statement ✅ 2026-05-14. 📧 Email SENT to…', owner: 'Rohan + Raman + Pawan', department: 'Legal', priority: '**CRITICAL**', status: 'Email SENT 2026-05-14 — awaiting Pawan/Raman filing confirmation', deadline: '**2026-05-23**', created: '2026-05-07' },
             { id: 'TMW-227', task: 'BR-22 post-restructure ratification — narrowed scope per DEC-126. DRAFT SHIPPED S098 2026-05-08 appended to Legal/Restructure/03_Board_Resolutions/Board_Resolutions_Pack.md as MEETING #3 (BR-22 with…', owner: 'Rohan + Anshul B + Raman', department: 'Legal', priority: 'Medium', status: 'Refined version in 2026-05-16 lawyer pack-back; pass at Meeting #3 post-2026-05…', deadline: '2026-06-15', created: '2026-05-08' },
             { id: '**TMW-226**', task: 'MASTER PLAN — End-to-end V0 launch execution umbrella. Phase 1 v1 ULTRAPLAN ✅ SHIPPED S098 at Operations/AI System/Plans/TMW-226_V0_Launch_Execution_Plan_v1.md (~1,520 lines · 4/7 advisor + 5/10 doma…', owner: 'Rohan + Claude', department: 'Engineering / Product / Operations', priority: '**CRITICAL**', status: 'Phase 2 lockable — TMW-224 closed; awaiting founder Q&A session', deadline: '2026-08-15 (launch)', created: '2026-05-07' },
@@ -518,7 +518,7 @@ const activeTasks = [
             { id: 'TMW-152', task: 'Register UDHYAM + GST + MSME certificates. UDHYAM first (free, fast). MSME rebate unlocks IP filing cost reduction (TMW-123/153).', owner: 'Rohan', department: 'Legal / Finance', priority: 'High', status: '⚡ Ready to start (bank active 2026-05-14 — was the gate)', deadline: 'Pre-launch', created: '2026-04-23' },
             { id: 'TMW-153', task: 'File copyright application for TrackMyWings (app, content, brand) — coordinate with Anshul Bansal. Filing package DRAFTED S098 2026-05-08 at Legal/IP/Copyright_Filing_2026/: 6 files / ~9,465 words (S…', owner: 'Rohan', department: 'Legal', priority: 'High', status: 'Drafts ready; Anshul ji review pending', deadline: 'Post TMW-152', created: '2026-04-23' },
             { id: 'TMW-154', task: 'Apply for startup funding — Startup India registration first, then grants + angel/seed. Parallel track to product build.', owner: 'Rohan', department: 'Finance / Strategy', priority: 'Medium', status: '⚡ Ready to start (bank active 2026-05-14 — was the gate)', deadline: 'Pre-launch', created: '2026-04-23' },
-            { id: '**TMW-220**', task: 'High-fi sprint REFRAMED 2026-05-12 per DEC-146 — OD-HTML-direct pipeline (OD direction probe → composition lock + 6-section spec → concurrent Flutter widget tree + Go backend). Stitch + Figma assembl…', owner: 'Rohan + Claude', department: 'Design / Eng', priority: '**CRITICAL**', status: 'Active — screen 2.20 Flutter widget translation starts S105', deadline: 'TBD per first-screen empirical signal', created: '2026-05-05' }
+            { id: '**TMW-220**', task: 'High-fi sprint REFRAMED 2026-05-15 per DEC-148 — OD-lock all 142 screens FIRST (sequential), then code-phase post-OD-lock (TMW-216 Phase 2). Per-screen artifact: 01_DIRECTION_PROBE_BRIEF.md + 02_LOCK…', owner: 'Rohan + Claude', department: 'Design', priority: '**CRITICAL**', status: 'Active — 3/142 done · founder picks next screen', deadline: '2026-08-15 (launch via TMW-216)', created: '2026-05-05' }
         ];
 const completedTasks = [
             { id: '**TMW-231**', task: 'OD agent CLI walk-through + canonical setup. Shipped S108 2026-05-14: (1) OD project renamed c0b58e6c-... "TMW 2.20 Home Dashboard" → "TrackMyWings" (single-project model per founder S108 — all 142 s…', owner: 'Rohan + Claude', department: 'Design / Operations', completed: '2026-05-14' },
@@ -1150,7 +1150,7 @@ const analyticsData = {
                                     "count": 1
                         },
                         {
-                                    "status": "Active \u2014 screen 2.20 widget translation starts S105",
+                                    "status": "Blocked on TMW-220 (OD-lock all 142)",
                                     "count": 1
                         },
                         {
@@ -1210,7 +1210,7 @@ const analyticsData = {
                                     "count": 1
                         },
                         {
-                                    "status": "Active \u2014 screen 2.20 Flutter widget translation starts S105",
+                                    "status": "Active \u2014 3/142 done \u00b7 founder picks next screen",
                                     "count": 1
                         }
             ],
@@ -1261,21 +1261,21 @@ const analyticsData = {
             "departmentHealth": [
                         {
                                     "department": "Design",
-                                    "active": 1,
-                                    "wip": 0,
-                                    "not_started": 0,
-                                    "overdue": 0,
-                                    "stale": 0,
-                                    "avg_age_days": 59
-                        },
-                        {
-                                    "department": "Design / Eng",
                                     "active": 2,
                                     "wip": 0,
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 5
+                                    "avg_age_days": 34
+                        },
+                        {
+                                    "department": "Design / Eng",
+                                    "active": 1,
+                                    "wip": 0,
+                                    "not_started": 0,
+                                    "overdue": 0,
+                                    "stale": 0,
+                                    "avg_age_days": 1
                         },
                         {
                                     "department": "Eng / Product",

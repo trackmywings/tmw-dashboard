@@ -571,32 +571,6 @@ const completedTasks = [
             { id: 'TMW-186', task: '6.10 airline badges as gold rectangles — root cause: original builder skipped library, hand-built all chips/badges as raw frames with default fills. Fix: 14 component instances installed (4 airline-l…', owner: 'Claude', department: 'Design', completed: '2026-05-01' },
             { id: 'TMW-185', task: '2.3 search filters overlay structurally empty — root cause: section frames + card bodies + chip scroll + CTA button all sized 1-3pt wide; content existed in tree but clipped invisible. Fix: 41 width…', owner: 'Claude', department: 'Design', completed: '2026-05-01' },
             { id: 'TMW-184', task: '9.5 paywall pricing tier component layout collapse — root cause: 3 tier cards had layoutSizingHorizontal: HUG in vertical auto-layout parent, shrunk to 140pt each, child content overflowed/cropped ca…', owner: 'Claude', department: 'Design', completed: '2026-05-01' },
-            { id: 'TMW-167', task: 'Wave 4 fully closed in S084 single session. All 16 screens BUILT (8 fresh tonight: 4.4/4.5/4.7/4.8 Wave A re-dispatch + 7.1/7.3/7.4/7.5 Wave B fresh) + 16 reviewed under DEC-107 Pass 0 reviewer-side…', owner: 'Claude + Rohan', department: 'Design', completed: '2026-04-30' },
-            { id: 'TMW-166', task: 'Tier 1 Figma optimizations SHIPPED. All 3 approved + executed S084: (1) Design/App Screens/foundation/LIBRARY_MANIFEST.json authored — 48 components, variant matrices for high-use, text-style slots,…', owner: 'Rohan + Claude', department: 'Operations / Design', completed: '2026-04-30' },
-            { id: 'TMW-169', task: 'Ops health tiles SHIPPED — 4 new FCP tiles live: Skills active (70 = 55 plugin + 15 user), Figma MCP today (0/200, daily reset), /start cold-start (~10.8K tokens raw + 7d history bootstrapped), Legal…', owner: 'Claude', department: 'Operations', completed: '2026-04-30' },
-            { id: 'TMW-012', task: 'CANCELLED 2026-04-30 (S084) — Claude Project re-upload rhythm obsolete; ClaudeCode reads files directly from disk via /start. No weekly upload needed.', owner: 'Rohan', department: 'Operations', completed: '2026-04-30' },
-            { id: '**TMW-165**', task: 'AI System grooming pass v14 EXECUTED — all 12 sweeps shipped. 47% cold-start drop (target ≥30%). CONTEXT split (369→157+207). SESSION_LOG archive (2918→1277). PROMPT dedup (246→177). 7 dead skills un…', owner: 'Rohan + Claude', department: 'Operations', completed: '2026-04-30' },
-            { id: 'TMW-162', task: 'Wave 2 — HM apex 15 screens shipped. All 15 PASS, reviewer avg 8.49 (vs Wave 1 redo 8.52). Zero rebuilds. Mid-Fi 2.0 framework validated at production scale. Highest scores: 7.7 (8.86), 5.6 (8.83), 7…', owner: 'Claude (with Rohan)', department: 'Design', completed: '2026-04-28' },
-            { id: 'TMW-163', task: 'Patch v5 fully complete — Block A: 9 lucide icons re-fetched from unpkg (40-icon set 100% integrity restored). Block B: wing_mark_micro.svg + cabin_aperture_faithful.svg copied to /assets/. Block C (…', owner: 'Claude (with Rohan)', department: 'Design', completed: '2026-04-28' },
-            { id: 'TMW-158', task: 'CA chase fully closed — all remaining items received via email: TAN PIN, MCA portal credentials (company + Rohan), Director Stamp template, Letterhead template, SHA template, Share Certificates templ…', owner: 'Rohan', department: 'Legal', completed: '2026-04-28' },
-            { id: 'TMW-160', task: 'Fire Patch v4 (Blocks A–I) per PHASE_B_LOCKED §13.2. Asset library generated (40 lucide + 8 illustrations + 30 gradients + 3 avatars + 12 airline logos + 271 flags). 4 NEW Figma components (toggle-sw…', owner: 'Claude (with Rohan)', department: 'Design', completed: '2026-04-27' },
-            { id: 'TMW-157', task: 'Reimburse CA ₹11,433 for MCA govt filing fees (3 MCA receipts: name application ₹1,030, form submission ₹146, stamp duty ₹10,256). UPI/bank transfer done. CA service fee ₹15K is separate.', owner: 'Rohan', department: 'Finance / Legal', completed: '2026-04-28' },
-            { id: 'TMW-159', task: 'Collect Amol\'s PAN + Aadhaar scans for ICICI bank account — both received.', owner: 'Rohan + Amol', department: 'Finance / Legal', completed: '2026-04-26' },
-            { id: 'TMW-155', task: 'Review and verify airport + airlines data shared by Amol — Rohan agreed on call. Amol to share final list.', owner: 'Rohan', department: 'Engineering / Product', completed: '2026-04-27' },
-            { id: 'TMW-147', task: 'Drop nb2.png into sprint folder + confirm Logo Draft.jpeg as canonical final logo. Both done S072 (2026-04-25). LOGO_FOUNDATION.md updated.', owner: 'Rohan', department: 'Design', completed: '2026-04-25' },
-            { id: 'TMW-148', task: 'Grant /usr/bin/python3 Full Disk Access — python3 + python3.9 both confirmed ON via screenshot (S072). Fixes folder-map-generator intermittent TCC failures.', owner: 'Rohan', department: 'Operations', completed: '2026-04-25' },
-            { id: 'TMW-149', task: 'Stamp paper + NOC + rent agreement couriered to Kolkata — done, incorporation complete.', owner: 'Rohan', department: 'Legal', completed: '2026-04-23' },
-            { id: 'TMW-150', task: 'Address registration + incorporation forms — done, Certificate + PAN received.', owner: 'Rohan', department: 'Legal', completed: '2026-04-23' },
-            { id: '**INC**', task: '🎉 TrackMyWings Technologies Pvt. Ltd. INCORPORATED — Certificate of Incorporation + PAN + TAN received. Docs at Legal/Incorporation/.', owner: 'Rohan + Raman Bhatia', department: 'Legal', completed: '2026-04-23' },
-            { id: 'TMW-037', task: 'Brand Book — CANCELLED (S069). Sprint worked around via Brand Soul Agent inference. Brand Book no longer tracked separately.', owner: 'Rohan', department: 'Design', completed: '2026-04-23' },
-            { id: 'TMW-146', task: 'Post-sprint housekeeping — CANCELLED (S069). Items folded into individual tasks or no longer relevant. stitch-resume.plist already removed in S068.', owner: 'Rohan', department: 'Operations', completed: '2026-04-23' },
-            { id: 'TMW-B01', task: 'Brand guidelines document from Ruchi — CANCELLED (S069). Brand guidelines now derived from sprint artifacts (BRAND_SOUL.md + color_tokens.json).', owner: 'Rohan', department: 'Design', completed: '2026-04-23' },
-            { id: 'TMW-142', task: 'Rohan formally approved sprint plan v12.0.1. Unblocked TMW-143 Bootstrap. DEC-089 path locked.', owner: 'Rohan', department: 'Design / Product', completed: '2026-04-11' },
-            { id: 'TMW-144', task: 'Environment setup for DEC-089 multi-model sprint — all 8 items closed. Sprint ready to Bootstrap.', owner: 'Rohan + Claude', department: 'Operations / Design', completed: '2026-04-11' },
-            { id: 'TMW-036', task: 'Font / Typeface finalized — Raleway (headlines) + Merriweather (body) per DEC-091 (S068). Rohan direct confirmation closed the S064 inference workaround.', owner: 'Rohan', department: 'Design', completed: '2026-04-20' },
-            { id: 'TMW-136', task: 'Escalate to Ruchi — Font + Brand Book. CANCELLED 2026-04-29 (S079) — Rohan handled directly.', owner: 'Rohan', department: 'Design', completed: '2026-04-29' },
-            { id: 'TMW-113', task: 'UI design sprint via Stitch — CLOSED 2026-04-29 (S079). Rolled into TMW-143 (App Screens sprint, currently mid-fi Phase 3). Stitch batch 142/142 done (TMW-132). DEC-074 pipeline now executing under T…', owner: 'Rohan + Claude', department: 'Design', completed: '2026-04-29' },
-            { id: 'TMW-156', task: 'Content calendar + Launch Playbook dates shifted for DEC-092 launch push. Content Plan xlsx (2,732 date cells, Weekly Themes 15 ranges, Cadence Rules 5 ranges) + Calendar Master.md (32 atomic substit…', owner: 'Rohan + Claude', department: 'Marketing', completed: '2026-04-29' },
             { id: 'TMW-001', task: 'Update Privacy Policy to TrackMyWings branding (DRAFT for legal review)', owner: 'Rohan + Claude', department: 'Legal', completed: '2026-03-19' },
             { id: 'TMW-002', task: 'Update Terms of Service to TrackMyWings branding (DRAFT for legal review)', owner: 'Rohan + Claude', department: 'Legal', completed: '2026-03-19' },
             { id: 'TMW-004', task: 'Finalize Shareholders Agreement (DRAFT aligned with MoU v6)', owner: 'Rohan + Claude', department: 'Legal', completed: '2026-03-19' },
@@ -1063,18 +1037,18 @@ const analyticsData = {
                         {
                                     "date": "2026-05-15",
                                     "completed": 1,
-                                    "added": 291
+                                    "added": 265
                         }
             ],
             "weeklyVelocity": [
                         {
                                     "week": "2026-04-20",
-                                    "completed": 10,
+                                    "completed": 0,
                                     "added": 3
                         },
                         {
                                     "week": "2026-04-27",
-                                    "completed": 20,
+                                    "completed": 6,
                                     "added": 11
                         },
                         {
@@ -1085,7 +1059,7 @@ const analyticsData = {
                         {
                                     "week": "2026-05-11",
                                     "completed": 6,
-                                    "added": 292
+                                    "added": 266
                         }
             ],
             "statusDistribution": [

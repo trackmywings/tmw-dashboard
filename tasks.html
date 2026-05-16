@@ -484,10 +484,10 @@ const heroMilestones = [
 const activeTasks = [
             { id: '**TMW-189**', task: 'RESTRUCTURE MASTER (umbrella) — Amol exit + Anshul B appointment + ICICI + INC-20A + INC-22 + ADT-1 + share transfer + IP assignment + director loan + handover. Sub-tasks TMW-190 → TMW-200 + TMW-225.…', owner: 'Rohan + Anshul B + Raman', department: 'Legal / Ops', priority: '**CRITICAL**', status: 'Active — lawyer pack-back due 2026-05-16', deadline: '2026-06-15 (target close)', created: '2026-05-02' },
             { id: 'TMW-191', task: 'ICICI Current Account opening + paid-up cap + DL principal. Sole signatory: Rohan. 🎉 ACCOUNT ACTIVE 2026-05-14 + ₹1L paid-up capital deposited (Rohan ₹62k + Amol ₹38k per DEC-126). Statement filed at…', owner: 'Rohan + Naik + Raman + Amol', department: 'Operations / Legal', priority: 'Critical', status: 'ACCOUNT ACTIVE 2026-05-14 — paid-up done; DL drawdown TBD', deadline: 'INC-20A close target ~2026-06-13', created: '2026-05-02' },
-            { id: 'TMW-192', task: 'ADT-1 Auditor appointment — Raman\'s firm as statutory auditor FY 2026-27 (BR-07). Raman handles filing end-to-end. Gated on TMW-225 per Pawan 2026-05-06. S112 2026-05-16 (CA call): Engagement letter…', owner: 'Raman', department: 'Legal', priority: 'High', status: 'Raman owns; gated on TMW-225 · fees ₹20k due 27 June', deadline: '**2026-05-23** filing · ₹20k due 2026-06-27', created: '2026-04-30' },
+            { id: '~~TMW-192~~', task: '~~ADT-1 Auditor appointment — Raman\'s firm as statutory auditor FY 2026-27 (BR-07).~~ Raman handles filing end-to-end. Gated on TMW-225 per Pawan 2026-05-06. S112 2026-05-16 (CA call): Engagement let…', owner: 'Raman', department: 'Legal', priority: '—', status: '✅ Completed 2026-05-16 (₹20k fee due 2026-06-27 separate track)', deadline: '**2026-05-23** filing · ₹20k due 2026-06-27', created: '2026-04-30' },
             { id: 'TMW-193', task: 'Amol exit bundle — Resignation + MoU Termination + IP Assignment + 3yr NCNS + SH-4 Share Transfer + Final Settlement + Handover. DIR-12 sequenced AFTER Anshul B DIR-12 effective. Notes (S098 2026-05-…', owner: 'Rohan + Amol + Anshul B + Raman', department: 'Legal', priority: 'Critical', status: 'Sequenced — Amol pack arriving 2026-05-16 from lawyer · 7 June transaction date', deadline: '**2026-06-07** transaction · 2026-05-31 paperwork', created: '2026-05-02' },
             { id: 'TMW-194', task: 'Director Loan Agreement (0% interest, on-demand) + Expense Schedule (B.1 pre-inc + B.2 post-inc; running ≥ ₹17,996.46 incl. S098 ₹941.46 INC-22 nameplate). Signed 2026-05-07; account active 2026-05-1…', owner: 'Rohan + Raman', department: 'Finance / Legal', priority: 'High', status: 'Bills + Schedule B .xlsx to share with CA · DL drawdown pending', deadline: '2026-05-31', created: '2026-05-02' },
-            { id: 'TMW-196', task: 'POA in favour of Anshul B (limited, dormant, trigger-activated). Stamped + notarised + registered. Sealed-envelope custody with spouse + Anshul B.', owner: 'Rohan + Anshul B', department: 'Legal', priority: 'Medium', status: 'Sequenced post-TMW-190', deadline: '2026-06-15', created: '2026-05-02' },
+            { id: 'TMW-196', task: 'POA in favour of Anshul B (limited, dormant, trigger-activated). Stamped + notarised + registered. Sealed-envelope custody with spouse + Anshul B. S112 2026-05-16: WIP — TMW-190 unblocker landed (Ans…', owner: 'Rohan + Anshul B', department: 'Legal', priority: 'Medium', status: 'Sequenced post-TMW-190', deadline: '2026-06-15', created: '2026-05-02' },
             { id: 'TMW-199', task: 'Email + credential migration — Workspace suspend (Amol/Adhi/Ruchi) + GitHub org transfer + AWS root rotation + IAM cleanup + Mapbox/Razorpay/Stripe/Cloudflare under Company. Checklist at Legal/Restru…', owner: 'Rohan', department: 'Operations', priority: 'High', status: 'Sequenced post-TMW-193', deadline: '2026-05-31', created: '2026-05-02' },
             { id: 'TMW-200', task: 'Mihir sir briefing — team change + launch timeline re-baseline. AFTER Amol DIR-12 effective. DRAFT SHIPPED S098 2026-05-08 at Operations/Briefings/2026-06-01_Mihir_Briefing.{md,docx} (380 words, stat…', owner: 'Rohan + Claude', department: 'Strategy', priority: 'Medium', status: 'Draft ready; send post-2026-05-31', deadline: '2026-06-01', created: '2026-05-02' },
             { id: 'TMW-206', task: 'Decision: git init ~/tmw? Recommendation: yes, with .gitignore excluding Engineering codebase + secrets. .gitignore pre-staged at ~/tmw/.gitignore S098 2026-05-08 (Engineering codebase + secrets + iC…', owner: 'Rohan', department: 'Operations', priority: 'Medium', status: 'Deferred — post-Amol exit; .gitignore staged', deadline: '2026-05-31', created: '2026-05-03' },
@@ -502,7 +502,6 @@ const activeTasks = [
             { id: 'TMW-054', task: 'Complete Stripe account activation + Stripe Billing for international web payments.', owner: 'Rohan', department: 'Finance', priority: 'Medium', status: '⚡ Ready to start (post-inc + bank active 2026-05-14)', deadline: 'Pre-launch', created: '2026-03-18' },
             { id: 'TMW-055', task: 'App Store billing — Google Play + Apple IAP + Razorpay alt billing.', owner: 'Rohan + Claude', department: 'Finance', priority: 'Low', status: '⚡ Ready to start (gated on TMW-053 Razorpay live)', deadline: 'Pre-launch', created: '2026-03-18' },
             { id: 'TMW-056', task: 'Define exact ad placements on Stitch UI screens', owner: 'Rohan + Claude', department: 'Product', priority: 'Medium', status: 'Not Started', deadline: 'Post UI finalisation', created: '2026-03-18' },
-            { id: 'TMW-060', task: 'Share SHA + Term Sheet drafts with legal team for review', owner: 'Rohan', department: 'Legal', priority: 'High', status: 'WIP', deadline: 'Post-inc', created: '2026-03-19' },
             { id: 'TMW-137', task: 'Loops.so setup — account + API key + Go backend + waitlist nurture', owner: 'Rohan + Claude', department: 'Marketing / Eng', priority: 'Medium', status: 'Parked', deadline: '—', created: '2026-04-08' },
             { id: 'TMW-102', task: 'X/Twitter account — @TrackMyWings + branding + pin Thread 1.', owner: 'Rohan + Claude', department: 'Marketing', priority: 'Medium', status: 'Blocked — DEC-067 stealth + IP clearance', deadline: 'Post stealth-flip', created: '2026-03-27' },
             { id: 'TMW-109', task: 'Content creation pipeline — Claude + ElevenLabs + Nano Banana 2 Pro + Google Flow + Capcut/PS. Drafts massively shipped S099+ launch sprint: 70 Twitter posts + 28 LinkedIn posts + 22 Reddit posts + 4…', owner: 'Rohan + Claude', department: 'Marketing', priority: 'High', status: 'Drafts shipped — execution gated on TMW-128 + stealth flip', deadline: 'Pre-July 1', created: '2026-03-30' },
@@ -510,12 +509,12 @@ const activeTasks = [
             { id: 'TMW-139', task: 'Deploy Website V0 to ECS — Dockerfile + CI/CD + CloudFront. Codebase at Engineering/Codebase/Website_v0/V0_NextJS/. Spec at Engineering/Architecture/Website_V0/.', owner: 'Rohan + Claude', department: 'Engineering', priority: 'High', status: 'Parked', deadline: 'Post-trademarks', created: '2026-04-09' },
             { id: 'TMW-117', task: 'A/B test framework for social content.', owner: 'Rohan + Claude', department: 'Marketing', priority: 'Low', status: 'Blocked — needed when posting starts (post stealth-flip)', deadline: 'Post stealth-flip', created: '2026-03-30' },
             { id: 'TMW-119', task: 'Accounts on Snapchat / Threads / Discord / Quora / Pinterest.', owner: 'Rohan + Claude', department: 'Marketing', priority: 'Medium', status: 'Blocked — DEC-067 stealth + IP clearance', deadline: 'Post stealth-flip', created: '2026-03-30' },
-            { id: 'TMW-123', task: 'File trademark application — coordinate with Anshul Bansal. Filing strategy + 4 marks DRAFTED S098 2026-05-08 at Legal/IP/TM_Filing_2026/: 7 files / ~11,776 words (Strategy + Prior Art Search Plan +…', owner: 'Rohan', department: 'Legal', priority: 'High', status: 'Drafts ready; Anshul ji review pending', deadline: 'Post TMW-152', created: '2026-03-30' },
+            { id: 'TMW-123', task: 'File trademark application — coordinate with Anshul Bansal. S112 2026-05-16: WIP under Raman\'s firm (Anubha Raman & Co driving filing; co-ord with Anshul B). Filing strategy + 4 marks DRAFTED S098 20…', owner: 'Rohan', department: 'Legal', priority: 'High', status: 'Drafts ready; Anshul ji review pending', deadline: 'Post TMW-152', created: '2026-03-30' },
             { id: 'TMW-128', task: 'End-to-end content pipeline test — 1 video through Claude → ElevenLabs → Nano Banana → Google Flow → Capcut. Runbook + canonical 75s test-asset script + 15 Nano Banana image prompts + 5 Google Flow m…', owner: 'Rohan + Claude', department: 'Marketing', priority: 'High', status: 'Runbook ready · founder execution pending', deadline: 'Pre-July 1', created: '2026-04-06' },
             { id: 'TMW-129', task: 'Pipeline tool accounts (Nano Banana 2 Pro + Google Flow + ElevenLabs paid) — accounts done; awaiting TMW-128 test', owner: 'Rohan + Claude', department: 'Marketing', priority: 'Medium', status: 'Blocked on TMW-128', deadline: 'Post TMW-128', created: '2026-04-06' },
             { id: 'TMW-152', task: 'Register UDHYAM + GST + MSME certificates. UDHYAM first (free, fast). MSME rebate unlocks IP filing cost reduction (TMW-123/153). S112 2026-05-16 (CA call): handed off to CA firm end-to-end (Raman ow…', owner: 'Raman + CA firm', department: 'Legal / Finance', priority: 'High', status: 'CA firm handling end-to-end · Rohan provides KYC/supporting docs', deadline: 'Pre-launch', created: '2026-04-23' },
-            { id: 'TMW-153', task: 'File copyright application for TrackMyWings (app, content, brand) — coordinate with Anshul Bansal. Filing package DRAFTED S098 2026-05-08 at Legal/IP/Copyright_Filing_2026/: 6 files / ~9,465 words (S…', owner: 'Rohan', department: 'Legal', priority: 'High', status: 'Drafts ready; Anshul ji review pending', deadline: 'Post TMW-152', created: '2026-04-23' },
-            { id: 'TMW-154', task: 'Apply for startup funding — Startup India registration + grant filing (5/6% completion-basis). S112 2026-05-16 (CA call): Startup India registration + grant filing handed off to CA firm end-to-end. A…', owner: 'Raman + CA firm (Startup India + grant) · Rohan +…', department: 'Finance / Strategy', priority: 'Medium', status: 'CA firm handling Startup India + grant · angel/seed deferred until TMW-233/234…', deadline: 'Pre-launch', created: '2026-04-23' },
+            { id: 'TMW-153', task: 'File copyright application for TrackMyWings — coordinate with Anshul Bansal. S112 2026-05-16: WIP under Raman\'s firm (Anubha Raman & Co driving filing; co-ord with Anshul B). Filing package DRAFTED S…', owner: 'Rohan', department: 'Legal', priority: 'High', status: 'Drafts ready; Anshul ji review pending', deadline: 'Post TMW-152', created: '2026-04-23' },
+            { id: 'TMW-154', task: 'Apply for startup funding — Startup India registration + grant filing (5/6% completion-basis). S112 2026-05-16 (CA call): Startup India registration + grant filing handed off to CA firm end-to-end. A…', owner: 'Raman + CA firm (Startup India + grant) · Rohan +…', department: 'Finance / Strategy', priority: 'Medium', status: 'WIP at CA firm · Startup India + grant · angel/seed deferred until TMW-233/234…', deadline: 'Pre-launch', created: '2026-04-23' },
             { id: '**TMW-236**', task: 'Document purpose of 5 GoDaddy domains purchased 2026-05-16 (₹3,134.67 from personal MasterCard · Receipt #4089611062 · Schedule B row 18 · MIS Expenses row 32). 5 domains acquired: trackmywingsreview…', owner: 'Rohan + Claude', department: 'Marketing / Strategy', priority: 'Medium', status: 'Not Started · awaiting founder\'s plan explanation', deadline: '2026-06-01', created: '2026-05-16' },
             { id: '**TMW-237**', task: 'Shift recurring-subscription billing from founder personal account → Company ICICI account. ICICI active since 2026-05-14 but founder still paying ALL recurring SaaS (Claude · Anthropic · Google Work…', owner: 'Rohan', department: 'Finance / Operations', priority: '**High**', status: 'Not Started · target tomorrow', deadline: '**2026-05-17**', created: '2026-05-16' },
             { id: '**TMW-220**', task: 'High-fi sprint REFRAMED 2026-05-15 per DEC-148 — OD-lock all 142 screens FIRST (sequential), then code-phase post-OD-lock (TMW-216 Phase 2). Per-screen artifact: 01_DIRECTION_PROBE_BRIEF.md + 02_LOCK…', owner: 'Rohan + Claude', department: 'Design', priority: '**CRITICAL**', status: 'Active — 24/142 spec done · 20 screens × 3 variants awaiting founder picks (rev…', deadline: '2026-08-15 (launch via TMW-216)', created: '2026-05-05' },
@@ -1089,7 +1088,7 @@ const analyticsData = {
                                     "count": 1
                         },
                         {
-                                    "status": "Raman owns; gated on TMW-225 \u00b7 fees \u20b920k due 27 June",
+                                    "status": "\u2705 Completed 2026-05-16 (\u20b920k fee due 2026-06-27 separate track)",
                                     "count": 1
                         },
                         {
@@ -1157,10 +1156,6 @@ const analyticsData = {
                                     "count": 1
                         },
                         {
-                                    "status": "WIP",
-                                    "count": 1
-                        },
-                        {
                                     "status": "**Drafts shipped \u2014 execution gated on TMW-128 + stealth flip**",
                                     "count": 1
                         },
@@ -1181,7 +1176,7 @@ const analyticsData = {
                                     "count": 1
                         },
                         {
-                                    "status": "**CA firm handling Startup India + grant** \u00b7 angel/seed deferred until TMW-233/234 ready",
+                                    "status": "**WIP at CA firm \u00b7 Startup India + grant** \u00b7 angel/seed deferred until TMW-233/234 ready",
                                     "count": 1
                         },
                         {
@@ -1253,13 +1248,13 @@ const analyticsData = {
                         {
                                     "owner": "Raman",
                                     "active": 11,
-                                    "high_priority": 5,
+                                    "high_priority": 4,
                                     "overdue": 0
                         },
                         {
                                     "owner": "Rohan",
-                                    "active": 37,
-                                    "high_priority": 12,
+                                    "active": 36,
+                                    "high_priority": 11,
                                     "overdue": 0
                         },
                         {
@@ -1344,12 +1339,12 @@ const analyticsData = {
                         },
                         {
                                     "department": "Legal",
-                                    "active": 8,
-                                    "wip": 1,
+                                    "active": 7,
+                                    "wip": 0,
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 23
+                                    "avg_age_days": 18
                         },
                         {
                                     "department": "Legal / Finance",
@@ -1452,65 +1447,65 @@ const analyticsData = {
             ],
             "deadlineStats": {
                         "overdue": 0,
-                        "due_3days": 31,
+                        "due_3days": 30,
                         "deadline_hit_rate": "0%"
             },
             "burndownData": [
                         {
                                     "date": "2026-05-16",
-                                    "remaining": 40
+                                    "remaining": 39
                         },
                         {
                                     "date": "2026-05-15",
-                                    "remaining": 35
-                        },
-                        {
-                                    "date": "2026-05-14",
-                                    "remaining": 35
-                        },
-                        {
-                                    "date": "2026-05-13",
-                                    "remaining": 35
-                        },
-                        {
-                                    "date": "2026-05-12",
-                                    "remaining": 35
-                        },
-                        {
-                                    "date": "2026-05-11",
-                                    "remaining": 35
-                        },
-                        {
-                                    "date": "2026-05-10",
-                                    "remaining": 35
-                        },
-                        {
-                                    "date": "2026-05-09",
-                                    "remaining": 35
-                        },
-                        {
-                                    "date": "2026-05-08",
-                                    "remaining": 35
-                        },
-                        {
-                                    "date": "2026-05-07",
                                     "remaining": 34
                         },
                         {
+                                    "date": "2026-05-14",
+                                    "remaining": 34
+                        },
+                        {
+                                    "date": "2026-05-13",
+                                    "remaining": 34
+                        },
+                        {
+                                    "date": "2026-05-12",
+                                    "remaining": 34
+                        },
+                        {
+                                    "date": "2026-05-11",
+                                    "remaining": 34
+                        },
+                        {
+                                    "date": "2026-05-10",
+                                    "remaining": 34
+                        },
+                        {
+                                    "date": "2026-05-09",
+                                    "remaining": 34
+                        },
+                        {
+                                    "date": "2026-05-08",
+                                    "remaining": 34
+                        },
+                        {
+                                    "date": "2026-05-07",
+                                    "remaining": 33
+                        },
+                        {
                                     "date": "2026-05-06",
-                                    "remaining": 32
-                        },
-                        {
-                                    "date": "2026-05-05",
-                                    "remaining": 32
-                        },
-                        {
-                                    "date": "2026-05-04",
                                     "remaining": 31
                         },
                         {
-                                    "date": "2026-05-03",
+                                    "date": "2026-05-05",
+                                    "remaining": 31
+                        },
+                        {
+                                    "date": "2026-05-04",
                                     "remaining": 30
+                        },
+                        {
+                                    "date": "2026-05-03",
+                                    "remaining": 29
                         }
             ],
             "velocity": {

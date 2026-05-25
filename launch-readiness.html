@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TMW Launch Readiness · Founder Control Panel</title>
+<link rel="stylesheet" href="dashboard-tokens.css">
+<link rel="stylesheet" href="dashboard-components.css">
+<link rel="icon" href="logo.jpeg">
+<style>
+  .metric-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; }
+  .metric { padding: 16px; border-radius: 8px; background: var(--surface-1, #1F2937); }
+  .metric .label { font-size: 12px; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.05em; }
+  .metric .value { font-size: 28px; font-weight: 600; margin-top: 4px; }
+  .metric .sub { font-size: 11px; opacity: 0.55; margin-top: 6px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+  .badge--urgent { background: #DC2626; color: white; }
+  .badge--high { background: #F59E0B; color: white; }
+  .badge--ok { background: #10B981; color: white; }
+  .badge--info { background: #3B82F6; color: white; }
+  .badge--default { background: #6B7280; color: white; }
+  table.t { width: 100%; border-collapse: collapse; margin: 16px 0; }
+  table.t th { background: var(--surface-2, #111827); padding: 8px; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+  table.t td { padding: 8px; border-bottom: 1px solid var(--border, #374151); font-size: 13px; vertical-align: top; }
+  .empty { padding: 16px; opacity: 0.6; font-style: italic; }
+  section { margin-bottom: 32px; }
+  h2 { margin: 24px 0 8px; font-size: 18px; }
+  .stale-banner { position: sticky; bottom: 0; padding: 8px 16px; background: var(--surface-2, #111827); font-size: 12px; opacity: 0.7; text-align: center; }
+  .ds-nav { flex-wrap: wrap; gap: 4px 12px; }
+  .progress-bar { width: 100%; height: 8px; background: var(--surface-2, #111827); border-radius: 4px; overflow: hidden; }
+  .progress-fill { height: 100%; transition: width 0.3s ease; }
+  .progress-fill--green { background: #10B981; }
+  .progress-fill--amber { background: #F59E0B; }
+  .progress-fill--red { background: #DC2626; }
+  
+</style>
+</head>
+<body>
+<div class="app-shell">
+  <header class="ds-header" style="padding: 16px; border-bottom: 1px solid var(--border, #374151);">
+      <nav class="ds-nav">
+        <a href="index.html">Founder</a>
+        <a href="finance-mis.html">Finance MIS</a>
+        <a href="tasks.html">Tasks</a>
+        <a href="launch-readiness.html" class="ds-nav-active">Launch</a>
+        <a href="statutory.html">Statutory</a>
+        <a href="restructure.html">Restructure</a>
+        <a href="risk-register.html">Risks</a>
+        <a href="legal.html">Legal</a>
+        <a href="claude-usage.html">Claude</a>
+        <a href="kb-health.html">KB Health</a>
+        <a href="bandwidth.html">Bandwidth</a>
+        <a href="ai-providers.html">Providers</a>
+        <a href="skills.html">Skills</a>
+        <a href="folder-map.html">Files</a>
+      </nav>
+    <h1 style="margin: 8px 0 0;">Launch Readiness</h1>
+  </header>
+
+  <main style="padding: 16px;">
+<div class="metric-row">
+  <div class="metric">
+    <div class="label">Days to Launch</div>
+    <div class="value"><span class="badge badge--info">T-82</span></div>
+    <div class="sub">Target: 2026-08-15 (DEC-133)</div>
+  </div>
+  <div class="metric">
+    <div class="label">Overall % Ready</div>
+    <div class="value"><span class="badge badge--high">62%</span></div>
+    <div class="sub">9 functions tracked</div>
+  </div>
+  <div class="metric">
+    <div class="label">Functions @ ≥75%</div>
+    <div class="value">2</div>
+    <div class="sub">Green zone</div>
+  </div>
+  <div class="metric">
+    <div class="label">Functions @ &lt;50%</div>
+    <div class="value">1</div>
+    <div class="sub">Red zone · needs attention</div>
+  </div>
+</div>
+
+<section>
+<h2>Status by Function</h2>
+<table class="t">
+  <thead><tr><th>Function</th><th>%</th><th>Progress</th><th>Status</th><th>Owner</th></tr></thead>
+  <tbody>
+<tr><td><strong>Product</strong></td><td><span class="badge badge--ok">75%</span></td><td><div class="progress-bar"><div class="progress-fill progress-fill--green" style="width: 75%;"></div></div></td><td>Mid-fi 142/142 audit-clean (DEC-118); high-fi V2 verdict pending Wed 5/13 (TMW-224); 51 features locked DEC-128</td><td>Rohan + Claude</td></tr>
+<tr><td><strong>Engineering</strong></td><td><span class="badge badge--urgent">30%</span></td><td><div class="progress-bar"><div class="progress-fill progress-fill--red" style="width: 30%;"></div></div></td><td>V0 backend decommissioning; V1 Flutter + Go blocked on Wed 5/13 verdict; Next.js dynamic flight pages templates landing tonight (#11)</td><td>Rohan + Claude</td></tr>
+<tr><td><strong>Design</strong></td><td><span class="badge badge--high">65%</span></td><td><div class="progress-bar"><div class="progress-fill progress-fill--amber" style="width: 65%;"></div></div></td><td>Mid-fi closed; V2 Aero Nocturne probe shipped (DEC-124); Adhi 12 patterns canonical (DEC-121); high-fi 142 still TBD post-verdict</td><td>Rohan + Claude (Stitch + Figma)</td></tr>
+<tr><td><strong>Marketing</strong></td><td><span class="badge badge--high">55%</span></td><td><div class="progress-bar"><div class="progress-fill progress-fill--amber" style="width: 55%;"></div></div></td><td>Content stockpile in flight (Twitter 70 / LinkedIn 28 / Reddit 21 / YT Shorts 42 / Launch playbook scripts — landing tonight); App Store/Play Store metadata + ASO + screenshots + preview-video script — landing tonight; OG meta tags wired</td><td>Rohan + Claude</td></tr>
+<tr><td><strong>Finance</strong></td><td><span class="badge badge--high">55%</span></td><td><div class="progress-bar"><div class="progress-fill progress-fill--amber" style="width: 55%;"></div></div></td><td>MIS active; ICICI live target Mon 5/11; Tue 5/12 deposits per DEC-126; DL signed 2026-05-07; 60-Month v2 shipped</td><td>Rohan + Raman</td></tr>
+<tr><td><strong>Legal</strong></td><td><span class="badge badge--high">70%</span></td><td><div class="progress-bar"><div class="progress-fill progress-fill--amber" style="width: 70%;"></div></div></td><td>Privacy + ToS + DPDP Notice drafts ready (tonight, lawyer-ready single-pass review); DSC ✅ for Anshul B (5/9); DIR-3 KYC ✅; INC-22 photos in (TMW-225); IP filing packs drafted (TMW-153/123, Anshul ji review pending); restructure target close 6/15</td><td>Rohan + Anshul B + Raman</td></tr>
+<tr><td><strong>Operations</strong></td><td><span class="badge badge--ok">75%</span></td><td><div class="progress-bar"><div class="progress-fill progress-fill--green" style="width: 75%;"></div></div></td><td>8+12 custom skills + v2.1 plan live; 6 dashboards live; dashboard integrity hardened (DEC-123); auto-sprint orchestration proven (S099+)</td><td>Rohan + Claude</td></tr>
+<tr><td><strong>Customer Success</strong></td><td><span class="badge badge--high">70%</span></td><td><div class="progress-bar"><div class="progress-fill progress-fill--amber" style="width: 70%;"></div></div></td><td>T-7 activation kit drafted tonight (canned responses ×50+ / triage rubric / escalation playbook / KB seed ×35+ / first-24h protocol)</td><td>Rohan + Claude</td></tr>
+<tr><td><strong>Sales</strong></td><td><span class="badge badge--default">N/A</span></td><td><div class="progress-bar"><div class="progress-fill progress-fill--default" style="width: 0%;"></div></div></td><td>n/a — consumer-first per anti-vision (DEC-066)</td><td>n/a</td></tr>
+  </tbody>
+</table>
+</section>
+
+<section>
+<h2>Next Update</h2>
+<p style="font-size: 13px; opacity: 0.7;">Weekly Sunday review per cadence. T-30 (2026-07-16) = comprehensive readiness audit. T-15 (2026-07-31) = content stockpile + social engine ON. T-7 (2026-08-08) = CS skills active.</p>
+</section>
+
+  </main>
+
+  <div class="stale-banner">
+    Last rebuilt: 2026-05-25T22:21 IST · Source: <code>Operations/AI System/LAUNCH_READINESS.md</code> · Rebuild: <code>python3 rebuild_launch_readiness.py</code>
+  </div>
+</div>
+</body>
+</html>

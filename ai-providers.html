@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TMW AI Providers · Founder Control Panel</title>
+<link rel="stylesheet" href="dashboard-tokens.css">
+<link rel="stylesheet" href="dashboard-components.css">
+<link rel="icon" href="logo.jpeg">
+<style>
+  .metric-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; }
+  .metric { padding: 16px; border-radius: 8px; background: var(--surface-1, #1F2937); }
+  .metric .label { font-size: 12px; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.05em; }
+  .metric .value { font-size: 28px; font-weight: 600; margin-top: 4px; }
+  .metric .sub { font-size: 11px; opacity: 0.55; margin-top: 6px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+  .badge--urgent { background: #DC2626; color: white; }
+  .badge--high { background: #F59E0B; color: white; }
+  .badge--ok { background: #10B981; color: white; }
+  .badge--info { background: #3B82F6; color: white; }
+  .badge--default { background: #6B7280; color: white; }
+  table.t { width: 100%; border-collapse: collapse; margin: 16px 0; }
+  table.t th { background: var(--surface-2, #111827); padding: 8px; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+  table.t td { padding: 8px; border-bottom: 1px solid var(--border, #374151); font-size: 13px; vertical-align: top; }
+  .empty { padding: 16px; opacity: 0.6; font-style: italic; }
+  section { margin-bottom: 32px; }
+  h2 { margin: 24px 0 8px; font-size: 18px; }
+  .stale-banner { position: sticky; bottom: 0; padding: 8px 16px; background: var(--surface-2, #111827); font-size: 12px; opacity: 0.7; text-align: center; }
+  .ds-nav { flex-wrap: wrap; gap: 4px 12px; }
+  .progress-bar { width: 100%; height: 8px; background: var(--surface-2, #111827); border-radius: 4px; overflow: hidden; }
+  .progress-fill { height: 100%; transition: width 0.3s ease; }
+  .progress-fill--green { background: #10B981; }
+  .progress-fill--amber { background: #F59E0B; }
+  .progress-fill--red { background: #DC2626; }
+  
+</style>
+</head>
+<body>
+<div class="app-shell">
+  <header class="ds-header" style="padding: 16px; border-bottom: 1px solid var(--border, #374151);">
+      <nav class="ds-nav">
+        <a href="index.html">Founder</a>
+        <a href="finance-mis.html">Finance MIS</a>
+        <a href="tasks.html">Tasks</a>
+        <a href="launch-readiness.html">Launch</a>
+        <a href="statutory.html">Statutory</a>
+        <a href="restructure.html">Restructure</a>
+        <a href="risk-register.html">Risks</a>
+        <a href="legal.html">Legal</a>
+        <a href="claude-usage.html">Claude</a>
+        <a href="kb-health.html">KB Health</a>
+        <a href="bandwidth.html">Bandwidth</a>
+        <a href="ai-providers.html" class="ds-nav-active">Providers</a>
+        <a href="skills.html">Skills</a>
+        <a href="folder-map.html">Files</a>
+      </nav>
+    <h1 style="margin: 8px 0 0;">AI Provider Registry</h1>
+  </header>
+
+  <main style="padding: 16px;">
+<div class="metric-row">
+  <div class="metric">
+    <div class="label">Active Providers</div>
+    <div class="value">6</div>
+    <div class="sub">In production use</div>
+  </div>
+  <div class="metric">
+    <div class="label">Canonical Reasoning</div>
+    <div class="value" style="font-size: 20px;">Claude</div>
+    <div class="sub">Opus 4.7 default · Sonnet 4.6 fallback</div>
+  </div>
+  <div class="metric">
+    <div class="label">Content Pipeline</div>
+    <div class="value" style="font-size: 16px;">EL · NB2P · Flow</div>
+    <div class="sub">Voice + Image + Video</div>
+  </div>
+  <div class="metric">
+    <div class="label">Live Spend Source</div>
+    <div class="value" style="font-size: 14px;">MIS xlsx</div>
+    <div class="sub">DEC-101 ₹95/$ canonical</div>
+  </div>
+</div>
+
+<section>
+<h2>Provider Matrix</h2>
+<table class="t">
+  <thead><tr><th>Provider</th><th>Model / Service</th><th>Workflow</th><th>Canonical for</th><th>Fallback</th><th>Spend</th></tr></thead>
+  <tbody>
+<tr><td><strong>Anthropic</strong></td><td>Claude Opus 4.7 / Sonnet 4.6 / Haiku 4.5</td><td>Operating partner, sprint dispatch, code, plans, decisions</td><td>All reasoning</td><td>Sonnet if Opus org-cap hit (DEC-093 §17.5b); Haiku for ultra-light tasks. Pattern: Opus subagent fail → refire as Sonnet.</td><td>MIS row "Anthropic"</td></tr>
+<tr><td><strong>Google (Gemini)</strong></td><td>Gemini 3.1 Pro</td><td>Stitch UI generation (S048/S051)</td><td>Stitch screen generation only</td><td>Claude as fallback for screens (lower fidelity per S066 contamination evidence)</td><td>Free tier (verify quarterly)</td></tr>
+<tr><td><strong>Eleven Labs</strong></td><td>TTS</td><td>Content pipeline narration (DEC-069)</td><td>Voice content</td><td>None — content blocked if down. Workaround: skip voice for that asset.</td><td>MIS row "Eleven Labs"</td></tr>
+<tr><td><strong>Nano Banana 2 Pro</strong></td><td>Image generation</td><td>Logo, brand visuals, content imagery (DEC-069)</td><td>Image content</td><td>Gemini Imagen / DALL-E manual export</td><td>MIS row "Nano Banana 2 Pro"</td></tr>
+<tr><td><strong>Google Flow</strong></td><td>Video generation</td><td>Content pipeline video (DEC-069)</td><td>Video content</td><td>None — content blocked if down.</td><td>Free at current usage</td></tr>
+<tr><td><strong>Open Generative AI (desktop)</strong></td><td>200+ models — Flux, Midjourney, Kling, Sora, Veo, Wan 2.2, Hunyuan, LTX, Z-Image, SD 1.5, SDXL · sd.cpp local + Wan2GP remote + Muapi cloud</td><td>Experimental / exploratory image + video gen on M4 (founder-driven). Self-hosted desktop app at `/Applications/Open Generative AI.app` v1.0.9 arm64. **Founder access only — Claude triggers app open via Bash; no automated TMW pipeline use.**</td><td>Founder R&D, look-dev, reference frames</td><td>None — exploratory only; not on commercial output critical path. Nano Banana 2 Pro + Google Flow remain canonical for shipped content (DEC-069).</td><td>Free (open-source MIT; cloud uses optional Muapi credits — none purchased)</td></tr>
+  </tbody>
+</table>
+</section>
+
+<section>
+<h2>Decision Cascade — when to use which</h2>
+<ol><li>**Reasoning, decisions, code, plans, ops** → Anthropic (Claude Opus 4.7 default; Sonnet 4.6 on org-cap fallback per DEC-093 §17.5b).</li><li>**Mid-fi sprint screen builders** → Sonnet by default per DEC-093, Opus per DEC-097 escalation for quality, MAX on Auditors/Typography/PG-4 per DEC-093.</li><li>**UI generation (Stitch)** → Gemini 3.1 Pro (locked per DEC-074 pipeline).</li><li>**Voice content** → Eleven Labs.</li><li>**Image content** → Nano Banana 2 Pro (Logo, brand, hero images).</li><li>**Video content** → Google Flow.</li><li>**All other AI tasks** → Claude (Anthropic) by default.</li><li>**Founder R&D / look-dev / unrestricted experimentation** → Open Generative AI desktop app. Triggered by founder via Claude (`open -a "Open Generative AI"`). Outputs not promoted to TMW commercial assets without re-generation through canonical Nano Banana 2 Pro / Google Flow pipeline.</li></ol>
+</section>
+
+<section>
+<h2>Maintenance</h2>
+<p style="font-size: 13px; opacity: 0.75;">
+<strong>Quarterly review:</strong> Aug 3 / Nov 3 / Feb 3 / May 3 per session-protocol cadence.<br>
+<strong>Adding a provider:</strong> add row in <code>AI_PROVIDER_REGISTRY.md</code> + MIS Subscriptions row + fallback policy + DECISION_LOG entry.<br>
+<strong>Removing:</strong> mark "RETIRED" with date + reason. Do not delete history.
+</p>
+</section>
+
+  </main>
+
+  <div class="stale-banner">
+    Last rebuilt: 2026-05-25T22:22 IST · Source: <code>Operations/AI System/AI_PROVIDER_REGISTRY.md</code> · Rebuild: <code>python3 rebuild_ai_providers.py</code>
+  </div>
+</div>
+</body>
+</html>

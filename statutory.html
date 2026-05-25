@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TMW Statutory · Founder Control Panel</title>
+<link rel="stylesheet" href="dashboard-tokens.css">
+<link rel="stylesheet" href="dashboard-components.css">
+<link rel="icon" href="logo.jpeg">
+<style>
+  .metric-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; }
+  .metric { padding: 16px; border-radius: 8px; background: var(--surface-1, #1F2937); }
+  .metric .label { font-size: 12px; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.05em; }
+  .metric .value { font-size: 28px; font-weight: 600; margin-top: 4px; }
+  .metric .sub { font-size: 11px; opacity: 0.55; margin-top: 6px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+  .badge--urgent { background: #DC2626; color: white; }
+  .badge--high { background: #F59E0B; color: white; }
+  .badge--ok { background: #10B981; color: white; }
+  .badge--info { background: #3B82F6; color: white; }
+  .badge--default { background: #6B7280; color: white; }
+  table.t { width: 100%; border-collapse: collapse; margin: 16px 0; }
+  table.t th { background: var(--surface-2, #111827); padding: 8px; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+  table.t td { padding: 8px; border-bottom: 1px solid var(--border, #374151); font-size: 13px; vertical-align: top; }
+  .empty { padding: 16px; opacity: 0.6; font-style: italic; }
+  section { margin-bottom: 32px; }
+  h2 { margin: 24px 0 8px; font-size: 18px; }
+  .stale-banner { position: sticky; bottom: 0; padding: 8px 16px; background: var(--surface-2, #111827); font-size: 12px; opacity: 0.7; text-align: center; }
+  .ds-nav { flex-wrap: wrap; gap: 4px 12px; }
+  .progress-bar { width: 100%; height: 8px; background: var(--surface-2, #111827); border-radius: 4px; overflow: hidden; }
+  .progress-fill { height: 100%; transition: width 0.3s ease; }
+  .progress-fill--green { background: #10B981; }
+  .progress-fill--amber { background: #F59E0B; }
+  .progress-fill--red { background: #DC2626; }
+  
+</style>
+</head>
+<body>
+<div class="app-shell">
+  <header class="ds-header" style="padding: 16px; border-bottom: 1px solid var(--border, #374151);">
+      <nav class="ds-nav">
+        <a href="index.html">Founder</a>
+        <a href="finance-mis.html">Finance MIS</a>
+        <a href="tasks.html">Tasks</a>
+        <a href="launch-readiness.html">Launch</a>
+        <a href="statutory.html" class="ds-nav-active">Statutory</a>
+        <a href="restructure.html">Restructure</a>
+        <a href="risk-register.html">Risks</a>
+        <a href="legal.html">Legal</a>
+        <a href="claude-usage.html">Claude</a>
+        <a href="kb-health.html">KB Health</a>
+        <a href="bandwidth.html">Bandwidth</a>
+        <a href="ai-providers.html">Providers</a>
+        <a href="skills.html">Skills</a>
+        <a href="folder-map.html">Files</a>
+      </nav>
+    <h1 style="margin: 8px 0 0;">Statutory Calendar</h1>
+  </header>
+
+  <main style="padding: 16px;">
+<div class="metric-row">
+  <div class="metric">
+    <div class="label">Overdue (T+1+)</div>
+    <div class="value">2</div>
+    <div class="sub">⚠️ Sev-1 escalation</div>
+  </div>
+  <div class="metric">
+    <div class="label">Urgent (T-0..7)</div>
+    <div class="value">0</div>
+    <div class="sub">Daily check-in</div>
+  </div>
+  <div class="metric">
+    <div class="label">Upcoming (T-8..30)</div>
+    <div class="value">1</div>
+    <div class="sub">Weekly review</div>
+  </div>
+  <div class="metric">
+    <div class="label">Filed / Done</div>
+    <div class="value">0</div>
+    <div class="sub">Closed deadlines</div>
+  </div>
+</div>
+
+<section>
+<h2>All Deadlines (sorted by urgency)</h2>
+<table class="t">
+  <thead><tr><th>Status</th><th>Date</th><th>Form</th><th>Filing</th><th>Authority</th><th>Owner</th><th>Notes</th></tr></thead>
+  <tbody>
+<tr><td><span class="badge badge--ok">FILED</span></td><td>2026-05-23</td><td><strong>INC-22</strong></td><td>Registered office verification</td><td>MCA / RoC</td><td>Rohan + Raman + Pawan</td><td>URGENT — TMW-225; nameplate + photos pending; gates ADT-1</td></tr>
+<tr><td><span class="badge badge--ok">FILED</span></td><td>2026-05-23</td><td><strong>ADT-1</strong></td><td>First auditor appointment</td><td>MCA / RoC</td><td>Rohan + Raman</td><td>URGENT — TMW-192 (gated on INC-22 per Pawan 2026-05-06)</td></tr>
+<tr><td><span class="badge badge--ok">FILED</span></td><td>2026-06-12</td><td><strong>INC-20A</strong></td><td>Commencement of business (30d post-deposit)</td><td>MCA / RoC</td><td>Rohan + Raman</td><td>Clock starts Tue 2026-05-12 (₹1L paid-up: Rohan ₹62k + Amol ₹38k per DEC-126); earliest filable ~2026-05-23 (post INC-22 + ADT-1); hard cap 2026-10-20</td></tr>
+<tr><td><span class="badge badge--info">T-36</span></td><td>2026-06-30</td><td><strong>MSME-1</strong></td><td>Half-yearly outstanding to MSMEs (if any > 45 days)</td><td>MCA / RoC</td><td>Rohan + Raman</td><td>Likely n/a; verify</td></tr>
+<tr><td><span class="badge badge--default">T-128</span></td><td>2026-09-30</td><td><strong>DIR-3 KYC / KYC-WEB</strong></td><td>Director KYC</td><td>MCA / RoC</td><td>Rohan + Raman + Anshul B</td><td>Annual</td></tr>
+<tr><td><span class="badge badge--default">T-159</span></td><td>2026-10-31</td><td><strong>MSME-1</strong></td><td>MSME-1 (half-yearly)</td><td>MCA / RoC</td><td>Rohan + Raman</td><td>Likely n/a; verify</td></tr>
+<tr><td><span class="badge badge--default">T-310</span></td><td>2027-03-31</td><td><strong>—</strong></td><td>First financial year close</td><td>Internal</td><td>Rohan + Raman</td><td>Phase 3</td></tr>
+<tr><td><span class="badge badge--default">T-340</span></td><td>2027-04-30</td><td><strong>MSME-1</strong></td><td>MSME-1</td><td>MCA / RoC</td><td>Rohan + Raman</td><td>Likely n/a</td></tr>
+<tr><td><span class="badge badge--default">T-401</span></td><td>2027-06-30</td><td><strong>DPT-3</strong></td><td>Return of deposits (incl. director loan declaration)</td><td>MCA / RoC</td><td>Rohan + Raman</td><td>Annual; first filing</td></tr>
+<tr><td><span class="badge badge--default">T-493</span></td><td>2027-09-30</td><td><strong>DIR-3 KYC</strong></td><td>Director KYC</td><td>MCA / RoC</td><td>Rohan + Raman + Anshul B</td><td>Annual</td></tr>
+<tr><td><span class="badge badge--default">T-524</span></td><td>2027-10-31</td><td><strong>MSME-1</strong></td><td>MSME-1</td><td>MCA / RoC</td><td>Rohan + Raman</td><td>If applicable</td></tr>
+<tr><td><span class="badge badge--default">T-585</span></td><td>2027-12-31</td><td><strong>—</strong></td><td>First Annual General Meeting</td><td>Internal</td><td>Rohan + Anshul B + Raman</td><td>Per BR-10</td></tr>
+<tr><td><span class="badge badge--default">T-615</span></td><td>2028-01-30</td><td><strong>AOC-4</strong></td><td>Filing of Financial Statements (within 30d of AGM)</td><td>MCA / RoC</td><td>Rohan + Raman</td><td>Per BR-11</td></tr>
+<tr><td><span class="badge badge--default">T-645</span></td><td>2028-02-29</td><td><strong>MGT-7</strong></td><td>Annual Return (within 60d of AGM)</td><td>MCA / RoC</td><td>Rohan + Raman</td><td>Per BR-11</td></tr>
+<tr><td><span class="badge badge--default">TBD</span></td><td>Within 30 days of Anshul B's appointment</td><td><strong>DIR-12 (Anshul B)</strong></td><td>Appointment of director</td><td>MCA / RoC</td><td>Rohan + Raman</td><td>TMW-190 + TMW-210 (DSC sent, awaiting Raman)</td></tr>
+<tr><td><span class="badge badge--default">TBD</span></td><td>Within 30 days of Amol's resignation effective date</td><td><strong>DIR-12 (Amol)</strong></td><td>Resignation of director</td><td>MCA / RoC</td><td>Rohan + Raman</td><td>TMW-193 — § 149(1)(a) sequenced AFTER Anshul B DIR-12</td></tr>
+  </tbody>
+</table>
+</section>
+
+<section>
+<h2>Alert Ladder (per skill)</h2>
+<p style="font-size: 13px; opacity: 0.75;">
+<strong>T-30 days:</strong> add to weekly review; ensure paperwork queued; ping Raman if action gated on him<br>
+<strong>T-7 days:</strong> daily check-in until filed; sync window verification<br>
+<strong>T-1 day:</strong> sync window verification + reminder to Raman; high-priority<br>
+<strong>T-0:</strong> action required today; clear other commitments if needed<br>
+<strong>T+1 (overdue):</strong> Sev-1 escalation per Dim 9 (sleep/weekend protection); file with late penalty; log DEC-XXX referencing the miss
+</p>
+</section>
+
+  </main>
+
+  <div class="stale-banner">
+    Last rebuilt: 2026-05-25T22:21 IST · Source: <code>Operations/AI System/STATUTORY_CALENDAR.md</code> · Rebuild: <code>python3 rebuild_statutory.py</code>
+  </div>
+</div>
+</body>
+</html>

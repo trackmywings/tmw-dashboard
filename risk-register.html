@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TMW Risk Register · Founder Control Panel</title>
+<link rel="stylesheet" href="dashboard-tokens.css">
+<link rel="stylesheet" href="dashboard-components.css">
+<link rel="icon" href="logo.jpeg">
+<style>
+  .metric-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; }
+  .metric { padding: 16px; border-radius: 8px; background: var(--surface-1, #1F2937); }
+  .metric .label { font-size: 12px; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.05em; }
+  .metric .value { font-size: 28px; font-weight: 600; margin-top: 4px; }
+  .metric .sub { font-size: 11px; opacity: 0.55; margin-top: 6px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+  .badge--urgent { background: #DC2626; color: white; }
+  .badge--high { background: #F59E0B; color: white; }
+  .badge--ok { background: #10B981; color: white; }
+  .badge--info { background: #3B82F6; color: white; }
+  .badge--default { background: #6B7280; color: white; }
+  table.t { width: 100%; border-collapse: collapse; margin: 16px 0; }
+  table.t th { background: var(--surface-2, #111827); padding: 8px; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+  table.t td { padding: 8px; border-bottom: 1px solid var(--border, #374151); font-size: 13px; vertical-align: top; }
+  .empty { padding: 16px; opacity: 0.6; font-style: italic; }
+  section { margin-bottom: 32px; }
+  h2 { margin: 24px 0 8px; font-size: 18px; }
+  .stale-banner { position: sticky; bottom: 0; padding: 8px 16px; background: var(--surface-2, #111827); font-size: 12px; opacity: 0.7; text-align: center; }
+  .ds-nav { flex-wrap: wrap; gap: 4px 12px; }
+  .progress-bar { width: 100%; height: 8px; background: var(--surface-2, #111827); border-radius: 4px; overflow: hidden; }
+  .progress-fill { height: 100%; transition: width 0.3s ease; }
+  .progress-fill--green { background: #10B981; }
+  .progress-fill--amber { background: #F59E0B; }
+  .progress-fill--red { background: #DC2626; }
+  
+</style>
+</head>
+<body>
+<div class="app-shell">
+  <header class="ds-header" style="padding: 16px; border-bottom: 1px solid var(--border, #374151);">
+      <nav class="ds-nav">
+        <a href="index.html">Founder</a>
+        <a href="finance-mis.html">Finance MIS</a>
+        <a href="tasks.html">Tasks</a>
+        <a href="launch-readiness.html">Launch</a>
+        <a href="statutory.html">Statutory</a>
+        <a href="restructure.html">Restructure</a>
+        <a href="risk-register.html" class="ds-nav-active">Risks</a>
+        <a href="legal.html">Legal</a>
+        <a href="claude-usage.html">Claude</a>
+        <a href="kb-health.html">KB Health</a>
+        <a href="bandwidth.html">Bandwidth</a>
+        <a href="ai-providers.html">Providers</a>
+        <a href="skills.html">Skills</a>
+        <a href="folder-map.html">Files</a>
+      </nav>
+    <h1 style="margin: 8px 0 0;">Risk Register</h1>
+  </header>
+
+  <main style="padding: 16px;">
+<div class="metric-row">
+  <div class="metric">
+    <div class="label">Critical Risks</div>
+    <div class="value">3</div>
+    <div class="sub">Immediate action</div>
+  </div>
+  <div class="metric">
+    <div class="label">High Risks</div>
+    <div class="value">4</div>
+    <div class="sub">Active mitigation</div>
+  </div>
+  <div class="metric">
+    <div class="label">Medium Risks</div>
+    <div class="value">3</div>
+    <div class="sub">Watch list</div>
+  </div>
+  <div class="metric">
+    <div class="label">Total Tracked</div>
+    <div class="value">12</div>
+    <div class="sub">Risk register entries</div>
+  </div>
+</div>
+
+<section>
+<h2>Risk Register (sorted by severity)</h2>
+<table class="t">
+  <thead><tr><th>Severity</th><th>Risk</th><th>Notes / Mitigation</th></tr></thead>
+  <tbody>
+<tr><td><span class="badge badge--urgent">CRITICAL</span></td><td><strong>Founder well-being — BP red zone</strong></td><td>2026-05-02: Rohan flagged 160/110 sustained. Operating cadence treats founder bandwidth + health as binding. BP > 140/90 = scope-pause day; BP > 160/100 + symptom = ER. Per Systems Upgrade Plan §4.5.</td></tr>
+<tr><td><span class="badge badge--urgent">CRITICAL</span></td><td><strong>§ 149 sequencing risk</strong></td><td>Anshul B's DIR-12 (appointment) MUST be effective BEFORE Amol's DIR-12 (resignation). Single mis-step = non-compliance. Raman to gate-keep.</td></tr>
+<tr><td><span class="badge badge--urgent">CRITICAL</span></td><td><strong>ADT-1 auditor appointment statutory deadline 2026-05-23</strong></td><td>21 days. Form filing within 30d of incorporation. Independent of Anshul B's DSC/DIN timing.</td></tr>
+<tr><td><span class="badge badge--high">High</span></td><td><strong>INC-20A filing trigger</strong></td><td>Within 30 days of subscriber capital deposit (post-ICICI). Late penalty ₹50k + ₹1k/day per director. Don't drift toward 180-day cap from 23-Apr-2026.</td></tr>
+<tr><td><span class="badge badge--high">High</span></td><td><strong>Solo-founder bandwidth</strong></td><td>All 9 functions on Rohan + Claude. Time variable, scope fixed (Q12.1, Q10.5). No contractors (Q10.3). Force-multiplier = Claude skill activation per Systems Upgrade Plan.</td></tr>
+<tr><td><span class="badge badge--high">High</span></td><td><strong>Knowledge loss during Amol handover</strong></td><td>Amol's Handover Document is gating his last working day. No clearance until delivered. Walkthrough video + bug list + roadmap notes mandatory.</td></tr>
+<tr><td><span class="badge badge--high">High</span></td><td><strong>Trademark filing not yet started</strong></td><td>TMW-123. Cleaner cap-table post-restructure accelerates path. Anshul B leads post-DIR-12 close.</td></tr>
+<tr><td><span class="badge badge--info">Medium</span></td><td><strong>Bus factor — solo founder</strong></td><td>Mitigated by POA in favour of Anshul B (TMW-196) + Continuity Memo (`07_Continuity_Memo.md`) + sealed-envelope credentials with spouse.</td></tr>
+<tr><td><span class="badge badge--info">Medium</span></td><td><strong>Figma MCP 200/day cap</strong></td><td>Mitigated by `figma-mcp-quota-manager` skill. Sprint cadence on hold during restructure week.</td></tr>
+<tr><td><span class="badge badge--info">Medium</span></td><td><strong>Rohan splitting time with Pococare</strong></td><td>Continues indefinitely (Q10.2). Bandwidth constraint accentuated post-team exit.</td></tr>
+<tr><td><span class="badge badge--default">Low</span></td><td><strong>Figma MCP cross-screen NAVIGATE reactions blocked</strong></td><td>DEC-120 — MCP `use_figma` proxy rejects type:'NODE' actions; custom plugin built as workaround. Future MCP updates may unlock direct path.</td></tr>
+<tr><td><span class="badge badge--default">Low</span></td><td><strong>No CRM</strong></td><td>Pre-launch. TMW-171 to decide stack T-30 from launch.</td></tr>
+  </tbody>
+</table>
+</section>
+
+<section>
+<h2>Mitigation Cadence</h2>
+<p style="font-size: 13px; opacity: 0.75;">
+<strong>Critical:</strong> Daily founder attention; weekly /checkpoint surface; escalate to Anshul B / Mihir sir as required.<br>
+<strong>High:</strong> Weekly Sunday review; mitigation owner identified.<br>
+<strong>Medium:</strong> Monthly cadence; trigger-watch.<br>
+Source canonical: <code>Operations/AI System/CONTEXT.md</code> "Top risks". Skill: <code>tmw-risk-register</code>.
+</p>
+</section>
+
+  </main>
+
+  <div class="stale-banner">
+    Last rebuilt: 2026-05-25T22:21 IST · Source: <code>Operations/AI System/CONTEXT.md</code> (Top risks section) · Rebuild: <code>python3 rebuild_risk_register.py</code>
+  </div>
+</div>
+</body>
+</html>

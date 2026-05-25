@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TMW KB Health · Founder Control Panel</title>
+<link rel="stylesheet" href="dashboard-tokens.css">
+<link rel="stylesheet" href="dashboard-components.css">
+<link rel="icon" href="logo.jpeg">
+<style>
+  .metric-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; }
+  .metric { padding: 16px; border-radius: 8px; background: var(--surface-1, #1F2937); }
+  .metric .label { font-size: 12px; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.05em; }
+  .metric .value { font-size: 28px; font-weight: 600; margin-top: 4px; }
+  .metric .sub { font-size: 11px; opacity: 0.55; margin-top: 6px; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+  .badge--urgent { background: #DC2626; color: white; }
+  .badge--high { background: #F59E0B; color: white; }
+  .badge--ok { background: #10B981; color: white; }
+  .badge--info { background: #3B82F6; color: white; }
+  .badge--default { background: #6B7280; color: white; }
+  table.t { width: 100%; border-collapse: collapse; margin: 16px 0; }
+  table.t th { background: var(--surface-2, #111827); padding: 8px; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+  table.t td { padding: 8px; border-bottom: 1px solid var(--border, #374151); font-size: 13px; vertical-align: top; }
+  .empty { padding: 16px; opacity: 0.6; font-style: italic; }
+  section { margin-bottom: 32px; }
+  h2 { margin: 24px 0 8px; font-size: 18px; }
+  .stale-banner { position: sticky; bottom: 0; padding: 8px 16px; background: var(--surface-2, #111827); font-size: 12px; opacity: 0.7; text-align: center; }
+  .ds-nav { flex-wrap: wrap; gap: 4px 12px; }
+  .progress-bar { width: 100%; height: 8px; background: var(--surface-2, #111827); border-radius: 4px; overflow: hidden; }
+  .progress-fill { height: 100%; transition: width 0.3s ease; }
+  .progress-fill--green { background: #10B981; }
+  .progress-fill--amber { background: #F59E0B; }
+  .progress-fill--red { background: #DC2626; }
+  
+</style>
+</head>
+<body>
+<div class="app-shell">
+  <header class="ds-header" style="padding: 16px; border-bottom: 1px solid var(--border, #374151);">
+      <nav class="ds-nav">
+        <a href="index.html">Founder</a>
+        <a href="finance-mis.html">Finance MIS</a>
+        <a href="tasks.html">Tasks</a>
+        <a href="launch-readiness.html">Launch</a>
+        <a href="statutory.html">Statutory</a>
+        <a href="restructure.html">Restructure</a>
+        <a href="risk-register.html">Risks</a>
+        <a href="legal.html">Legal</a>
+        <a href="claude-usage.html">Claude</a>
+        <a href="kb-health.html" class="ds-nav-active">KB Health</a>
+        <a href="bandwidth.html">Bandwidth</a>
+        <a href="ai-providers.html">Providers</a>
+        <a href="skills.html">Skills</a>
+        <a href="folder-map.html">Files</a>
+      </nav>
+    <h1 style="margin: 8px 0 0;">KB Health</h1>
+  </header>
+
+  <main style="padding: 16px;">
+<div class="metric-row">
+  <div class="metric">
+    <div class="label">Context Packet</div>
+    <div class="value"><span class="badge badge--ok">1.5h ago</span></div>
+    <div class="sub">Auto-compiled at /close · Stale &gt; 6h</div>
+  </div>
+  <div class="metric">
+    <div class="label">KB Index</div>
+    <div class="value"><span class="badge badge--high">1.2d ago</span></div>
+    <div class="sub">Size: 720.9 MB · Stale &gt; 24h</div>
+  </div>
+  <div class="metric">
+    <div class="label">Files Indexed</div>
+    <div class="value">—</div>
+    <div class="sub">— chunks · last run —</div>
+  </div>
+  <div class="metric">
+    <div class="label">Median /start Tokens (7d)</div>
+    <div class="value">67,345</div>
+    <div class="sub">3 samples · target ≤ 55K</div>
+  </div>
+</div>
+
+<section>
+<h2>Recent /start Audit (last 20)</h2>
+<table class="t">
+  <thead><tr><th>Timestamp</th><th>Model</th><th>Total Input</th><th>Fresh</th><th>Cache Read</th></tr></thead>
+  <tbody>
+<tr><td>2026-05-24T03:10</td><td>claude-opus-4-7</td><td>67,259</td><td>5</td><td>0</td></tr>
+<tr><td>2026-05-18T07:59</td><td>claude-opus-4-7</td><td>57,181</td><td>5</td><td>0</td></tr>
+<tr><td>2026-05-24T05:43</td><td>claude-opus-4-7</td><td>69,447</td><td>5</td><td>0</td></tr>
+<tr><td>2026-05-18T03:56</td><td>claude-opus-4-7</td><td>58,786</td><td>5</td><td>0</td></tr>
+<tr><td>2026-05-24T08:35</td><td>claude-opus-4-7</td><td>67,345</td><td>5</td><td>0</td></tr>
+<tr><td>2026-05-17T04:00</td><td>claude-opus-4-7</td><td>59,126</td><td>5</td><td>0</td></tr>
+  </tbody>
+</table>
+</section>
+
+<section>
+<h2>MCP Servers (TMW-239 Phase 2)</h2>
+<table class="t">
+  <thead><tr><th>Server</th><th>Tools</th><th>Purpose</th></tr></thead>
+  <tbody>
+    <tr><td><code>tmw-kb-search</code></td><td>query · query_history · stats</td><td>Semantic search across the corpus (Ollama nomic-embed-text)</td></tr>
+    <tr><td><code>tmw-decision-logger</code></td><td>list · view · find · next_number · template</td><td>DEC-XXX log queries</td></tr>
+    <tr><td><code>tmw-graphify</code></td><td>query · path · explain · neighbors · stats</td><td>Knowledge graph traversal (9313 nodes · 17323 edges)</td></tr>
+  </tbody>
+</table>
+</section>
+
+<section>
+<h2>Refresh Cadence</h2>
+<p style="font-size: 13px; opacity: 0.75;">
+<strong>kb-reindex (daily 02:00):</strong> rebuild kb_index.jsonl from markdown corpus<br>
+<strong>kb-watch (event-driven):</strong> fswatch fires reindex on file changes (5min debounce)<br>
+<strong>graphify-update (weekly Sun 02:15):</strong> rebuild graph.json from corpus<br>
+<strong>token-budget-audit (daily 02:30):</strong> snapshot /start sessions for cost trend<br>
+<strong>This dashboard (every 12h):</strong> render the above signals to HTML
+</p>
+</section>
+
+  </main>
+
+  <div class="stale-banner">
+    Last rebuilt: 2026-05-25T22:21 IST · Source: <code>state/kb_index_meta.json · CONTEXT_PACKET.md · start_token_audit.jsonl</code> · Rebuild: <code>python3 rebuild_kb_health_v2.py</code>
+  </div>
+</div>
+</body>
+</html>

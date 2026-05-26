@@ -500,6 +500,7 @@ const activeTasks = [
             { id: '**TMW-242**', task: 'Data Layer Phase 1 backfill (W2 Drift schema + remaining repositories + W1 screen backfill). Per architecture doc Phase 1 (DEC-155): Drift schema scaffold (6 tables: airlines/airports/flight_cache/us…', owner: 'Rohan + Claude', department: 'Engineering', priority: '**Medium**', status: 'Unblocked · sequenced post-W2 backend services landing', deadline: 'W2 evenings (Jun 1-7)', created: '2026-05-25' },
             { id: '**TMW-245**', task: 'V1 Go Backend foundation — auth + users + plans services LIVE-LOCAL · S127. Built per Engineering Constitution + v2.1 §B.2 + Multi-Agent CodeGen Pattern (Opus-direct for security-critical paths). Shi…', owner: 'Rohan + Claude', department: 'Engineering', priority: '—', status: 'WIP — code complete · smoke test gated on Docker restart', deadline: 'n/a', created: '2026-05-26' },
             { id: '**TMW-246**', task: 'FE → backend wiring layer · S127. Built dio + interceptors (CorrelationInterceptor adds X-Correlation-Id; AuthInterceptor attaches Bearer + 401 refresh) + AuthTokenStorage (in-memory, W3 will add flu…', owner: 'Rohan + Claude', department: 'Engineering', priority: '—', status: 'WIP — wiring layer complete · sign-up callback wire pending', deadline: 'n/a', created: '2026-05-26' },
+            { id: '**TMW-248**', task: 'Path C Implementation umbrella — adopt trackmywings/backend scaffold + 53 pending tasks + our additions · S128. Per Operations/AI System/Plans/TMW-226_Path_C_Implementation_Plan.md v1.0 (4,362 words…', owner: 'Rohan + Claude + Amol (advisory)', department: 'Engineering', priority: '**CRITICAL**', status: 'Pre-flight (Phase 0) · gated on Amol lunch alignment + DEC-157', deadline: '2026-08-15 (launch)', created: '2026-05-26' },
             { id: '**TMW-247**', task: 'W3 Group 3 Wave 1 (4 of 14 screens) shipped via 4-parallel Sonnets · S127. Dispatched 4 background Sonnets per Multi-Agent Pattern (each independent screen folder · no shared files · LocalSeed per DE…', owner: 'Rohan + Claude', department: 'Engineering', priority: '—', status: 'WIP — 4 of 14 W3 screens shipped · 10 remaining', deadline: 'n/a', created: '2026-05-26' },
             { id: 'TMW-227', task: 'BR-22 post-restructure ratification — narrowed scope per DEC-126. DRAFT SHIPPED S098 2026-05-08 appended to Legal/Restructure/03_Board_Resolutions/Board_Resolutions_Pack.md as MEETING #3 (BR-22 with…', owner: 'Rohan + Anshul B + Raman', department: 'Legal', priority: 'Medium', status: 'Refined version in 2026-05-16 lawyer pack-back; pass at Meeting #3 post-2026-05…', deadline: '2026-06-15', created: '2026-05-08' },
             { id: '**TMW-226**', task: 'MASTER PLAN — End-to-end V0 launch execution umbrella. v2.1 ADOPTED S121 per DEC-152 — 6 canonical artifacts at Plans/TMW-226_* (v2.1 plan · Engineering Constitution 84 rules · Multi-Agent CodeGen Pa…', owner: 'Rohan + Claude', department: 'Engineering / Product / Operations', priority: '**CRITICAL**', status: 'WIP · v2.1 W1-D1 ahead of pace · 1.1 splash Validation Gate next session', deadline: '2026-08-15 (launch)', created: '2026-05-07' },
@@ -1000,7 +1001,7 @@ const analyticsData = {
                         {
                                     "date": "2026-05-26",
                                     "completed": 1,
-                                    "added": 241
+                                    "added": 242
                         }
             ],
             "weeklyVelocity": [
@@ -1027,7 +1028,7 @@ const analyticsData = {
                         {
                                     "week": "2026-05-25",
                                     "completed": 5,
-                                    "added": 242
+                                    "added": 243
                         }
             ],
             "statusDistribution": [
@@ -1081,6 +1082,10 @@ const analyticsData = {
                         },
                         {
                                     "status": "**WIP \u2014 wiring layer complete \u00b7 sign-up callback wire pending**",
+                                    "count": 1
+                        },
+                        {
+                                    "status": "**Pre-flight (Phase 0) \u00b7 gated on Amol lunch alignment + DEC-157**",
                                     "count": 1
                         },
                         {
@@ -1156,6 +1161,12 @@ const analyticsData = {
                                     "overdue": 0
                         },
                         {
+                                    "owner": "Amol (advisory)",
+                                    "active": 1,
+                                    "high_priority": 0,
+                                    "overdue": 0
+                        },
+                        {
                                     "owner": "Anshul B",
                                     "active": 5,
                                     "high_priority": 1,
@@ -1181,7 +1192,7 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Claude",
-                                    "active": 19,
+                                    "active": 20,
                                     "high_priority": 4,
                                     "overdue": 0
                         },
@@ -1199,7 +1210,7 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Rohan",
-                                    "active": 32,
+                                    "active": 33,
                                     "high_priority": 8,
                                     "overdue": 0
                         },
@@ -1213,12 +1224,12 @@ const analyticsData = {
             "departmentHealth": [
                         {
                                     "department": "Engineering",
-                                    "active": 5,
+                                    "active": 6,
                                     "wip": 0,
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 9
+                                    "avg_age_days": 8
                         },
                         {
                                     "department": "Engineering / Product / Operations",
@@ -1357,13 +1368,13 @@ const analyticsData = {
             ],
             "deadlineStats": {
                         "overdue": 0,
-                        "due_3days": 26,
+                        "due_3days": 27,
                         "deadline_hit_rate": "0%"
             },
             "burndownData": [
                         {
                                     "date": "2026-05-26",
-                                    "remaining": 34
+                                    "remaining": 35
                         },
                         {
                                     "date": "2026-05-25",

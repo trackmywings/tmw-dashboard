@@ -85,7 +85,7 @@
   </form>
 </div>
 
-<div class="fc-truth">T-81 launch · Bank ✅ 2026-05-14 · INC-20A T-18 · Phase 3 100% · ₹100,000 cash / ₹98,498 receivable · 13 priorities · 0 overdue · last sync 59m ago</div>
+<div class="fc-truth">T-81 launch · Bank ✅ 2026-05-14 · INC-20A T-18 · Phase 3 100% · ₹100,000 cash / ₹98,498 receivable · 13 priorities · 0 overdue · last sync 60m ago</div>
 
 <div class="ds-wrap">
   <header class="ds-top">
@@ -295,7 +295,7 @@
       <div class="ds-section-aside">Google Calendar · TMW</div>
     </div>
     <div class="ds-frame ds-frame-flush" style="padding:8px 22px;">
-      <div class="fc-empty tone-warn">calendar_events.json unreadable: [Errno 11] Resource deadlock avoided. <span class="fc-empty-sub">Calendar sync not wired (TODO).</span></div>
+      <div class="fc-empty tone-warn">No upcoming events. Calendar sync not wired (TODO).</div>
     </div>
   </section>
 
@@ -354,8 +354,8 @@
       <div class="ds-metrics ds-metrics-3">
         <div class="ds-metric ds-metric-lead">
           <div class="ds-metric-lbl">Claude burn (Opus output)</div>
-          <div class="ds-metric-val num">20.42M</div>
-          <div class="ds-metric-sub">243 sessions · last 0.2h ago.</div>
+          <div class="ds-metric-val num">20.43M</div>
+          <div class="ds-metric-sub">244 sessions · last 0.2h ago.</div>
         </div>
         <div class="ds-metric">
           <div class="ds-metric-lbl">Tasks completed</div>
@@ -457,23 +457,23 @@
         <tbody>
         <tr>
           <td><code>tasks</code></td>
-          <td class="num">2026-05-26 19:05</td>
-          <td>4m ago</td>
+          <td class="num">2026-05-26 20:05</td>
+          <td>5m ago</td>
           <td><span class="ds-badge ds-badge-pri-medium">◉ stale</span></td>
           <td class="num"><span class="num">14</span></td>
         </tr>
         
         <tr>
           <td><code>founder-control-panel</code></td>
-          <td class="num">2026-05-26 18:10</td>
-          <td>59m ago</td>
+          <td class="num">2026-05-26 19:10</td>
+          <td>1.0h ago</td>
           <td><span class="ds-badge ds-badge-pri-medium">◉ stale</span></td>
           <td class="num"><span class="num">3</span></td>
         </tr>
         
         <tr>
           <td><code>claude-usage</code></td>
-          <td class="num">2026-05-26 18:15</td>
+          <td class="num">2026-05-26 19:15</td>
           <td>54m ago</td>
           <td><span class="ds-badge ds-badge-pri-medium">◉ stale</span></td>
           <td class="num"><span class="num">5</span></td>
@@ -481,7 +481,7 @@
         
         <tr>
           <td><code>finance-mis</code></td>
-          <td class="num">2026-05-26 18:20</td>
+          <td class="num">2026-05-26 19:20</td>
           <td>50m ago</td>
           <td><span class="ds-badge ds-badge-pri-medium">◉ stale</span></td>
           <td class="num"><span class="num">5</span></td>
@@ -489,7 +489,7 @@
         
         <tr>
           <td><code>folder-map-generator</code></td>
-          <td class="num">2026-05-26 18:55</td>
+          <td class="num">2026-05-26 19:55</td>
           <td>15m ago</td>
           <td><span class="ds-badge ds-badge-pri-medium">◉ stale</span></td>
           <td class="num"><span class="num">330</span></td>
@@ -497,16 +497,16 @@
         
         <tr>
           <td><code>file-watcher</code></td>
-          <td class="num">2026-05-26 18:15</td>
+          <td class="num">2026-05-26 19:15</td>
           <td>55m ago</td>
           <td><span class="ds-badge ds-badge-pri-medium">◉ stale</span></td>
-          <td class="num"><span class="num">456</span></td>
+          <td class="num"><span class="num">460</span></td>
         </tr>
         
         <tr>
           <td><code>calendar-sync</code></td>
           <td class="num">2026-05-26 07:01</td>
-          <td>12.1h ago</td>
+          <td>13.1h ago</td>
           <td><span class="ds-badge ds-badge-pri-medium">◉ stale</span></td>
           <td class="num"><span class="num">100</span></td>
         </tr>
@@ -514,7 +514,7 @@
         <tr>
           <td><code>weekly-digest</code></td>
           <td class="num">2026-05-24 20:10</td>
-          <td>47.0h ago</td>
+          <td>2d ago</td>
           <td><span class="ds-badge ds-badge-pri-low">✓ ok</span></td>
           <td class="num"><span class="num" style="color:var(--ink-low);">0</span></td>
         </tr>
@@ -532,7 +532,7 @@
   </div>
 
   <div class="ds-meta">
-    <span>Generated <span id="generatedAt">2026-05-26T19:10:10</span></span>
+    <span>Generated <span id="generatedAt">2026-05-26T20:10:14</span></span>
     <span>Founder Control v1 · launchd hourly</span>
   </div>
 </div>
@@ -564,7 +564,7 @@ document.getElementById('loginForm').addEventListener('submit', async e => {
 });
 
 // --- Stale banner: warn if >150 min old (hourly @ :15 schedule) ---
-const GENERATED_EPOCH = 1779802810;
+const GENERATED_EPOCH = 1779806414;
 (function(){
   const ageMin = (Date.now()/1000 - GENERATED_EPOCH) / 60;
   if (ageMin > 150) {

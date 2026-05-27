@@ -490,7 +490,9 @@ const heroMilestones = [
             }
 ];
 const activeTasks = [
-            { id: '**TMW-251**', task: 'Phase 6 integration testing + Phase 7 AWS ECS deploy — Per Path C plan §Phase 6+7. P6.1 local full-stack smoke (Amol\'s backend + V1_Flutter --dart-define=USE_LIVE_API=true + V0_NextJS dynamic routes)…', owner: 'Rohan + Claude', department: 'Engineering / Operations', priority: 'High', status: 'Sequenced after TMW-250 + disk + DEC-067 clearance', deadline: 'Pre-launch', created: '2026-05-26' },
+            { id: '**TMW-254**', task: 'Static_web stage refresh — Option E carryover from S132 — Build V0_NextJS static export + push to trackmywings/static_web stage branch. Replicates the S128 pattern (commit 1a4429e0d30e "deploy(stage)…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'Medium', status: 'Deferred to next session per founder S132 Option E', deadline: 'Next session', created: '2026-05-27' },
+            { id: '**TMW-255**', task: 'signup_otp email template seed migration — Live backend /v1/auth/signup/request-otp returns 404 "email template not found" because the signup_otp row doesn\'t exist in email_templates table. Tests see…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'High', status: 'Surfaced S132 close · pre-Phase-7 blocker', deadline: 'Pre-Phase-7 / before any live signup test', created: '2026-05-27' },
+            { id: '**TMW-256**', task: 'V1_Flutter web visual full-UI smoke (deferred) — Flutter web build verified S132 (flutter build web --release succeeded in 243s · main.dart.js 3.57MB · serves via python3 -m http.server 9090 · playwr…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'Medium', status: 'Deferred to next session · backend contract already proven by integration tests', deadline: 'Pre-Phase-7 polish', created: '2026-05-27' },
             { id: '**TMW-252**', task: 'Workspace relocation out of iCloud-synced paths · session-blocker resolution — DEC candidate. Current state: ~/Documents/Documents - Rohan\'s MacBook Air/Rohan Personal/Business Idea/App based Ideas/T…', owner: 'Rohan + Claude', department: 'Operations', priority: 'High', status: 'DEC candidate · awaiting founder direction at S130 start', deadline: 'Pre-Phase-5 dispatch', created: '2026-05-26' },
             { id: '**TMW-189**', task: 'RESTRUCTURE MASTER (umbrella) — Amol exit + Anshul B appointment + ICICI + INC-20A + INC-22 + ADT-1 + share transfer + IP assignment + director loan + handover. S114→S115 statutory milestones: ✅ TMW-…', owner: 'Rohan + Anshul B + Raman', department: 'Legal / Ops', priority: '**CRITICAL**', status: 'Active — 5 milestones closed in last 8 days (incl. all statutory T-5 filings);…', deadline: '2026-06-15 (target close)', created: '2026-05-02' },
             { id: 'TMW-193', task: 'Amol exit bundle — Resignation + MoU Termination + IP Assignment + 3yr NCNS + SH-4 Share Transfer + Final Settlement + Handover. DIR-12 sequenced AFTER Anshul B DIR-12 effective. Notes (S098 2026-05-…', owner: 'Rohan + Amol + Anshul B + Raman', department: 'Legal', priority: 'Critical', status: 'WIP — lawyer docs received via email 2026-05-24 · download + file + completenes…', deadline: '**2026-06-07** transaction · 2026-05-31 paperwork lock', created: '2026-05-02' },
@@ -545,6 +547,7 @@ const completedTasks = [
             { id: 'TMW-224', task: 'CLOSED 2026-05-12 per DEC-146 — methodology + DESIGN.md v2.0 + 6-section per-screen template work fully delivered. Original DEC-142 5-step pipeline (OD probe → Stitch → Figma → review → FE+BE) supers…', owner: 'Rohan + Claude', department: 'Design', completed: '2026-05-12' },
             { id: 'TMW-217', task: 'CANCELLED 2026-05-12 per DEC-146 — Figma prototype wiring plugin obsolete under OD-HTML-direct → Flutter+Go pipeline. Figma intermediate step dropped; no need to wire 838 hotspots / 617 reactions in…', owner: 'Rohan', department: 'Design / Eng', completed: '2026-05-12' },
             { id: '~~TMW-250~~', task: '✅ CLOSED S131 2026-05-27 · ENTIRE PHASE 5 SHIPPED LOCALLY. P5.2 /flight/[flightId] SSR (W f295304 · hybrid UUID-vs-slug preserved static path) · P5.3 /aircraft/[registration] SSR (X 15920f1 · ISR 5mi…', owner: 'Rohan + Claude', department: 'Engineering / Design', completed: '2026-05-26' },
+            { id: '**TMW-251**', task: 'Phase 6 COMPLETE S132 · Phase 7 remains (gated on TM clearance). Phase 6 shipped (TMW-251.6 closed): P6.1 local smoke + 3 bug fixes (migration 000003 UUID/hyphen · consent route collision · driver mi…', owner: 'Rohan + Claude', department: 'Engineering / Operations', completed: '2026-05-26' },
             { id: 'TMW-216', task: 'V1 Flutter mobile build — 🎉 WAVE 1 COMPLETE S124 · 22/22 screens · 206/206 tests · first-time-right quality. S122 W1-D1 bootstrap + foundation. S123 ops day. S124 W1-D3: 7-batch marathon shipped Wave…', owner: 'Rohan + Claude', department: 'Eng / Product', completed: '2026-05-04' },
             { id: '~~TMW-241~~', task: 'Data Layer Phase 0 retrofit — ✅ SHIPPED S126 per DEC-155. Drift+path_provider+sqlite3_flutter_libs+drift_dev+build_runner deps added · PlanItem + UserSession models + LocalSeed{Plans,UserSession}Repo…', owner: 'Rohan + Claude', department: 'Engineering', completed: '2026-05-25' },
             { id: '~~TMW-248-prior~~', task: 'Path C Implementation umbrella — adopt trackmywings/backend scaffold + 53 pending tasks + our additions · S128. Per Operations/AI System/Plans/TMW-226_Path_C_Implementation_Plan.md v1.0 (4,362 words…', owner: 'Rohan + Claude + Amol (advisory)', department: 'Engineering', completed: '2026-05-26' },
@@ -830,6 +833,13 @@ const activityFeed = [
                         "task_name": "**\u2705 CLOSED S131 2026-05-27 \u00b7 ENTIRE P..."
             },
             {
+                        "date": "2026-05-26",
+                        "task_id": "**TMW-251**",
+                        "event": "completed",
+                        "department": "Engineering / Operations",
+                        "task_name": "**Phase 6 COMPLETE S132 \u00b7 Phase 7 rem..."
+            },
+            {
                         "date": "2026-05-25",
                         "task_id": "**TMW-240**",
                         "event": "completed",
@@ -919,22 +929,10 @@ const activityFeed = [
                         "event": "completed",
                         "department": "Design",
                         "task_name": "OD-first build per DEC-148 \u2014 OD-lock ..."
-            },
-            {
-                        "date": "2026-05-24",
-                        "task_id": "**TMW-239**",
-                        "event": "completed",
-                        "department": "Operations",
-                        "task_name": "**/start Token Diet \u2014 drop /start fro..."
             }
 ];
 const calendarEvents = [];
 const taskDependencies = [
-            {
-                        "from": "**TMW-251**",
-                        "to": "TMW-250",
-                        "reason": "after TMW-250"
-            },
             {
                         "from": "TMW-154",
                         "to": "TMW-233",
@@ -1007,13 +1005,13 @@ const analyticsData = {
                         },
                         {
                                     "date": "2026-05-26",
-                                    "completed": 6,
-                                    "added": 5
+                                    "completed": 7,
+                                    "added": 4
                         },
                         {
                                     "date": "2026-05-27",
                                     "completed": 1,
-                                    "added": 245
+                                    "added": 249
                         }
             ],
             "weeklyVelocity": [
@@ -1039,8 +1037,8 @@ const analyticsData = {
                         },
                         {
                                     "week": "2026-05-25",
-                                    "completed": 11,
-                                    "added": 251
+                                    "completed": 12,
+                                    "added": 254
                         }
             ],
             "statusDistribution": [
@@ -1057,7 +1055,15 @@ const analyticsData = {
                                     "count": 2
                         },
                         {
-                                    "status": "**Sequenced after TMW-250 + disk + DEC-067 clearance**",
+                                    "status": "**Deferred to next session per founder S132 Option E**",
+                                    "count": 1
+                        },
+                        {
+                                    "status": "**Surfaced S132 close \u00b7 pre-Phase-7 blocker**",
+                                    "count": 1
+                        },
+                        {
+                                    "status": "**Deferred to next session \u00b7 backend contract already proven by integration tests**",
                                     "count": 1
                         },
                         {
@@ -1204,7 +1210,7 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Claude",
-                                    "active": 21,
+                                    "active": 23,
                                     "high_priority": 6,
                                     "overdue": 0
                         },
@@ -1222,7 +1228,7 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Rohan",
-                                    "active": 33,
+                                    "active": 35,
                                     "high_priority": 10,
                                     "overdue": 0
                         },
@@ -1236,21 +1242,12 @@ const analyticsData = {
             "departmentHealth": [
                         {
                                     "department": "Engineering",
-                                    "active": 5,
+                                    "active": 8,
                                     "wip": 0,
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 10
-                        },
-                        {
-                                    "department": "Engineering / Operations",
-                                    "active": 1,
-                                    "wip": 0,
-                                    "not_started": 0,
-                                    "overdue": 0,
-                                    "stale": 0,
-                                    "avg_age_days": 1
+                                    "avg_age_days": 6
                         },
                         {
                                     "department": "Engineering / Product / Operations",
@@ -1389,17 +1386,17 @@ const analyticsData = {
             ],
             "deadlineStats": {
                         "overdue": 0,
-                        "due_3days": 27,
+                        "due_3days": 29,
                         "deadline_hit_rate": "0%"
             },
             "burndownData": [
                         {
                                     "date": "2026-05-27",
-                                    "remaining": 35
+                                    "remaining": 37
                         },
                         {
                                     "date": "2026-05-26",
-                                    "remaining": 35
+                                    "remaining": 34
                         },
                         {
                                     "date": "2026-05-25",
@@ -1452,7 +1449,7 @@ const analyticsData = {
             ],
             "velocity": {
                         "today": 1,
-                        "this_week": 11,
+                        "this_week": 12,
                         "overdue": 0,
                         "stale": 1
             }

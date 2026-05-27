@@ -490,7 +490,6 @@ const heroMilestones = [
             }
 ];
 const activeTasks = [
-            { id: '**TMW-250**', task: 'Phase 5 V0_NextJS dynamic routes + Razorpay checkout · post-disk-recovery dispatch — Per Path C plan §Phase 5. P5.2 /flight/[id] SSR via GET /v1/flights/:id (Flight F+J shipped) · P5.3 /aircraft/[reg…', owner: 'Rohan + Claude', department: 'Engineering / Design', priority: 'High', status: 'Queued for S130 post-disk-recovery', deadline: 'T-30 to launch', created: '2026-05-26' },
             { id: '**TMW-251**', task: 'Phase 6 integration testing + Phase 7 AWS ECS deploy — Per Path C plan §Phase 6+7. P6.1 local full-stack smoke (Amol\'s backend + V1_Flutter --dart-define=USE_LIVE_API=true + V0_NextJS dynamic routes)…', owner: 'Rohan + Claude', department: 'Engineering / Operations', priority: 'High', status: 'Sequenced after TMW-250 + disk + DEC-067 clearance', deadline: 'Pre-launch', created: '2026-05-26' },
             { id: '**TMW-252**', task: 'Workspace relocation out of iCloud-synced paths · session-blocker resolution — DEC candidate. Current state: ~/Documents/Documents - Rohan\'s MacBook Air/Rohan Personal/Business Idea/App based Ideas/T…', owner: 'Rohan + Claude', department: 'Operations', priority: 'High', status: 'DEC candidate · awaiting founder direction at S130 start', deadline: 'Pre-Phase-5 dispatch', created: '2026-05-26' },
             { id: '**TMW-189**', task: 'RESTRUCTURE MASTER (umbrella) — Amol exit + Anshul B appointment + ICICI + INC-20A + INC-22 + ADT-1 + share transfer + IP assignment + director loan + handover. S114→S115 statutory milestones: ✅ TMW-…', owner: 'Rohan + Anshul B + Raman', department: 'Legal / Ops', priority: '**CRITICAL**', status: 'Active — 5 milestones closed in last 8 days (incl. all statutory T-5 filings);…', deadline: '2026-06-15 (target close)', created: '2026-05-02' },
@@ -545,6 +544,7 @@ const completedTasks = [
             { id: 'TMW-218', task: 'CANCELLED 2026-05-12 per DEC-146 — Library v15 catalog promotion obsolete under OD-HTML→Flutter pipeline. Reasoning: (a) Figma component sets dormant (no longer built); (b) color_tokens.json sync no…', owner: 'Rohan + Claude', department: 'Design / Eng', completed: '2026-05-12' },
             { id: 'TMW-224', task: 'CLOSED 2026-05-12 per DEC-146 — methodology + DESIGN.md v2.0 + 6-section per-screen template work fully delivered. Original DEC-142 5-step pipeline (OD probe → Stitch → Figma → review → FE+BE) supers…', owner: 'Rohan + Claude', department: 'Design', completed: '2026-05-12' },
             { id: 'TMW-217', task: 'CANCELLED 2026-05-12 per DEC-146 — Figma prototype wiring plugin obsolete under OD-HTML-direct → Flutter+Go pipeline. Figma intermediate step dropped; no need to wire 838 hotspots / 617 reactions in…', owner: 'Rohan', department: 'Design / Eng', completed: '2026-05-12' },
+            { id: '~~TMW-250~~', task: '✅ CLOSED S131 2026-05-27 · ENTIRE PHASE 5 SHIPPED LOCALLY. P5.2 /flight/[flightId] SSR (W f295304 · hybrid UUID-vs-slug preserved static path) · P5.3 /aircraft/[registration] SSR (X 15920f1 · ISR 5mi…', owner: 'Rohan + Claude', department: 'Engineering / Design', completed: '2026-05-26' },
             { id: 'TMW-216', task: 'V1 Flutter mobile build — 🎉 WAVE 1 COMPLETE S124 · 22/22 screens · 206/206 tests · first-time-right quality. S122 W1-D1 bootstrap + foundation. S123 ops day. S124 W1-D3: 7-batch marathon shipped Wave…', owner: 'Rohan + Claude', department: 'Eng / Product', completed: '2026-05-04' },
             { id: '~~TMW-241~~', task: 'Data Layer Phase 0 retrofit — ✅ SHIPPED S126 per DEC-155. Drift+path_provider+sqlite3_flutter_libs+drift_dev+build_runner deps added · PlanItem + UserSession models + LocalSeed{Plans,UserSession}Repo…', owner: 'Rohan + Claude', department: 'Engineering', completed: '2026-05-25' },
             { id: '~~TMW-248-prior~~', task: 'Path C Implementation umbrella — adopt trackmywings/backend scaffold + 53 pending tasks + our additions · S128. Per Operations/AI System/Plans/TMW-226_Path_C_Implementation_Plan.md v1.0 (4,362 words…', owner: 'Rohan + Claude + Amol (advisory)', department: 'Engineering', completed: '2026-05-26' },
@@ -823,6 +823,13 @@ const activityFeed = [
                         "task_name": "**W3 Group 3 Wave 1 (4 of 14 screens)..."
             },
             {
+                        "date": "2026-05-26",
+                        "task_id": "~~TMW-250~~",
+                        "event": "completed",
+                        "department": "Engineering / Design",
+                        "task_name": "**\u2705 CLOSED S131 2026-05-27 \u00b7 ENTIRE P..."
+            },
+            {
                         "date": "2026-05-25",
                         "task_id": "**TMW-240**",
                         "event": "completed",
@@ -919,13 +926,6 @@ const activityFeed = [
                         "event": "completed",
                         "department": "Operations",
                         "task_name": "**/start Token Diet \u2014 drop /start fro..."
-            },
-            {
-                        "date": "2026-05-18",
-                        "task_id": "TMW-225",
-                        "event": "completed",
-                        "department": "Legal",
-                        "task_name": "INC-22 registered office verification..."
             }
 ];
 const calendarEvents = [];
@@ -1007,13 +1007,13 @@ const analyticsData = {
                         },
                         {
                                     "date": "2026-05-26",
-                                    "completed": 5,
-                                    "added": 6
+                                    "completed": 6,
+                                    "added": 5
                         },
                         {
                                     "date": "2026-05-27",
                                     "completed": 1,
-                                    "added": 244
+                                    "added": 245
                         }
             ],
             "weeklyVelocity": [
@@ -1039,7 +1039,7 @@ const analyticsData = {
                         },
                         {
                                     "week": "2026-05-25",
-                                    "completed": 10,
+                                    "completed": 11,
                                     "added": 251
                         }
             ],
@@ -1055,10 +1055,6 @@ const analyticsData = {
                         {
                                     "status": "**Drafts ready; Anshul ji review pending**",
                                     "count": 2
-                        },
-                        {
-                                    "status": "**Queued for S130 post-disk-recovery**",
-                                    "count": 1
                         },
                         {
                                     "status": "**Sequenced after TMW-250 + disk + DEC-067 clearance**",
@@ -1208,8 +1204,8 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Claude",
-                                    "active": 22,
-                                    "high_priority": 7,
+                                    "active": 21,
+                                    "high_priority": 6,
                                     "overdue": 0
                         },
                         {
@@ -1226,8 +1222,8 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Rohan",
-                                    "active": 34,
-                                    "high_priority": 11,
+                                    "active": 33,
+                                    "high_priority": 10,
                                     "overdue": 0
                         },
                         {
@@ -1246,15 +1242,6 @@ const analyticsData = {
                                     "overdue": 0,
                                     "stale": 0,
                                     "avg_age_days": 10
-                        },
-                        {
-                                    "department": "Engineering / Design",
-                                    "active": 1,
-                                    "wip": 0,
-                                    "not_started": 0,
-                                    "overdue": 0,
-                                    "stale": 0,
-                                    "avg_age_days": 1
                         },
                         {
                                     "department": "Engineering / Operations",
@@ -1402,17 +1389,17 @@ const analyticsData = {
             ],
             "deadlineStats": {
                         "overdue": 0,
-                        "due_3days": 28,
+                        "due_3days": 27,
                         "deadline_hit_rate": "0%"
             },
             "burndownData": [
                         {
                                     "date": "2026-05-27",
-                                    "remaining": 36
+                                    "remaining": 35
                         },
                         {
                                     "date": "2026-05-26",
-                                    "remaining": 36
+                                    "remaining": 35
                         },
                         {
                                     "date": "2026-05-25",
@@ -1465,7 +1452,7 @@ const analyticsData = {
             ],
             "velocity": {
                         "today": 1,
-                        "this_week": 10,
+                        "this_week": 11,
                         "overdue": 0,
                         "stale": 1
             }

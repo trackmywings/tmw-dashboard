@@ -498,7 +498,6 @@ const activeTasks = [
             { id: 'TMW-196', task: 'POA in favour of Anshul B (limited, dormant, trigger-activated). Stamped + notarised + registered. Sealed-envelope custody with spouse + Anshul B. S112 2026-05-16: WIP — TMW-190 unblocker landed (Ans…', owner: 'Rohan + Anshul B', department: 'Legal', priority: 'Medium', status: 'Sequenced post-TMW-190', deadline: '2026-06-15', created: '2026-05-02' },
             { id: 'TMW-199', task: 'Email + credential migration — Workspace suspend (Amol/Adhi/Ruchi) + GitHub org transfer + AWS root rotation + IAM cleanup + Mapbox/Razorpay/Stripe/Cloudflare under Company. Checklist at Legal/Restru…', owner: 'Rohan', department: 'Operations', priority: 'High', status: 'Sequenced post-TMW-193', deadline: '2026-05-31', created: '2026-05-02' },
             { id: 'TMW-200', task: 'Mihir sir briefing — team change + launch timeline re-baseline. AFTER Amol DIR-12 effective. DRAFT SHIPPED S098 2026-05-08 at Operations/Briefings/2026-06-01_Mihir_Briefing.{md,docx} (380 words, stat…', owner: 'Rohan + Claude', department: 'Strategy', priority: 'Medium', status: 'Draft ready; send post-2026-05-31', deadline: '2026-06-01', created: '2026-05-02' },
-            { id: '**TMW-206**', task: 'Subsumed by TMW-259 Phase 3 (Infrastructure v2 git init). Original scope: git init ~/tmw + .gitignore. New scope: git init ~/Code/tmw/ + push to Gitea on Lenovo (http://tmw-linux:3000/) + GitHub mirr…', owner: 'Rohan + Claude', department: 'Operations', priority: 'High', status: 'Ready for next session (Phase 3)', deadline: 'Next session', created: '2026-05-03' },
             { id: 'TMW-207', task: 'Install zellij (or tmux) + create tmw saved layout for 5-pane setup (T1 strategic / T2 code worktree / T3 design worktree / T4 local Ollama / T5 monitoring). Per v2.1 Dim 7. Blocked on TMW-206.', owner: 'Rohan', department: 'Operations', priority: 'Medium', status: 'Blocked on TMW-206', deadline: '2026-06-15', created: '2026-05-03' },
             { id: '**TMW-242**', task: 'Data Layer Phase 1 backfill (W2 Drift schema + remaining repositories + W1 screen backfill). Per architecture doc Phase 1 (DEC-155): Drift schema scaffold (6 tables: airlines/airports/flight_cache/us…', owner: 'Rohan + Claude', department: 'Engineering', priority: '**Medium**', status: 'Unblocked · sequenced post-W2 backend services landing', deadline: 'W2 evenings (Jun 1-7)', created: '2026-05-25' },
             { id: '**TMW-245**', task: 'V1 Go Backend foundation — auth + users + plans services LIVE-LOCAL · S127. Built per Engineering Constitution + v2.1 §B.2 + Multi-Agent CodeGen Pattern (Opus-direct for security-critical paths). Shi…', owner: 'Rohan + Claude', department: 'Engineering', priority: '—', status: 'WIP — code complete · smoke test gated on Docker restart', deadline: 'n/a', created: '2026-05-26' },
@@ -527,6 +526,9 @@ const activeTasks = [
             { id: '**TMW-238**', task: 'Fundraise pack execution — NDA + investor outreach + data room access logistics. Pitch decks ready in 11 variants (4 aesthetic × HTML+PPTX + 7 use-case). When founder decides to share externally: (a)…', owner: 'Rohan + Anshul B + Mihir sir', department: 'Strategy / Legal', priority: 'High', status: 'Pending — when founder ready to share externally · variants ready', deadline: 'Pre-launch (target T-30 fundraise window or earlier if grant deadline)', created: '2026-05-17' }
         ];
 const completedTasks = [
+            { id: '~~TMW-206~~', task: '✅ DONE S138 — git init ~/Code/tmw + comprehensive .gitignore + initial commit + pushed Gitea + GitHub mirror (subsumed by TMW-259 Phase 3).', owner: 'Rohan + Claude', department: 'Operations', completed: '2026-05-29' },
+            { id: '~~TMW-252~~', task: '✅ CLOSED S137 2026-05-29 — Workspace moved from ~/Documents/Documents - Rohan\'s MacBook Air/.../TrackMyWings/ (iCloud-synced) to ~/Code/tmw/ (local-only). Full relocation (NOT the partial Engineering…', owner: 'Rohan + Claude', department: 'Operations', completed: '2026-05-29' },
+            { id: '~~TMW-230~~', task: '✅ CLOSED S137 2026-05-29 — Old PAT ghp_KhKJd...feudc REVOKED at github.com/settings/tokens. New fine-grained PAT github_pat_11B... generated (scope: trackmywings/* Contents R+W · expires 90 days · au…', owner: 'Rohan + Claude', department: 'Operations', completed: '2026-05-29' },
             { id: '~~TMW-137~~', task: '❌ CANCELLED S136 2026-05-28 per DEC-162 — Loops.so retired from V1 stack; AWS SES is the canonical transactional path (Engineering/Architecture/Email/AWS_SES_Setup_Runbook.md per S133). Waitlist nurt…', owner: 'Rohan + Claude', department: 'Marketing / Eng', completed: '2026-05-28' },
             { id: '~~TMW-253~~', task: '✅ EFFECTIVELY CLOSED S134 2026-05-27 · plist reloaded + WorkingDirectory iCloud TCC trap fixed. Diagnosed S134 that the loaded plist\'s WorkingDirectory = /Users/rohansahay/tmw resolves into iCloud-sy…', owner: 'Rohan + Claude', department: 'Operations', completed: '2026-05-27' },
             { id: '**TMW-257**', task: 'W4 Group 4 Aviation Identity Foundation SHIPPED 9/9 screens · 143/143 tests GREEN · TMW-226. 3 dispatch batches via Multi-Agent CodeGen Pattern (Opus controller + parallel Sonnet writers per DEC-152).', owner: 'Rohan + Claude', department: 'Engineering / Design', completed: '2026-05-27' },
@@ -815,6 +817,27 @@ const activityFeed = [
                         "task_name": "**Infrastructure v2 build umbrella (P..."
             },
             {
+                        "date": "2026-05-29",
+                        "task_id": "~~TMW-206~~",
+                        "event": "completed",
+                        "department": "Operations",
+                        "task_name": "**\u2705 DONE S138** \u2014 git init `~/Code/tm..."
+            },
+            {
+                        "date": "2026-05-29",
+                        "task_id": "~~TMW-252~~",
+                        "event": "completed",
+                        "department": "Operations",
+                        "task_name": "**\u2705 CLOSED S137 2026-05-29** \u2014 Worksp..."
+            },
+            {
+                        "date": "2026-05-29",
+                        "task_id": "~~TMW-230~~",
+                        "event": "completed",
+                        "department": "Operations",
+                        "task_name": "**\u2705 CLOSED S137 2026-05-29** \u2014 Old PA..."
+            },
+            {
                         "date": "2026-05-28",
                         "task_id": "~~TMW-137~~",
                         "event": "completed",
@@ -911,27 +934,6 @@ const activityFeed = [
                         "event": "completed",
                         "department": "Operations",
                         "task_name": "**Dashboard expansion 5 \u2192 14 with uni..."
-            },
-            {
-                        "date": "2026-05-25",
-                        "task_id": "~~TMW-241~~",
-                        "event": "completed",
-                        "department": "Engineering",
-                        "task_name": "**Data Layer Phase 0 retrofit \u2014 \u2705 SHI..."
-            },
-            {
-                        "date": "2026-05-25",
-                        "task_id": "**TMW-244**",
-                        "event": "completed",
-                        "department": "Engineering",
-                        "task_name": ""
-            },
-            {
-                        "date": "2026-05-25",
-                        "task_id": "~~TMW-244~~",
-                        "event": "completed",
-                        "department": "Engineering",
-                        "task_name": "**Wave 2 build \u2014 22/22 screens \u00b7 \u2705 SH..."
             }
 ];
 const calendarEvents = [
@@ -1028,15 +1030,20 @@ const analyticsData = {
                         },
                         {
                                     "date": "2026-05-29",
-                                    "completed": 7,
-                                    "added": 251
+                                    "completed": 4,
+                                    "added": 0
+                        },
+                        {
+                                    "date": "2026-05-30",
+                                    "completed": 6,
+                                    "added": 254
                         }
             ],
             "weeklyVelocity": [
                         {
                                     "week": "2026-04-27",
                                     "completed": 0,
-                                    "added": 7
+                                    "added": 6
                         },
                         {
                                     "week": "2026-05-04",
@@ -1055,8 +1062,8 @@ const analyticsData = {
                         },
                         {
                                     "week": "2026-05-25",
-                                    "completed": 20,
-                                    "added": 258
+                                    "completed": 23,
+                                    "added": 261
                         }
             ],
             "statusDistribution": [
@@ -1098,10 +1105,6 @@ const analyticsData = {
                         },
                         {
                                     "status": "**Draft ready; send post-2026-05-31**",
-                                    "count": 1
-                        },
-                        {
-                                    "status": "**Ready for next session (Phase 3)**",
                                     "count": 1
                         },
                         {
@@ -1224,8 +1227,8 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Claude",
-                                    "active": 22,
-                                    "high_priority": 7,
+                                    "active": 21,
+                                    "high_priority": 6,
                                     "overdue": 0
                         },
                         {
@@ -1242,8 +1245,8 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Rohan",
-                                    "active": 33,
-                                    "high_priority": 11,
+                                    "active": 32,
+                                    "high_priority": 10,
                                     "overdue": 0
                         },
                         {
@@ -1261,7 +1264,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 9
+                                    "avg_age_days": 10
                         },
                         {
                                     "department": "Engineering / Design",
@@ -1270,7 +1273,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 2
+                                    "avg_age_days": 3
                         },
                         {
                                     "department": "Engineering / Product / Operations",
@@ -1279,7 +1282,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 22
+                                    "avg_age_days": 23
                         },
                         {
                                     "department": "Finance",
@@ -1288,7 +1291,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 72
+                                    "avg_age_days": 73
                         },
                         {
                                     "department": "Finance / Operations",
@@ -1297,7 +1300,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 13
+                                    "avg_age_days": 14
                         },
                         {
                                     "department": "Finance / Strategy",
@@ -1306,7 +1309,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 36
+                                    "avg_age_days": 37
                         },
                         {
                                     "department": "Legal",
@@ -1315,7 +1318,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 34
+                                    "avg_age_days": 35
                         },
                         {
                                     "department": "Legal / Finance",
@@ -1324,7 +1327,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 36
+                                    "avg_age_days": 37
                         },
                         {
                                     "department": "Legal / Ops",
@@ -1333,7 +1336,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 27
+                                    "avg_age_days": 28
                         },
                         {
                                     "department": "Marketing",
@@ -1342,7 +1345,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 60
+                                    "avg_age_days": 61
                         },
                         {
                                     "department": "Marketing / Strategy",
@@ -1351,16 +1354,16 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 13
+                                    "avg_age_days": 14
                         },
                         {
                                     "department": "Operations",
-                                    "active": 3,
+                                    "active": 2,
                                     "wip": 0,
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 26
+                                    "avg_age_days": 27
                         },
                         {
                                     "department": "Product",
@@ -1369,7 +1372,7 @@ const analyticsData = {
                                     "not_started": 1,
                                     "overdue": 0,
                                     "stale": 1,
-                                    "avg_age_days": 72
+                                    "avg_age_days": 73
                         },
                         {
                                     "department": "Strategy",
@@ -1378,7 +1381,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 27
+                                    "avg_age_days": 28
                         },
                         {
                                     "department": "Strategy / Legal",
@@ -1387,7 +1390,7 @@ const analyticsData = {
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 12
+                                    "avg_age_days": 13
                         }
             ],
             "staleTasks": [
@@ -1395,75 +1398,75 @@ const analyticsData = {
                                     "id": "TMW-056",
                                     "task": "Define exact ad placements on Stitch UI screens",
                                     "department": "Product",
-                                    "age_days": 72
+                                    "age_days": 73
                         }
             ],
             "deadlineStats": {
                         "overdue": 0,
-                        "due_3days": 32,
+                        "due_3days": 31,
                         "deadline_hit_rate": "0%"
             },
             "burndownData": [
                         {
+                                    "date": "2026-05-30",
+                                    "remaining": 34
+                        },
+                        {
                                     "date": "2026-05-29",
-                                    "remaining": 35
+                                    "remaining": 34
                         },
                         {
                                     "date": "2026-05-28",
-                                    "remaining": 35
+                                    "remaining": 34
                         },
                         {
                                     "date": "2026-05-27",
-                                    "remaining": 35
+                                    "remaining": 34
                         },
                         {
                                     "date": "2026-05-26",
-                                    "remaining": 32
+                                    "remaining": 31
                         },
                         {
                                     "date": "2026-05-25",
-                                    "remaining": 29
+                                    "remaining": 28
                         },
                         {
                                     "date": "2026-05-24",
-                                    "remaining": 28
+                                    "remaining": 27
                         },
                         {
                                     "date": "2026-05-23",
-                                    "remaining": 28
+                                    "remaining": 27
                         },
                         {
                                     "date": "2026-05-22",
-                                    "remaining": 28
+                                    "remaining": 27
                         },
                         {
                                     "date": "2026-05-21",
-                                    "remaining": 28
+                                    "remaining": 27
                         },
                         {
                                     "date": "2026-05-20",
-                                    "remaining": 28
+                                    "remaining": 27
                         },
                         {
                                     "date": "2026-05-19",
-                                    "remaining": 28
+                                    "remaining": 27
                         },
                         {
                                     "date": "2026-05-18",
-                                    "remaining": 28
+                                    "remaining": 27
                         },
                         {
                                     "date": "2026-05-17",
-                                    "remaining": 28
-                        },
-                        {
-                                    "date": "2026-05-16",
                                     "remaining": 27
                         }
             ],
             "velocity": {
-                        "today": 7,
-                        "this_week": 20,
+                        "today": 6,
+                        "this_week": 23,
                         "overdue": 0,
                         "stale": 1
             }

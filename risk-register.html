@@ -61,12 +61,12 @@
 <div class="metric-row">
   <div class="metric">
     <div class="label">Critical Risks</div>
-    <div class="value">2</div>
+    <div class="value">3</div>
     <div class="sub">Immediate action</div>
   </div>
   <div class="metric">
     <div class="label">High Risks</div>
-    <div class="value">4</div>
+    <div class="value">3</div>
     <div class="sub">Active mitigation</div>
   </div>
   <div class="metric">
@@ -87,8 +87,8 @@
   <thead><tr><th>Severity</th><th>Risk</th><th>Notes / Mitigation</th></tr></thead>
   <tbody>
 <tr><td><span class="badge badge--urgent">CRITICAL</span></td><td><strong>Founder well-being — BP red zone</strong></td><td>2026-05-02: Rohan flagged 160/110 sustained. Operating cadence treats founder bandwidth + health as binding. BP > 140/90 = scope-pause day; BP > 160/100 + symptom = ER. Per Systems Upgrade Plan §4.5.</td></tr>
+<tr><td><span class="badge badge--urgent">CRITICAL</span></td><td><strong>TMW-252 workspace relocation — iCloud contention recurring</strong></td><td>iCloud ghost files (` 2.dart`, ` 2.py`) hit 3× in S133-S135; OSR(11) lock contention hung parallel dispatches twice. Root cause: `~/tmw` in iCloud-synced Documents with 2.7GB Archive (relocated 2026-05-25 but residual contention persists). **DEC pending. Treat as blocking for parallel Sonnet batches >2 agents until resolved.** ~2hr fix. Per `feedback_icloud_osr11_lock_contention.md` + S133-S135 incident chain.</td></tr>
 <tr><td><span class="badge badge--urgent">CRITICAL</span></td><td><strong>§ 149 sequencing risk</strong></td><td>Anshul B's DIR-12 (appointment) MUST be effective BEFORE Amol's DIR-12 (resignation). Single mis-step = non-compliance. Raman to gate-keep.</td></tr>
-<tr><td><span class="badge badge--high">High</span></td><td><strong>INC-20A filing trigger</strong></td><td>30-day clock LIVE post-paid-up-deposit 2026-05-14. Deadline ~2026-06-13. Late penalty ₹50k + ₹1k/day per director.</td></tr>
 <tr><td><span class="badge badge--high">High</span></td><td><strong>Solo-founder bandwidth</strong></td><td>All 9 functions on Rohan + Claude. Time variable, scope fixed (Q12.1, Q10.5). No contractors (Q10.3). Force-multiplier = Claude skill activation per Systems Upgrade Plan.</td></tr>
 <tr><td><span class="badge badge--high">High</span></td><td><strong>Knowledge loss during Amol handover</strong></td><td>Amol's Handover Document is gating his last working day. No clearance until delivered. Walkthrough video + bug list + roadmap notes mandatory.</td></tr>
 <tr><td><span class="badge badge--high">High</span></td><td><strong>Trademark filing not yet started</strong></td><td>TMW-123. Cleaner cap-table post-restructure accelerates path. Anshul B leads post-DIR-12 close.</td></tr>
@@ -114,7 +114,7 @@ Source canonical: <code>Operations/AI System/CONTEXT.md</code> "Top risks". Skil
   </main>
 
   <div class="stale-banner">
-    Last rebuilt: 2026-05-27T09:52 IST · Source: <code>Operations/AI System/CONTEXT.md</code> (Top risks section) · Rebuild: <code>python3 rebuild_risk_register.py</code>
+    Last rebuilt: 2026-05-29T08:53 IST · Source: <code>Operations/AI System/CONTEXT.md</code> (Top risks section) · Rebuild: <code>python3 rebuild_risk_register.py</code>
   </div>
 </div>
 </body>

@@ -32,6 +32,15 @@
   .progress-fill--green { background: #10B981; }
   .progress-fill--amber { background: #F59E0B; }
   .progress-fill--red { background: #DC2626; }
+  /* --- Mobile (≤700px): scrollable nav, scrollable tables, stacked metrics --- */
+  @media (max-width: 700px) {
+    .ds-nav { display: flex; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; gap: 6px; padding-bottom: 4px; }
+    .ds-nav a { flex: 0 0 auto; padding: 6px 10px; font-size: 12px; white-space: nowrap; }
+    table.t { display: block; width: 100%; overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; }
+  }
+  @media (max-width: 480px) {
+    .metric-row { grid-template-columns: 1fr; }
+  }
   
 </style>
 </head>
@@ -53,6 +62,7 @@
         <a href="ai-providers.html">Providers</a>
         <a href="skills.html">Skills</a>
         <a href="folder-map.html">Files</a>
+        <a href="infra.html">Infra</a>
       </nav>
     <h1 style="margin: 8px 0 0;">KB Health</h1>
   </header>
@@ -61,13 +71,13 @@
 <div class="metric-row">
   <div class="metric">
     <div class="label">Context Packet</div>
-    <div class="value"><span class="badge badge--ok">8.8h ago</span></div>
+    <div class="value"><span class="badge badge--ok">2.2h ago</span></div>
     <div class="sub">Auto-compiled at /close · Stale &gt; 6h</div>
   </div>
   <div class="metric">
     <div class="label">KB Index</div>
-    <div class="value"><span class="badge badge--urgent">2.4d ago</span></div>
-    <div class="sub">Size: 742.0 MB · Stale &gt; 24h</div>
+    <div class="value"><span class="badge badge--high">1.4d ago</span></div>
+    <div class="sub">Size: 588.2 MB · Stale &gt; 24h</div>
   </div>
   <div class="metric">
     <div class="label">Files Indexed</div>
@@ -76,8 +86,8 @@
   </div>
   <div class="metric">
     <div class="label">Median /start Tokens (7d)</div>
-    <div class="value">—</div>
-    <div class="sub">0 samples · target ≤ 55K</div>
+    <div class="value">70,044</div>
+    <div class="sub">21 samples · target ≤ 55K</div>
   </div>
 </div>
 
@@ -86,7 +96,26 @@
 <table class="t">
   <thead><tr><th>Timestamp</th><th>Model</th><th>Total Input</th><th>Fresh</th><th>Cache Read</th></tr></thead>
   <tbody>
-<tr><td colspan="5" class="empty">No audit data yet</td></tr>
+<tr><td>2026-05-27T03:37</td><td>claude-opus-4-7</td><td>73,975</td><td>5</td><td>0</td></tr>
+<tr><td>2026-05-26T07:33</td><td>claude-opus-4-7</td><td>69,344</td><td>5</td><td>0</td></tr>
+<tr><td>2026-05-27T09:34</td><td>claude-opus-4-7</td><td>67,960</td><td>5</td><td>0</td></tr>
+<tr><td>2026-05-27T06:26</td><td>claude-opus-4-7</td><td>70,074</td><td>5</td><td>18509</td></tr>
+<tr><td>2026-05-28T03:27</td><td>claude-opus-4-7</td><td>60,006</td><td>5</td><td>0</td></tr>
+<tr><td>2026-05-28T06:39</td><td>claude-opus-4-7</td><td>70,358</td><td>5</td><td>0</td></tr>
+<tr><td>2026-05-27T00:16</td><td>claude-opus-4-7</td><td>71,461</td><td>5</td><td>0</td></tr>
+<tr><td>2026-05-26T04:16</td><td>claude-opus-4-7</td><td>65,520</td><td>5</td><td>0</td></tr>
+<tr><td>2026-05-26T02:34</td><td>claude-opus-4-7</td><td>71,414</td><td>5</td><td>0</td></tr>
+<tr><td>2026-05-27T12:06</td><td>claude-opus-4-7</td><td>70,044</td><td>5</td><td>0</td></tr>
+<tr><td>2026-05-27T00:54</td><td>claude-opus-4-7</td><td>71,804</td><td>5</td><td>18560</td></tr>
+<tr><td>2026-05-26T10:03</td><td>claude-opus-4-7</td><td>61,583</td><td>5</td><td>0</td></tr>
+<tr><td>2026-05-25T15:20</td><td>claude-opus-4-7</td><td>71,401</td><td>5</td><td>0</td></tr>
+<tr><td>2026-05-25T17:04</td><td>claude-opus-4-7</td><td>71,414</td><td>5</td><td>0</td></tr>
+<tr><td>2026-05-25T02:37</td><td>claude-opus-4-7</td><td>69,263</td><td>5</td><td>0</td></tr>
+<tr><td>2026-05-25T00:06</td><td>claude-opus-4-7</td><td>68,986</td><td>5</td><td>0</td></tr>
+<tr><td>2026-05-24T11:39</td><td>claude-opus-4-7</td><td>70,216</td><td>5</td><td>0</td></tr>
+<tr><td>2026-05-24T15:14</td><td>claude-opus-4-7</td><td>70,072</td><td>5</td><td>0</td></tr>
+<tr><td>2026-05-24T03:10</td><td>claude-opus-4-7</td><td>67,259</td><td>5</td><td>0</td></tr>
+<tr><td>2026-05-18T07:59</td><td>claude-opus-4-7</td><td>57,181</td><td>5</td><td>0</td></tr>
   </tbody>
 </table>
 </section>
@@ -117,7 +146,7 @@
   </main>
 
   <div class="stale-banner">
-    Last rebuilt: 2026-05-28T20:53 IST · Source: <code>state/kb_index_meta.json · CONTEXT_PACKET.md · start_token_audit.jsonl</code> · Rebuild: <code>python3 rebuild_kb_health_v2.py</code>
+    Last rebuilt: 2026-05-31T02:14 IST · Source: <code>state/kb_index_meta.json · CONTEXT_PACKET.md · start_token_audit.jsonl</code> · Rebuild: <code>python3 rebuild_kb_health_v2.py</code>
   </div>
 </div>
 </body>

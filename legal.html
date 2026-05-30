@@ -10,26 +10,36 @@
 <style>
   /* Page-specific overrides only — most styling comes from dashboard-components.css partials */
   .metric-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; }
-  .metric { padding: 16px; border-radius: 8px; background: var(--surface-1, #1F2937); }
+  .metric { padding: 16px; border-radius: 8px; background: var(--surface-1, #302154); }
   .metric .label { font-size: 12px; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.05em; }
   .metric .value { font-size: 28px; font-weight: 600; margin-top: 4px; }
   .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
-  .badge--urgent { background: #DC2626; color: white; }
-  .badge--high { background: #F59E0B; color: white; }
-  .badge--ok { background: #10B981; color: white; }
-  .badge--default { background: #6B7280; color: white; }
+  .badge--urgent { background: #B28134; color: #FFEFC2; }
+  .badge--high { background: #F2B95F; color: #1A1F3D; }
+  .badge--ok { background: #FFE08A; color: #1A1F3D; }
+  .badge--default { background: #4C3E70; color: #FFEFC2; }
   table.t { width: 100%; border-collapse: collapse; margin: 16px 0; }
-  table.t th { background: var(--surface-2, #111827); padding: 8px; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
-  table.t td { padding: 8px; border-bottom: 1px solid var(--border, #374151); font-size: 13px; }
+  table.t th { background: var(--surface-2, #1A1F3D); padding: 8px; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+  table.t td { padding: 8px; border-bottom: 1px solid var(--border, #4C3E70); font-size: 13px; }
   .empty { padding: 16px; opacity: 0.6; font-style: italic; }
   section { margin-bottom: 32px; }
   h2 { margin: 24px 0 8px; font-size: 18px; }
-  .stale-banner { position: sticky; bottom: 0; padding: 8px 16px; background: var(--surface-2, #111827); font-size: 12px; opacity: 0.7; text-align: center; }
+  .stale-banner { position: sticky; bottom: 0; padding: 8px 16px; background: var(--surface-2, #1A1F3D); font-size: 12px; opacity: 0.7; text-align: center; }
+  /* --- Mobile (≤700px): scrollable nav + tables, stacked metrics --- */
+  @media (max-width: 700px) {
+    .ds-nav { display: flex; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; gap: 6px; padding-bottom: 4px; }
+    .ds-nav a { flex: 0 0 auto; white-space: nowrap; padding: 6px 10px; font-size: 12px; }
+    table.t, .ds-table { display: block; width: 100%; overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; }
+    .ds-metrics, .metric-row { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+  }
+  @media (max-width: 480px) {
+    .ds-metrics, .metric-row { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
 <div class="app-shell">
-<header class="ds-header" style="padding: 16px; border-bottom: 1px solid var(--border, #374151);">
+<header class="ds-header" style="padding: 16px; border-bottom: 1px solid var(--border, #4C3E70);">
 <nav class="ds-nav">
   <a href="index.html">Founder</a>
   <a href="finance-mis.html">Finance MIS</a>
@@ -45,6 +55,7 @@
   <a href="ai-providers.html">Providers</a>
   <a href="skills.html">Skills</a>
   <a href="folder-map.html">Files</a>
+  <a href="infra.html">Infra</a>
 </nav>
 <h1 style="margin: 8px 0 0;">Legal Registry</h1>
 </header>
@@ -98,7 +109,7 @@
 </main>
 
 <div class="stale-banner">
-Last rebuilt: 2026-05-31T01:25 IST · Source: <code>Legal/Registries/TMW_Legal_Registry.xlsx</code> · Rebuild: <code>python3 rebuild_legal.py</code>
+Last rebuilt: 2026-05-31T02:14 IST · Source: <code>Legal/Registries/TMW_Legal_Registry.xlsx</code> · Rebuild: <code>python3 rebuild_legal.py</code>
 </div>
 
 </div>

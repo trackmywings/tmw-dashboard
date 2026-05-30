@@ -61,7 +61,7 @@
 <div class="metric-row">
   <div class="metric">
     <div class="label">Active Providers</div>
-    <div class="value">6</div>
+    <div class="value">7</div>
     <div class="sub">In production use</div>
   </div>
   <div class="metric">
@@ -92,6 +92,7 @@
 <tr><td><strong>Nano Banana 2 Pro</strong></td><td>Image generation</td><td>Logo, brand visuals, content imagery (DEC-069)</td><td>Image content</td><td>Gemini Imagen / DALL-E manual export</td><td>MIS row "Nano Banana 2 Pro"</td></tr>
 <tr><td><strong>Google Flow</strong></td><td>Video generation</td><td>Content pipeline video (DEC-069)</td><td>Video content</td><td>None — content blocked if down.</td><td>Free at current usage</td></tr>
 <tr><td><strong>Open Generative AI (desktop)</strong></td><td>200+ models — Flux, Midjourney, Kling, Sora, Veo, Wan 2.2, Hunyuan, LTX, Z-Image, SD 1.5, SDXL · sd.cpp local + Wan2GP remote + Muapi cloud</td><td>Experimental / exploratory image + video gen on M4 (founder-driven). Self-hosted desktop app at `/Applications/Open Generative AI.app` v1.0.9 arm64. **Founder access only — Claude triggers app open via Bash; no automated TMW pipeline use.**</td><td>Founder R&D, look-dev, reference frames</td><td>None — exploratory only; not on commercial output critical path. Nano Banana 2 Pro + Google Flow remain canonical for shipped content (DEC-069).</td><td>Free (open-source MIT; cloud uses optional Muapi credits — none purchased)</td></tr>
+<tr><td><strong>~~Ollama (local · M4 16GB)~~</strong></td><td>~~qwen2.5:7b · qwen2.5-coder:7b · gemma2:9b · nomic-embed-text · deepseek-r1:8b~~</td><td>**RETIRED 2026-05-27** (founder · disk space ~20GB recovered). Was: tmw-kb-search embedder + graphify local-AI step + kb-reindex + conversation-mine.</td><td>n/a (retired)</td><td>Capabilities migrated to **Claude on-demand** (semantic queries via Grep+Read; graphify deferred per TMW-253). Third-party KB principle (`feedback_no_third_party_kb`) preserved — no cloud embedder swap.</td><td>n/a (was free local)</td></tr>
   </tbody>
 </table>
 </section>
@@ -113,7 +114,7 @@
   </main>
 
   <div class="stale-banner">
-    Last rebuilt: 2026-05-25T22:22 IST · Source: <code>Operations/AI System/AI_PROVIDER_REGISTRY.md</code> · Rebuild: <code>python3 rebuild_ai_providers.py</code>
+    Last rebuilt: 2026-05-30T09:44 IST · Source: <code>Operations/AI System/AI_PROVIDER_REGISTRY.md</code> · Rebuild: <code>python3 rebuild_ai_providers.py</code>
   </div>
 </div>
 </body>

@@ -32,6 +32,15 @@
   .progress-fill--green { background: #10B981; }
   .progress-fill--amber { background: #F59E0B; }
   .progress-fill--red { background: #DC2626; }
+  /* --- Mobile (≤700px): scrollable nav, scrollable tables, stacked metrics --- */
+  @media (max-width: 700px) {
+    .ds-nav { display: flex; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; gap: 6px; padding-bottom: 4px; }
+    .ds-nav a { flex: 0 0 auto; padding: 6px 10px; font-size: 12px; white-space: nowrap; }
+    table.t { display: block; width: 100%; overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; }
+  }
+  @media (max-width: 480px) {
+    .metric-row { grid-template-columns: 1fr; }
+  }
   
 </style>
 </head>
@@ -53,6 +62,7 @@
         <a href="ai-providers.html">Providers</a>
         <a href="skills.html" class="ds-nav-active">Skills</a>
         <a href="folder-map.html">Files</a>
+        <a href="infra.html">Infra</a>
       </nav>
     <h1 style="margin: 8px 0 0;">Skills Inventory</h1>
   </header>
@@ -76,7 +86,7 @@
   </div>
   <div class="metric">
     <div class="label">Last Scan</div>
-    <div class="value" style="font-size: 16px;">2026-05-30</div>
+    <div class="value" style="font-size: 16px;">2026-05-31</div>
     <div class="sub">Weekly refresh cadence</div>
   </div>
 </div>
@@ -136,7 +146,7 @@
   </main>
 
   <div class="stale-banner">
-    Last rebuilt: 2026-05-30T15:56 IST · Source: <code>~/.claude/skills/</code> directory walk · Rebuild: <code>python3 rebuild_skills.py</code>
+    Last rebuilt: 2026-05-31T02:14 IST · Source: <code>~/.claude/skills/</code> directory walk · Rebuild: <code>python3 rebuild_skills.py</code>
   </div>
 </div>
 </body>

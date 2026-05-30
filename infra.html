@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TrackMyWings — Infrastructure Map</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700;800&family=Merriweather:wght@400;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  /* =========================================================================
+     TrackMyWings — Infrastructure Map · Aero Nocturne (TMW canonical brand)
+     Re-skinned to brand tokens (tokens.dart) · S141
+     100% self-contained · inline CSS + one Google Fonts @import · no other requests
+     ========================================================================= */
+
+  :root {
+    /* Surfaces — Aero Nocturne (dark, default) */
+    --bg-0: #0E132F;   /* Haiti — page canvas */
+    --bg-1: #1A1F3D;   /* Port Gore — sub-surface */
+    --card: #302154;   /* Deep Port Gore — cards */
+    --card-2: #1A1F3D; /* Port Gore — card base / gradient end */
+    --hair: #4C3E70;   /* East Bay — subtle border */
+    --hair-soft: #4C3E70; /* East Bay — soft hairline */
+
+    /* Text */
+    --text: #FFEFC2;   /* Egg White — primary */
+    --muted: #978CB5;  /* Amethyst Smoke — secondary */
+    --faint: #6A719A;  /* Lynch — muted */
+
+    /* Accents */
+    --gold-1: #F2B95F; /* Cream Can */
+    --gold-2: #B28134; /* Copper (deep gold) */
+    --gold-3: #FFE08A; /* Salomie (bright gold) */
+    --lilac: #CEABCA;  /* Lilac — links / planned */
+    --cyan: #3DD9D6;   /* Cockpit Cyan — flow / IPs */
+    --green: #3DD9D6;  /* Cockpit Cyan — live / active */
+    --red: #B28134;    /* Copper — warning (brand has no pure red) */
+    --cosmic: #773C71; /* Cosmic — accent */
+    --strike: #A06E9B; /* Strikemaster — accent */
+
+    --shadow: 0 8px 28px rgba(14,19,47,.55);
+    --shadow-sm: 0 2px 10px rgba(14,19,47,.45);
+    --radius: 12px;
+
+    --font: 'Raleway', sans-serif;       /* headings / labels / nav */
+    --font-body: 'Merriweather', serif;  /* body text */
+    --mono: 'JetBrains Mono', monospace; /* IPs / codes */
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg-0);
+    color: var(--text);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background:
+      radial-gradient(1200px 700px at 18% -8%, rgba(242,185,95,.07), transparent 60%),
+      radial-gradient(1100px 800px at 92% 4%, rgba(61,217,214,.06), transparent 55%),
+      radial-gradient(1000px 900px at 50% 120%, rgba(160,110,155,.10), transparent 60%),
+      linear-gradient(170deg, #0E132F 0%, #131835 40%, #1A1F3D 100%);
+    background-attachment: fixed;
+    padding: 34px 24px 60px;
+  }
+
+  .wrap {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  /* ---------------------------------------------------------------- HEADER */
+  header.masthead {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 18px 20px 22px;
+    border-radius: 16px;
+    border: 1px solid var(--hair);
+    background: linear-gradient(135deg,#0E132F,#1A1F3D 25%,#4C3E70 50%,#A06E9B 100%);
+    box-shadow: var(--shadow);
+    margin-bottom: 26px;
+  }
+  .brandblock { display: flex; align-items: center; gap: 16px; }
+  .logo-mark {
+    width: 52px; height: 52px;
+    border-radius: 14px;
+    flex: 0 0 auto;
+    background: linear-gradient(135deg,#302154 0%,#773C71 30%,#B28134 64%,#FFE08A 100%);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 6px 20px rgba(178,129,52,.40), inset 0 1px 0 rgba(255,224,138,.5);
+  }
+  .logo-mark svg { width: 30px; height: 30px; display: block; }
+  h1 {
+    font-family: var(--font);
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -.4px;
+    margin: 0 0 3px;
+    line-height: 1.1;
+    color: var(--text);
+  }
+  h1 .tmw-accent {
+    background: linear-gradient(120deg, var(--gold-3), var(--gold-1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .subtitle {
+    font-family: var(--font);
+    color: var(--text);
+    font-size: 13.5px;
+    font-weight: 500;
+    margin: 0;
+    letter-spacing: .1px;
+  }
+  .masthead-meta {
+    text-align: right;
+    font-family: var(--font);
+    font-size: 11.5px;
+    font-weight: 500;
+    color: var(--text);
+    line-height: 1.7;
+  }
+  .masthead-meta .pill {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    color: var(--cyan);
+    border: 1px solid var(--border-strong, #978CB5);
+    background: rgba(61,217,214,.10);
+    padding: 2px 9px;
+    border-radius: 20px;
+  }
+
+  /* ---------------------------------------------------------------- LEGEND */
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    align-items: center;
+    background: linear-gradient(180deg, var(--card), var(--card-2));
+    border: 1px solid var(--hair);
+    border-radius: var(--radius);
+    padding: 13px 18px;
+    margin-bottom: 26px;
+    box-shadow: var(--shadow-sm);
+  }
+  .legend .legend-title {
+    font-family: var(--font);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--faint);
+    font-weight: 700;
+    margin-right: 6px;
+  }
+  .legend-item {
+    display: flex; align-items: center; gap: 8px;
+    font-family: var(--font);
+    font-weight: 500;
+    font-size: 12.5px; color: var(--muted);
+  }
+  .dot { width: 11px; height: 11px; border-radius: 50%; flex: 0 0 auto; }
+  .dot.live   { background: var(--green); box-shadow: 0 0 8px rgba(61,217,214,.6); }
+  .dot.gold   { background: linear-gradient(145deg,var(--gold-3),var(--gold-2)); box-shadow: 0 0 8px rgba(178,129,52,.55); }
+  .dot.flag   { background: var(--red); box-shadow: 0 0 8px rgba(178,129,52,.6); }
+  .swatch-dashed {
+    width: 26px; height: 0;
+    border-top: 2px dashed var(--lilac);
+    flex: 0 0 auto;
+  }
+  .swatch-flow {
+    width: 26px; height: 0;
+    border-top: 2px solid var(--cyan);
+    position: relative; flex: 0 0 auto;
+  }
+  .swatch-flow::after {
+    content: ""; position: absolute; right: -2px; top: -4px;
+    border-left: 6px solid var(--cyan);
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+  }
+
+  /* ---------------------------------------------------------------- BANDS */
+  .band {
+    position: relative;
+    border: 1px solid var(--hair);
+    border-radius: 16px;
+    padding: 16px 18px 18px;
+    margin-bottom: 14px;
+    background:
+      linear-gradient(180deg, rgba(48,33,84,.55), rgba(26,31,61,.40));
+    box-shadow: inset 0 1px 0 rgba(255,224,138,.03);
+  }
+  .band-label {
+    position: absolute;
+    top: -10px; left: 16px;
+    font-family: var(--font);
+    font-size: 10.5px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--faint);
+    background: var(--bg-0);
+    padding: 1px 12px;
+    border: 1px solid var(--hair);
+    border-radius: 20px;
+  }
+  .band-label .zone-accent { color: var(--cyan); }
+  .band-sub {
+    color: var(--faint);
+    font-size: 11.5px;
+    margin: 2px 2px 14px;
+    line-height: 1.5;
+    max-width: 1000px;
+  }
+  .band-sub code, .mono { font-family: var(--mono); color: var(--lilac); font-size: 11px; }
+
+  /* highlight band for the Tailscale spine */
+  .band.spine {
+    background:
+      linear-gradient(100deg, rgba(206,171,202,.10), rgba(61,217,214,.07) 70%);
+    border-color: var(--strike);
+  }
+
+  /* ---------------------------------------------------------------- GRID */
+  .row {
+    display: grid;
+    gap: 14px;
+  }
+  .cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .cols-4 { grid-template-columns: repeat(4, 1fr); }
+  .cols-5 { grid-template-columns: repeat(5, 1fr); }
+
+  /* ---------------------------------------------------------------- NODES */
+  .node {
+    position: relative;
+    background: linear-gradient(180deg, var(--card), var(--card-2));
+    border: 1px solid var(--hair);
+    border-radius: var(--radius);
+    padding: 13px 14px 14px;
+    box-shadow: var(--shadow-sm);
+    transition: transform .12s ease;
+  }
+  .node:hover { transform: translateY(-2px); }
+  .node .node-head {
+    display: flex; align-items: center; gap: 9px;
+    margin-bottom: 7px;
+  }
+  .node .ttl {
+    font-family: var(--font);
+    font-size: 13.5px; font-weight: 700; letter-spacing: -.2px;
+    line-height: 1.25;
+    color: var(--text);
+  }
+  .node .sub {
+    font-size: 11px; color: var(--muted); line-height: 1.5;
+  }
+  .node .sub .ip {
+    font-family: var(--mono); color: var(--cyan); font-size: 10.5px;
+  }
+  .node .meta {
+    margin-top: 9px;
+    padding-top: 9px;
+    border-top: 1px dashed var(--hair-soft);
+    font-size: 10.5px; color: var(--faint); line-height: 1.55;
+  }
+  .node ul.spec {
+    margin: 8px 0 0; padding: 0; list-style: none;
+    display: flex; flex-wrap: wrap; gap: 5px;
+  }
+  .node ul.spec li {
+    font-family: var(--mono); font-size: 10px;
+    color: var(--muted);
+    background: rgba(255,239,194,.04);
+    border: 1px solid var(--hair-soft);
+    border-radius: 6px;
+    padding: 2px 7px;
+  }
+
+  /* status badge */
+  .badge {
+    margin-left: auto;
+    font-family: var(--font);
+    font-size: 9.5px; font-weight: 700;
+    letter-spacing: .6px; text-transform: uppercase;
+    padding: 2px 8px; border-radius: 20px;
+    flex: 0 0 auto;
+  }
+  .badge.live { color: var(--green); border: 1px solid rgba(61,217,214,.35); background: rgba(61,217,214,.10); }
+  .badge.planned { color: var(--lilac); border: 1px solid rgba(206,171,202,.40); background: rgba(206,171,202,.10); }
+  .badge.transient { color: var(--gold-1); border: 1px solid rgba(242,185,95,.40); background: rgba(242,185,95,.10); }
+  .badge.flag { color: var(--gold-2); border: 1px solid rgba(178,129,52,.45); background: rgba(160,110,155,.16); }
+
+  /* glyph chip */
+  .glyph {
+    width: 30px; height: 30px; border-radius: 9px; flex: 0 0 auto;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(255,239,194,.05);
+    border: 1px solid var(--hair);
+    font-size: 16px; line-height: 1;
+  }
+  .glyph svg { width: 17px; height: 17px; }
+
+  /* PRIMARY / gold node treatment */
+  .node.primary {
+    border-color: rgba(178,129,52,.60);
+    background:
+      linear-gradient(135deg,#302154 0%,#773C71 30%,#B28134 64%,#FFE08A 100%);
+    box-shadow: 0 8px 26px rgba(178,129,52,.22), inset 0 1px 0 rgba(255,224,138,.10);
+  }
+  .node.primary .glyph {
+    background: linear-gradient(145deg, var(--gold-3), var(--gold-2));
+    border-color: transparent;
+    box-shadow: 0 3px 10px rgba(178,129,52,.45);
+  }
+  .node.primary .ttl { color: #0E132F; }
+  .node.primary .sub { color: #1A1F3D; }
+  .node.primary .meta { color: #2a1f12; border-top-color: rgba(14,19,47,.25); }
+  .node.primary .sub .ip { color: #1A1F3D; }
+  .node.primary ul.spec li { color: #1A1F3D; background: rgba(14,19,47,.10); border-color: rgba(14,19,47,.20); }
+
+  /* PLANNED node treatment — dashed Lilac */
+  .node.planned {
+    border: 1.5px dashed var(--lilac);
+    background: linear-gradient(180deg, rgba(206,171,202,.07), rgba(26,31,61,.5));
+    box-shadow: none;
+  }
+  .node.planned .ttl { color: var(--lilac); }
+
+  /* FLAGGED node treatment — Copper alert (no red) */
+  .node.flagged {
+    border: 1.5px solid var(--gold-2);
+    background:
+      linear-gradient(180deg, rgba(160,110,155,.16), rgba(48,33,84,.92));
+    box-shadow: 0 8px 26px rgba(178,129,52,.18);
+  }
+  .node.flagged .ttl { color: var(--gold-1); }
+  .node.flagged .glyph { border-color: rgba(178,129,52,.55); background: rgba(178,129,52,.16); }
+
+  /* transient node — Cream Can amber */
+  .node.transient {
+    border: 1.5px dashed rgba(242,185,95,.55);
+    background: linear-gradient(180deg, rgba(242,185,95,.08), rgba(26,31,61,.5));
+  }
+
+  /* sub-list of repos / services inside a node */
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 9px; }
+  .chip {
+    font-family: var(--font);
+    font-weight: 500;
+    font-size: 10.5px;
+    border: 1px solid var(--hair);
+    border-radius: 7px;
+    padding: 3px 8px;
+    color: var(--muted);
+    background: rgba(255,239,194,.03);
+  }
+  .chip.warn { color: var(--gold-2); border-color: rgba(178,129,52,.50); background: rgba(160,110,155,.14); font-weight: 700; }
+  .chip.go   { color: var(--cyan); }
+  .chip.gold { color: var(--gold-1); border-color: rgba(242,185,95,.45); }
+
+  /* ------------------------------------------------------ SPINE / MESH bar */
+  .mesh-bar {
+    display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+    padding: 4px 2px;
+  }
+  .mesh-node {
+    display: flex; align-items: center; gap: 8px;
+    border: 1px solid var(--strike);
+    border-radius: 40px;
+    padding: 7px 15px;
+    background: linear-gradient(180deg, rgba(206,171,202,.14), rgba(48,33,84,.7));
+    font-family: var(--font);
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--text);
+  }
+  .mesh-node .mdot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 7px var(--green); }
+  .mesh-node .mip { font-family: var(--mono); font-weight: 400; font-size: 10px; color: var(--cyan); }
+  .mesh-link {
+    flex: 1 1 30px; min-width: 26px; height: 2px;
+    background: repeating-linear-gradient(90deg, var(--lilac) 0 7px, transparent 7px 14px);
+    opacity: .65;
+  }
+
+  /* ----------------------------------------------------- CONNECTOR ARROWS  */
+  .flow-rail {
+    display: flex; align-items: center; justify-content: center;
+    gap: 10px;
+    margin: -2px 0 6px;
+  }
+  .flow-arrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 10.5px; color: var(--muted);
+    font-family: var(--mono);
+  }
+  .flow-line {
+    position: relative; width: 60px; height: 2px;
+    background: linear-gradient(90deg, var(--cyan), rgba(61,217,214,.2));
+  }
+  .flow-line::after {
+    content: ""; position: absolute; right: -1px; top: -4px;
+    border-left: 7px solid var(--cyan);
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+  }
+  .flow-line.up { background: linear-gradient(90deg, var(--lilac), rgba(206,171,202,.2)); }
+  .flow-line.up::after { border-left-color: var(--lilac); }
+  .flow-line.flag-line { background: linear-gradient(90deg, var(--red), rgba(178,129,52,.25)); }
+  .flow-line.flag-line::after { border-left-color: var(--red); }
+
+  /* a labeled vertical band-to-band connector caption */
+  .band-link {
+    display: flex; align-items: center; gap: 12px;
+    justify-content: center;
+    margin: -4px 0 8px;
+    flex-wrap: wrap;
+  }
+  .band-link .conn {
+    display: inline-flex; align-items: center; gap: 9px;
+    font-family: var(--font);
+    font-weight: 500;
+    font-size: 11px; color: var(--muted);
+    background: rgba(255,239,194,.03);
+    border: 1px solid var(--hair-soft);
+    border-radius: 30px;
+    padding: 5px 14px;
+  }
+  .band-link .conn .arr { color: var(--cyan); font-family: var(--mono); font-weight: 700; }
+  .band-link .conn.up .arr { color: var(--lilac); }
+  .band-link .conn.flag { border-color: rgba(178,129,52,.45); }
+  .band-link .conn.flag .arr { color: var(--red); }
+  .band-link .conn.gold .arr { color: var(--gold-1); }
+  .band-link .conn .num {
+    font-family: var(--mono); font-size: 9.5px; color: var(--bg-0);
+    background: var(--cyan); border-radius: 50%;
+    width: 15px; height: 15px; display: inline-flex;
+    align-items: center; justify-content: center; font-weight: 700;
+  }
+  .band-link .conn.up .num { background: var(--lilac); }
+  .band-link .conn.flag .num { background: var(--red); color: var(--text); }
+  .band-link .conn.gold .num { background: var(--gold-1); }
+
+  /* ---------------------------------------------------------- CALLOUT CARDS */
+  .callouts { display: grid; grid-template-columns: 1.15fr 1fr; gap: 16px; margin-top: 26px; }
+  .callout {
+    border-radius: 16px; padding: 18px 20px;
+    border: 1px solid var(--hair);
+    background: linear-gradient(180deg, var(--card), var(--card-2));
+    box-shadow: var(--shadow);
+  }
+  .callout.dr { border-color: rgba(61,217,214,.40); background: linear-gradient(180deg, rgba(61,217,214,.07), rgba(48,33,84,.95)); }
+  .callout.sec { border-color: var(--gold-2); background: linear-gradient(180deg, rgba(160,110,155,.16), rgba(48,33,84,.95)); }
+  .callout h3 {
+    font-family: var(--font);
+    margin: 0 0 4px; font-size: 15px; font-weight: 800;
+    display: flex; align-items: center; gap: 9px;
+  }
+  .callout.dr h3 { color: var(--cyan); }
+  .callout.sec h3 { color: var(--gold-1); }
+  .callout .co-sub { font-size: 11.5px; color: var(--muted); margin: 0 0 12px; }
+  .callout .three21 {
+    display: flex; gap: 10px; margin-bottom: 12px; flex-wrap: wrap;
+  }
+  .three21 .num-card {
+    flex: 1 1 90px; text-align: center;
+    border: 1px solid rgba(61,217,214,.30);
+    border-radius: 10px; padding: 9px 6px;
+    background: rgba(61,217,214,.06);
+  }
+  .three21 .num-card .big { font-family: var(--font); font-size: 22px; font-weight: 800; color: var(--green); line-height: 1; }
+  .three21 .num-card .lbl { font-size: 10px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+
+  .callout ul { margin: 0; padding-left: 0; list-style: none; }
+  .callout li {
+    font-size: 12px; color: var(--text); line-height: 1.6;
+    padding: 5px 0 5px 22px; position: relative;
+    border-top: 1px solid var(--hair-soft);
+  }
+  .callout li:first-child { border-top: none; }
+  .callout li::before {
+    content: ""; position: absolute; left: 4px; top: 11px;
+    width: 7px; height: 7px; border-radius: 2px;
+  }
+  .callout.dr li::before { background: var(--green); }
+  .callout.sec li.bad::before { background: var(--red); }
+  .callout.sec li.fix::before { background: var(--cyan); transform: rotate(45deg); border-radius: 0; }
+  .callout li .k { color: var(--muted); font-weight: 600; }
+  .callout li .m { font-family: var(--mono); font-size: 10.5px; color: var(--lilac); }
+  .callout.sec li .fixtag {
+    font-family: var(--font);
+    font-size: 9px; font-weight: 700; letter-spacing: .5px;
+    color: var(--cyan); border: 1px solid rgba(61,217,214,.40);
+    border-radius: 5px; padding: 1px 6px; margin-right: 6px;
+    background: rgba(61,217,214,.10);
+  }
+
+  /* secrets chain inline */
+  .chain { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
+  .chain .step {
+    font-family: var(--font);
+    font-weight: 500;
+    font-size: 11px; border: 1px solid var(--hair); border-radius: 8px;
+    padding: 4px 10px; color: var(--text); background: rgba(255,239,194,.04);
+  }
+  .chain .step.canon { border-color: rgba(242,185,95,.50); color: var(--gold-1); }
+  .chain .arr { color: var(--cyan); font-family: var(--mono); }
+
+  /* ------------------------------------------------------------------ FOOT */
+  footer {
+    margin-top: 34px; padding-top: 18px;
+    border-top: 1px solid var(--hair);
+    font-family: var(--font);
+    font-weight: 500;
+    font-size: 11px; color: var(--faint);
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+    line-height: 1.6;
+  }
+  footer .mono { font-family: var(--mono); font-weight: 400; color: var(--muted); font-size: 10.5px; }
+  footer .brandnote { color: var(--gold-1); font-weight: 600; }
+
+  /* section divider title */
+  .layer-tag {
+    text-align: center;
+    font-family: var(--font);
+    font-weight: 600;
+    font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--faint); margin: 18px 0 6px;
+  }
+
+  /* ---------------------------------------------------------- RESPONSIVE */
+  @media (max-width: 1080px) {
+    .cols-4, .cols-5 { grid-template-columns: repeat(2, 1fr); }
+    .cols-3 { grid-template-columns: repeat(2, 1fr); }
+    .callouts { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .cols-2, .cols-3, .cols-4, .cols-5 { grid-template-columns: 1fr; }
+    body { padding: 18px 12px 40px; }
+    header.masthead { align-items: flex-start; }
+    .masthead-meta { text-align: left; }
+  }
+
+  @media print {
+    body { background: #0E132F !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .node:hover { transform: none; }
+  }
+
+/* infra-nav — canonical dashboard nav (S141) */
+.infra-nav{position:sticky;top:0;z-index:50;display:flex;flex-wrap:wrap;gap:2px;
+  padding:8px 14px;background:#1A1F3D;border-bottom:1px solid #4C3E70;
+  font-family:'Raleway',system-ui,sans-serif;font-size:12px;font-weight:600;}
+.infra-nav a{color:#978CB5;text-decoration:none;padding:5px 9px;border-radius:6px;
+  white-space:nowrap;letter-spacing:.01em;transition:background .15s,color .15s;}
+.infra-nav a:hover{color:#FFEFC2;background:rgba(76,62,112,.45);}
+.infra-nav a.active{color:#0E132F;background:#F2B95F;}
+@media (max-width:700px){
+  .infra-nav{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding:7px 10px;}
+  .infra-nav a{padding:5px 8px;font-size:11px;}
+}
+</style>
+</head>
+<body>
+<nav class="infra-nav">
+    <a href="index.html">Founder</a>
+    <a href="finance-mis.html">Finance MIS</a>
+    <a href="tasks.html">Tasks</a>
+    <a href="launch-readiness.html">Launch</a>
+    <a href="statutory.html">Statutory</a>
+    <a href="restructure.html">Restructure</a>
+    <a href="risk-register.html">Risks</a>
+    <a href="legal.html">Legal</a>
+    <a href="claude-usage.html">Claude</a>
+    <a href="kb-health.html">KB Health</a>
+    <a href="bandwidth.html">Bandwidth</a>
+    <a href="ai-providers.html">Providers</a>
+    <a href="skills.html">Skills</a>
+    <a href="folder-map.html">Files</a>
+    <a href="infra.html" class="active">Infra</a>
+</nav>
+
+<div class="wrap">
+
+  <!-- ====================================================== MASTHEAD ===== -->
+  <header class="masthead">
+    <div class="brandblock">
+      <div class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 16.5L21.5 12 2 7.5l.01 3.6L15 12 2.01 12.9 2 16.5z" fill="#0E132F"/>
+        </svg>
+      </div>
+      <div>
+        <h1>TrackMyWings <span class="tmw-accent">— Infrastructure Map</span></h1>
+        <p class="subtitle">Multi-machine AI-augmented solo-founder stack · as of 2026-05-31 (S141)</p>
+      </div>
+    </div>
+    <div class="masthead-meta">
+      <span class="pill">TMW-259 · INFRA v2</span><br/>
+      Founder: Rohan &nbsp;·&nbsp; Stack: Flutter + Go + PostgreSQL + AWS<br/>
+      Target launch: <strong style="color:var(--gold-3)">2026-08-15</strong> · pre-launch / stealth
+    </div>
+  </header>
+
+  <!-- ====================================================== LEGEND ======= -->
+  <div class="legend" role="group" aria-label="Legend">
+    <span class="legend-title">Legend</span>
+    <span class="legend-item"><span class="dot live"></span> Live / active</span>
+    <span class="legend-item"><span class="dot gold"></span> Primary / critical node</span>
+    <span class="legend-item"><span class="swatch-dashed"></span> Planned / future</span>
+    <span class="legend-item"><span class="dot flag"></span> Security flag</span>
+    <span class="legend-item"><span class="swatch-flow"></span> Data-flow (labeled 1–6)</span>
+    <span class="legend-item" style="color:var(--faint)">Tailscale spine = lilac mesh fabric</span>
+  </div>
+
+  <!-- ====================================================== BAND 1: EDGE = -->
+  <div class="band">
+    <span class="band-label">01 · <span class="zone-accent">Devices / Edge</span></span>
+    <p class="band-sub">Founder endpoints + (future) end-user app installs. The phone is already a peer on the private mesh — the recommended path to internal dashboards.</p>
+    <div class="row cols-3">
+
+      <div class="node primary">
+        <div class="node-head">
+          <div class="glyph">💻</div>
+          <div class="ttl">MacBook Air<br/><span class="sub mono" style="color:#1A1F3D">rohans-macbook-air</span></div>
+          <span class="badge live">Primary</span>
+        </div>
+        <div class="sub">Primary dev machine · macOS 26.5<br/>Tailscale <span class="ip">100.116.139.112</span></div>
+        <ul class="spec">
+          <li>Mac16,12</li><li>M-series</li><li>10-core</li><li>16 GB</li><li>~74 GB free</li>
+        </ul>
+      </div>
+
+      <div class="node">
+        <div class="node-head">
+          <div class="glyph">📱</div>
+          <div class="ttl">iPhone<br/><span class="sub mono">tmw-rohan-iphone</span></div>
+          <span class="badge live">On mesh</span>
+        </div>
+        <div class="sub">Founder mobile · on the Tailscale mesh<br/>Tailscale <span class="ip">100.68.130.77</span></div>
+        <div class="meta">Already a peer → can reach Lenovo services privately. The fix-path for the public-dashboard flag.</div>
+      </div>
+
+      <div class="node planned">
+        <div class="node-head">
+          <div class="glyph">📲</div>
+          <div class="ttl">End-user phones</div>
+          <span class="badge planned">Planned</span>
+        </div>
+        <div class="sub">TMW app installs (iOS + Android)<br/>Post-launch fleet</div>
+        <div class="meta">Talk to AWS backend over HTTPS — see flow ⑥. Not on the private mesh.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- connector: edge → mesh -->
+  <div class="band-link">
+    <span class="conn"><span class="arr">↓</span> Founder devices join the private overlay</span>
+  </div>
+
+  <!-- ====================================================== BAND 2: MESH = -->
+  <div class="band spine">
+    <span class="band-label">02 · <span class="zone-accent">Tailscale Mesh</span> — WireGuard private overlay</span>
+    <p class="band-sub">SSH via <span class="mono">--ssh</span> with Google identity · stable 100.x IPs survive WSL2 restarts · Mac ↔ Lenovo direct on LAN at <span class="mono">192.168.1.14</span>. <strong style="color:var(--text)">4 live nodes.</strong></p>
+    <div class="mesh-bar">
+      <div class="mesh-node"><span class="mdot"></span> Mac <span class="mip">100.116.139.112</span></div>
+      <div class="mesh-link"></div>
+      <div class="mesh-node"><span class="mdot"></span> Lenovo · Windows <span class="mip">100.76.78.53</span></div>
+      <div class="mesh-link"></div>
+      <div class="mesh-node"><span class="mdot"></span> Lenovo · Ubuntu <span class="mip">100.125.84.55</span></div>
+      <div class="mesh-link"></div>
+      <div class="mesh-node"><span class="mdot"></span> iPhone <span class="mip">100.68.130.77</span></div>
+    </div>
+  </div>
+
+  <!-- connector: mesh routes between Mac dev internals and home server -->
+  <div class="band-link">
+    <span class="conn up"><span class="num">3</span><span class="arr">↕</span> Claude Code (Mac) → Tailscale → Ollama (Lenovo) · local embeddings / inference</span>
+    <span class="conn"><span class="num">5</span><span class="arr">↕</span> iPhone → Tailscale → Lenovo services · secure-dashboard path</span>
+  </div>
+
+  <!-- ====================================================== BAND 3: LOCAL DEV -->
+  <div class="band">
+    <span class="band-label">03 · <span class="zone-accent">Local Dev</span> — Mac internals</span>
+    <p class="band-sub">The cockpit. AI Operating Partner + 31 launchd jobs orchestrate the workspace, codebases, and security tooling — all local-only after the iCloud exit.</p>
+    <div class="row cols-3">
+
+      <div class="node primary">
+        <div class="node-head">
+          <div class="glyph">🤖</div>
+          <div class="ttl">Claude Code <span class="sub">(Opus 4.8)</span></div>
+          <span class="badge live">Live</span>
+        </div>
+        <div class="sub">AI Operating Partner — runs the whole stack: code-gen, ops, decisions, dashboards.</div>
+        <div class="meta">Calls local Ollama over the mesh (flow ③) for embeddings + cheap inference.</div>
+      </div>
+
+      <div class="node">
+        <div class="node-head">
+          <div class="glyph">⏱️</div>
+          <div class="ttl">31 launchd jobs</div>
+          <span class="badge live">Live</span>
+        </div>
+        <div class="sub">Automation fleet</div>
+        <div class="chips">
+          <span class="chip">dashboards</span><span class="chip">KB</span><span class="chip">graphify</span>
+          <span class="chip">restic</span><span class="chip">digests</span><span class="chip">job-scout</span>
+          <span class="chip">calendar/MIS sync</span>
+        </div>
+      </div>
+
+      <div class="node">
+        <div class="node-head">
+          <div class="glyph">🗂️</div>
+          <div class="ttl">Workspace <span class="sub mono">~/Code/tmw</span></div>
+          <span class="badge live">Live</span>
+        </div>
+        <div class="sub">22.5k files · moved out of iCloud → local-only</div>
+        <div class="meta">Symlinks at <span class="mono">~/tmw</span> + a Documents path preserve Claude memory keying.</div>
+      </div>
+
+      <div class="node">
+        <div class="node-head">
+          <div class="glyph">📦</div>
+          <div class="ttl">Codebases</div>
+          <span class="badge live">Active</span>
+        </div>
+        <div class="chips">
+          <span class="chip gold">V1_Flutter · 137 screens</span>
+          <span class="chip go">V1_Backend · Go</span>
+          <span class="chip">V0_NextJS · website</span>
+        </div>
+      </div>
+
+      <div class="node">
+        <div class="node-head">
+          <div class="glyph">🔐</div>
+          <div class="ttl">Security — on Mac</div>
+          <span class="badge live">Live</span>
+        </div>
+        <div class="chips">
+          <span class="chip">git-crypt · Legal/Finance encrypted</span>
+          <span class="chip">gitleaks · pre-commit secret scan</span>
+        </div>
+      </div>
+
+      <div class="node" style="display:flex;flex-direction:column;justify-content:center;border-style:dashed;border-color:var(--hair-soft);background:rgba(255,239,194,.025)">
+        <div class="sub" style="color:var(--faint);font-size:11px;line-height:1.7">
+          <strong style="color:var(--muted)">Outbound from this band:</strong><br/>
+          ① push → Gitea + mirror → GitHub<br/>
+          ② restic daily 02:30 → Lenovo<br/>
+          ④ launchd rebuild → GitHub Pages
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- connector: local dev → git remotes + home server -->
+  <div class="band-link">
+    <span class="conn gold"><span class="num">1</span><span class="arr">→</span> Mac push → <strong>Gitea (primary)</strong> &nbsp;AND&nbsp; mirror → GitHub</span>
+    <span class="conn"><span class="num">2</span><span class="arr">→</span> Mac → restic daily 02:30 → Lenovo</span>
+    <span class="conn flag"><span class="num">4</span><span class="arr">→</span> launchd → GitHub Pages (⚠ public)</span>
+  </div>
+
+  <div class="layer-tag">— self-hosted core —</div>
+
+  <!-- ====================================================== BAND 4: HOME SERVER -->
+  <div class="band">
+    <span class="band-label">04 · <span class="zone-accent">Home Server</span> — Lenovo Yoga 7 Pro</span>
+    <p class="band-sub">Repurposed ex-Adhi laptop · i7-1165G7 / 16 GB / 475 GB SSD · Windows 11 25H2 host (never-sleeps) + WSL2 Ubuntu 26.04 "Resolute". Dual Tailscale identity: <span class="mono">tmw-server</span> (Windows · 100.76.78.53) + <span class="mono">tmw-linux</span> (Ubuntu · 100.125.84.55 — the active node).</p>
+    <div class="row cols-3">
+
+      <div class="node primary">
+        <div class="node-head">
+          <div class="glyph">🌿</div>
+          <div class="ttl">Gitea v1.26.2</div>
+          <span class="badge live">Primary git</span>
+        </div>
+        <div class="sub">Self-hosted PRIMARY git remote · port 3000</div>
+        <div class="meta mono" style="color:#1A1F3D">tmw-linux:3000/rohan/tmw-workspace</div>
+      </div>
+
+      <div class="node">
+        <div class="node-head">
+          <div class="glyph">🧠</div>
+          <div class="ttl">Ollama v0.24.0</div>
+          <span class="badge live">Live</span>
+        </div>
+        <div class="sub">7 local models · ~25 GB · bound <span class="ip">0.0.0.0:11434</span></div>
+        <div class="chips">
+          <span class="chip">nomic-embed-text</span><span class="chip">llama3.2:3b</span>
+          <span class="chip">qwen2.5-coder:7b</span><span class="chip">deepseek-r1:8b</span>
+          <span class="chip">gemma3:4b</span><span class="chip">gemma2:9b</span>
+          <span class="chip">mistral:7b</span>
+        </div>
+      </div>
+
+      <div class="node">
+        <div class="node-head">
+          <div class="glyph">🐳</div>
+          <div class="ttl">Docker v29.5.2</div>
+          <span class="badge live">Live</span>
+        </div>
+        <div class="sub">Container runtime for self-hosted services</div>
+      </div>
+
+      <div class="node">
+        <div class="node-head">
+          <div class="glyph">💾</div>
+          <div class="ttl">restic repository</div>
+          <span class="badge live">Backup target</span>
+        </div>
+        <div class="sub">Backup repo target via sftp</div>
+        <div class="meta mono">/mnt/c/restic-tmw</div>
+      </div>
+
+      <div class="node transient">
+        <div class="node-head">
+          <div class="glyph">✈️</div>
+          <div class="ttl">IX1347 capture rig</div>
+          <span class="badge transient">Transient</span>
+        </div>
+        <div class="sub">Live-flight data-capture (today only)</div>
+        <div class="meta">Temporary pipeline test on the home server. Tears down after the flight.</div>
+      </div>
+
+      <div class="node" style="display:flex;flex-direction:column;justify-content:center;border-style:dashed;border-color:var(--hair-soft);background:rgba(206,171,202,.06)">
+        <div class="sub" style="color:var(--muted);font-size:11px;line-height:1.7">
+          <strong style="color:var(--lilac)">Reachable only over Tailscale.</strong><br/>
+          No ports exposed to the public internet. iPhone (on mesh) can already reach Gitea + dashboards privately.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="layer-tag">— cloud —</div>
+
+  <!-- ====================================================== BAND 5: CLOUD GIT -->
+  <div class="band">
+    <span class="band-label">05 · <span class="zone-accent">Cloud Git</span> — GitHub "trackmywings" org <span style="color:var(--faint)">· FREE plan</span></span>
+    <p class="band-sub">Cloud mirror of the self-hosted Gitea origin. Legal/Finance paths stay git-crypt'd at rest in every remote.</p>
+    <div class="row cols-2">
+
+      <div class="node">
+        <div class="node-head">
+          <div class="glyph">🔒</div>
+          <div class="ttl">Private repositories</div>
+          <span class="badge live">Live · 7 repos</span>
+        </div>
+        <div class="sub">Mirror + product source trees</div>
+        <div class="chips">
+          <span class="chip gold">tmw-workspace · mirror, git-crypt'd</span>
+          <span class="chip">client_app · Flutter</span>
+          <span class="chip">backend · Go</span>
+          <span class="chip">client_web</span>
+          <span class="chip">static_web</span>
+          <span class="chip">data_scrapper</span>
+          <span class="chip">wing-scroll-verse</span>
+        </div>
+      </div>
+
+      <div class="node flagged">
+        <div class="node-head">
+          <div class="glyph">⚠️</div>
+          <div class="ttl">tmw-dashboard <span class="sub">— GitHub Pages</span></div>
+          <span class="badge flag">Security flag</span>
+        </div>
+        <div class="sub mono" style="color:var(--gold-1)">trackmywings.github.io/tmw-dashboard</div>
+        <div class="meta" style="color:var(--gold-3)">
+          Org is on the <strong>FREE plan</strong> → private Pages isn't available. Internal dashboards
+          (BP/health, cap table, finances, legal, restructure) are <strong>world-readable + indexable</strong>.
+          The intended "password" is <strong>client-side only</strong> — not a real control.
+        </div>
+        <div class="chips">
+          <span class="chip warn">→ FIX: rehost on Lenovo over Tailscale (iPhone already on mesh)</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- connector: cloud git → AWS -->
+  <div class="band-link">
+    <span class="conn"><span class="arr">↓</span> Source trees deploy to AWS · prod compute still planned</span>
+  </div>
+
+  <!-- ====================================================== BAND 6: AWS === -->
+  <div class="band">
+    <span class="band-label">06 · <span class="zone-accent">Cloud — AWS</span> us-east-1</span>
+    <p class="band-sub">3 SSO profiles: <span class="mono">tmw-trackmywings</span> (mgmt/root) · <span class="mono">tmw-production</span> · <span class="mono">tmw-staging</span>. Two services live today; the production compute tier is planned.</p>
+    <div class="row cols-3">
+
+      <div class="node">
+        <div class="node-head">
+          <div class="glyph">🌐</div>
+          <div class="ttl">Amplify</div>
+          <span class="badge live">Live</span>
+        </div>
+        <div class="sub">static_web staging host</div>
+      </div>
+
+      <div class="node">
+        <div class="node-head">
+          <div class="glyph">✉️</div>
+          <div class="ttl">SES</div>
+          <span class="badge live">Live</span>
+        </div>
+        <div class="sub">Transactional email · per DEC-162</div>
+      </div>
+
+      <div class="node planned">
+        <div class="node-head">
+          <div class="glyph">⚙️</div>
+          <div class="ttl">ECS + CloudFront + Route53 + RDS</div>
+          <span class="badge planned">Planned</span>
+        </div>
+        <div class="sub">Prod compute for backend + website · PostgreSQL on RDS · Redis cache</div>
+        <div class="meta">Target prod tier the TMW app talks to over HTTPS (flow ⑥).</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- connector: AWS → external services + future app data path -->
+  <div class="band-link">
+    <span class="conn"><span class="num">6</span><span class="arr">→</span> TMW app (future) → HTTPS → AWS ECS → Postgres/Redis → flight-data providers</span>
+  </div>
+
+  <!-- ====================================================== BAND 7: EXTERNAL -->
+  <div class="band">
+    <span class="band-label">07 · <span class="zone-accent">External Services</span></span>
+    <p class="band-sub">Third-party data, payments, maps, banking, domains, and the secrets resolution chain.</p>
+    <div class="row cols-4">
+
+      <div class="node">
+        <div class="node-head">
+          <div class="glyph">🛰️</div>
+          <div class="ttl">Flight data</div>
+        </div>
+        <div class="chips">
+          <span class="chip">AirLabs · schedules</span>
+          <span class="chip">OpenSky · live, OAuth2</span>
+          <span class="chip">OurAirports · static ref</span>
+          <span class="chip">adsb.lol</span><span class="chip">adsb.fi</span><span class="chip">airplanes.live</span>
+          <span class="chip">AviationStack</span>
+        </div>
+      </div>
+
+      <div class="node">
+        <div class="node-head">
+          <div class="glyph">💳</div>
+          <div class="ttl">Payments</div>
+        </div>
+        <div class="chips">
+          <span class="chip">Razorpay · test→live</span>
+          <span class="chip">Apple IAP</span>
+          <span class="chip">Google Play Billing</span>
+        </div>
+      </div>
+
+      <div class="node">
+        <div class="node-head">
+          <div class="glyph">🗺️</div>
+          <div class="ttl">Maps · Banking · Domains</div>
+        </div>
+        <div class="chips">
+          <span class="chip">Mapbox</span>
+          <span class="chip">ICICI · company a/c</span>
+          <span class="chip">GoDaddy · 6 domains</span>
+        </div>
+      </div>
+
+      <div class="node">
+        <div class="node-head">
+          <div class="glyph">🔑</div>
+          <div class="ttl">Secrets chain</div>
+        </div>
+        <div class="chain">
+          <span class="step canon">Bitwarden</span>
+          <span class="arr">→</span>
+          <span class="step">macOS Keychain</span>
+          <span class="arr">→</span>
+          <span class="step">env fallback</span>
+        </div>
+        <div class="meta">Bitwarden canonical · Keychain is the launchd-readable mirror.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ====================================================== CALLOUTS ====== -->
+  <div class="callouts">
+
+    <!-- 3-2-1 backup / DR -->
+    <div class="callout dr">
+      <h3>🛟 Backup &amp; Disaster Recovery — 3-2-1</h3>
+      <p class="co-sub">Cross-cutting resilience across both git remotes, restic snapshots, and encrypted secrets.</p>
+      <div class="three21">
+        <div class="num-card"><div class="big">3</div><div class="lbl">copies of data</div></div>
+        <div class="num-card"><div class="big">2</div><div class="lbl">media / locations<br/>(Lenovo + cloud)</div></div>
+        <div class="num-card"><div class="big">1</div><div class="lbl">off-machine<br/>(GitHub)</div></div>
+      </div>
+      <ul>
+        <li><span class="k">Git:</span> Gitea (Lenovo, Tailscale-only, <strong>primary</strong>) + GitHub (cloud mirror)</li>
+        <li><span class="k">restic:</span> Mac → Lenovo sftp · daily <span class="m">02:30</span> · 7d / 4w / 6m retention · captures gitignored <span class="m">.env</span></li>
+        <li><span class="k">git-crypt:</span> Legal/Finance encrypted at rest in both remotes</li>
+        <li><span class="k">Secrets:</span> Bitwarden + macOS Keychain</li>
+        <li><span class="k">DR runbook:</span> <span class="m">Operations/AI System/DR_Drill_Runbook.md</span></li>
+      </ul>
+    </div>
+
+    <!-- Security flag -->
+    <div class="callout sec">
+      <h3>⚠️ Security Flag — public dashboards exposure</h3>
+      <p class="co-sub">The single open exposure in an otherwise private, mesh-gated stack.</p>
+      <ul>
+        <li class="bad"><span class="k">Exposure:</span> <span class="m">trackmywings.github.io/tmw-dashboard</span> is world-readable + search-indexable.</li>
+        <li class="bad"><span class="k">Root cause:</span> org on <strong>FREE plan</strong> → no private GitHub Pages.</li>
+        <li class="bad"><span class="k">Data at risk:</span> BP/health, cap table, finances, legal, restructure.</li>
+        <li class="bad"><span class="k">False control:</span> the "password" is <strong>client-side only</strong> — not enforced.</li>
+        <li class="fix"><span class="fixtag">FIX</span> Rehost on Lenovo over Tailscale — iPhone is already on the mesh, so access survives the move with zero new exposure.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- ====================================================== FOOTER ======= -->
+  <footer>
+    <div>
+      Generated <strong style="color:var(--muted)">S141</strong> · canonical:
+      <span class="mono">Operations/AI System/Plans/TMW-259_Infrastructure_Map_2026-05-31.html</span><br/>
+      <span class="brandnote">Brand: Aero Nocturne · TMW canonical palette (tokens.dart) · S141</span>
+    </div>
+    <div class="mono">sources: TMW-252 Infra v2 docs</div>
+  </footer>
+
+</div>
+</body>
+</html>

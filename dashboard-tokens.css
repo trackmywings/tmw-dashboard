@@ -1,44 +1,63 @@
 /* ============================================================
  * TrackMyWings Internal Dashboards — Design Tokens
  * Source of truth: Operations/Internal Dashboards/Design System/DESIGN.md
- * Edit this file to change tokens system-wide. All five dashboards
- * link to this CSS, so changes propagate immediately on next deploy.
+ * Palette: CANONICAL TMW "Aero Nocturne" brand (S141 rebrand 2026-05-31).
+ *   Hex authoritative from V1_Flutter/lib/theme/tokens.dart (AeroColors) +
+ *   Design/Brand/Color Palette/TMW_COLORS.md. Mirrors tmw_brand_tokens.css.
+ * Token NAMES are stable; only values changed in the rebrand, so no per-page
+ * HTML edits were required. Brand rules: never pure #000/#fff (use Haiti /
+ * Egg White); error = Copper; Inter forbidden as a primary face.
  * ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&family=Merriweather:wght@400;700&family=JetBrains+Mono:wght@500;600&display=swap');
 
 :root {
-  /* --- Surface neutrals (tinted toward brand axis, never pure black/white) --- */
-  --bg-base:        oklch(18% 0.04 280);
-  --bg-elev:        oklch(22% 0.05 285);
-  --bg-card:        oklch(20% 0.04 282);
-  --line:           oklch(35% 0.04 300 / 0.40);
-  --line-soft:      oklch(35% 0.04 300 / 0.18);
+  /* --- Surfaces (Aero Nocturne — dark, brand hex) --- */
+  --bg-base:        #0E132F;                    /* Haiti — page canvas */
+  --bg-elev:        #1A1F3D;                    /* Port Gore — nav / elevated chrome */
+  --bg-card:        #302154;                    /* Deep Port Gore — cards */
+  --line:           rgba(76, 62, 112, 0.40);    /* East Bay @ 40% — border */
+  --line-soft:      rgba(76, 62, 112, 0.18);    /* East Bay @ 18% — hairline */
 
-  /* --- Ink (Lamp Cream / Twilight / Slate) --- */
-  --ink-hi:         oklch(94% 0.04 85);
-  --ink-mid:        oklch(72% 0.04 300);
-  --ink-low:        oklch(55% 0.04 295);
+  /* --- Ink (Egg White / Amethyst Smoke / Lynch) --- */
+  --ink-hi:         #FFEFC2;                     /* Egg White — primary text */
+  --ink-mid:        #978CB5;                     /* Amethyst Smoke — secondary */
+  --ink-low:        #6A719A;                     /* Lynch — muted / tertiary */
 
-  /* --- Signal Gold (PRIMARY accent, ≤10% of pixels per Signal Gold Rule) --- */
-  --gold:           oklch(78% 0.13 75);
-  --gold-tint:      oklch(78% 0.13 75 / 0.15);
-  --gold-tint-soft: oklch(78% 0.13 75 / 0.08);
+  /* --- Signal Gold (PRIMARY accent — Cream Can, ≤10% of pixels) --- */
+  --gold:           #F2B95F;                     /* Cream Can */
+  --gold-tint:      rgba(242, 185, 95, 0.15);
+  --gold-tint-soft: rgba(242, 185, 95, 0.08);
 
-  /* --- Brand Plum (SECONDARY) and Rose (TERTIARY) --- */
-  --plum:           oklch(75% 0.06 320);
-  --plum-tint:      oklch(75% 0.06 320 / 0.18);
-  --rose:           oklch(70% 0.10 350);
-  --rose-tint:      oklch(70% 0.10 350 / 0.18);
+  /* --- Brand accents: Strikemaster (SECONDARY) + Lilac (TERTIARY) --- */
+  --plum:           #A06E9B;                     /* Strikemaster */
+  --plum-tint:      rgba(160, 110, 155, 0.18);
+  --rose:           #CEABCA;                     /* Lilac (brand has no rose; Lilac is tertiary) */
+  --rose-tint:      rgba(206, 171, 202, 0.18);
 
-  /* --- Functional --- */
-  --warn:           oklch(70% 0.18 50);
-  --warn-tint:      oklch(70% 0.18 50 / 0.15);
-  --danger:         oklch(62% 0.22 25);
-  --danger-tint:    oklch(62% 0.22 25 / 0.12);
+  /* --- Functional (brand-faithful: warn = Cream Can, danger = Copper; no off-brand red) --- */
+  --warn:           #F2B95F;                     /* Cream Can — HIGH / caution */
+  --warn-tint:      rgba(242, 185, 95, 0.15);
+  --danger:         #B28134;                     /* Copper — URGENT / overdue / error */
+  --danger-tint:    rgba(178, 129, 52, 0.16);
 
-  /* --- Modal scrim (the only allowed blur-adjacent effect) --- */
-  --scrim:          oklch(15% 0.04 280 / 0.78);
+  /* --- Status extras (brand) --- */
+  --ok:             #FFE08A;                     /* Salomie — OK / on-time / done */
+  --ok-tint:        rgba(255, 224, 138, 0.16);
+  --live:           #3DD9D6;                     /* Cockpit Cyan — live / active */
+  --live-tint:      rgba(61, 217, 214, 0.16);
+
+  /* --- Gradients --- */
+  --grad-primary:   linear-gradient(135deg, #0E132F 0%, #1A1F3D 25%, #4C3E70 50%, #A06E9B 100%);
+  --grad-gold:      linear-gradient(135deg, #302154 0%, #773C71 30%, #B28134 64%, #FFE08A 100%);
+
+  /* --- Modal scrim --- */
+  --scrim:          rgba(14, 19, 47, 0.78);      /* Haiti @ 78% */
+
+  /* --- Typography (Raleway display · Merriweather body · JetBrains Mono numerics) --- */
+  --font-display:   'Raleway', system-ui, -apple-system, sans-serif;
+  --font-body:      'Merriweather', Georgia, 'Times New Roman', serif;
+  --font-mono:      'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
 
   /* --- Spacing scale (vary for rhythm; never uniform) --- */
   --sp-xs:    6px;
@@ -69,17 +88,21 @@
 html, body { background: var(--bg-base); }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-body);  /* Merriweather body — distinctive brand serif */
   color: var(--ink-hi);
   font-size: 13px;
   font-weight: 400;
   line-height: 1.5;
-  font-feature-settings: 'cv11', 'ss01';
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;             /* never let a stray wide element break mobile layout */
 }
 
-/* --- Tabular numerics (Tabular-Numeric Rule, no exceptions) --- */
+/* Chrome = Raleway (headings, nav, labels, badges, buttons) */
+h1, h2, h3, h4, h5, h6, nav, .ds-nav, .ds-display, .ds-headline, .ds-label,
+.ds-micro, button, th, .badge { font-family: var(--font-display); }
+
+/* --- Tabular numerics (no exceptions) --- */
 .num, .ds-num, td.num, th.num,
 .ds-metric-val, .ds-metric-lead-val,
 .ds-stat-val, .ds-tool-count, .ds-tool-rank,
@@ -88,7 +111,7 @@ code, .ds-mono, time {
 }
 
 code, .ds-mono {
-  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  font-family: var(--font-mono);
   font-size: 12px;
   font-weight: 500;
 }
@@ -101,7 +124,7 @@ code, .ds-mono {
 .ds-label       { font-size: 11px;  font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; line-height: 1.3; }
 .ds-micro       { font-size: 10.5px; font-weight: 600; letter-spacing: 0.1em;  text-transform: uppercase; line-height: 1.3; }
 
-/* --- Focus rings (WCAG AA, replaces outline:none antipattern) --- */
+/* --- Focus rings (WCAG AA) --- */
 :focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 :focus:not(:focus-visible) { outline: none; }
 
@@ -120,7 +143,6 @@ code, .ds-mono {
 
 /* ============================================================
  * Mobile baseline (≤ 700px = tablet portrait, ≤ 480px = phone)
- * Added S081 Phase 7+ per Rohan: dashboards must be usable on phone.
  * ============================================================ */
 @media (max-width: 700px) {
   body { font-size: 12.5px; }
@@ -134,9 +156,7 @@ code, .ds-mono {
   .ds-display { font-size: 22px; }
 }
 
-/* Phone-only horizontal scroll wrapper for any table that won't fit.
-   Pages that wrap a <table> in <div class="ds-frame ds-frame-flush"> get
-   horizontal-only scrolling automatically below 700px. */
+/* Phone-only horizontal scroll wrapper for any table that won't fit. */
 @media (max-width: 700px) {
   .ds-frame.ds-frame-flush {
     overflow-x: auto;

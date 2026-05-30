@@ -1,7 +1,7 @@
 /* ============================================================
  * TrackMyWings Internal Dashboards — Component Library
  * Concatenated from 12 partials in /components/
- * Built: 2026-04-30T02:29:14
+ * Built: 2026-05-31T02:12:37
  * Edit individual partials, then re-run build_dashboard_assets.py.
  * ============================================================ */
 
@@ -82,7 +82,16 @@
 
 @media (max-width: 700px) {
   .ds-top { flex-direction: column; align-items: flex-start; }
-  .ds-nav { width: 100%; }
+  /* Horizontally scrollable nav so all links stay reachable on a phone. */
+  .ds-nav {
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 6px;
+    padding-bottom: 4px;
+  }
+  .ds-nav a, .ds-nav button { flex: 0 0 auto; padding: 6px 10px; font-size: 12px; }
 }
 
 /* --- Phone-tighter chrome --- */
@@ -368,6 +377,9 @@ canvas { max-height: 320px; }
   .ds-table thead th { padding: 9px 10px; font-size: 9.5px; letter-spacing: 0.07em; }
   .ds-table tbody td { padding: 9px 10px; font-size: 12px; }
   .ds-table .num { font-size: 11.5px; }
+  /* Fallback for tables not wrapped in a .ds-frame scroll container:
+     let the table itself scroll horizontally rather than break layout. */
+  .ds-table { display: block; width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; }
 }
 @media (max-width: 480px) {
   .ds-table thead th { padding: 8px 8px; }
@@ -396,24 +408,24 @@ canvas { max-height: 320px; }
 .ds-badge-opus   { background: var(--gold-tint); color: var(--gold); }
 .ds-badge-sonnet { background: var(--plum-tint); color: var(--plum); }
 .ds-badge-haiku  { background: var(--rose-tint); color: var(--rose); }
-.ds-badge-other  { background: oklch(55% 0.04 295 / 0.18); color: var(--ink-low); }
+.ds-badge-other  { background: rgba(76, 62, 112, 0.18); color: var(--ink-low); }
 
 /* --- Dept (collapsed from 12-color rainbow to 3 roles per One-Hue-One-Job Rule) --- */
 .ds-badge-dept           { background: var(--plum-tint); color: var(--plum); }
 .ds-badge-dept-finance   { background: var(--gold-tint); color: var(--gold); }
 .ds-badge-dept-legal     { background: var(--danger-tint); color: var(--danger); }
-.ds-badge-dept-other     { background: oklch(55% 0.04 295 / 0.18); color: var(--ink-low); }
+.ds-badge-dept-other     { background: rgba(76, 62, 112, 0.18); color: var(--ink-low); }
 
 /* --- Status --- */
 .ds-badge-warn   { background: var(--warn-tint); color: var(--warn); }
 .ds-badge-danger { background: var(--danger-tint); color: var(--danger); }
-.ds-badge-ok     { background: oklch(70% 0.10 140 / 0.18); color: oklch(75% 0.10 140); }
+.ds-badge-ok     { background: rgba(255, 224, 138, 0.18); color: #FFE08A; }
 
 /* --- Priority (replaces side-stripe pattern) --- */
 .ds-badge-pri-critical { background: var(--danger-tint); color: var(--danger); }
 .ds-badge-pri-high     { background: var(--warn-tint); color: var(--warn); }
 .ds-badge-pri-medium   { background: var(--gold-tint); color: var(--gold); }
-.ds-badge-pri-low      { background: oklch(55% 0.04 295 / 0.18); color: var(--ink-low); }
+.ds-badge-pri-low      { background: rgba(76, 62, 112, 0.18); color: var(--ink-low); }
 
 /* === Component: Filter Inputs ======================================
  * Text and select fields. Border shifts to gold on focus.

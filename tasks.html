@@ -497,7 +497,6 @@ const activeTasks = [
             { id: 'TMW-193', task: 'Amol exit bundle — Resignation + MoU Termination + IP Assignment + 3yr NCNS + SH-4 Share Transfer + Final Settlement + Handover. DIR-12 sequenced AFTER Anshul B DIR-12 effective. Notes (S098 2026-05-…', owner: 'Rohan + Amol + Anshul B + Raman', department: 'Legal', priority: 'Critical', status: 'WIP — lawyer docs received via email 2026-05-24 · download + file + completenes…', deadline: '**2026-06-07** transaction · 2026-05-31 paperwork lock', created: '2026-05-02' },
             { id: 'TMW-196', task: 'POA in favour of Anshul B (limited, dormant, trigger-activated). Stamped + notarised + registered. Sealed-envelope custody with spouse + Anshul B. S112 2026-05-16: WIP — TMW-190 unblocker landed (Ans…', owner: 'Rohan + Anshul B', department: 'Legal', priority: 'Medium', status: 'Sequenced post-TMW-190', deadline: '2026-06-15', created: '2026-05-02' },
             { id: 'TMW-199', task: 'Email + credential migration — Workspace suspend (Amol/Adhi/Ruchi) + GitHub org transfer + AWS root rotation + IAM cleanup + Mapbox/Razorpay/Stripe/Cloudflare under Company. Checklist at Legal/Restru…', owner: 'Rohan', department: 'Operations', priority: 'High', status: 'Sequenced post-TMW-193', deadline: '2026-05-31', created: '2026-05-02' },
-            { id: 'TMW-207', task: 'Install zellij (or tmux) + create tmw saved layout for 5-pane setup (T1 strategic / T2 code worktree / T3 design worktree / T4 local Ollama / T5 monitoring). Per v2.1 Dim 7. Blocked on TMW-206.', owner: 'Rohan', department: 'Operations', priority: 'Medium', status: 'Blocked on TMW-206', deadline: '2026-06-15', created: '2026-05-03' },
             { id: '**TMW-242**', task: 'Data Layer Phase 1 backfill (W2 Drift schema + remaining repositories + W1 screen backfill). Per architecture doc Phase 1 (DEC-155): Drift schema scaffold (6 tables: airlines/airports/flight_cache/us…', owner: 'Rohan + Claude', department: 'Engineering', priority: '**Medium**', status: 'Unblocked · sequenced post-W2 backend services landing', deadline: 'W2 evenings (Jun 1-7)', created: '2026-05-25' },
             { id: '**TMW-245**', task: 'V1 Go Backend foundation — auth + users + plans services LIVE-LOCAL · S127. Built per Engineering Constitution + v2.1 §B.2 + Multi-Agent CodeGen Pattern (Opus-direct for security-critical paths). Shi…', owner: 'Rohan + Claude', department: 'Engineering', priority: '—', status: 'WIP — code complete · smoke test gated on Docker restart', deadline: 'n/a', created: '2026-05-26' },
             { id: '**TMW-246**', task: 'FE → backend wiring layer · S127. Built dio + interceptors (CorrelationInterceptor adds X-Correlation-Id; AuthInterceptor attaches Bearer + 401 refresh) + AuthTokenStorage (in-memory, W3 will add flu…', owner: 'Rohan + Claude', department: 'Engineering', priority: '—', status: 'WIP — wiring layer complete · sign-up callback wire pending', deadline: 'n/a', created: '2026-05-26' },
@@ -556,6 +555,7 @@ const completedTasks = [
             { id: '**TMW-258**', task: '✅ COMPLETE S139 (2026-05-30) — ALL remaining V1 screens shipped. The S139 autonomous marathon (reboot-recovered) finished Group 5\'s last 11 + Groups 6(12)·7(11)·8(6)·W(2)·U/C·R(6)·P(5)·WN(1) = 137/13…', owner: 'Rohan + Claude', department: 'Engineering / Design', completed: '2026-05-27' },
             { id: '**TMW-251**', task: 'Phase 6 COMPLETE S132 · Phase 7 remains (gated on TM clearance). Phase 6 shipped (TMW-251.6 closed): P6.1 local smoke + 3 bug fixes (migration 000003 UUID/hyphen · consent route collision · driver mi…', owner: 'Rohan + Claude', department: 'Engineering / Operations', completed: '2026-05-26' },
             { id: 'TMW-200', task: 'Mihir sir briefing — team change + launch timeline re-baseline. ✅ DONE S141 (2026-05-31) — Rohan met Mihir sir IN PERSON and briefed him (team change / restructure / launch timeline). Founder to shar…', owner: 'Rohan + Claude', department: 'Strategy', completed: '2026-05-02' },
+            { id: 'TMW-207', task: 'Install zellij (or tmux) + create tmw saved layout for 5-pane setup. ✅ DONE S141 (2026-05-31) — zellij 0.44.3 installed via brew; layout at ~/.config/zellij/layouts/tmw.kdl with 5 tabs: T1 strategic…', owner: 'Rohan', department: 'Operations', completed: '2026-05-03' },
             { id: 'TMW-216', task: 'V1 Flutter mobile build — 🎉 WAVE 1 COMPLETE S124 · 22/22 screens · 206/206 tests · first-time-right quality. S122 W1-D1 bootstrap + foundation. S123 ops day. S124 W1-D3: 7-batch marathon shipped Wave…', owner: 'Rohan + Claude', department: 'Eng / Product', completed: '2026-05-04' },
             { id: '**TMW-259**', task: 'Infrastructure v2 build umbrella (Phases 0-10). Per [[TMW-252_Infrastructure_v2_Complete]] + Runbook. S137 PROGRESS: Phase 0 ✅ (Bitwarden + PAT rotation) · Phase 1 ✅ (workspace → ~/Code/tmw/) · Phase…', owner: 'Rohan + Claude', department: 'Operations / Engineering', completed: '2026-05-29' },
             { id: '~~TMW-248-prior~~', task: 'Path C Implementation umbrella — adopt trackmywings/backend scaffold + 53 pending tasks + our additions · S128. Per Operations/AI System/Plans/TMW-226_Path_C_Implementation_Plan.md v1.0 (4,362 words…', owner: 'Rohan + Claude + Amol (advisory)', department: 'Engineering', completed: 'unknown' },
@@ -1038,14 +1038,14 @@ const analyticsData = {
                         {
                                     "date": "2026-05-31",
                                     "completed": 6,
-                                    "added": 256
+                                    "added": 257
                         }
             ],
             "weeklyVelocity": [
                         {
                                     "week": "2026-04-27",
-                                    "completed": 0,
-                                    "added": 1
+                                    "completed": 1,
+                                    "added": 0
                         },
                         {
                                     "week": "2026-05-04",
@@ -1065,7 +1065,7 @@ const analyticsData = {
                         {
                                     "week": "2026-05-25",
                                     "completed": 24,
-                                    "added": 264
+                                    "added": 265
                         }
             ],
             "statusDistribution": [
@@ -1103,10 +1103,6 @@ const analyticsData = {
                         },
                         {
                                     "status": "Sequenced post-TMW-193",
-                                    "count": 1
-                        },
-                        {
-                                    "status": "Blocked on TMW-206",
                                     "count": 1
                         },
                         {
@@ -1247,7 +1243,7 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Rohan",
-                                    "active": 32,
+                                    "active": 31,
                                     "high_priority": 11,
                                     "overdue": 0
                         },
@@ -1351,12 +1347,12 @@ const analyticsData = {
                         },
                         {
                                     "department": "Operations",
-                                    "active": 2,
+                                    "active": 1,
                                     "wip": 0,
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 28
+                                    "avg_age_days": 29
                         },
                         {
                                     "department": "Product",
@@ -1393,59 +1389,59 @@ const analyticsData = {
             "burndownData": [
                         {
                                     "date": "2026-05-31",
-                                    "remaining": 34
+                                    "remaining": 33
                         },
                         {
                                     "date": "2026-05-30",
-                                    "remaining": 34
+                                    "remaining": 33
                         },
                         {
                                     "date": "2026-05-29",
-                                    "remaining": 32
+                                    "remaining": 31
                         },
                         {
                                     "date": "2026-05-28",
-                                    "remaining": 32
+                                    "remaining": 31
                         },
                         {
                                     "date": "2026-05-27",
-                                    "remaining": 32
+                                    "remaining": 31
                         },
                         {
                                     "date": "2026-05-26",
-                                    "remaining": 30
+                                    "remaining": 29
                         },
                         {
                                     "date": "2026-05-25",
-                                    "remaining": 27
+                                    "remaining": 26
                         },
                         {
                                     "date": "2026-05-24",
-                                    "remaining": 26
+                                    "remaining": 25
                         },
                         {
                                     "date": "2026-05-23",
-                                    "remaining": 26
+                                    "remaining": 25
                         },
                         {
                                     "date": "2026-05-22",
-                                    "remaining": 26
+                                    "remaining": 25
                         },
                         {
                                     "date": "2026-05-21",
-                                    "remaining": 26
+                                    "remaining": 25
                         },
                         {
                                     "date": "2026-05-20",
-                                    "remaining": 26
+                                    "remaining": 25
                         },
                         {
                                     "date": "2026-05-19",
-                                    "remaining": 26
+                                    "remaining": 25
                         },
                         {
                                     "date": "2026-05-18",
-                                    "remaining": 26
+                                    "remaining": 25
                         }
             ],
             "velocity": {

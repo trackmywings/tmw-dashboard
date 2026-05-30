@@ -32,6 +32,15 @@
   .progress-fill--green { background: #10B981; }
   .progress-fill--amber { background: #F59E0B; }
   .progress-fill--red { background: #DC2626; }
+  /* --- Mobile (≤700px): scrollable nav, scrollable tables, stacked metrics --- */
+  @media (max-width: 700px) {
+    .ds-nav { display: flex; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; gap: 6px; padding-bottom: 4px; }
+    .ds-nav a { flex: 0 0 auto; padding: 6px 10px; font-size: 12px; white-space: nowrap; }
+    table.t { display: block; width: 100%; overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; }
+  }
+  @media (max-width: 480px) {
+    .metric-row { grid-template-columns: 1fr; }
+  }
   
 </style>
 </head>
@@ -53,6 +62,7 @@
         <a href="ai-providers.html">Providers</a>
         <a href="skills.html">Skills</a>
         <a href="folder-map.html">Files</a>
+        <a href="infra.html">Infra</a>
       </nav>
     <h1 style="margin: 8px 0 0;">Risk Register</h1>
   </header>
@@ -61,7 +71,7 @@
 <div class="metric-row">
   <div class="metric">
     <div class="label">Critical Risks</div>
-    <div class="value">3</div>
+    <div class="value">2</div>
     <div class="sub">Immediate action</div>
   </div>
   <div class="metric">
@@ -87,7 +97,6 @@
   <thead><tr><th>Severity</th><th>Risk</th><th>Notes / Mitigation</th></tr></thead>
   <tbody>
 <tr><td><span class="badge badge--urgent">CRITICAL</span></td><td><strong>Founder well-being — BP red zone</strong></td><td>2026-05-02: Rohan flagged 160/110 sustained. Operating cadence treats founder bandwidth + health as binding. BP > 140/90 = scope-pause day; BP > 160/100 + symptom = ER. Per Systems Upgrade Plan §4.5.</td></tr>
-<tr><td><span class="badge badge--urgent">CRITICAL</span></td><td><strong>TMW-252 workspace relocation — iCloud contention recurring</strong></td><td>iCloud ghost files (` 2.dart`, ` 2.py`) hit 3× in S133-S135; OSR(11) lock contention hung parallel dispatches twice. Root cause: `~/tmw` in iCloud-synced Documents with 2.7GB Archive (relocated 2026-05-25 but residual contention persists). **DEC pending. Treat as blocking for parallel Sonnet batches >2 agents until resolved.** ~2hr fix. Per `feedback_icloud_osr11_lock_contention.md` + S133-S135 incident chain.</td></tr>
 <tr><td><span class="badge badge--urgent">CRITICAL</span></td><td><strong>§ 149 sequencing risk</strong></td><td>Anshul B's DIR-12 (appointment) MUST be effective BEFORE Amol's DIR-12 (resignation). Single mis-step = non-compliance. Raman to gate-keep.</td></tr>
 <tr><td><span class="badge badge--high">High</span></td><td><strong>Solo-founder bandwidth</strong></td><td>All 9 functions on Rohan + Claude. Time variable, scope fixed (Q12.1, Q10.5). No contractors (Q10.3). Force-multiplier = Claude skill activation per Systems Upgrade Plan.</td></tr>
 <tr><td><span class="badge badge--high">High</span></td><td><strong>Knowledge loss during Amol handover</strong></td><td>Amol's Handover Document is gating his last working day. No clearance until delivered. Walkthrough video + bug list + roadmap notes mandatory.</td></tr>
@@ -97,6 +106,7 @@
 <tr><td><span class="badge badge--info">Medium</span></td><td><strong>Rohan splitting time with Pococare</strong></td><td>Continues indefinitely (Q10.2). Bandwidth constraint accentuated post-team exit.</td></tr>
 <tr><td><span class="badge badge--default">Low</span></td><td><strong>Figma MCP cross-screen NAVIGATE reactions blocked</strong></td><td>DEC-120 — MCP `use_figma` proxy rejects type:'NODE' actions; custom plugin built as workaround. Future MCP updates may unlock direct path.</td></tr>
 <tr><td><span class="badge badge--default">Low</span></td><td><strong>No CRM</strong></td><td>Pre-launch. TMW-171 to decide stack T-30 from launch.</td></tr>
+<tr><td><span class="badge badge--default">✅ RESOLVED S137-S138</span></td><td><strong>~~TMW-252 workspace iCloud contention~~</strong></td><td>Workspace moved out of iCloud → `~/Code/tmw/` (local-only) S137 · **0 ghost files since** · now version-controlled (Gitea + GitHub mirror, Legal/Finance git-crypt-encrypted) + restic daily backup (S138). iCloud bird-sync contention eliminated; parallel-dispatch block lifted.</td></tr>
   </tbody>
 </table>
 </section>
@@ -114,7 +124,7 @@ Source canonical: <code>Operations/AI System/CONTEXT.md</code> "Top risks". Skil
   </main>
 
   <div class="stale-banner">
-    Last rebuilt: 2026-05-29T08:53 IST · Source: <code>Operations/AI System/CONTEXT.md</code> (Top risks section) · Rebuild: <code>python3 rebuild_risk_register.py</code>
+    Last rebuilt: 2026-05-31T02:14 IST · Source: <code>Operations/AI System/CONTEXT.md</code> (Top risks section) · Rebuild: <code>python3 rebuild_risk_register.py</code>
   </div>
 </div>
 </body>

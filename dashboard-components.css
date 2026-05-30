@@ -1,7 +1,7 @@
 /* ============================================================
  * TrackMyWings Internal Dashboards — Component Library
  * Concatenated from 12 partials in /components/
- * Built: 2026-05-31T02:12:46
+ * Built: 2026-05-31T02:21:04
  * Edit individual partials, then re-run build_dashboard_assets.py.
  * ============================================================ */
 
@@ -676,9 +676,16 @@ select.ds-filter {
 }
 .ds-login-err.show { display: block; }
 
-/* --- Phone: login lockup tightens --- */
+/* --- Phone/tablet: login lockup never overflows the viewport ---
+   The non-mobile card has min-width:320px + 40px side padding (= 400px),
+   which overflows narrow phones. Relax min-width early and shrink side
+   padding so the card always fits within the 20px overlay gutters. */
+@media (max-width: 700px) {
+  .ds-login-overlay { padding: 16px; }
+  .ds-login-card { padding: var(--sp-xl) var(--sp-lg); min-width: 0; max-width: 380px; }
+}
 @media (max-width: 480px) {
-  .ds-login-card { padding: var(--sp-xl) var(--sp-lg); min-width: 280px; }
+  .ds-login-card { padding: var(--sp-lg) var(--sp-md); min-width: 0; }
   .ds-login-logo { width: 64px; height: 64px; margin-bottom: var(--sp-md); }
   .ds-login-title { font-size: 19px; }
   .ds-login-sub { font-size: 11.5px; }

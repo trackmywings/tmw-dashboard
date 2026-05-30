@@ -32,6 +32,15 @@
   .progress-fill--green { background: #10B981; }
   .progress-fill--amber { background: #F59E0B; }
   .progress-fill--red { background: #DC2626; }
+  /* --- Mobile (≤700px): scrollable nav, scrollable tables, stacked metrics --- */
+  @media (max-width: 700px) {
+    .ds-nav { display: flex; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; gap: 6px; padding-bottom: 4px; }
+    .ds-nav a { flex: 0 0 auto; padding: 6px 10px; font-size: 12px; white-space: nowrap; }
+    table.t { display: block; width: 100%; overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; }
+  }
+  @media (max-width: 480px) {
+    .metric-row { grid-template-columns: 1fr; }
+  }
   
 </style>
 </head>
@@ -53,6 +62,7 @@
         <a href="ai-providers.html" class="ds-nav-active">Providers</a>
         <a href="skills.html">Skills</a>
         <a href="folder-map.html">Files</a>
+        <a href="infra.html">Infra</a>
       </nav>
     <h1 style="margin: 8px 0 0;">AI Provider Registry</h1>
   </header>
@@ -114,7 +124,7 @@
   </main>
 
   <div class="stale-banner">
-    Last rebuilt: 2026-05-31T02:00 IST · Source: <code>Operations/AI System/AI_PROVIDER_REGISTRY.md</code> · Rebuild: <code>python3 rebuild_ai_providers.py</code>
+    Last rebuilt: 2026-05-31T02:14 IST · Source: <code>Operations/AI System/AI_PROVIDER_REGISTRY.md</code> · Rebuild: <code>python3 rebuild_ai_providers.py</code>
   </div>
 </div>
 </body>

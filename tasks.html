@@ -490,7 +490,7 @@ const heroMilestones = [
             }
 ];
 const activeTasks = [
-            { id: '**TMW-258**', task: 'Wave 4 Group 5 HM apex screens — 6 of 17 SHIPPED S135 · 11 remaining. Group 5 = 17 screens (HM3 badge · HM5 passport · HM6 year-in-review · HM7 globe · HM12 country · + supporting). Per v2.1 §B.1.1,…', owner: 'Rohan + Claude', department: 'Engineering / Design', priority: 'High', status: 'WIP · 6/17 shipped S135 · 11 remaining for S136-S138', deadline: 'Soft 2026-06-03 to 2026-06-12 per supplement', created: '2026-05-27' },
+            { id: '**TMW-260**', task: 'Wire V1 screens off LocalSeed → live backend (the unfinished third of the S139 /goal). All 137 screens currently render from LocalSeed* mock repositories. The wiring scaffold already exists — dio + i…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'High', status: 'Not Started — next major dev block (post-screen-completion)', deadline: 'Pre-launch', created: '2026-05-30' },
             { id: '**TMW-255**', task: 'signup_otp email template seed migration — DRAFTED S133 · awaiting backend deploy. Background general-purpose agent drafted Engineering/Codebase/V1_Backend/migrations/000024_seed_email_templates.up.s…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'High', status: 'Migration drafted S133 · awaiting deploy', deadline: 'Pre-Phase-7 / before any live signup test', created: '2026-05-27' },
             { id: '**TMW-256**', task: 'V1_Flutter web visual full-UI smoke (deferred) — Flutter web build verified S132 (flutter build web --release succeeded in 243s · main.dart.js 3.57MB · serves via python3 -m http.server 9090 · playwr…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'Medium', status: 'Deferred to next session · backend contract already proven by integration tests', deadline: 'Pre-Phase-7 polish', created: '2026-05-27' },
             { id: '**TMW-189**', task: 'RESTRUCTURE MASTER (umbrella) — Amol exit + Anshul B appointment + ICICI + INC-20A + INC-22 + ADT-1 + share transfer + IP assignment + director loan + handover. S114→S133 statutory milestones: ✅ TMW-…', owner: 'Rohan + Anshul B + Raman', department: 'Legal / Ops', priority: '**CRITICAL**', status: 'Active — 6 milestones closed (incl. all statutory T-5 filings + INC-20A approve…', deadline: '2026-06-15 (target close)', created: '2026-05-02' },
@@ -553,6 +553,7 @@ const completedTasks = [
             { id: 'TMW-190', task: 'Anshul B Additional Director. ✅ APPOINTED 2026-05-16 — DSC ✅ + DIR-3 KYC ✅ + DIN ✅ 2026-05-12 + BR-02 + DIR-12 effective 2026-05-16. § 149(1)(a) sequencing satisfied (Anshul B\'s DIR-12 effecti', owner: 'Rohan + Anshul B + Raman', department: 'Legal', completed: '2026-05-16' },
             { id: '~~TMW-249~~', task: '✅ CLOSED S136 2026-05-28 — Subsumed by downstream chain: Tier 1+2+3+cross-cutting ✅ S128+S129 + Phase 5 SSR dynamic routes ✅ via TMW-250 (S131 · /flight + /aircraft + /route SSR + sitemap + cookie ba…', owner: 'Rohan + Claude', department: 'Design / Engineering', completed: 'unknown' },
             { id: '~~TMW-239~~', task: '✅ CLOSED S136 2026-05-28 — Phase 1-5 shipped + Phase 6 RESEARCH closed in S119. /start now consistently ≤ 55K tokens (6 real records median 58-67K pre-Phase-1; post = ≤ 55K). CONTEXT_PACKET + 3 MCPs…', owner: 'Rohan + Claude', department: 'Operations', completed: 'unknown' },
+            { id: '**TMW-258**', task: '✅ COMPLETE S139 (2026-05-30) — ALL remaining V1 screens shipped. The S139 autonomous marathon (reboot-recovered) finished Group 5\'s last 11 + Groups 6(12)·7(11)·8(6)·W(2)·U/C·R(6)·P(5)·WN(1) = 137/13…', owner: 'Rohan + Claude', department: 'Engineering / Design', completed: '2026-05-27' },
             { id: '**TMW-251**', task: 'Phase 6 COMPLETE S132 · Phase 7 remains (gated on TM clearance). Phase 6 shipped (TMW-251.6 closed): P6.1 local smoke + 3 bug fixes (migration 000003 UUID/hyphen · consent route collision · driver mi…', owner: 'Rohan + Claude', department: 'Engineering / Operations', completed: '2026-05-26' },
             { id: 'TMW-216', task: 'V1 Flutter mobile build — 🎉 WAVE 1 COMPLETE S124 · 22/22 screens · 206/206 tests · first-time-right quality. S122 W1-D1 bootstrap + foundation. S123 ops day. S124 W1-D3: 7-batch marathon shipped Wave…', owner: 'Rohan + Claude', department: 'Eng / Product', completed: '2026-05-04' },
             { id: '**TMW-259**', task: 'Infrastructure v2 build umbrella (Phases 0-10). Per [[TMW-252_Infrastructure_v2_Complete]] + Runbook. S137 PROGRESS: Phase 0 ✅ (Bitwarden + PAT rotation) · Phase 1 ✅ (workspace → ~/Code/tmw/) · Phase…', owner: 'Rohan + Claude', department: 'Operations / Engineering', completed: '2026-05-29' },
@@ -866,6 +867,13 @@ const activityFeed = [
                         "task_name": "**W4 Group 4 Aviation Identity Founda..."
             },
             {
+                        "date": "2026-05-27",
+                        "task_id": "**TMW-258**",
+                        "event": "completed",
+                        "department": "Engineering / Design",
+                        "task_name": "**\u2705 COMPLETE S139 (2026-05-30) \u2014 ALL ..."
+            },
+            {
                         "date": "2026-05-26",
                         "task_id": "~~TMW-054~~",
                         "event": "completed",
@@ -927,13 +935,6 @@ const activityFeed = [
                         "event": "completed",
                         "department": "Operations",
                         "task_name": "**launchd dashboard rebuild jobs fail..."
-            },
-            {
-                        "date": "2026-05-25",
-                        "task_id": "**TMW-243**",
-                        "event": "completed",
-                        "department": "Operations",
-                        "task_name": "**Dashboard expansion 5 \u2192 14 with uni..."
             }
 ];
 const calendarEvents = [
@@ -1020,8 +1021,8 @@ const analyticsData = {
                         },
                         {
                                     "date": "2026-05-27",
-                                    "completed": 4,
-                                    "added": 3
+                                    "completed": 5,
+                                    "added": 2
                         },
                         {
                                     "date": "2026-05-28",
@@ -1036,7 +1037,7 @@ const analyticsData = {
                         {
                                     "date": "2026-05-30",
                                     "completed": 6,
-                                    "added": 254
+                                    "added": 256
                         }
             ],
             "weeklyVelocity": [
@@ -1062,8 +1063,8 @@ const analyticsData = {
                         },
                         {
                                     "week": "2026-05-25",
-                                    "completed": 23,
-                                    "added": 261
+                                    "completed": 24,
+                                    "added": 262
                         }
             ],
             "statusDistribution": [
@@ -1076,7 +1077,7 @@ const analyticsData = {
                                     "count": 2
                         },
                         {
-                                    "status": "**WIP \u00b7 6/17 shipped S135 \u00b7 11 remaining for S136-S138**",
+                                    "status": "**Not Started \u2014 next major dev block (post-screen-completion)**",
                                     "count": 1
                         },
                         {
@@ -1259,21 +1260,12 @@ const analyticsData = {
             "departmentHealth": [
                         {
                                     "department": "Engineering",
-                                    "active": 7,
+                                    "active": 8,
                                     "wip": 0,
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 10
-                        },
-                        {
-                                    "department": "Engineering / Design",
-                                    "active": 1,
-                                    "wip": 0,
-                                    "not_started": 0,
-                                    "overdue": 0,
-                                    "stale": 0,
-                                    "avg_age_days": 3
+                                    "avg_age_days": 9
                         },
                         {
                                     "department": "Engineering / Product / Operations",
@@ -1413,15 +1405,15 @@ const analyticsData = {
                         },
                         {
                                     "date": "2026-05-29",
-                                    "remaining": 34
+                                    "remaining": 33
                         },
                         {
                                     "date": "2026-05-28",
-                                    "remaining": 34
+                                    "remaining": 33
                         },
                         {
                                     "date": "2026-05-27",
-                                    "remaining": 34
+                                    "remaining": 33
                         },
                         {
                                     "date": "2026-05-26",
@@ -1466,7 +1458,7 @@ const analyticsData = {
             ],
             "velocity": {
                         "today": 6,
-                        "this_week": 23,
+                        "this_week": 24,
                         "overdue": 0,
                         "stale": 1
             }

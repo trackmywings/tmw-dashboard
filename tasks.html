@@ -530,8 +530,7 @@ const activeTasks = [
             { id: '**TMW-266**', task: 'Client monetization — IAP + Razorpay SDK + enforce feature-gating. Per S141 readiness Q1-F6/Q6-L2: backend payments (Apple+Google+Razorpay verify) are built but pubspec.yaml has NO in_app_purchase/ra…', owner: 'Rohan + Claude', department: 'Finance / Engineering', priority: '**High**', status: 'Not Started', deadline: 'Pre-launch', created: '2026-05-31' },
             { id: '**TMW-267**', task: 'Source-less-screen data strategy — decide integrate-or-descope per feature. Per S141 readiness Q10: built screens with NO upstream data source — weather (3.14), gate/terminal/baggage (2.13), seat map…', owner: 'Rohan (decision) + Claude', department: 'Engineering / Product', priority: '**Medium**', status: 'Not Started — needs founder integrate/descope call per feature', deadline: 'Pre-launch', created: '2026-05-31' },
             { id: '**TMW-268**', task: 'DPDP client data layer + in-app legal surfaces. Per S141 readiness Q5/Q6-L3/Q9: backend implements DPDP §6/§11/§12(2) (tested) but Flutter has NO consent/export/erasure repository and NO in-app Terms…', owner: 'Rohan + Anshul B + Claude', department: 'Legal / Engineering', priority: '**High**', status: 'Not Started', deadline: 'Pre-launch', created: '2026-05-31' },
-            { id: '**TMW-269**', task: 'Create canonical Launch Asset Register + store assets. Per S141 readiness Q5: there is NO single asset checklist. Create Operations/AI System/Plans/TMW-226_Launch_Asset_Register.md enumerating every…', owner: 'Rohan + Claude + Ruchi', department: 'Marketing / Design', priority: '**Medium**', status: 'Not Started', deadline: 'Pre-launch (post-TM for store submission)', created: '2026-05-31' },
-            { id: '**TMW-270**', task: 'Operating-systems hygiene sweep (S141 systems-fix plan). Per Operations/AI System/Plans/Systems_Fix_Plan_2026-05-31_S141.md: (FIX-3) reindex tmw-decision-logger MCP — it returns only ≤ DEC-165; DEC-1…', owner: 'Rohan + Claude', department: 'Operations', priority: '**Medium**', status: 'Not Started', deadline: 'Pre-launch (hygiene)', created: '2026-05-31' }
+            { id: '**TMW-269**', task: 'Create canonical Launch Asset Register + store assets. Per S141 readiness Q5: there is NO single asset checklist. Create Operations/AI System/Plans/TMW-226_Launch_Asset_Register.md enumerating every…', owner: 'Rohan + Claude + Ruchi', department: 'Marketing / Design', priority: '**Medium**', status: 'Not Started', deadline: 'Pre-launch (post-TM for store submission)', created: '2026-05-31' }
         ];
 const completedTasks = [
             { id: '~~TMW-206~~', task: '✅ DONE S138 — git init ~/Code/tmw + comprehensive .gitignore + initial commit + pushed Gitea + GitHub mirror (subsumed by TMW-259 Phase 3).', owner: 'Rohan + Claude', department: 'Operations', completed: '2026-05-29' },
@@ -568,6 +567,7 @@ const completedTasks = [
             { id: 'TMW-216', task: 'V1 Flutter mobile build — 🎉 WAVE 1 COMPLETE S124 · 22/22 screens · 206/206 tests · first-time-right quality. S122 W1-D1 bootstrap + foundation. S123 ops day. S124 W1-D3: 7-batch marathon shipped Wave…', owner: 'Rohan + Claude', department: 'Eng / Product', completed: '2026-05-04' },
             { id: '**TMW-259**', task: 'Infrastructure v2 build umbrella (Phases 0-10). Per [[TMW-252_Infrastructure_v2_Complete]] + Runbook. S137 PROGRESS: Phase 0 ✅ (Bitwarden + PAT rotation) · Phase 1 ✅ (workspace → ~/Code/tmw/) · Phase…', owner: 'Rohan + Claude', department: 'Operations / Engineering', completed: '2026-05-29' },
             { id: '**TMW-261**', task: 'Fix ingestion bugs surfaced by the IX1347 live-flight validation (S140 · DEC-167). Real defects in V1_Backend/src/ingestion proven against live OpenSky data on the Lenovo rig: BUG-1 — positions silen…', owner: 'Rohan + Claude', department: 'Engineering', completed: '2026-05-30' },
+            { id: '**TMW-270**', task: 'Operating-systems hygiene sweep (S141 systems-fix plan). Per Operations/AI System/Plans/Systems_Fix_Plan_2026-05-31_S141.md: (FIX-3) ✅ DONE 2026-05-31 (PM) — diagnosis corrected. Root cause was NOT a…', owner: 'Rohan + Claude', department: 'Operations', completed: '2026-05-31' },
             { id: '~~TMW-248-prior~~', task: 'Path C Implementation umbrella — adopt trackmywings/backend scaffold + 53 pending tasks + our additions · S128. Per Operations/AI System/Plans/TMW-226_Path_C_Implementation_Plan.md v1.0 (4,362 words…', owner: 'Rohan + Claude + Amol (advisory)', department: 'Engineering', completed: 'unknown' },
             { id: '~~TMW-249-prior~~', task: 'Staging website end-to-end revamp · design + UX + connectivity sync to app · S128 founder direction — Completely revamp staging.trackmywings.com (V0_NextJS) end-to-end. Pull V1_Flutter Aero Nocturne…', owner: 'Rohan + Claude', department: 'Design / Engineering', completed: 'unknown' },
             { id: '~~TMW-247-prior~~', task: 'W3 Group 3 Wave 1 (4 of 14 screens) shipped via 4-parallel Sonnets · S127. Dispatched 4 background Sonnets per Multi-Agent Pattern (each independent screen folder · no shared files · LocalSeed per DE…', owner: 'Rohan + Claude', department: 'Engineering', completed: 'unknown' },
@@ -822,6 +822,13 @@ const activityFeed = [
                         "task_name": "**\u2705 CLOSED S136 2026-05-28** \u2014 Phase ..."
             },
             {
+                        "date": "2026-05-31",
+                        "task_id": "**TMW-270**",
+                        "event": "completed",
+                        "department": "Operations",
+                        "task_name": "**Operating-systems hygiene sweep (S1..."
+            },
+            {
                         "date": "2026-05-30",
                         "task_id": "**TMW-261**",
                         "event": "completed",
@@ -939,13 +946,6 @@ const activityFeed = [
                         "event": "completed",
                         "department": "Engineering / Operations",
                         "task_name": "**Phase 6 COMPLETE S132 \u00b7 Phase 7 rem..."
-            },
-            {
-                        "date": "2026-05-25",
-                        "task_id": "**TMW-240**",
-                        "event": "completed",
-                        "department": "Operations",
-                        "task_name": ""
             }
 ];
 const calendarEvents = [
@@ -1052,7 +1052,7 @@ const analyticsData = {
                         },
                         {
                                     "date": "2026-05-31",
-                                    "completed": 6,
+                                    "completed": 7,
                                     "added": 267
                         }
             ],
@@ -1079,17 +1079,17 @@ const analyticsData = {
                         },
                         {
                                     "week": "2026-05-25",
-                                    "completed": 25,
+                                    "completed": 26,
                                     "added": 274
                         }
             ],
             "statusDistribution": [
                         {
-                                    "status": "**Not Started**",
-                                    "count": 5
+                                    "status": "Blocked \u2014 DEC-067 stealth + IP clearance",
+                                    "count": 4
                         },
                         {
-                                    "status": "Blocked \u2014 DEC-067 stealth + IP clearance",
+                                    "status": "**Not Started**",
                                     "count": 4
                         },
                         {
@@ -1256,7 +1256,7 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Claude",
-                                    "active": 29,
+                                    "active": 28,
                                     "high_priority": 6,
                                     "overdue": 0
                         },
@@ -1274,7 +1274,7 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Rohan",
-                                    "active": 38,
+                                    "active": 37,
                                     "high_priority": 10,
                                     "overdue": 0
                         },
@@ -1426,12 +1426,12 @@ const analyticsData = {
                         },
                         {
                                     "department": "Operations",
-                                    "active": 2,
+                                    "active": 1,
                                     "wip": 0,
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 14
+                                    "avg_age_days": 29
                         },
                         {
                                     "department": "Product",
@@ -1462,13 +1462,13 @@ const analyticsData = {
             ],
             "deadlineStats": {
                         "overdue": 0,
-                        "due_3days": 39,
+                        "due_3days": 38,
                         "deadline_hit_rate": "0%"
             },
             "burndownData": [
                         {
                                     "date": "2026-05-31",
-                                    "remaining": 41
+                                    "remaining": 40
                         },
                         {
                                     "date": "2026-05-30",
@@ -1524,8 +1524,8 @@ const analyticsData = {
                         }
             ],
             "velocity": {
-                        "today": 6,
-                        "this_week": 25,
+                        "today": 7,
+                        "this_week": 26,
                         "overdue": 0,
                         "stale": 1
             }

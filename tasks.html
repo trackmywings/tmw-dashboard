@@ -491,7 +491,7 @@ const heroMilestones = [
             }
 ];
 const activeTasks = [
-            { id: '**TMW-260**', task: 'Wire V1 screens off LocalSeed → live backend (the unfinished third of the S139 /goal). All 137 screens currently render from LocalSeed* mock repositories. The wiring scaffold already exists — dio + i…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'High', status: 'WIP — proof-slice template DONE S142 (ApiFlightDetailRepository + DEC-155 swap…', deadline: 'Pre-launch', created: '2026-05-30' },
+            { id: '**TMW-260**', task: 'Wire V1 screens off LocalSeed → live backend (the unfinished third of the S139 /goal). All 137 screens currently render from LocalSeed* mock repositories. The wiring scaffold already exists — dio + i…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'High', status: 'WIP — S143: 29 slices wired+verified behind USE_LIVE_API (22 reads + 4 mutation…', deadline: 'Pre-launch', created: '2026-05-30' },
             { id: '**TMW-255**', task: 'signup_otp email template seed migration — DRAFTED S133 · awaiting backend deploy. Background general-purpose agent drafted Engineering/Codebase/V1_Backend/migrations/000024_seed_email_templates.up.s…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'High', status: 'Migration drafted S133 · awaiting deploy', deadline: 'Pre-Phase-7 / before any live signup test', created: '2026-05-27' },
             { id: '**TMW-256**', task: 'V1_Flutter web visual full-UI smoke (deferred) — Flutter web build verified S132 (flutter build web --release succeeded in 243s · main.dart.js 3.57MB · serves via python3 -m http.server 9090 · playwr…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'Medium', status: 'Deferred to next session · backend contract already proven by integration tests', deadline: 'Pre-Phase-7 polish', created: '2026-05-27' },
             { id: '**TMW-189**', task: 'RESTRUCTURE MASTER (umbrella) — Amol exit + Anshul B appointment + ICICI + INC-20A + INC-22 + ADT-1 + share transfer + IP assignment + director loan + handover. S114→S133 statutory milestones: ✅ TMW-…', owner: 'Rohan + Anshul B + Raman', department: 'Legal / Ops', priority: '**CRITICAL**', status: 'Active — 6 milestones closed (incl. all statutory T-5 filings + INC-20A approve…', deadline: '2026-06-15 (target close)', created: '2026-05-02' },
@@ -531,7 +531,11 @@ const activeTasks = [
             { id: '**TMW-269**', task: 'Create canonical Launch Asset Register + store assets. Per S141 readiness Q5: there is NO single asset checklist. Create Operations/AI System/Plans/TMW-226_Launch_Asset_Register.md enumerating every…', owner: 'Rohan + Claude + Ruchi', department: 'Marketing / Design', priority: '**Medium**', status: 'Not Started', deadline: 'Pre-launch (post-TM for store submission)', created: '2026-05-31' },
             { id: '**TMW-271**', task: 'Screen-to-screen connectivity — Layer 2 navigation graph (split out of TMW-262 Layer 2, made explicit 2026-06-01). The router spine is live (TMW-262 L1 ef73399: 14 routes — splash + 7-step onboarding…', owner: 'Rohan + Claude', department: 'Engineering', priority: '**High**', status: 'Not Started — spine done (TMW-262 L1); ~120 detail routes + per-screen push cal…', deadline: 'Pre-launch', created: '2026-06-01' },
             { id: '**TMW-272**', task: 'Legal clearance — community ADS-B aggregator commercial-use terms (DEC-169 path A gate). Per DEC-169, the live-tracking core uses community ADS-B aggregators (adsb.lol · adsb.fi · airplanes.live) as…', owner: 'Rohan + Anshul B', department: 'Legal', priority: '**High**', status: 'Not Started', deadline: 'Pre-launch (before live tracking ships)', created: '2026-06-01' },
-            { id: '**TMW-273**', task: 'Explore aviation data providers — landscape survey. Deliberate market survey across ALL aviation data needs, to set provider strategy + feed the source-less-screen calls (TMW-267): (1) live positions…', owner: 'Rohan + Claude', department: 'Engineering / Strategy', priority: '**Medium**', status: 'Not Started', deadline: 'Pre-launch (informs TMW-267 + live-tracking)', created: '2026-06-01' }
+            { id: '**TMW-273**', task: 'Explore aviation data providers — landscape survey. Deliberate market survey across ALL aviation data needs, to set provider strategy + feed the source-less-screen calls (TMW-267): (1) live positions…', owner: 'Rohan + Claude', department: 'Engineering / Strategy', priority: '**Medium**', status: 'Not Started', deadline: 'Pre-launch (informs TMW-267 + live-tracking)', created: '2026-06-01' },
+            { id: '**TMW-274**', task: 'Mihir advisory equity formalization. Decision package + drafts done S143 (Strategy/Fundraising/Mihir_Advisory_Equity_Decision_Memo_2026-06-01.md + Legal/Contracts/Drafts/Mihir_Advisor_Agreement_DRAFT…', owner: 'Rohan + Mihir + Anshul B + Raman', department: 'Legal / Strategy', priority: 'High', status: 'Drafted S143 · founder finalizing % + docs + SoW with Mihir', deadline: 'Pre-launch', created: '2026-06-01' },
+            { id: '**TMW-275**', task: 'Loafer Studios pitch-deck engagement — 30-40 slide MASTER deck. Studio building the canonical master deck (variants derive from it). NDA signed + filed (Legal/Contracts/NDA_TMW_LOAFER_STUDIOS_2026-05…', owner: 'Rohan + Claude', department: 'Strategy / Design', priority: 'High', status: 'Brief + .docx ready · meeting 2026-06-02 10am', deadline: '2026-06-02 (meeting)', created: '2026-06-01' },
+            { id: '**TMW-276**', task: 'Backend data-layer tickets (unblock remaining FE wiring). The Flutter read+mutation+composite wiring is complete (S143 / TMW-260); the rest is backend-side: (1) rich fields on GET /flights/:id (gate-…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'Medium', status: 'Not Started — itemized S143', deadline: 'Pre-launch', created: '2026-06-01' },
+            { id: '**TMW-277**', task: 'Regenerate GitHub recovery codes (security). github-recovery-codes.txt was found in ~/Downloads/_REVIEW/Unclear/ (plaintext). Regenerate at github.com/settings/security (invalidates the exposed set)…', owner: 'Rohan', department: 'Operations / Security', priority: 'Medium', status: 'Not Started — flagged S143 Downloads cleanup', deadline: 'This week', created: '2026-06-01' }
         ];
 const completedTasks = [
             { id: '~~TMW-206~~', task: '✅ DONE S138 — git init ~/Code/tmw + comprehensive .gitignore + initial commit + pushed Gitea + GitHub mirror (subsumed by TMW-259 Phase 3).', owner: 'Rohan + Claude', department: 'Operations', completed: '2026-05-29' },
@@ -1056,7 +1060,7 @@ const analyticsData = {
                         {
                                     "date": "2026-06-01",
                                     "completed": 6,
-                                    "added": 264
+                                    "added": 268
                         }
             ],
             "weeklyVelocity": [
@@ -1083,7 +1087,7 @@ const analyticsData = {
                         {
                                     "week": "2026-06-01",
                                     "completed": 6,
-                                    "added": 264
+                                    "added": 268
                         }
             ],
             "statusDistribution": [
@@ -1100,7 +1104,7 @@ const analyticsData = {
                                     "count": 2
                         },
                         {
-                                    "status": "**WIP \u2014 proof-slice template DONE S142 (`ApiFlightDetailRepository` + DEC-155 swap + tests \u00b7 `6c6c9bb`); core-loop + ~50-repo long-tail wiring pending (pairs w/ TMW-271)**",
+                                    "status": "**WIP \u2014 S143: 29 slices wired+verified behind `USE_LIVE_API` (22 reads + 4 mutations + 3 composites on a bundled AviationReference) \u00b7 full suite 1805/0-fail \u00b7 committed+pushed (`634f2dc`/`8d2fcf5`/`45780b8`). The Flutter-doable read+mutation+composite layer is COMPLETE. REMAINING = backend tickets only (TMW-276): rich gate/badge/delay fields \u00b7 check-in/import/seat-tracking endpoints \u00b7 add_friend email-vs-uuid \u00b7 consent direction. Projection composites (gate/baggage/delay/badge_detail) backend-blocked. Nav-graph wiring is TMW-271 (separate).**",
                                     "count": 1
                         },
                         {
@@ -1214,6 +1218,22 @@ const analyticsData = {
                         {
                                     "status": "**Not Started \u2014 spine done (TMW-262 L1); ~120 detail routes + per-screen push callbacks pending**",
                                     "count": 1
+                        },
+                        {
+                                    "status": "**Drafted S143 \u00b7 founder finalizing % + docs + SoW with Mihir**",
+                                    "count": 1
+                        },
+                        {
+                                    "status": "**Brief + .docx ready \u00b7 meeting 2026-06-02 10am**",
+                                    "count": 1
+                        },
+                        {
+                                    "status": "**Not Started \u2014 itemized S143**",
+                                    "count": 1
+                        },
+                        {
+                                    "status": "**Not Started \u2014 flagged S143 Downloads cleanup**",
+                                    "count": 1
                         }
             ],
             "ownerWorkload": [
@@ -1231,8 +1251,8 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Anshul B",
-                                    "active": 7,
-                                    "high_priority": 1,
+                                    "active": 8,
+                                    "high_priority": 2,
                                     "overdue": 0
                         },
                         {
@@ -1255,8 +1275,14 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Claude",
-                                    "active": 28,
-                                    "high_priority": 6,
+                                    "active": 30,
+                                    "high_priority": 7,
+                                    "overdue": 0
+                        },
+                        {
+                                    "owner": "Mihir",
+                                    "active": 1,
+                                    "high_priority": 1,
                                     "overdue": 0
                         },
                         {
@@ -1267,14 +1293,14 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Raman",
-                                    "active": 5,
-                                    "high_priority": 1,
+                                    "active": 6,
+                                    "high_priority": 2,
                                     "overdue": 0
                         },
                         {
                                     "owner": "Rohan",
-                                    "active": 38,
-                                    "high_priority": 10,
+                                    "active": 42,
+                                    "high_priority": 12,
                                     "overdue": 1
                         },
                         {
@@ -1299,12 +1325,12 @@ const analyticsData = {
             "departmentHealth": [
                         {
                                     "department": "Engineering",
-                                    "active": 11,
+                                    "active": 12,
                                     "wip": 0,
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 8
+                                    "avg_age_days": 7
                         },
                         {
                                     "department": "Engineering / Product",
@@ -1406,6 +1432,15 @@ const analyticsData = {
                                     "avg_age_days": 30
                         },
                         {
+                                    "department": "Legal / Strategy",
+                                    "active": 1,
+                                    "wip": 0,
+                                    "not_started": 0,
+                                    "overdue": 0,
+                                    "stale": 0,
+                                    "avg_age_days": 0
+                        },
+                        {
                                     "department": "Marketing",
                                     "active": 8,
                                     "wip": 0,
@@ -1442,6 +1477,15 @@ const analyticsData = {
                                     "avg_age_days": 30
                         },
                         {
+                                    "department": "Operations / Security",
+                                    "active": 1,
+                                    "wip": 0,
+                                    "not_started": 0,
+                                    "overdue": 0,
+                                    "stale": 0,
+                                    "avg_age_days": 0
+                        },
+                        {
                                     "department": "Product",
                                     "active": 1,
                                     "wip": 0,
@@ -1449,6 +1493,15 @@ const analyticsData = {
                                     "overdue": 0,
                                     "stale": 1,
                                     "avg_age_days": 75
+                        },
+                        {
+                                    "department": "Strategy / Design",
+                                    "active": 1,
+                                    "wip": 0,
+                                    "not_started": 0,
+                                    "overdue": 0,
+                                    "stale": 0,
+                                    "avg_age_days": 0
                         },
                         {
                                     "department": "Strategy / Legal",
@@ -1470,13 +1523,13 @@ const analyticsData = {
             ],
             "deadlineStats": {
                         "overdue": 1,
-                        "due_3days": 38,
+                        "due_3days": 42,
                         "deadline_hit_rate": "0%"
             },
             "burndownData": [
                         {
                                     "date": "2026-06-01",
-                                    "remaining": 41
+                                    "remaining": 45
                         },
                         {
                                     "date": "2026-05-31",

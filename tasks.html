@@ -534,7 +534,8 @@ const activeTasks = [
             { id: 'TMW-276', task: 'Backend data-layer tickets (unblock remaining FE wiring). The Flutter read+mutation+composite wiring is complete (S143 / TMW-260); the rest is backend-side: (1) rich fields on GET /flights/:id (gate-…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'Medium', status: 'Not Started — itemized S143', deadline: 'Pre-launch', created: '2026-06-01' },
             { id: 'TMW-278', task: 'Graphify tooling fix + exhaustive run (deferred per founder S145). Root cause of the S102-frozen graph found S145: the weekly runner graphify_update.sh calls a bare graphify <path> full-build command…', owner: 'Rohan + Claude', department: 'Operations / Engineering', priority: 'Medium', status: 'Deferred — dedicated end-of-week session', deadline: 'End of week (founder-paced)', created: '2026-06-02' },
             { id: 'TMW-279', task: 'Build programmatic SEO (founder-flagged S145 — noted so it\'s not missed). Programmatic/templated SEO pages at scale (e.g. per-airport / per-airline / per-route landing pages off the AviationReference…', owner: 'Rohan + Claude', department: 'Marketing / Engineering', priority: 'Medium', status: 'Not Started — founder-flagged S145', deadline: 'Pre-launch (live = post stealth-flip)', created: '2026-06-02' },
-            { id: 'TMW-280', task: 'Fix website inter-page linking (links between pages) (founder-flagged S145 — noted so it\'s not missed). The static_web / website pages need proper internal linking between pages (nav + contextual cro…', owner: 'Rohan + Claude', department: 'Engineering / Marketing', priority: 'Medium', status: 'Not Started — founder-flagged S145', deadline: 'Pre-launch (stealth-gated)', created: '2026-06-02' }
+            { id: 'TMW-280', task: 'Fix website inter-page linking (links between pages) (founder-flagged S145 — noted so it\'s not missed). The static_web / website pages need proper internal linking between pages (nav + contextual cro…', owner: 'Rohan + Claude', department: 'Engineering / Marketing', priority: 'Medium', status: 'Not Started — founder-flagged S145', deadline: 'Pre-launch (stealth-gated)', created: '2026-06-02' },
+            { id: 'TMW-282', task: 'In-app product analytics — dual-sink (PostHog + Firebase GA4) behind a vendor-agnostic AnalyticsService. Net-new: app has ZERO analytics today (no SDK in pubspec, no NavigatorObserver, no event code;…', owner: 'Rohan + Claude', department: 'Engineering / Product', priority: 'Medium', status: 'Not Started — logged S146 for later (founder dual-sink decision)', deadline: 'Pre-launch (instrument before beta so funnel baselines exist from day 1)', created: '2026-06-02' }
         ];
 const completedTasks = [
             { id: 'TMW-216', task: '✅ V1 Flutter mobile build — Wave 1 (22/22 screens · 206 tests · first-time-right) complete S124 W1-D3; full 137-screen V1 build continued + completed under TMW-258. Umbrella closed S145.', owner: 'Rohan + Claude', department: 'Engineering / Product', completed: '2026-06-02' },
@@ -1073,7 +1074,7 @@ const analyticsData = {
                         {
                                     "date": "2026-06-02",
                                     "completed": 11,
-                                    "added": 269
+                                    "added": 270
                         }
             ],
             "weeklyVelocity": [
@@ -1100,7 +1101,7 @@ const analyticsData = {
                         {
                                     "week": "2026-06-01",
                                     "completed": 12,
-                                    "added": 274
+                                    "added": 275
                         }
             ],
             "statusDistribution": [
@@ -1239,6 +1240,10 @@ const analyticsData = {
                         {
                                     "status": "**Deferred \u2014 dedicated end-of-week session**",
                                     "count": 1
+                        },
+                        {
+                                    "status": "**Not Started \u2014 logged S146 for later (founder dual-sink decision)**",
+                                    "count": 1
                         }
             ],
             "ownerWorkload": [
@@ -1274,7 +1279,7 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Claude",
-                                    "active": 31,
+                                    "active": 32,
                                     "high_priority": 6,
                                     "overdue": 0
                         },
@@ -1298,7 +1303,7 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Rohan",
-                                    "active": 42,
+                                    "active": 43,
                                     "high_priority": 11,
                                     "overdue": 0
                         },
@@ -1342,12 +1347,12 @@ const analyticsData = {
                         },
                         {
                                     "department": "Engineering / Product",
-                                    "active": 1,
+                                    "active": 2,
                                     "wip": 0,
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 2
+                                    "avg_age_days": 1
                         },
                         {
                                     "department": "Engineering / Product / Operations",
@@ -1506,13 +1511,13 @@ const analyticsData = {
             "staleTasks": [],
             "deadlineStats": {
                         "overdue": 0,
-                        "due_3days": 41,
+                        "due_3days": 42,
                         "deadline_hit_rate": "0%"
             },
             "burndownData": [
                         {
                                     "date": "2026-06-02",
-                                    "remaining": 44
+                                    "remaining": 45
                         },
                         {
                                     "date": "2026-06-01",

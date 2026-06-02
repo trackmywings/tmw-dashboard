@@ -531,7 +531,10 @@ const activeTasks = [
             { id: 'TMW-272', task: 'Legal clearance — community ADS-B aggregator commercial-use terms (DEC-169 path A gate). Per DEC-169, the live-tracking core uses community ADS-B aggregators (adsb.lol · adsb.fi · airplanes.live) as…', owner: 'Rohan + Anshul B', department: 'Legal', priority: '**High**', status: 'Not Started', deadline: 'Pre-launch (before live tracking ships)', created: '2026-06-01' },
             { id: 'TMW-273', task: 'Explore aviation data providers — landscape survey. Deliberate market survey across ALL aviation data needs, to set provider strategy + feed the source-less-screen calls (TMW-267): (1) live positions…', owner: 'Rohan + Claude', department: 'Engineering / Strategy', priority: '**Medium**', status: 'Not Started', deadline: 'Pre-launch (informs TMW-267 + live-tracking)', created: '2026-06-01' },
             { id: 'TMW-274', task: 'Mihir advisory equity formalization. Decision package + drafts done S143 (Strategy/Fundraising/Mihir_Advisory_Equity_Decision_Memo_2026-06-01.md + Legal/Contracts/Drafts/Mihir_Advisor_Agreement_DRAFT…', owner: 'Rohan + Mihir + Anshul B + Raman', department: 'Legal / Strategy', priority: 'High', status: 'Drafted S143 · founder finalizing % + docs + SoW with Mihir', deadline: 'Pre-launch', created: '2026-06-01' },
-            { id: 'TMW-276', task: 'Backend data-layer tickets (unblock remaining FE wiring). The Flutter read+mutation+composite wiring is complete (S143 / TMW-260); the rest is backend-side: (1) rich fields on GET /flights/:id (gate-…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'Medium', status: 'Not Started — itemized S143', deadline: 'Pre-launch', created: '2026-06-01' }
+            { id: 'TMW-276', task: 'Backend data-layer tickets (unblock remaining FE wiring). The Flutter read+mutation+composite wiring is complete (S143 / TMW-260); the rest is backend-side: (1) rich fields on GET /flights/:id (gate-…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'Medium', status: 'Not Started — itemized S143', deadline: 'Pre-launch', created: '2026-06-01' },
+            { id: 'TMW-278', task: 'Graphify tooling fix + exhaustive run (deferred per founder S145). Root cause of the S102-frozen graph found S145: the weekly runner graphify_update.sh calls a bare graphify <path> full-build command…', owner: 'Rohan + Claude', department: 'Operations / Engineering', priority: 'Medium', status: 'Deferred — dedicated end-of-week session', deadline: 'End of week (founder-paced)', created: '2026-06-02' },
+            { id: 'TMW-279', task: 'Build programmatic SEO (founder-flagged S145 — noted so it\'s not missed). Programmatic/templated SEO pages at scale (e.g. per-airport / per-airline / per-route landing pages off the AviationReference…', owner: 'Rohan + Claude', department: 'Marketing / Engineering', priority: 'Medium', status: 'Not Started — founder-flagged S145', deadline: 'Pre-launch (live = post stealth-flip)', created: '2026-06-02' },
+            { id: 'TMW-280', task: 'Fix website inter-page linking (links between pages) (founder-flagged S145 — noted so it\'s not missed). The static_web / website pages need proper internal linking between pages (nav + contextual cro…', owner: 'Rohan + Claude', department: 'Engineering / Marketing', priority: 'Medium', status: 'Not Started — founder-flagged S145', deadline: 'Pre-launch (stealth-gated)', created: '2026-06-02' }
         ];
 const completedTasks = [
             { id: 'TMW-275', task: '✅ Loafer Studios master-deck engagement — meeting held 2026-06-02; closed per founder. NDA + master source brief (.docx) filed. SOW/IP-assignment tracked separately if engaged.', owner: 'Rohan + Claude', department: 'Strategy / Design', completed: '2026-06-02' },
@@ -1069,7 +1072,7 @@ const analyticsData = {
                         {
                                     "date": "2026-06-02",
                                     "completed": 9,
-                                    "added": 265
+                                    "added": 268
                         }
             ],
             "weeklyVelocity": [
@@ -1096,7 +1099,7 @@ const analyticsData = {
                         {
                                     "week": "2026-06-01",
                                     "completed": 10,
-                                    "added": 270
+                                    "added": 273
                         }
             ],
             "statusDistribution": [
@@ -1110,6 +1113,10 @@ const analyticsData = {
                         },
                         {
                                     "status": "**Drafts ready; Anshul ji review pending**",
+                                    "count": 2
+                        },
+                        {
+                                    "status": "**Not Started \u2014 founder-flagged S145**",
                                     "count": 2
                         },
                         {
@@ -1227,6 +1234,10 @@ const analyticsData = {
                         {
                                     "status": "**Not Started \u2014 itemized S143**",
                                     "count": 1
+                        },
+                        {
+                                    "status": "**Deferred \u2014 dedicated end-of-week session**",
+                                    "count": 1
                         }
             ],
             "ownerWorkload": [
@@ -1262,7 +1273,7 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Claude",
-                                    "active": 28,
+                                    "active": 31,
                                     "high_priority": 6,
                                     "overdue": 0
                         },
@@ -1286,7 +1297,7 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Rohan",
-                                    "active": 39,
+                                    "active": 42,
                                     "high_priority": 11,
                                     "overdue": 0
                         },
@@ -1318,6 +1329,15 @@ const analyticsData = {
                                     "overdue": 0,
                                     "stale": 0,
                                     "avg_age_days": 8
+                        },
+                        {
+                                    "department": "Engineering / Marketing",
+                                    "active": 1,
+                                    "wip": 0,
+                                    "not_started": 0,
+                                    "overdue": 0,
+                                    "stale": 0,
+                                    "avg_age_days": 0
                         },
                         {
                                     "department": "Engineering / Product",
@@ -1437,6 +1457,15 @@ const analyticsData = {
                                     "avg_age_days": 2
                         },
                         {
+                                    "department": "Marketing / Engineering",
+                                    "active": 1,
+                                    "wip": 0,
+                                    "not_started": 0,
+                                    "overdue": 0,
+                                    "stale": 0,
+                                    "avg_age_days": 0
+                        },
+                        {
                                     "department": "Operations",
                                     "active": 1,
                                     "wip": 0,
@@ -1444,6 +1473,15 @@ const analyticsData = {
                                     "overdue": 0,
                                     "stale": 0,
                                     "avg_age_days": 31
+                        },
+                        {
+                                    "department": "Operations / Engineering",
+                                    "active": 1,
+                                    "wip": 0,
+                                    "not_started": 0,
+                                    "overdue": 0,
+                                    "stale": 0,
+                                    "avg_age_days": 0
                         },
                         {
                                     "department": "Product",
@@ -1467,13 +1505,13 @@ const analyticsData = {
             "staleTasks": [],
             "deadlineStats": {
                         "overdue": 0,
-                        "due_3days": 38,
+                        "due_3days": 41,
                         "deadline_hit_rate": "0%"
             },
             "burndownData": [
                         {
                                     "date": "2026-06-02",
-                                    "remaining": 41
+                                    "remaining": 44
                         },
                         {
                                     "date": "2026-06-01",

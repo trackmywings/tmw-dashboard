@@ -535,7 +535,12 @@ const activeTasks = [
             { id: 'TMW-278', task: 'Graphify tooling fix + exhaustive run (deferred per founder S145). Root cause of the S102-frozen graph found S145: the weekly runner graphify_update.sh calls a bare graphify <path> full-build command…', owner: 'Rohan + Claude', department: 'Operations / Engineering', priority: 'Medium', status: 'Deferred — dedicated end-of-week session', deadline: 'End of week (founder-paced)', created: '2026-06-02' },
             { id: 'TMW-279', task: 'Build programmatic SEO (founder-flagged S145 — noted so it\'s not missed). Programmatic/templated SEO pages at scale (e.g. per-airport / per-airline / per-route landing pages off the AviationReference…', owner: 'Rohan + Claude', department: 'Marketing / Engineering', priority: 'Medium', status: 'Not Started — founder-flagged S145', deadline: 'Pre-launch (live = post stealth-flip)', created: '2026-06-02' },
             { id: 'TMW-280', task: 'Fix website inter-page linking (links between pages) (founder-flagged S145 — noted so it\'s not missed). The static_web / website pages need proper internal linking between pages (nav + contextual cro…', owner: 'Rohan + Claude', department: 'Engineering / Marketing', priority: 'Medium', status: 'Not Started — founder-flagged S145', deadline: 'Pre-launch (stealth-gated)', created: '2026-06-02' },
-            { id: 'TMW-282', task: 'In-app product analytics — dual-sink (PostHog + Firebase GA4) behind a vendor-agnostic AnalyticsService. Net-new: app has ZERO analytics today (no SDK in pubspec, no NavigatorObserver, no event code;…', owner: 'Rohan + Claude', department: 'Engineering / Product', priority: 'Medium', status: 'Not Started — logged S146 for later (founder dual-sink decision)', deadline: 'Pre-launch (instrument before beta so funnel baselines exist from day 1)', created: '2026-06-02' }
+            { id: 'TMW-282', task: 'In-app product analytics — dual-sink (PostHog + Firebase GA4) behind a vendor-agnostic AnalyticsService. Net-new: app has ZERO analytics today (no SDK in pubspec, no NavigatorObserver, no event code;…', owner: 'Rohan + Claude', department: 'Engineering / Product', priority: 'Medium', status: 'Not Started — logged S146 for later (founder dual-sink decision)', deadline: 'Pre-launch (instrument before beta so funnel baselines exist from day 1)', created: '2026-06-02' },
+            { id: 'TMW-283', task: 'AWS backend deployment — the launch keystone. Stand up V1_Backend on AWS: ECS (Fargate) + RDS Postgres + the ingestion pipeline (adsb.lol live per DEC-177) + AWS SES (transactional email) + secrets m…', owner: 'Rohan + Claude', department: 'Engineering / Operations', priority: '**CRITICAL**', status: 'Not Started — keystone', deadline: 'Pre-launch (start now; DNS post-TM)', created: '2026-06-02' },
+            { id: 'TMW-284', task: 'kb-search MCP revival — local re-embed on Lenovo. Ollama reachable from Mac (verified S146), but the over-Tailscale re-embed aborts on blips + a runaway loop forced unloading the kb-watch+kb-reindex…', owner: 'Rohan + Claude', department: 'Operations / Engineering', priority: 'Low', status: 'Parked — Ollama reachable; needs local re-embed', deadline: 'When convenient', created: '2026-06-02' },
+            { id: 'TMW-286', task: 'flight_history_detail children — backend fields + typed callbacks. The history-detail children (timeline/baggage/aircraft/country) can\'t be wired: the screen callbacks pass no id AND the history mode…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'Medium', status: 'Not Started — backend-field-blocked', deadline: 'Pre-launch', created: '2026-06-02' },
+            { id: 'TMW-287', task: 'SearchResult airlineIata field + wire FlightResultRow logo. Search-results rows have code ("AI 302") but no airlineIata, so AirlineLogo wasn\'t wired there (flagged S146). Add airlineIata to SearchRes…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'Low', status: 'Not Started — flagged S146', deadline: 'Pre-launch', created: '2026-06-02' },
+            { id: 'TMW-288', task: 'Client monetization SDK — IAP + Razorpay + screen-internal gates. Entitlement engine + route-gating (TMW-266) built; remaining: in_app_purchase + razorpay_flutter SDKs + store IAP products (8 tiers +…', owner: 'Rohan + Claude', department: 'Finance / Engineering', priority: 'High', status: 'Not Started — gated on ICICI card + store console', deadline: 'Pre-launch', created: '2026-06-02' }
         ];
 const completedTasks = [
             { id: 'TMW-216', task: '✅ V1 Flutter mobile build — Wave 1 (22/22 screens · 206 tests · first-time-right) complete S124 W1-D3; full 137-screen V1 build continued + completed under TMW-258. Umbrella closed S145.', owner: 'Rohan + Claude', department: 'Engineering / Product', completed: '2026-06-02' },
@@ -580,6 +585,7 @@ const completedTasks = [
             { id: 'TMW-263', task: 'App permissions — declare + prime + wire (launch-blocker incl. a 10-min hard bug). Per S141 readiness Q8: app currently declares ZERO runtime permissions. (a) URGENT ~10 min: move INTERNET + ACCESS_N…', owner: 'Rohan + Claude', department: 'Engineering', completed: '2026-05-31' },
             { id: 'TMW-270', task: 'Operating-systems hygiene sweep (S141 systems-fix plan). Per Operations/AI System/Plans/Systems_Fix_Plan_2026-05-31_S141.md: (FIX-3) ✅ DONE 2026-05-31 (PM) — diagnosis corrected. Root cause was NOT a…', owner: 'Rohan + Claude', department: 'Operations', completed: '2026-05-31' },
             { id: 'TMW-281', task: 'Canonical doc-currency — refresh cadence + remaining deep passes. S145 currency pass done: ✅ CAP_TABLE_CURRENT (DEC-149 9,990/10 + Mihir-pending) · CLAUDE.md Quick Ref (integration phase + GST/Udyam…', owner: 'Rohan + Claude', department: 'Operations / Product', completed: '2026-06-02' },
+            { id: 'TMW-285', task: 'Gitea :3000 unreachable from Mac. Gitea listens on the Tailscale IP but git over :3000 RESETS from the Mac (ROOT_URL/reverse-proxy or Tailscale-serve binding quirk). Internal mirror ~30 commits behin…', owner: 'Rohan + Claude', department: 'Operations', completed: '2026-06-02' },
             { id: '~~TMW-248-prior~~', task: 'Path C Implementation umbrella — adopt trackmywings/backend scaffold + 53 pending tasks + our additions · S128. Per Operations/AI System/Plans/TMW-226_Path_C_Implementation_Plan.md v1.0 (4,362 words…', owner: 'Rohan + Claude + Amol (advisory)', department: 'Engineering', completed: 'unknown' },
             { id: '~~TMW-249-prior~~', task: 'Staging website end-to-end revamp · design + UX + connectivity sync to app · S128 founder direction — Completely revamp staging.trackmywings.com (V0_NextJS) end-to-end. Pull V1_Flutter Aero Nocturne…', owner: 'Rohan + Claude', department: 'Design / Engineering', completed: 'unknown' },
             { id: '~~TMW-247-prior~~', task: 'W3 Group 3 Wave 1 (4 of 14 screens) shipped via 4-parallel Sonnets · S127. Dispatched 4 background Sonnets per Multi-Agent Pattern (each independent screen folder · no shared files · LocalSeed per DE…', owner: 'Rohan + Claude', department: 'Engineering', completed: 'unknown' },
@@ -862,6 +868,13 @@ const activityFeed = [
                         "task_name": "**Canonical doc-currency \u2014 refresh ca..."
             },
             {
+                        "date": "2026-06-02",
+                        "task_id": "TMW-285",
+                        "event": "completed",
+                        "department": "Operations",
+                        "task_name": "**Gitea :3000 unreachable from Mac.**..."
+            },
+            {
                         "date": "2026-06-01",
                         "task_id": "TMW-152",
                         "event": "completed",
@@ -951,25 +964,9 @@ const activityFeed = [
                         "event": "completed",
                         "department": "Operations",
                         "task_name": "**\u2705 CLOSED S137 2026-05-29** \u2014 Worksp..."
-            },
-            {
-                        "date": "2026-05-29",
-                        "task_id": "~~TMW-230~~",
-                        "event": "completed",
-                        "department": "Operations",
-                        "task_name": "**\u2705 CLOSED S137 2026-05-29** \u2014 Old PA..."
             }
 ];
 const calendarEvents = [
-            {
-                        "id": "5squkp678u8t1n1gcvkpk5j224",
-                        "summary": "TMW x Loafer Studios",
-                        "description": "",
-                        "start": "2026-06-02T10:00:00+05:30",
-                        "end": "2026-06-02T12:00:00+05:30",
-                        "location": "Starbucks, Ground Floor, Satsang, Unit No 1 & 2, Dixit Rd, Satsang CHSL, Navpada, Vile Parle East, Vile Parle, Mumbai, Maharashtra 400057, India",
-                        "status": "confirmed"
-            },
             {
                         "id": "5aqoinjnqakln05gcojann1r40",
                         "summary": "Harsh Goel/ Rohan",
@@ -1073,8 +1070,8 @@ const analyticsData = {
                         },
                         {
                                     "date": "2026-06-02",
-                                    "completed": 11,
-                                    "added": 270
+                                    "completed": 12,
+                                    "added": 276
                         }
             ],
             "weeklyVelocity": [
@@ -1100,8 +1097,8 @@ const analyticsData = {
                         },
                         {
                                     "week": "2026-06-01",
-                                    "completed": 12,
-                                    "added": 275
+                                    "completed": 13,
+                                    "added": 281
                         }
             ],
             "statusDistribution": [
@@ -1244,6 +1241,26 @@ const analyticsData = {
                         {
                                     "status": "**Not Started \u2014 logged S146 for later (founder dual-sink decision)**",
                                     "count": 1
+                        },
+                        {
+                                    "status": "**Not Started \u2014 keystone**",
+                                    "count": 1
+                        },
+                        {
+                                    "status": "**Parked \u2014 Ollama reachable; needs local re-embed**",
+                                    "count": 1
+                        },
+                        {
+                                    "status": "**Not Started \u2014 backend-field-blocked**",
+                                    "count": 1
+                        },
+                        {
+                                    "status": "**Not Started \u2014 flagged S146**",
+                                    "count": 1
+                        },
+                        {
+                                    "status": "**Not Started \u2014 gated on ICICI card + store console**",
+                                    "count": 1
                         }
             ],
             "ownerWorkload": [
@@ -1279,8 +1296,8 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Claude",
-                                    "active": 32,
-                                    "high_priority": 6,
+                                    "active": 37,
+                                    "high_priority": 7,
                                     "overdue": 0
                         },
                         {
@@ -1303,8 +1320,8 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Rohan",
-                                    "active": 43,
-                                    "high_priority": 11,
+                                    "active": 48,
+                                    "high_priority": 12,
                                     "overdue": 0
                         },
                         {
@@ -1329,15 +1346,24 @@ const analyticsData = {
             "departmentHealth": [
                         {
                                     "department": "Engineering",
-                                    "active": 12,
+                                    "active": 14,
                                     "wip": 0,
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 8
+                                    "avg_age_days": 7
                         },
                         {
                                     "department": "Engineering / Marketing",
+                                    "active": 1,
+                                    "wip": 0,
+                                    "not_started": 0,
+                                    "overdue": 0,
+                                    "stale": 0,
+                                    "avg_age_days": 0
+                        },
+                        {
+                                    "department": "Engineering / Operations",
                                     "active": 1,
                                     "wip": 0,
                                     "not_started": 0,
@@ -1383,12 +1409,12 @@ const analyticsData = {
                         },
                         {
                                     "department": "Finance / Engineering",
-                                    "active": 1,
+                                    "active": 2,
                                     "wip": 0,
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 2
+                                    "avg_age_days": 1
                         },
                         {
                                     "department": "Finance / Operations",
@@ -1482,7 +1508,7 @@ const analyticsData = {
                         },
                         {
                                     "department": "Operations / Engineering",
-                                    "active": 1,
+                                    "active": 2,
                                     "wip": 0,
                                     "not_started": 0,
                                     "overdue": 0,
@@ -1511,13 +1537,13 @@ const analyticsData = {
             "staleTasks": [],
             "deadlineStats": {
                         "overdue": 0,
-                        "due_3days": 42,
+                        "due_3days": 47,
                         "deadline_hit_rate": "0%"
             },
             "burndownData": [
                         {
                                     "date": "2026-06-02",
-                                    "remaining": 45
+                                    "remaining": 50
                         },
                         {
                                     "date": "2026-06-01",
@@ -1573,8 +1599,8 @@ const analyticsData = {
                         }
             ],
             "velocity": {
-                        "today": 11,
-                        "this_week": 12,
+                        "today": 12,
+                        "this_week": 13,
                         "overdue": 0,
                         "stale": 0
             }

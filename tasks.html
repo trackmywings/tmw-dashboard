@@ -537,7 +537,8 @@ const activeTasks = [
             { id: 'TMW-284', task: 'kb-search MCP revival — local re-embed on Lenovo. Ollama reachable from Mac (verified S146), but the over-Tailscale re-embed aborts on blips + a runaway loop forced unloading the kb-watch+kb-reindex…', owner: 'Rohan + Claude', department: 'Operations / Engineering', priority: 'Low', status: 'Parked — Ollama reachable; needs local re-embed', deadline: 'When convenient', created: '2026-06-02' },
             { id: 'TMW-288', task: 'Client monetization SDK — IAP + Razorpay + screen-internal gates. Entitlement engine + route-gating (TMW-266) built; remaining: in_app_purchase + razorpay_flutter SDKs + store IAP products (8 tiers +…', owner: 'Rohan + Claude', department: 'Finance / Engineering', priority: 'High', status: 'Not Started — gated on ICICI card + store console', deadline: 'Pre-launch', created: '2026-06-02' },
             { id: 'TMW-289', task: 'Website (V0_NextJS) SSR deploy — static export doesn\'t scale. S147 finding: the public site can\'t ship as flat static HTML — output:\'export\' of the 25,308 SEO pages = 8.4 GB (~200KB/page inlined RSC…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'High', status: 'Not Started — S147 finding (DEC-candidate: website=SSR not static export)', deadline: 'Post-TM (buildable now)', created: '2026-06-03' },
-            { id: 'TMW-290', task: 'Evaluate ECC ("Everything Claude Code", affaan-m/ECC) for adoption — deferred, joint-owned, per-file approval gate. ECC is NOT currently installed (only the two official Anthropic marketplaces are; S…', owner: 'Rohan + Claude', department: 'Operations / Engineering', priority: 'Low', status: 'Deferred — do later (post-launch crunch); founder approves/rejects each file', deadline: 'Post-launch (founder-paced)', created: '2026-06-03' }
+            { id: 'TMW-290', task: 'Evaluate ECC ("Everything Claude Code", affaan-m/ECC) for adoption — deferred, joint-owned, per-file approval gate. ECC is NOT currently installed (only the two official Anthropic marketplaces are; S…', owner: 'Rohan + Claude', department: 'Operations / Engineering', priority: 'Low', status: 'Deferred — do later (post-launch crunch); founder approves/rejects each file', deadline: 'Post-launch (founder-paced)', created: '2026-06-03' },
+            { id: 'TMW-291', task: 'F&F beta APK + app distribution. S149 stood up the Android build toolchain on the dev Mac (JDK17 + cmdline-tools + platform-35/build-tools;35 + Gradle 8.14 dist + 988MB dep cache — all banked) and wi…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'Medium', status: 'WIP — toolchain + deps banked S149; NDK+compile remain (resume on fast WiFi)', deadline: 'Pre-launch', created: '2026-06-03' }
         ];
 const completedTasks = [
             { id: 'TMW-271', task: '✅ DONE S148 — in-app navigation COMPLETE. 14 stranded secondary screens wired (notification_history · stats_global_comparison · world_globe · calendar_sync · referral · map_style_toggle · connection_…', owner: 'Rohan + Claude', department: 'Engineering', completed: '2026-06-03' },
@@ -1073,7 +1074,7 @@ const analyticsData = {
                         {
                                     "date": "2026-06-03",
                                     "completed": 14,
-                                    "added": 274
+                                    "added": 275
                         }
             ],
             "weeklyVelocity": [
@@ -1100,7 +1101,7 @@ const analyticsData = {
                         {
                                     "week": "2026-06-01",
                                     "completed": 20,
-                                    "added": 286
+                                    "added": 287
                         }
             ],
             "statusDistribution": [
@@ -1259,6 +1260,10 @@ const analyticsData = {
                         {
                                     "status": "**Deferred \u2014 do later (post-launch crunch); founder approves/rejects each file**",
                                     "count": 1
+                        },
+                        {
+                                    "status": "**WIP \u2014 toolchain + deps banked S149; NDK+compile remain (resume on fast WiFi)**",
+                                    "count": 1
                         }
             ],
             "ownerWorkload": [
@@ -1294,7 +1299,7 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Claude",
-                                    "active": 34,
+                                    "active": 35,
                                     "high_priority": 8,
                                     "overdue": 0
                         },
@@ -1318,7 +1323,7 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Rohan",
-                                    "active": 45,
+                                    "active": 46,
                                     "high_priority": 13,
                                     "overdue": 0
                         },
@@ -1338,12 +1343,12 @@ const analyticsData = {
             "departmentHealth": [
                         {
                                     "department": "Engineering",
-                                    "active": 10,
+                                    "active": 11,
                                     "wip": 0,
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 10
+                                    "avg_age_days": 9
                         },
                         {
                                     "department": "Engineering / Marketing",
@@ -1529,13 +1534,13 @@ const analyticsData = {
             "staleTasks": [],
             "deadlineStats": {
                         "overdue": 0,
-                        "due_3days": 44,
+                        "due_3days": 45,
                         "deadline_hit_rate": "0%"
             },
             "burndownData": [
                         {
                                     "date": "2026-06-03",
-                                    "remaining": 47
+                                    "remaining": 48
                         },
                         {
                                     "date": "2026-06-02",

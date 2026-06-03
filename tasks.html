@@ -521,11 +521,9 @@ const activeTasks = [
             { id: 'TMW-154', task: 'Apply for startup funding — Startup India registration + grant filing (5/6% completion-basis). S112 2026-05-16 (CA call): Startup India registration + grant filing handed off to CA firm end-to-end. A…', owner: 'Raman + CA firm (Startup India + grant) · Rohan +…', department: 'Finance / Strategy', priority: 'Medium', status: 'WIP at CA firm · Startup India + grant · angel/seed deferred until TMW-233/234…', deadline: 'Pre-launch', created: '2026-04-23' },
             { id: 'TMW-237', task: 'Shift recurring-subscription billing from founder personal account → Company ICICI account. ICICI active since 2026-05-14 but founder still paying ALL recurring SaaS on personal MasterCard. Action: (…', owner: 'Rohan', department: 'Finance / Operations', priority: '**High**', status: 'WIP — card still in transit · revised T-5 to month-end', deadline: '**2026-05-31 (T-5 · month-end)**', created: '2026-05-16' },
             { id: 'TMW-238', task: 'Fundraise pack execution — NDA + investor outreach + data room access logistics. Pitch decks ready in 11 variants (4 aesthetic × HTML+PPTX + 7 use-case). When founder decides to share externally: (a)…', owner: 'Rohan + Anshul B + Mihir sir', department: 'Strategy / Legal', priority: 'High', status: 'Pending — when founder ready to share externally · variants ready', deadline: 'Pre-launch (target T-30 fundraise window or earlier if grant deadline)', created: '2026-05-17' },
-            { id: 'TMW-265', task: 'Integrate real map SDK + plot live positions. Per S141 readiness Q1-F5/Q10: the flight-tracking map is an explicit CustomPainter placeholder ("NOT real Mapbox/Google Maps"); no maps SDK in pubspec. A…', owner: 'Rohan + Claude', department: 'Engineering', priority: '**High**', status: '❌ CANCELLED S148 per founder — SUPERSEDED BY DEC-170 (V1 ships custom-painted m…', deadline: 'Post-launch (SDK)', created: '2026-05-31' },
             { id: 'TMW-266', task: 'Client monetization — IAP + Razorpay SDK + enforce feature-gating. Per S141 readiness Q1-F6/Q6-L2: backend payments (Apple+Google+Razorpay verify) are built but pubspec.yaml has NO in_app_purchase/ra…', owner: 'Rohan + Claude', department: 'Finance / Engineering', priority: '**High**', status: 'Not Started', deadline: 'Pre-launch', created: '2026-05-31' },
             { id: 'TMW-267', task: 'Source-less-screen data strategy — decide integrate-or-descope per feature. Per S141 readiness Q10: built screens with NO upstream data source — weather (3.14), gate/terminal/baggage (2.13), seat map…', owner: 'Rohan (decision) + Claude', department: 'Engineering / Product', priority: '**High**', status: 'DECIDED S145 (DEC-174) — INTEGRATE ALL, no V1 descopes. Providers: weather=Open…', deadline: 'Pre-launch', created: '2026-05-31' },
             { id: 'TMW-268', task: 'DPDP client data layer + in-app legal surfaces. Per S141 readiness Q5/Q6-L3/Q9: backend implements DPDP §6/§11/§12(2) (tested) but Flutter has NO consent/export/erasure repository and NO in-app Terms…', owner: 'Rohan + Anshul B + Claude', department: 'Legal / Engineering', priority: '**High**', status: 'Not Started', deadline: 'Pre-launch', created: '2026-05-31' },
-            { id: 'TMW-271', task: 'Screen-to-screen connectivity — Layer 2 navigation graph (split out of TMW-262 Layer 2, made explicit 2026-06-01). The router spine is live (TMW-262 L1 ef73399: 14 routes — splash + 7-step onboarding…', owner: 'Rohan + Claude', department: 'Engineering', priority: '**High**', status: 'WIP S144 — HOME flight-tracking cluster wired in 3 waves · 10 routes live (sear…', deadline: 'Pre-launch', created: '2026-06-01' },
             { id: 'TMW-272', task: 'Legal clearance — community ADS-B aggregator commercial-use terms (DEC-169 path A gate). Per DEC-169, the live-tracking core uses community ADS-B aggregators (adsb.lol · adsb.fi · airplanes.live) as…', owner: 'Rohan + Anshul B', department: 'Legal', priority: '**High**', status: 'Not Started', deadline: 'Pre-launch (before live tracking ships)', created: '2026-06-01' },
             { id: 'TMW-273', task: 'Explore aviation data providers — landscape survey. Deliberate market survey across ALL aviation data needs, to set provider strategy + feed the source-less-screen calls (TMW-267): (1) live positions…', owner: 'Rohan + Claude', department: 'Engineering / Strategy', priority: '**Medium**', status: 'Not Started', deadline: 'Pre-launch (informs TMW-267 + live-tracking)', created: '2026-06-01' },
             { id: 'TMW-274', task: 'Mihir advisory equity formalization. Decision package + drafts done S143 (Strategy/Fundraising/Investor Readiness/Mihir_Advisory_Equity_Decision_Memo_2026-06-01.md + Legal/Contracts/Drafts/Mihir_Advi…', owner: 'Rohan + Mihir + Anshul B + Raman', department: 'Legal / Strategy', priority: 'High', status: 'Drafted S143 · founder finalizing % + docs + SoW with Mihir', deadline: 'Pre-launch', created: '2026-06-01' },
@@ -535,12 +533,15 @@ const activeTasks = [
             { id: 'TMW-280', task: 'Fix website inter-page linking (links between pages) (founder-flagged S145 — noted so it\'s not missed). The static_web / website pages need proper internal linking between pages (nav + contextual cro…', owner: 'Rohan + Claude', department: 'Engineering / Marketing', priority: 'Medium', status: 'Not Started — founder-flagged S145', deadline: 'Pre-launch (stealth-gated)', created: '2026-06-02' },
             { id: 'TMW-281', task: 'Canonical doc-currency — refresh cadence + remaining deep passes. S145 currency pass done: ✅ CAP_TABLE_CURRENT (DEC-149 9,990/10 + Mihir-pending) · CLAUDE.md Quick Ref (integration phase + GST/Udyam…', owner: 'Rohan + Claude', department: 'Operations / Product', priority: 'Low', status: 'S148: doc-currency remainder done — PRODUCT_VISION tech-stack rows corrected (A…', deadline: 'Recurring / pre-launch', created: '2026-06-02' },
             { id: 'TMW-282', task: 'In-app product analytics — dual-sink (PostHog + Firebase GA4) behind a vendor-agnostic AnalyticsService. Net-new: app has ZERO analytics today (no SDK in pubspec, no NavigatorObserver, no event code;…', owner: 'Rohan + Claude', department: 'Engineering / Product', priority: 'Medium', status: 'Not Started — logged S146 for later (founder dual-sink decision)', deadline: 'Pre-launch (instrument before beta so funnel baselines exist from day 1)', created: '2026-06-02' },
-            { id: 'TMW-283', task: 'AWS backend deployment — the launch keystone. Stand up V1_Backend on AWS: ECS (Fargate) + RDS Postgres + the ingestion pipeline (adsb.lol live per DEC-177) + AWS SES (transactional email) + secrets m…', owner: 'Rohan + Claude', department: 'Engineering / Operations', priority: '**CRITICAL**', status: 'Not Started — keystone', deadline: 'Pre-launch (start now; DNS post-TM)', created: '2026-06-02' },
+            { id: 'TMW-283', task: 'AWS backend deployment — the launch keystone. Stand up V1_Backend on AWS: ECS (Fargate) + RDS Postgres + the ingestion pipeline (adsb.lol live per DEC-177) + AWS SES (transactional email) + secrets m…', owner: 'Rohan + Claude', department: 'Engineering / Operations', priority: '**CRITICAL**', status: 'WIP — pipeline AUTHORED, runtime NOT deployed (verified S149 vs live AWS). Depl…', deadline: 'Pre-launch (start now; DNS post-TM)', created: '2026-06-02' },
             { id: 'TMW-284', task: 'kb-search MCP revival — local re-embed on Lenovo. Ollama reachable from Mac (verified S146), but the over-Tailscale re-embed aborts on blips + a runaway loop forced unloading the kb-watch+kb-reindex…', owner: 'Rohan + Claude', department: 'Operations / Engineering', priority: 'Low', status: 'Parked — Ollama reachable; needs local re-embed', deadline: 'When convenient', created: '2026-06-02' },
             { id: 'TMW-288', task: 'Client monetization SDK — IAP + Razorpay + screen-internal gates. Entitlement engine + route-gating (TMW-266) built; remaining: in_app_purchase + razorpay_flutter SDKs + store IAP products (8 tiers +…', owner: 'Rohan + Claude', department: 'Finance / Engineering', priority: 'High', status: 'Not Started — gated on ICICI card + store console', deadline: 'Pre-launch', created: '2026-06-02' },
             { id: 'TMW-289', task: 'Website (V0_NextJS) SSR deploy — static export doesn\'t scale. S147 finding: the public site can\'t ship as flat static HTML — output:\'export\' of the 25,308 SEO pages = 8.4 GB (~200KB/page inlined RSC…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'High', status: 'Not Started — S147 finding (DEC-candidate: website=SSR not static export)', deadline: 'Post-TM (buildable now)', created: '2026-06-03' }
         ];
 const completedTasks = [
+            { id: 'TMW-271', task: '✅ DONE S148 — in-app navigation COMPLETE. 14 stranded secondary screens wired (notification_history · stats_global_comparison · world_globe · calendar_sync · referral · map_style_toggle · connection_…', owner: 'Rohan + Claude', department: 'Engineering', completed: '2026-06-03' },
+            { id: 'TMW-270', task: '✅ DONE S148 — ops hygiene FIX-2 (restructure dashboard step-sequence normalized) · FIX-3 (DEC-list MCP, S141) · FIX-4 (.DS_Store in V1_Backend + 2 legacy subrepo gitignores) · FIX-5 (resolved doc-onl…', owner: 'Rohan + Claude', department: 'Operations', completed: '2026-06-03' },
+            { id: '~~TMW-265~~', task: '❌ CANCELLED S148 per founder — real-tile map SDK SUPERSEDED by DEC-170 (V1 ships custom-painted maps; SDK deferred post-launch → DEC-170 + TMW-237). The \'plot live positions\' half already wired (flig…', owner: 'Rohan + Claude', department: 'Engineering', completed: '2026-06-03' },
             { id: 'TMW-263', task: '✅ App permissions declared + primed + wired — INTERNET/ACCESS_NETWORK_STATE in release manifest, permission plugins + PermissionService + priming/denial screens wired, permission set frozen (DEC-175)…', owner: 'Rohan + Claude', department: 'Engineering', completed: '2026-06-03' },
             { id: 'TMW-264', task: '✅ Reference seed corpus bundled — airlines_min.json (983 carriers, 100% logo coverage) + AviationReference lookup; +5 tests (S147). Feeds TMW-242 data layer.', owner: 'Rohan + Claude', department: 'Engineering', completed: '2026-06-03' },
             { id: 'TMW-269', task: '✅ Launch Asset Register + store assets — 8 store-ready frames @ 6.9in (1320x2868) Aero Nocturne + HTML/README (S147). Closed per founder S148. NOTE: real device-capture swap still required pre-store-…', owner: 'Rohan + Claude + Ruchi', department: 'Marketing / Design', completed: '2026-06-03' },
@@ -586,7 +587,6 @@ const completedTasks = [
             { id: 'TMW-259', task: 'Infrastructure v2 build umbrella (Phases 0-10). Per [[TMW-252_Infrastructure_v2_Complete]] + Runbook. S137 PROGRESS: Phase 0 ✅ (Bitwarden + PAT rotation) · Phase 1 ✅ (workspace → ~/Code/tmw/) · Phase…', owner: 'Rohan + Claude', department: 'Operations / Engineering', completed: '2026-05-29' },
             { id: 'TMW-261', task: 'Fix ingestion bugs surfaced by the IX1347 live-flight validation (S140 · DEC-167). Real defects in V1_Backend/src/ingestion proven against live OpenSky data on the Lenovo rig: BUG-1 — positions silen…', owner: 'Rohan + Claude', department: 'Engineering', completed: '2026-05-30' },
             { id: 'TMW-262', task: 'Production app shell + router + auth gate (the #1 launch unblock). Per S141 readiness deep-analysis + TMW-260_Screen_Component_Connection_Study + TMW-260_User_Access_Paths: lib/main.dart boots _dev_g…', owner: 'Rohan + Claude', department: 'Engineering', completed: '2026-05-31' },
-            { id: 'TMW-270', task: 'Operating-systems hygiene sweep (S141 systems-fix plan). Per Operations/AI System/Plans/Systems_Fix_Plan_2026-05-31_S141.md: (FIX-3) ✅ DONE 2026-05-31 (PM) — diagnosis corrected. Root cause was NOT a…', owner: 'Rohan + Claude', department: 'Operations', completed: '2026-05-31' },
             { id: '~~TMW-248-prior~~', task: 'Path C Implementation umbrella — adopt trackmywings/backend scaffold + 53 pending tasks + our additions · S128. Per Operations/AI System/Plans/TMW-226_Path_C_Implementation_Plan.md v1.0 (4,362 words…', owner: 'Rohan + Claude + Amol (advisory)', department: 'Engineering', completed: 'unknown' },
             { id: '~~TMW-249-prior~~', task: 'Staging website end-to-end revamp · design + UX + connectivity sync to app · S128 founder direction — Completely revamp staging.trackmywings.com (V0_NextJS) end-to-end. Pull V1_Flutter Aero Nocturne…', owner: 'Rohan + Claude', department: 'Design / Engineering', completed: 'unknown' },
             { id: '~~TMW-247-prior~~', task: 'W3 Group 3 Wave 1 (4 of 14 screens) shipped via 4-parallel Sonnets · S127. Dispatched 4 background Sonnets per Multi-Agent Pattern (each independent screen folder · no shared files · LocalSeed per DE…', owner: 'Rohan + Claude', department: 'Engineering', completed: 'unknown' },
@@ -855,6 +855,20 @@ const activityFeed = [
                         "task_name": "\u2705 flight_history_detail children \u2014 Hi..."
             },
             {
+                        "date": "2026-06-03",
+                        "task_id": "TMW-271",
+                        "event": "completed",
+                        "department": "Engineering",
+                        "task_name": "\u2705 **DONE S148 \u2014 in-app navigation COM..."
+            },
+            {
+                        "date": "2026-06-03",
+                        "task_id": "~~TMW-265~~",
+                        "event": "completed",
+                        "department": "Engineering",
+                        "task_name": "\u274c **CANCELLED S148** per founder \u2014 re..."
+            },
+            {
                         "date": "2026-06-02",
                         "task_id": "TMW-275",
                         "event": "completed",
@@ -950,21 +964,7 @@ const activityFeed = [
                         "task_id": "TMW-270",
                         "event": "completed",
                         "department": "Operations",
-                        "task_name": "**Operating-systems hygiene sweep (S1..."
-            },
-            {
-                        "date": "2026-05-31",
-                        "task_id": "TMW-264",
-                        "event": "completed",
-                        "department": "Engineering",
-                        "task_name": "\u2705 Reference seed corpus bundled \u2014 air..."
-            },
-            {
-                        "date": "2026-05-30",
-                        "task_id": "**TMW-261**",
-                        "event": "completed",
-                        "department": "Engineering",
-                        "task_name": ""
+                        "task_name": "\u2705 **DONE S148** \u2014 ops hygiene FIX-2 (..."
             }
 ];
 const calendarEvents = [
@@ -983,11 +983,6 @@ const taskDependencies = [
                         "from": "TMW-154",
                         "to": "TMW-233",
                         "reason": "depends on TMW-233"
-            },
-            {
-                        "from": "TMW-265",
-                        "to": "TMW-261",
-                        "reason": "depends on TMW-261"
             }
 ];
 const milestones = [
@@ -1061,13 +1056,13 @@ const analyticsData = {
                         },
                         {
                                     "date": "2026-05-31",
-                                    "completed": 4,
-                                    "added": 4
+                                    "completed": 3,
+                                    "added": 3
                         },
                         {
                                     "date": "2026-06-01",
                                     "completed": 1,
-                                    "added": 5
+                                    "added": 4
                         },
                         {
                                     "date": "2026-06-02",
@@ -1076,8 +1071,8 @@ const analyticsData = {
                         },
                         {
                                     "date": "2026-06-03",
-                                    "completed": 11,
-                                    "added": 271
+                                    "completed": 14,
+                                    "added": 273
                         }
             ],
             "weeklyVelocity": [
@@ -1098,13 +1093,13 @@ const analyticsData = {
                         },
                         {
                                     "week": "2026-05-25",
-                                    "completed": 23,
-                                    "added": 11
+                                    "completed": 22,
+                                    "added": 10
                         },
                         {
                                     "week": "2026-06-01",
-                                    "completed": 17,
-                                    "added": 284
+                                    "completed": 20,
+                                    "added": 285
                         }
             ],
             "statusDistribution": [
@@ -1221,15 +1216,7 @@ const analyticsData = {
                                     "count": 1
                         },
                         {
-                                    "status": "**\u274c CANCELLED S148 per founder \u2014 SUPERSEDED BY DEC-170 (V1 ships custom-painted maps; real-tile SDK deferred post-launch). The \"plot live positions\" half is ALREADY done: `flightLiveProvider` swaps to `ApiFlightLiveRepository` (GET /flights/:id/position \u00b7 adsb.lol per DEC-169/177) and the custom `_map_painter` consumes `live.position`. No map SDK in V1. Post-launch map-SDK work tracked under DEC-170 + TMW-237 (Mapbox billing). Optional V1 nicety not built: 30s refresh poller (spec \u00a75) so the map auto-updates \u2014 log a fresh task if wanted.**",
-                                    "count": 1
-                        },
-                        {
                                     "status": "**DECIDED S145 (DEC-174) \u2014 INTEGRATE ALL, no V1 descopes.** Providers: weather=OpenWeatherMap \u00b7 aircraft photos=Planespotters + airline logos (airhex/bundle) \u00b7 gate/baggage + seat maps (paid/licensed) \u00b7 historical delays + amenities + fares. Provider-integration workstream \u2014 sequence via TMW-273 survey, ToS clearance via TMW-272, wiring via TMW-260; add `cached_network_image` for media.",
-                                    "count": 1
-                        },
-                        {
-                                    "status": "**WIP S144 \u2014 HOME flight-tracking cluster wired in 3 waves \u00b7 10 routes live (search/results \u00b7 /flights/:id \u00b7 :id/{map,gate,timeline,baggage,info,status-history} \u00b7 /seat-map{,/history}) \u00b7 commits `6a28bd4`/`c62f953`/`b95dcd2` \u00b7 analyze 0-new \u00b7 suite 1809/0-fail \u00b7 DEC-171 authorizes behavior-only nav affordances on OD-locked screens. DEFERRED (logged): aircraft_info\u2192aircraft_type (no `registration`/tail on FlightDetail \u2014 only `aircraftCode`; needs upstream field OR live-map entry) \u00b7 check_in + connection_analysis (Bucket B \u2014 need new CTAs, design steer) \u00b7 delays/alerts 3.x (Bucket C \u2014 deep-link/push layer, ties to TMW-263 G3). \u00b7 PASSPORT cluster P1+P2 (`8274808`/`a856bf0`): identity tab now navigates \u2014 passport_dashboard \u2192 countries\u2192country_detail \u00b7 badges\u2192badge_detail \u00b7 year-in-review \u00b7 fleet\u2192fleet_stats. Deferred (passport): stats entry (lifetime_stats has no onBack \u2014 back button is a visual add, out of DEC-171) \u00b7 travel_timeline (ambiguous target) \u00b7 YiR/fleet sub-pages. Suite 1811/0-fail \u00b7 **6 commits (pushed S144)**. \u00b7 PROFILE PR1+PR2 (`3ec5343`/`331dfac`): profile tab navigates \u2014 user_profile\u2192settings/edit/passport/flight; settings_main now a working router hub (account/privacy/notifications/import by row-key prefix); import picker\u2192manual entry + CSV/JSON. **S144 TOTAL: DEC-171 + DEC-172 + DEC-173 + 10 waves \u00b7 10 client_app commits (`6a28bd4`..`41b5b11`) \u00b7 ~45 routes live \u00b7 suite 1814/0-fail \u00b7 ALL PUSHED to `client_app` (`45780b8..41b5b11`, S144 close).** Passport dashboard now **100% navigable** (all 6 sections \u2192 their screens). All nav doubts cleared by DEC-172/173: Flights/Trips/Social\u2192Passport \u00b7 all secondary clusters in V1 \u00b7 back-buttons+minimal-CTAs allowed on OD-locked screens \u00b7 Track tab\u2192active flight. Since guidance: P3 flight-history (`982dc85`) \u00b7 P4 sub_tier\u2192all_plans (`0fb2a80`) \u00b7 P5 stats+back-button (`41b5b11`). **QUEUED-NEXT (fully specified per DEC-172/173, fresh-context):** Social cluster (~8 screens via Passport) \u00b7 Family (6.7/6.8) \u00b7 Trips via Passport \u00b7 check_in minimal-CTA on flight_detail \u00b7 flight_history_detail\u2192children (resolve flightUuid-vs-flightId) \u00b7 Track-tab active-flight wire (+empty state) \u00b7 stats sub-edges (breakdown 4.5 / share 4.6). **STILL GATED \u2192 owning tasks:** aircraft chain\u2192TMW-276 \u00b7 checkout\u2192TMW-266 \u00b7 in-app legal\u2192TMW-268 \u00b7 delays/alerts deep-links\u2192TMW-263. **S148 UPDATE (truth-first re-map): 271 is FAR more done than this row implies \u2014 ~53 cluster routes live (flight 16 \u00b7 passport 10 \u00b7 social 9 \u00b7 profile 6 \u00b7 legal 6 \u00b7 import 3 \u00b7 trips 2 \u00b7 upgrade 1) + onboarding + shell. Of 141 screens, 74 lack a router ref but MOST are correctly NOT destinations (skeletons \u00b7 error states \u00b7 banners/overlays \u00b7 push-notification screens \u00b7 share cards \u00b7 showcases \u00b7 OS-surfaces). S148 WIRED: notification_history (3.9 \u2014 spec \u00a75a \"the one genuine in-scope MVP stranded screen\") via a \"View notification history\" affordance on notification_preferences (DEC-171) \u2192 `/profile/notifications/history` + 2 router tests (`2b73eaa`). GENUINE in-app remainder = airport_disruption (3.13) + whats_new (WN.1) [each needs an entry affordance] + the named clusters above. OUT OF SCOPE as routes: ios_widget P.1-3 (WidgetKit ext) + watch P.4-5 (watchOS) \u2014 OS surfaces, not in-app GoRoutes. Web build re-validated S148 (TMW-256). **S148 WAVE-2 (founder-directed completion): wired 13 stranded secondary screens this session \u2014 notification_history (3.9) \u00b7 stats_global_comparison (4.7) \u00b7 world_globe (5.15) \u00b7 calendar_sync (7.9\u00b7F27) \u00b7 referral_program (R.5) \u00b7 map_style_toggle (2.8\u00b7modal F31) \u00b7 connection_analysis (2.22) \u00b7 inbound_aircraft (3.7)\u2192live_inbound_tracking (3.14) \u00b7 boarding_pass scan/confirm/display (7.6\u21927.7\u21927.8) \u00b7 watchlist (8.1, FLIGHTS empty-state CTA; fixed a static-vs-dynamic route-shadow bug). Commits 2b73eaa\u00b79305c8b\u00b7183255e\u00b774c3a6a. E9 re-engagement scheduler DECISION CORE built+tested (683b092, decideReengagement + policy + 10 tests). Suite 2107/0-fail. **S148 WAVE-3 (founder-directed \u2014 leaderboard + E9 DONE):** leaderboard (5.14) wired from ALL 3 hubs \u2014 lifetime_stats ActionRow + friends_list header + passport_dashboard social chip (`2aaca89`/`4e1c81a`). **E9 re-engagement scheduler FULLY INTEGRATED** (`8a9b1f5`): file-backed `ReengagementStore` (path_provider JSON, no new dep) + `resolveReengagementOnOpen` (load\u2192decide\u2192record) wired into `main()`; `_SplashGate` reads `reengagementSurfaceProvider` and routes to the interstitial on boot-complete; 5 interstitial routes registered (whatsNew/welcomeBack/ratingPrompt/dailyStreak/weeklyDigest); digest gated on `digestMinSessions`. **+16 E9 tests \u00b7 full suite 2126/0-fail \u00b7 web build clean (boot verified).** **DONE: TMW-271 in-app nav is COMPLETE** \u2014 every built in-app destination reachable; leaderboard via 3 paths; E9 scheduler live. **Remainder is owned elsewhere, NOT 271:** airport_disruption/weather_alert \u2192 TMW-263 (push/deep-link) \u00b7 aircraft\u2192TMW-276 \u00b7 checkout\u2192TMW-266 \u00b7 in-app legal\u2192TMW-268 \u00b7 OS-surfaces (ios_widget/watch) excluded. Tuning note: E9 thresholds (`ReengagementPolicy`) + the `kAppVersion` constant are tunable; auth-gating E9 to logged-in users is a post-`_kAuthEnforced`-flip refinement.**",
                                     "count": 1
                         },
                         {
@@ -1253,7 +1240,7 @@ const analyticsData = {
                                     "count": 1
                         },
                         {
-                                    "status": "**Not Started \u2014 keystone**",
+                                    "status": "**WIP \u2014 pipeline AUTHORED, runtime NOT deployed (verified S149 vs live AWS).** Deploy chain EXISTS in repo: `.github/workflows/aws-production.yml` + `deploy/task-definition.json` (EC2 launch type, 256MB) + `Dockerfile`. AWS account 522822657387/us-east-1 has the SHELL only: `trackmywings-cluster` + `backend-service` (active=1) + ECR repo `trackmywings-backend` \u2014 but **0 running tasks \u00b7 0 registered container instances \u00b7 NO RDS instance**. So nothing is live; safe to deploy (no double-deploy risk). BEFORE deploy: (a) provision RDS Postgres + ElastiCache Redis (none exist); (b) task-def fix \u2014 add `INGESTION_ADSBLOL_ENABLED=true`, remove deprecated `INGESTION_ADSB_ENABLED`, flip `INGESTION_ENABLED=true`; (c) populate Secrets Manager (JWT/DB_DSN/REDIS_URL/SMTP/live keys); (d) EC2 launch type needs a registered container instance OR switch to Fargate; (e) apply migrations + seed reference data. NOTE: live-flight TEST does NOT need AWS \u2014 run backend on Lenovo via docker-compose (DEC-177 adsb.lol keyless).",
                                     "count": 1
                         },
                         {
@@ -1302,7 +1289,7 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Claude",
-                                    "active": 35,
+                                    "active": 33,
                                     "high_priority": 8,
                                     "overdue": 0
                         },
@@ -1326,7 +1313,7 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Rohan",
-                                    "active": 46,
+                                    "active": 44,
                                     "high_priority": 13,
                                     "overdue": 0
                         },
@@ -1346,12 +1333,12 @@ const analyticsData = {
             "departmentHealth": [
                         {
                                     "department": "Engineering",
-                                    "active": 12,
+                                    "active": 10,
                                     "wip": 0,
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 9
+                                    "avg_age_days": 10
                         },
                         {
                                     "department": "Engineering / Marketing",
@@ -1537,25 +1524,25 @@ const analyticsData = {
             "staleTasks": [],
             "deadlineStats": {
                         "overdue": 0,
-                        "due_3days": 45,
+                        "due_3days": 43,
                         "deadline_hit_rate": "0%"
             },
             "burndownData": [
                         {
                                     "date": "2026-06-03",
-                                    "remaining": 48
+                                    "remaining": 46
                         },
                         {
                                     "date": "2026-06-02",
-                                    "remaining": 47
+                                    "remaining": 45
                         },
                         {
                                     "date": "2026-06-01",
-                                    "remaining": 39
+                                    "remaining": 37
                         },
                         {
                                     "date": "2026-05-31",
-                                    "remaining": 34
+                                    "remaining": 33
                         },
                         {
                                     "date": "2026-05-30",
@@ -1599,8 +1586,8 @@ const analyticsData = {
                         }
             ],
             "velocity": {
-                        "today": 11,
-                        "this_week": 17,
+                        "today": 14,
+                        "this_week": 20,
                         "overdue": 0,
                         "stale": 0
             }

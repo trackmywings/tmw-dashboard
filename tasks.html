@@ -536,7 +536,8 @@ const activeTasks = [
             { id: 'TMW-283', task: 'AWS backend deployment — the launch keystone. Stand up V1_Backend on AWS: ECS (Fargate) + RDS Postgres + the ingestion pipeline (adsb.lol live per DEC-177) + AWS SES (transactional email) + secrets m…', owner: 'Rohan + Claude', department: 'Engineering / Operations', priority: '**CRITICAL**', status: 'WIP — pipeline AUTHORED, runtime NOT deployed (verified S149 vs live AWS). Depl…', deadline: 'Pre-launch (start now; DNS post-TM)', created: '2026-06-02' },
             { id: 'TMW-284', task: 'kb-search MCP revival — local re-embed on Lenovo. Ollama reachable from Mac (verified S146), but the over-Tailscale re-embed aborts on blips + a runaway loop forced unloading the kb-watch+kb-reindex…', owner: 'Rohan + Claude', department: 'Operations / Engineering', priority: 'Low', status: 'Parked — Ollama reachable; needs local re-embed', deadline: 'When convenient', created: '2026-06-02' },
             { id: 'TMW-288', task: 'Client monetization SDK — IAP + Razorpay + screen-internal gates. Entitlement engine + route-gating (TMW-266) built; remaining: in_app_purchase + razorpay_flutter SDKs + store IAP products (8 tiers +…', owner: 'Rohan + Claude', department: 'Finance / Engineering', priority: 'High', status: 'Not Started — gated on ICICI card + store console', deadline: 'Pre-launch', created: '2026-06-02' },
-            { id: 'TMW-289', task: 'Website (V0_NextJS) SSR deploy — static export doesn\'t scale. S147 finding: the public site can\'t ship as flat static HTML — output:\'export\' of the 25,308 SEO pages = 8.4 GB (~200KB/page inlined RSC…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'High', status: 'Not Started — S147 finding (DEC-candidate: website=SSR not static export)', deadline: 'Post-TM (buildable now)', created: '2026-06-03' }
+            { id: 'TMW-289', task: 'Website (V0_NextJS) SSR deploy — static export doesn\'t scale. S147 finding: the public site can\'t ship as flat static HTML — output:\'export\' of the 25,308 SEO pages = 8.4 GB (~200KB/page inlined RSC…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'High', status: 'Not Started — S147 finding (DEC-candidate: website=SSR not static export)', deadline: 'Post-TM (buildable now)', created: '2026-06-03' },
+            { id: 'TMW-290', task: 'Evaluate ECC ("Everything Claude Code", affaan-m/ECC) for adoption — deferred, joint-owned, per-file approval gate. ECC is NOT currently installed (only the two official Anthropic marketplaces are; S…', owner: 'Rohan + Claude', department: 'Operations / Engineering', priority: 'Low', status: 'Deferred — do later (post-launch crunch); founder approves/rejects each file', deadline: 'Post-launch (founder-paced)', created: '2026-06-03' }
         ];
 const completedTasks = [
             { id: 'TMW-271', task: '✅ DONE S148 — in-app navigation COMPLETE. 14 stranded secondary screens wired (notification_history · stats_global_comparison · world_globe · calendar_sync · referral · map_style_toggle · connection_…', owner: 'Rohan + Claude', department: 'Engineering', completed: '2026-06-03' },
@@ -1072,7 +1073,7 @@ const analyticsData = {
                         {
                                     "date": "2026-06-03",
                                     "completed": 14,
-                                    "added": 273
+                                    "added": 274
                         }
             ],
             "weeklyVelocity": [
@@ -1099,7 +1100,7 @@ const analyticsData = {
                         {
                                     "week": "2026-06-01",
                                     "completed": 20,
-                                    "added": 285
+                                    "added": 286
                         }
             ],
             "statusDistribution": [
@@ -1254,6 +1255,10 @@ const analyticsData = {
                         {
                                     "status": "**Not Started \u2014 S147 finding (DEC-candidate: website=SSR not static export)**",
                                     "count": 1
+                        },
+                        {
+                                    "status": "**Deferred \u2014 do later (post-launch crunch); founder approves/rejects each file**",
+                                    "count": 1
                         }
             ],
             "ownerWorkload": [
@@ -1289,7 +1294,7 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Claude",
-                                    "active": 33,
+                                    "active": 34,
                                     "high_priority": 8,
                                     "overdue": 0
                         },
@@ -1313,7 +1318,7 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Rohan",
-                                    "active": 44,
+                                    "active": 45,
                                     "high_priority": 13,
                                     "overdue": 0
                         },
@@ -1486,12 +1491,12 @@ const analyticsData = {
                         },
                         {
                                     "department": "Operations / Engineering",
-                                    "active": 2,
+                                    "active": 3,
                                     "wip": 0,
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 1
+                                    "avg_age_days": 0
                         },
                         {
                                     "department": "Operations / Product",
@@ -1524,13 +1529,13 @@ const analyticsData = {
             "staleTasks": [],
             "deadlineStats": {
                         "overdue": 0,
-                        "due_3days": 43,
+                        "due_3days": 44,
                         "deadline_hit_rate": "0%"
             },
             "burndownData": [
                         {
                                     "date": "2026-06-03",
-                                    "remaining": 46
+                                    "remaining": 47
                         },
                         {
                                     "date": "2026-06-02",

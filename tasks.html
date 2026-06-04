@@ -522,7 +522,6 @@ const activeTasks = [
             { id: 'TMW-274', task: 'Mihir advisory equity formalization. Decision package + drafts done S143 (Strategy/Fundraising/Investor Readiness/Mihir_Advisory_Equity_Decision_Memo_2026-06-01.md + Legal/Contracts/Drafts/Mihir_Advi…', owner: 'Rohan + Mihir + Anshul B + Raman', department: 'Legal / Strategy', priority: 'High', status: 'Drafted S143 · founder finalizing % + docs + SoW with Mihir', deadline: 'Pre-launch', created: '2026-06-01' },
             { id: 'TMW-278', task: 'Graphify tooling fix + exhaustive run (deferred per founder S145). Root cause of the S102-frozen graph found S145: the weekly runner graphify_update.sh calls a bare graphify <path> full-build command…', owner: 'Rohan + Claude', department: 'Operations / Engineering', priority: 'Medium', status: 'Deferred — dedicated end-of-week session', deadline: 'End of week (founder-paced)', created: '2026-06-02' },
             { id: 'TMW-282', task: 'In-app product analytics — dual-sink (PostHog + Firebase GA4) behind a vendor-agnostic AnalyticsService. Net-new: app has ZERO analytics today (no SDK in pubspec, no NavigatorObserver, no event code;…', owner: 'Rohan + Claude', department: 'Engineering / Product', priority: 'Medium', status: 'Not Started — logged S146 for later (founder dual-sink decision)', deadline: 'Pre-launch (instrument before beta so funnel baselines exist from day 1)', created: '2026-06-02' },
-            { id: 'TMW-292', task: 'Staging gate verify + DNS flip. client_web SSR is deployed to client-web-service (task-def :4, CI-built) and renders real data, but the basic-auth stealth gate does NOT work — no-creds returns 200 ev…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'High', status: 'WIP S153 — STEPS 1-3 DONE + VERIFIED. Root cause of the broken gate: basic-auth…', deadline: 'Pre-launch', created: '2026-06-04' },
             { id: 'TMW-295', task: 'Backend repo-commit + remaining hardening. Commit cmd/server/main.go connectWithRetry + reconciled deploy/task-definition.json to trackmywings/backend (currently only deployed manually, not in repo).…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'Medium', status: 'WIP (S153) — repo-commit DONE (S152). + S153 commit-security-review folded 5 fi…', deadline: 'Pre-launch', created: '2026-06-04' },
             { id: 'TMW-284', task: 'kb-search MCP revival — local re-embed on Lenovo. Ollama reachable from Mac (verified S146), but the over-Tailscale re-embed aborts on blips + a runaway loop forced unloading the kb-watch+kb-reindex…', owner: 'Rohan + Claude', department: 'Operations / Engineering', priority: 'Low', status: 'Parked — Ollama reachable; needs local re-embed', deadline: 'When convenient', created: '2026-06-02' },
             { id: 'TMW-288', task: 'Client monetization SDK — IAP + Razorpay + screen-internal gates. Entitlement engine + route-gating (TMW-266) built; remaining: in_app_purchase + razorpay_flutter SDKs + store IAP products (8 tiers +…', owner: 'Rohan + Claude', department: 'Finance / Engineering', priority: 'High', status: 'Not Started — gated on ICICI card + store console', deadline: 'Pre-launch', created: '2026-06-02' },
@@ -594,6 +593,7 @@ const completedTasks = [
             { id: 'TMW-259', task: 'Infrastructure v2 build umbrella (Phases 0-10). Per [[TMW-252_Infrastructure_v2_Complete]] + Runbook. S137 PROGRESS: Phase 0 ✅ (Bitwarden + PAT rotation) · Phase 1 ✅ (workspace → ~/Code/tmw/) · Phase…', owner: 'Rohan + Claude', department: 'Operations / Engineering', completed: '2026-05-29' },
             { id: 'TMW-261', task: 'Fix ingestion bugs surfaced by the IX1347 live-flight validation (S140 · DEC-167). Real defects in V1_Backend/src/ingestion proven against live OpenSky data on the Lenovo rig: BUG-1 — positions silen…', owner: 'Rohan + Claude', department: 'Engineering', completed: '2026-05-30' },
             { id: 'TMW-283', task: 'AWS backend deployment — the launch keystone. Stand up V1_Backend on AWS: ECS (Fargate) + RDS Postgres + the ingestion pipeline (adsb.lol live per DEC-177) + AWS SES (transactional email) + secrets m…', owner: 'Rohan + Claude', department: 'Engineering / Operations', completed: '2026-06-02' },
+            { id: 'TMW-292', task: 'Staging gate verify + DNS flip. client_web SSR is deployed to client-web-service (task-def :4, CI-built) and renders real data, but the basic-auth stealth gate does NOT work — no-creds returns 200 ev…', owner: 'Rohan + Claude', department: 'Engineering', completed: '2026-06-04' },
             { id: 'TMW-293', task: 'Backend reference-data ingestion (airports/airlines/aircraft all = 0). Live tracking works (positions/flights) but reference tables empty; AirLabs airline/aircraft crons yield 0 (suspect free tier ex…', owner: 'Rohan + Claude', department: 'Engineering', completed: '2026-06-04' },
             { id: 'TMW-294', task: 'CDK cutover (DEC-179 end state). CDK app authored + cdk synth-validated at Engineering/Codebase/infra/ (NetworkStack[NAT-instance] / DataStack / AppStack / CicdStack; cost-opt, no-Fargate). Cutover =…', owner: 'Rohan + Claude', department: 'Engineering', completed: '2026-06-04' },
             { id: 'TMW-299', task: 'Establish migrate-to-private-RDS path + apply pending migrations. Build an SSM-into-VPC (EC2 container instance) or bastion path to run golang-migrate against the private RDS; apply migration 000029…', owner: 'Rohan + Claude', department: 'Engineering / Operations', completed: '2026-06-04' },
@@ -942,6 +942,13 @@ const activityFeed = [
                         "task_name": "**Establish migrate-to-private-RDS pa..."
             },
             {
+                        "date": "2026-06-04",
+                        "task_id": "TMW-292",
+                        "event": "completed",
+                        "department": "Engineering",
+                        "task_name": "**Staging gate verify + DNS flip.** `..."
+            },
+            {
                         "date": "2026-06-03",
                         "task_id": "TMW-269",
                         "event": "completed",
@@ -968,13 +975,6 @@ const activityFeed = [
                         "event": "completed",
                         "department": "Engineering",
                         "task_name": "\u274c **CANCELLED S148** per founder \u2014 re..."
-            },
-            {
-                        "date": "2026-06-02",
-                        "task_id": "TMW-275",
-                        "event": "completed",
-                        "department": "Strategy / Design",
-                        "task_name": "\u2705 Loafer Studios master-deck engageme..."
             }
 ];
 const calendarEvents = [
@@ -1086,13 +1086,13 @@ const analyticsData = {
                         },
                         {
                                     "date": "2026-06-04",
-                                    "completed": 15,
-                                    "added": 4
+                                    "completed": 16,
+                                    "added": 3
                         },
                         {
                                     "date": "2026-06-05",
                                     "completed": 6,
-                                    "added": 288
+                                    "added": 289
                         }
             ],
             "weeklyVelocity": [
@@ -1118,7 +1118,7 @@ const analyticsData = {
                         },
                         {
                                     "week": "2026-06-01",
-                                    "completed": 36,
+                                    "completed": 37,
                                     "added": 301
                         }
             ],
@@ -1228,10 +1228,6 @@ const analyticsData = {
                                     "count": 1
                         },
                         {
-                                    "status": "**WIP S153 \u2014 STEPS 1-3 DONE + VERIFIED.** Root cause of the broken gate: basic-auth creds were never baked into the Next 14 edge middleware (deployed image predated the GitHub `BASIC_AUTH_USER`/`PASS` vars set 08:57 \u2192 middleware no-op, 200 to everyone). Fixed: fresh CI build bakes the creds (`47bf5f0` / td:5 deployed to `client-web-service`) + added an ungated `/healthz` route (excluded from the gate matcher) + repointed the ALB health check `/`\u2192`/healthz` (zero-downtime via a temporary 200,401 matcher during the transition). **VERIFIED live (Host: staging): no-creds `/`\u2192401, with-creds\u2192200, `/healthz`\u2192200, deep routes (`/aircraft/A320`)\u2192401; 401 carries WWW-Authenticate + noindex.** REMAINING: **STEPS 4-5 \u2014 DNS flip** (`staging.trackmywings.com` CNAME `d2uv1u20ta7kkb.cloudfront.net`\u2192 the live ALB) is a **TM-gated founder decision**; gate must stay verified-enforcing before flip. Creds at `~/tmw_staging_basicauth.txt`. CDK-estate client_web stays desiredCount 0 until cutover.",
-                                    "count": 1
-                        },
-                        {
                                     "status": "**WIP (S153) \u2014 repo-commit DONE (S152). + S153 commit-security-review folded 5 findings into scope: TmwCicd OIDC over-broad (pin `sub`-claim to repo+ref, scope policies) \u00b7 Redis no TLS/auth (transit+at-rest+authToken) \u00b7 DB/Redis SG=VPC-CIDR (scope to app-task SG) \u00b7 client_web SES static keys (\u2192 task-role) \u00b7 plaintext `redis://` (\u2192 `rediss://`). Hardening PENDING: those 5 + role-split + stale task-def/launch-template cleanup + RDS Multi-AZ + SNS `tmw-alerts` alert-email subscribe.**",
                                     "count": 1
                         },
@@ -1283,8 +1279,8 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Claude",
-                                    "active": 27,
-                                    "high_priority": 8,
+                                    "active": 26,
+                                    "high_priority": 7,
                                     "overdue": 0
                         },
                         {
@@ -1307,8 +1303,8 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Rohan",
-                                    "active": 38,
-                                    "high_priority": 13,
+                                    "active": 37,
+                                    "high_priority": 12,
                                     "overdue": 0
                         },
                         {
@@ -1327,12 +1323,12 @@ const analyticsData = {
             "departmentHealth": [
                         {
                                     "department": "Engineering",
-                                    "active": 8,
+                                    "active": 7,
                                     "wip": 0,
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 9
+                                    "avg_age_days": 10
                         },
                         {
                                     "department": "Engineering / Product",
@@ -1473,17 +1469,17 @@ const analyticsData = {
             "staleTasks": [],
             "deadlineStats": {
                         "overdue": 0,
-                        "due_3days": 38,
+                        "due_3days": 37,
                         "deadline_hit_rate": "0%"
             },
             "burndownData": [
                         {
                                     "date": "2026-06-05",
-                                    "remaining": 40
+                                    "remaining": 39
                         },
                         {
                                     "date": "2026-06-04",
-                                    "remaining": 40
+                                    "remaining": 39
                         },
                         {
                                     "date": "2026-06-03",
@@ -1536,7 +1532,7 @@ const analyticsData = {
             ],
             "velocity": {
                         "today": 6,
-                        "this_week": 36,
+                        "this_week": 37,
                         "overdue": 0,
                         "stale": 0
             }

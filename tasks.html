@@ -533,7 +533,10 @@ const activeTasks = [
             { id: 'TMW-280', task: 'Fix website inter-page linking (links between pages) (founder-flagged S145 — noted so it\'s not missed). The static_web / website pages need proper internal linking between pages (nav + contextual cro…', owner: 'Rohan + Claude', department: 'Engineering / Marketing', priority: 'Medium', status: 'Not Started — founder-flagged S145', deadline: 'Pre-launch (stealth-gated)', created: '2026-06-02' },
             { id: 'TMW-281', task: 'Canonical doc-currency — refresh cadence + remaining deep passes. S145 currency pass done: ✅ CAP_TABLE_CURRENT (DEC-149 9,990/10 + Mihir-pending) · CLAUDE.md Quick Ref (integration phase + GST/Udyam…', owner: 'Rohan + Claude', department: 'Operations / Product', priority: 'Low', status: 'S148: doc-currency remainder done — PRODUCT_VISION tech-stack rows corrected (A…', deadline: 'Recurring / pre-launch', created: '2026-06-02' },
             { id: 'TMW-282', task: 'In-app product analytics — dual-sink (PostHog + Firebase GA4) behind a vendor-agnostic AnalyticsService. Net-new: app has ZERO analytics today (no SDK in pubspec, no NavigatorObserver, no event code;…', owner: 'Rohan + Claude', department: 'Engineering / Product', priority: 'Medium', status: 'Not Started — logged S146 for later (founder dual-sink decision)', deadline: 'Pre-launch (instrument before beta so funnel baselines exist from day 1)', created: '2026-06-02' },
-            { id: 'TMW-283', task: 'AWS backend deployment — the launch keystone. Stand up V1_Backend on AWS: ECS (Fargate) + RDS Postgres + the ingestion pipeline (adsb.lol live per DEC-177) + AWS SES (transactional email) + secrets m…', owner: 'Rohan + Claude', department: 'Engineering / Operations', priority: '**CRITICAL**', status: 'WIP — pipeline AUTHORED, runtime NOT deployed (verified S149 vs live AWS). Depl…', deadline: 'Pre-launch (start now; DNS post-TM)', created: '2026-06-02' },
+            { id: 'TMW-292', task: 'Staging gate verify + DNS flip. client_web SSR is deployed to client-web-service (task-def :4, CI-built) and renders real data, but the basic-auth stealth gate does NOT work — no-creds returns 200 ev…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'High', status: 'Not started (next session)', deadline: 'Pre-launch', created: '2026-06-04' },
+            { id: 'TMW-293', task: 'Backend reference-data ingestion (airports/airlines/aircraft all = 0). Live tracking works (positions/flights) but reference tables empty; AirLabs airline/aircraft crons yield 0 (suspect free tier ex…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'High', status: 'Not started (next session)', deadline: 'Pre-launch', created: '2026-06-04' },
+            { id: 'TMW-294', task: 'CDK cutover (DEC-179 end state). CDK app authored + cdk synth-validated at Engineering/Codebase/infra/ (NetworkStack[NAT-instance] / DataStack / AppStack / CicdStack; cost-opt, no-Fargate). Cutover =…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'Medium', status: 'Not started (next session)', deadline: 'Pre-launch', created: '2026-06-04' },
+            { id: 'TMW-295', task: 'Backend repo-commit + remaining hardening. Commit cmd/server/main.go connectWithRetry + reconciled deploy/task-definition.json to trackmywings/backend (currently only deployed manually, not in repo).…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'Medium', status: 'Not started (next session)', deadline: 'Pre-launch', created: '2026-06-04' },
             { id: 'TMW-284', task: 'kb-search MCP revival — local re-embed on Lenovo. Ollama reachable from Mac (verified S146), but the over-Tailscale re-embed aborts on blips + a runaway loop forced unloading the kb-watch+kb-reindex…', owner: 'Rohan + Claude', department: 'Operations / Engineering', priority: 'Low', status: 'Parked — Ollama reachable; needs local re-embed', deadline: 'When convenient', created: '2026-06-02' },
             { id: 'TMW-288', task: 'Client monetization SDK — IAP + Razorpay + screen-internal gates. Entitlement engine + route-gating (TMW-266) built; remaining: in_app_purchase + razorpay_flutter SDKs + store IAP products (8 tiers +…', owner: 'Rohan + Claude', department: 'Finance / Engineering', priority: 'High', status: 'Not Started — gated on ICICI card + store console', deadline: 'Pre-launch', created: '2026-06-02' },
             { id: 'TMW-289', task: 'Website (V0_NextJS) SSR deploy — static export doesn\'t scale. S147 finding: the public site can\'t ship as flat static HTML — output:\'export\' of the 25,308 SEO pages = 8.4 GB (~200KB/page inlined RSC…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'High', status: 'Not Started — S147 finding (DEC-candidate: website=SSR not static export)', deadline: 'Post-TM (buildable now)', created: '2026-06-03' },
@@ -589,6 +592,7 @@ const completedTasks = [
             { id: 'TMW-259', task: 'Infrastructure v2 build umbrella (Phases 0-10). Per [[TMW-252_Infrastructure_v2_Complete]] + Runbook. S137 PROGRESS: Phase 0 ✅ (Bitwarden + PAT rotation) · Phase 1 ✅ (workspace → ~/Code/tmw/) · Phase…', owner: 'Rohan + Claude', department: 'Operations / Engineering', completed: '2026-05-29' },
             { id: 'TMW-261', task: 'Fix ingestion bugs surfaced by the IX1347 live-flight validation (S140 · DEC-167). Real defects in V1_Backend/src/ingestion proven against live OpenSky data on the Lenovo rig: BUG-1 — positions silen…', owner: 'Rohan + Claude', department: 'Engineering', completed: '2026-05-30' },
             { id: 'TMW-262', task: 'Production app shell + router + auth gate (the #1 launch unblock). Per S141 readiness deep-analysis + TMW-260_Screen_Component_Connection_Study + TMW-260_User_Access_Paths: lib/main.dart boots _dev_g…', owner: 'Rohan + Claude', department: 'Engineering', completed: '2026-05-31' },
+            { id: 'TMW-283', task: 'AWS backend deployment — the launch keystone. Stand up V1_Backend on AWS: ECS (Fargate) + RDS Postgres + the ingestion pipeline (adsb.lol live per DEC-177) + AWS SES (transactional email) + secrets m…', owner: 'Rohan + Claude', department: 'Engineering / Operations', completed: '2026-06-02' },
             { id: '~~TMW-248-prior~~', task: 'Path C Implementation umbrella — adopt trackmywings/backend scaffold + 53 pending tasks + our additions · S128. Per Operations/AI System/Plans/TMW-226_Path_C_Implementation_Plan.md v1.0 (4,362 words…', owner: 'Rohan + Claude + Amol (advisory)', department: 'Engineering', completed: 'unknown' },
             { id: '~~TMW-249-prior~~', task: 'Staging website end-to-end revamp · design + UX + connectivity sync to app · S128 founder direction — Completely revamp staging.trackmywings.com (V0_NextJS) end-to-end. Pull V1_Flutter Aero Nocturne…', owner: 'Rohan + Claude', department: 'Design / Engineering', completed: 'unknown' },
             { id: '~~TMW-247-prior~~', task: 'W3 Group 3 Wave 1 (4 of 14 screens) shipped via 4-parallel Sonnets · S127. Dispatched 4 background Sonnets per Multi-Agent Pattern (each independent screen folder · no shared files · LocalSeed per DE…', owner: 'Rohan + Claude', department: 'Engineering', completed: 'unknown' },
@@ -920,6 +924,13 @@ const activityFeed = [
                         "task_name": "\u2705 Gitea :3000 reachability fixed S146..."
             },
             {
+                        "date": "2026-06-02",
+                        "task_id": "TMW-283",
+                        "event": "completed",
+                        "department": "Engineering / Operations",
+                        "task_name": "**AWS backend deployment \u2014 the launch..."
+            },
+            {
                         "date": "2026-06-01",
                         "task_id": "TMW-152",
                         "event": "completed",
@@ -960,13 +971,6 @@ const activityFeed = [
                         "event": "completed",
                         "department": "Engineering",
                         "task_name": "\u2705 App permissions declared + primed +..."
-            },
-            {
-                        "date": "2026-05-31",
-                        "task_id": "TMW-270",
-                        "event": "completed",
-                        "department": "Operations",
-                        "task_name": "\u2705 **DONE S148** \u2014 ops hygiene FIX-2 (..."
             }
 ];
 const calendarEvents = [
@@ -1068,8 +1072,8 @@ const analyticsData = {
                         },
                         {
                                     "date": "2026-06-02",
-                                    "completed": 5,
-                                    "added": 8
+                                    "completed": 6,
+                                    "added": 7
                         },
                         {
                                     "date": "2026-06-03",
@@ -1079,7 +1083,7 @@ const analyticsData = {
                         {
                                     "date": "2026-06-04",
                                     "completed": 6,
-                                    "added": 272
+                                    "added": 277
                         }
             ],
             "weeklyVelocity": [
@@ -1105,8 +1109,8 @@ const analyticsData = {
                         },
                         {
                                     "week": "2026-06-01",
-                                    "completed": 20,
-                                    "added": 287
+                                    "completed": 21,
+                                    "added": 291
                         }
             ],
             "statusDistribution": [
@@ -1116,6 +1120,10 @@ const analyticsData = {
                         },
                         {
                                     "status": "**Not Started**",
+                                    "count": 4
+                        },
+                        {
+                                    "status": "Not started (next session)",
                                     "count": 4
                         },
                         {
@@ -1247,10 +1255,6 @@ const analyticsData = {
                                     "count": 1
                         },
                         {
-                                    "status": "**WIP \u2014 pipeline AUTHORED, runtime NOT deployed (verified S149 vs live AWS).** Deploy chain EXISTS in repo: `.github/workflows/aws-production.yml` + `deploy/task-definition.json` (EC2 launch type, 256MB) + `Dockerfile`. AWS account 522822657387/us-east-1 has the SHELL only: `trackmywings-cluster` + `backend-service` (active=1) + ECR repo `trackmywings-backend` \u2014 but **0 running tasks \u00b7 0 registered container instances \u00b7 NO RDS instance**. So nothing is live; safe to deploy (no double-deploy risk). BEFORE deploy: (a) provision RDS Postgres + ElastiCache Redis (none exist); (b) task-def fix \u2014 add `INGESTION_ADSBLOL_ENABLED=true`, remove deprecated `INGESTION_ADSB_ENABLED`, flip `INGESTION_ENABLED=true`; (c) populate Secrets Manager (JWT/DB_DSN/REDIS_URL/SMTP/live keys); (d) EC2 launch type needs a registered container instance OR switch to Fargate; (e) apply migrations + seed reference data. NOTE: live-flight TEST does NOT need AWS \u2014 run backend on Lenovo via docker-compose (DEC-177 adsb.lol keyless).",
-                                    "count": 1
-                        },
-                        {
                                     "status": "**Parked \u2014 Ollama reachable; needs local re-embed**",
                                     "count": 1
                         },
@@ -1304,8 +1308,8 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Claude",
-                                    "active": 35,
-                                    "high_priority": 8,
+                                    "active": 38,
+                                    "high_priority": 10,
                                     "overdue": 0
                         },
                         {
@@ -1328,8 +1332,8 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Rohan",
-                                    "active": 46,
-                                    "high_priority": 13,
+                                    "active": 49,
+                                    "high_priority": 15,
                                     "overdue": 0
                         },
                         {
@@ -1348,24 +1352,15 @@ const analyticsData = {
             "departmentHealth": [
                         {
                                     "department": "Engineering",
-                                    "active": 11,
+                                    "active": 15,
                                     "wip": 0,
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 10
+                                    "avg_age_days": 7
                         },
                         {
                                     "department": "Engineering / Marketing",
-                                    "active": 1,
-                                    "wip": 0,
-                                    "not_started": 0,
-                                    "overdue": 0,
-                                    "stale": 0,
-                                    "avg_age_days": 2
-                        },
-                        {
-                                    "department": "Engineering / Operations",
                                     "active": 1,
                                     "wip": 0,
                                     "not_started": 0,
@@ -1539,21 +1534,21 @@ const analyticsData = {
             "staleTasks": [],
             "deadlineStats": {
                         "overdue": 0,
-                        "due_3days": 46,
+                        "due_3days": 49,
                         "deadline_hit_rate": "0%"
             },
             "burndownData": [
                         {
                                     "date": "2026-06-04",
-                                    "remaining": 48
+                                    "remaining": 51
                         },
                         {
                                     "date": "2026-06-03",
-                                    "remaining": 48
+                                    "remaining": 47
                         },
                         {
                                     "date": "2026-06-02",
-                                    "remaining": 45
+                                    "remaining": 44
                         },
                         {
                                     "date": "2026-06-01",
@@ -1602,7 +1597,7 @@ const analyticsData = {
             ],
             "velocity": {
                         "today": 6,
-                        "this_week": 20,
+                        "this_week": 21,
                         "overdue": 0,
                         "stale": 0
             }

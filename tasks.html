@@ -491,7 +491,6 @@ const heroMilestones = [
             }
 ];
 const activeTasks = [
-            { id: 'TMW-300', task: 'Screen-review system — printable per-screen review packets + ACTUAL-vs-IDEAL nav map, from the Flutter Dart source (legacy HTML ignored). Gate-2 APPROVED S154 (Doc-1 v2 phone-framed/white/landscape +…', owner: 'Rohan + Claude', department: 'Engineering / Design', priority: 'High', status: 'Gate-2 approved · 142-batch pending (new session)', deadline: 'Pre-launch', created: '2026-06-05' },
             { id: 'TMW-256', task: 'V1_Flutter web visual full-UI smoke (deferred) — Flutter web build verified S132 (flutter build web --release succeeded in 243s · main.dart.js 3.57MB · serves via python3 -m http.server 9090 · playwr…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'Medium', status: 'WIP (S154) — integration_test suite BUILT — integration_test/sign_up_flow_test.…', deadline: 'Pre-Phase-7 polish', created: '2026-05-27' },
             { id: 'TMW-189', task: 'RESTRUCTURE MASTER (umbrella) — Amol exit + Anshul B appointment + ICICI + INC-20A + INC-22 + ADT-1 + share transfer + IP assignment + director loan + handover. S114→S133 statutory milestones: ✅ TMW-…', owner: 'Rohan + Anshul B + Raman', department: 'Legal / Ops', priority: '**CRITICAL**', status: 'Active — Amol exit (TMW-193) CLOSED 2026-06-05; remaining: POA (196) · email mi…', deadline: '2026-06-15 (target close)', created: '2026-05-02' },
             { id: 'TMW-196', task: 'POA in favour of Anshul B (limited, dormant, trigger-activated). Stamped + notarised + registered. Sealed-envelope custody with spouse + Anshul B. S112 2026-05-16: WIP — TMW-190 unblocker landed (Ans…', owner: 'Rohan + Anshul B', department: 'Legal', priority: 'Medium', status: 'Sequenced post-TMW-190', deadline: '2026-06-15', created: '2026-05-02' },
@@ -528,6 +527,7 @@ const activeTasks = [
             { id: 'TMW-290', task: 'Evaluate ECC ("Everything Claude Code", affaan-m/ECC) for adoption — deferred, joint-owned, per-file approval gate. ECC is NOT currently installed (only the two official Anthropic marketplaces are; S…', owner: 'Rohan + Claude', department: 'Operations / Engineering', priority: 'Low', status: 'Deferred — do later (post-launch crunch); founder approves/rejects each file', deadline: 'Post-launch (founder-paced)', created: '2026-06-03' }
         ];
 const completedTasks = [
+            { id: 'TMW-300', task: '✅ DONE S155 — 142-screen review batch shipped. Built from the live Flutter Dart source via a generated golden-capture harness (test/_review/batch_capture_test.dart). 141/142 rendered standalone (S-01…', owner: 'Rohan + Claude', department: 'Engineering / Design', completed: '2026-06-05' },
             { id: 'TMW-298', task: '✅ DONE S154 (code) · 2 residuals routed — backend source-less endpoints (commit 80b7a61, local): GET /flights/:id/inbound-aircraft (honest-empty data_gap=true — no turnaround pointer in schema), GET…', owner: 'Rohan + Claude', department: 'Engineering', completed: '2026-06-05' },
             { id: 'TMW-297', task: '✅ DONE S154 — home-context composite VERIFIED: GET /v1/me/home-context (src/homecontext/, AuthRequired) wired in router+main; 3 tests pass; go build 0. Flutter ApiHomeContextRepository consumes it be…', owner: 'Rohan + Claude', department: 'Engineering', completed: '2026-06-05' },
             { id: 'TMW-291', task: '✅ DONE S154 (build) · distribution post-TM — branded launcher icon + native splash verified committed (b157172); F&F APK built S150 (91.9MB · v1.0.0 · LocalSeed · debug-signed · delivered). Residual…', owner: 'Rohan + Claude', department: 'Engineering', completed: '2026-06-05' },
@@ -887,6 +887,13 @@ const activityFeed = [
                         "task_name": "\u2705 **CLOSED 2026-06-05 per founder** \u2014..."
             },
             {
+                        "date": "2026-06-05",
+                        "task_id": "TMW-300",
+                        "event": "completed",
+                        "department": "Engineering / Design",
+                        "task_name": "\u2705 **DONE S155 \u2014 142-screen review bat..."
+            },
+            {
                         "date": "2026-06-04",
                         "task_id": "TMW-296",
                         "event": "completed",
@@ -969,13 +976,6 @@ const activityFeed = [
                         "event": "completed",
                         "department": "Engineering",
                         "task_name": "**CDK cutover (DEC-179 end state).** ..."
-            },
-            {
-                        "date": "2026-06-04",
-                        "task_id": "TMW-299",
-                        "event": "completed",
-                        "department": "Engineering / Operations",
-                        "task_name": "\u2705 **DONE S153** \u2014 live-RDS migration ..."
             }
 ];
 const calendarEvents = [
@@ -1097,7 +1097,7 @@ const analyticsData = {
                         },
                         {
                                     "date": "2026-06-05",
-                                    "completed": 11,
+                                    "completed": 12,
                                     "added": 295
                         }
             ],
@@ -1124,7 +1124,7 @@ const analyticsData = {
                         },
                         {
                                     "week": "2026-06-01",
-                                    "completed": 44,
+                                    "completed": 45,
                                     "added": 303
                         }
             ],
@@ -1132,10 +1132,6 @@ const analyticsData = {
                         {
                                     "status": "Blocked \u2014 DEC-067 stealth + IP clearance",
                                     "count": 4
-                        },
-                        {
-                                    "status": "**Gate-2 approved \u00b7 142-batch pending (new session)**",
-                                    "count": 1
                         },
                         {
                                     "status": "**WIP (S154) \u2014 integration_test suite BUILT** \u2014 `integration_test/sign_up_flow_test.dart` (10 tests / 4 groups; flutter commit `44f3f80`, local). Run: `flutter test integration_test/sign_up_flow_test.dart -d chrome` (needs chromedriver:4444). Compiles clean (analyze 0). Full-UI drive-through now exists (was the deferred piece).",
@@ -1279,8 +1275,8 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Claude",
-                                    "active": 23,
-                                    "high_priority": 7,
+                                    "active": 22,
+                                    "high_priority": 6,
                                     "overdue": 0
                         },
                         {
@@ -1303,8 +1299,8 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Rohan",
-                                    "active": 33,
-                                    "high_priority": 12,
+                                    "active": 32,
+                                    "high_priority": 11,
                                     "overdue": 0
                         },
                         {
@@ -1329,15 +1325,6 @@ const analyticsData = {
                                     "overdue": 0,
                                     "stale": 0,
                                     "avg_age_days": 17
-                        },
-                        {
-                                    "department": "Engineering / Design",
-                                    "active": 1,
-                                    "wip": 0,
-                                    "not_started": 0,
-                                    "overdue": 0,
-                                    "stale": 0,
-                                    "avg_age_days": 0
                         },
                         {
                                     "department": "Engineering / Product",
@@ -1478,13 +1465,13 @@ const analyticsData = {
             "staleTasks": [],
             "deadlineStats": {
                         "overdue": 0,
-                        "due_3days": 33,
+                        "due_3days": 32,
                         "deadline_hit_rate": "0%"
             },
             "burndownData": [
                         {
                                     "date": "2026-06-05",
-                                    "remaining": 35
+                                    "remaining": 34
                         },
                         {
                                     "date": "2026-06-04",
@@ -1540,8 +1527,8 @@ const analyticsData = {
                         }
             ],
             "velocity": {
-                        "today": 11,
-                        "this_week": 44,
+                        "today": 12,
+                        "this_week": 45,
                         "overdue": 0,
                         "stale": 0
             }

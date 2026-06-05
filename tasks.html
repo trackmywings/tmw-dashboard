@@ -491,6 +491,7 @@ const heroMilestones = [
             }
 ];
 const activeTasks = [
+            { id: 'TMW-300', task: 'Screen-review system — printable per-screen review packets + ACTUAL-vs-IDEAL nav map, from the Flutter Dart source (legacy HTML ignored). Gate-2 APPROVED S154 (Doc-1 v2 phone-framed/white/landscape +…', owner: 'Rohan + Claude', department: 'Engineering / Design', priority: 'High', status: 'Gate-2 approved · 142-batch pending (new session)', deadline: 'Pre-launch', created: '2026-06-05' },
             { id: 'TMW-256', task: 'V1_Flutter web visual full-UI smoke (deferred) — Flutter web build verified S132 (flutter build web --release succeeded in 243s · main.dart.js 3.57MB · serves via python3 -m http.server 9090 · playwr…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'Medium', status: 'WIP (S154) — integration_test suite BUILT — integration_test/sign_up_flow_test.…', deadline: 'Pre-Phase-7 polish', created: '2026-05-27' },
             { id: 'TMW-189', task: 'RESTRUCTURE MASTER (umbrella) — Amol exit + Anshul B appointment + ICICI + INC-20A + INC-22 + ADT-1 + share transfer + IP assignment + director loan + handover. S114→S133 statutory milestones: ✅ TMW-…', owner: 'Rohan + Anshul B + Raman', department: 'Legal / Ops', priority: '**CRITICAL**', status: 'Active — Amol exit (TMW-193) CLOSED 2026-06-05; remaining: POA (196) · email mi…', deadline: '2026-06-15 (target close)', created: '2026-05-02' },
             { id: 'TMW-196', task: 'POA in favour of Anshul B (limited, dormant, trigger-activated). Stamped + notarised + registered. Sealed-envelope custody with spouse + Anshul B. S112 2026-05-16: WIP — TMW-190 unblocker landed (Ans…', owner: 'Rohan + Anshul B', department: 'Legal', priority: 'Medium', status: 'Sequenced post-TMW-190', deadline: '2026-06-15', created: '2026-05-02' },
@@ -1097,7 +1098,7 @@ const analyticsData = {
                         {
                                     "date": "2026-06-05",
                                     "completed": 11,
-                                    "added": 294
+                                    "added": 295
                         }
             ],
             "weeklyVelocity": [
@@ -1124,13 +1125,17 @@ const analyticsData = {
                         {
                                     "week": "2026-06-01",
                                     "completed": 44,
-                                    "added": 302
+                                    "added": 303
                         }
             ],
             "statusDistribution": [
                         {
                                     "status": "Blocked \u2014 DEC-067 stealth + IP clearance",
                                     "count": 4
+                        },
+                        {
+                                    "status": "**Gate-2 approved \u00b7 142-batch pending (new session)**",
+                                    "count": 1
                         },
                         {
                                     "status": "**WIP (S154) \u2014 integration_test suite BUILT** \u2014 `integration_test/sign_up_flow_test.dart` (10 tests / 4 groups; flutter commit `44f3f80`, local). Run: `flutter test integration_test/sign_up_flow_test.dart -d chrome` (needs chromedriver:4444). Compiles clean (analyze 0). Full-UI drive-through now exists (was the deferred piece).",
@@ -1209,7 +1214,7 @@ const analyticsData = {
                                     "count": 1
                         },
                         {
-                                    "status": "**WIP (S154) \u2014 DEC-158 tier-gating now ENFORCED** (root cause: `softPaywallShowFn` was null everywhere \u2192 paywall fired into a no-op; wired in main.dart) + `in_app_purchase`/`razorpay_flutter` SDKs added. Flutter commit `5e28e9f` (local, UNPUSHED). REMAINING (founder-gated): live store products + Razorpay/IAP keys (ICICI card) + purchase flows (behind `ENABLE_IAP` flag).",
+                                    "status": "**WIP (S154) \u2014 DEC-158 tier-gating now ENFORCED** (root cause: `softPaywallShowFn` was null everywhere \u2192 paywall fired into a no-op; wired in main.dart) + `in_app_purchase`/`razorpay_flutter` SDKs added. Flutter commit `5e28e9f` (PUSHED S154 origin+gitea). REMAINING (founder-gated): live store products + Razorpay/IAP keys (ICICI card) + purchase flows (behind `ENABLE_IAP` flag).",
                                     "count": 1
                         },
                         {
@@ -1274,8 +1279,8 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Claude",
-                                    "active": 22,
-                                    "high_priority": 6,
+                                    "active": 23,
+                                    "high_priority": 7,
                                     "overdue": 0
                         },
                         {
@@ -1298,8 +1303,8 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Rohan",
-                                    "active": 32,
-                                    "high_priority": 11,
+                                    "active": 33,
+                                    "high_priority": 12,
                                     "overdue": 0
                         },
                         {
@@ -1324,6 +1329,15 @@ const analyticsData = {
                                     "overdue": 0,
                                     "stale": 0,
                                     "avg_age_days": 17
+                        },
+                        {
+                                    "department": "Engineering / Design",
+                                    "active": 1,
+                                    "wip": 0,
+                                    "not_started": 0,
+                                    "overdue": 0,
+                                    "stale": 0,
+                                    "avg_age_days": 0
                         },
                         {
                                     "department": "Engineering / Product",
@@ -1464,13 +1478,13 @@ const analyticsData = {
             "staleTasks": [],
             "deadlineStats": {
                         "overdue": 0,
-                        "due_3days": 32,
+                        "due_3days": 33,
                         "deadline_hit_rate": "0%"
             },
             "burndownData": [
                         {
                                     "date": "2026-06-05",
-                                    "remaining": 34
+                                    "remaining": 35
                         },
                         {
                                     "date": "2026-06-04",

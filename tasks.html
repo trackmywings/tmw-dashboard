@@ -491,7 +491,7 @@ const heroMilestones = [
             }
 ];
 const activeTasks = [
-            { id: 'TMW-256', task: 'V1_Flutter web visual full-UI smoke (deferred) — Flutter web build verified S132 (flutter build web --release succeeded in 243s · main.dart.js 3.57MB · serves via python3 -m http.server 9090 · playwr…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'Medium', status: 'WIP (S154) — integration_test suite BUILT — integration_test/sign_up_flow_test.…', deadline: 'Pre-Phase-7 polish', created: '2026-05-27' },
+            { id: 'TMW-256', task: 'V1_Flutter web visual full-UI smoke (deferred) — Flutter web build verified S132 (flutter build web --release succeeded in 243s · main.dart.js 3.57MB · serves via python3 -m http.server 9090 · playwr…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'Medium', status: 'WIP (S156) — web-smoke env FIXED, run inconclusive at close. Root-caused: flutt…', deadline: 'Pre-Phase-7 polish', created: '2026-05-27' },
             { id: 'TMW-189', task: 'RESTRUCTURE MASTER (umbrella) — Amol exit + Anshul B appointment + ICICI + INC-20A + INC-22 + ADT-1 + share transfer + IP assignment + director loan + handover. S114→S133 statutory milestones: ✅ TMW-…', owner: 'Rohan + Anshul B + Raman', department: 'Legal / Ops', priority: '**CRITICAL**', status: 'Active — Amol exit (TMW-193) CLOSED 2026-06-05; remaining: POA (196) · email mi…', deadline: '2026-06-15 (target close)', created: '2026-05-02' },
             { id: 'TMW-196', task: 'POA in favour of Anshul B (limited, dormant, trigger-activated). Stamped + notarised + registered. Sealed-envelope custody with spouse + Anshul B. S112 2026-05-16: WIP — TMW-190 unblocker landed (Ans…', owner: 'Rohan + Anshul B', department: 'Legal', priority: 'Medium', status: 'Sequenced post-TMW-190', deadline: '2026-06-15', created: '2026-05-02' },
             { id: 'TMW-199', task: 'Email + credential migration — Workspace suspend (Amol/Adhi/Ruchi) + GitHub org transfer + AWS root rotation + IAM cleanup + Mapbox/Razorpay/Stripe/Cloudflare under Company. Checklist at Legal/Restru…', owner: 'Rohan', department: 'Operations', priority: 'High', status: 'WIP (S154) — UNBLOCKED by TMW-193 close. Execution runbook prepped: Legal/Restr…', deadline: '2026-06-07', created: '2026-05-02' },
@@ -516,12 +516,9 @@ const activeTasks = [
             { id: 'TMW-238', task: 'Fundraise pack execution — NDA + investor outreach + data room access logistics. Pitch decks ready in 11 variants (4 aesthetic × HTML+PPTX + 7 use-case). When founder decides to share externally: (a)…', owner: 'Rohan + Anshul B + Mihir sir', department: 'Strategy / Legal', priority: 'High', status: 'Pending — when founder ready to share externally · variants ready', deadline: 'Pre-launch (target T-30 fundraise window or earlier if grant deadline)', created: '2026-05-17' },
             { id: 'TMW-266', task: 'Client monetization — IAP + Razorpay SDK + enforce feature-gating. Per S141 readiness Q1-F6/Q6-L2: backend payments (Apple+Google+Razorpay verify) are built but pubspec.yaml has NO in_app_purchase/ra…', owner: 'Rohan + Claude', department: 'Finance / Engineering', priority: '**High**', status: 'WIP (S154) — DEC-158 tier-gating now ENFORCED (root cause: softPaywallShowFn wa…', deadline: 'Pre-launch', created: '2026-05-31' },
             { id: 'TMW-267', task: 'Source-less-screen data strategy — decide integrate-or-descope per feature. Per S141 readiness Q10: built screens with NO upstream data source — weather (3.14), gate/terminal/baggage (2.13), seat map…', owner: 'Rohan (decision) + Claude', department: 'Engineering / Product', priority: '**High**', status: 'DECIDED S145 (DEC-174) — INTEGRATE ALL, no V1 descopes. Providers: weather=Open…', deadline: 'Pre-launch', created: '2026-05-31' },
-            { id: 'TMW-268', task: 'DPDP client data layer + in-app legal surfaces. Per S141 readiness Q5/Q6-L3/Q9: backend implements DPDP §6/§11/§12(2) (tested) but Flutter has NO consent/export/erasure repository and NO in-app Terms…', owner: 'Rohan + Anshul B + Claude', department: 'Legal / Engineering', priority: '**High**', status: 'Not Started', deadline: 'Pre-launch', created: '2026-05-31' },
             { id: 'TMW-272', task: 'Legal clearance — community ADS-B aggregator commercial-use terms (DEC-169 path A gate). Per DEC-169, the live-tracking core uses community ADS-B aggregators (adsb.lol · adsb.fi · airplanes.live) as…', owner: 'Rohan + Anshul B', department: 'Legal', priority: '**High**', status: 'WIP (S154) — provider/live-tracking legal draft prepped: Legal/Policies/Drafts/…', deadline: 'Pre-launch (before live tracking ships)', created: '2026-06-01' },
             { id: 'TMW-274', task: 'Mihir advisory equity formalization. Decision package + drafts done S143 (Strategy/Fundraising/Investor Readiness/Mihir_Advisory_Equity_Decision_Memo_2026-06-01.md + Legal/Contracts/Drafts/Mihir_Advi…', owner: 'Rohan + Mihir + Anshul B + Raman', department: 'Legal / Strategy', priority: 'High', status: 'Drafted S143 · founder finalizing % + docs + SoW with Mihir', deadline: 'Pre-launch', created: '2026-06-01' },
             { id: 'TMW-278', task: 'Graphify tooling fix + exhaustive run (deferred per founder S145). Root cause of the S102-frozen graph found S145: the weekly runner graphify_update.sh calls a bare graphify <path> full-build command…', owner: 'Rohan + Claude', department: 'Operations / Engineering', priority: 'Medium', status: 'Deferred — dedicated end-of-week session', deadline: 'End of week (founder-paced)', created: '2026-06-02' },
-            { id: 'TMW-282', task: 'In-app product analytics — dual-sink (PostHog + Firebase GA4) behind a vendor-agnostic AnalyticsService. Net-new: app has ZERO analytics today (no SDK in pubspec, no NavigatorObserver, no event code;…', owner: 'Rohan + Claude', department: 'Engineering / Product', priority: 'Medium', status: 'Not Started — logged S146 for later (founder dual-sink decision)', deadline: 'Pre-launch (instrument before beta so funnel baselines exist from day 1)', created: '2026-06-02' },
-            { id: 'TMW-295', task: 'Backend repo-commit + remaining hardening. Commit cmd/server/main.go connectWithRetry + reconciled deploy/task-definition.json to trackmywings/backend (currently only deployed manually, not in repo).…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'Medium', status: 'WIP (S154) — 5 security findings HARDENED in CDK (Redis TLS+authToken+at-rest ·…', deadline: 'Pre-launch', created: '2026-06-04' },
             { id: 'TMW-288', task: 'Client monetization SDK — IAP + Razorpay + screen-internal gates. Entitlement engine + route-gating (TMW-266) built; remaining: in_app_purchase + razorpay_flutter SDKs + store IAP products (8 tiers +…', owner: 'Rohan + Claude', department: 'Finance / Engineering', priority: 'High', status: 'Not Started — gated on ICICI card + store console', deadline: 'Pre-launch', created: '2026-06-02' },
             { id: 'TMW-289', task: 'Website (V0_NextJS) SSR deploy — static export doesn\'t scale. S147 finding: the public site can\'t ship as flat static HTML — output:\'export\' of the 25,308 SEO pages = 8.4 GB (~200KB/page inlined RSC…', owner: 'Rohan + Claude', department: 'Engineering', priority: 'High', status: 'Not Started — S147 finding (DEC-candidate: website=SSR not static export)', deadline: 'Post-TM (buildable now)', created: '2026-06-03' },
             { id: 'TMW-290', task: 'Evaluate ECC ("Everything Claude Code", affaan-m/ECC) for adoption — deferred, joint-owned, per-file approval gate. ECC is NOT currently installed (only the two official Anthropic marketplaces are; S…', owner: 'Rohan + Claude', department: 'Operations / Engineering', priority: 'Low', status: 'Deferred — do later (post-launch crunch); founder approves/rejects each file', deadline: 'Post-launch (founder-paced)', created: '2026-06-03' }
@@ -596,8 +593,11 @@ const completedTasks = [
             { id: '~~TMW-239~~', task: '✅ CLOSED S136 2026-05-28 — Phase 1-5 shipped + Phase 6 RESEARCH closed in S119. /start now consistently ≤ 55K tokens (6 real records median 58-67K pre-Phase-1; post = ≤ 55K). CONTEXT_PACKET + 3 MCPs…', owner: 'Rohan + Claude', department: 'Operations', completed: 'unknown' },
             { id: 'TMW-251', task: 'Phase 6 COMPLETE S132 · Phase 7 remains (gated on TM clearance). Phase 6 shipped (TMW-251.6 closed): P6.1 local smoke + 3 bug fixes (migration 000003 UUID/hyphen · consent route collision · driver mi…', owner: 'Rohan + Claude', department: 'Engineering / Operations', completed: '2026-05-26' },
             { id: 'TMW-259', task: 'Infrastructure v2 build umbrella (Phases 0-10). Per [[TMW-252_Infrastructure_v2_Complete]] + Runbook. S137 PROGRESS: Phase 0 ✅ (Bitwarden + PAT rotation) · Phase 1 ✅ (workspace → ~/Code/tmw/) · Phase…', owner: 'Rohan + Claude', department: 'Operations / Engineering', completed: '2026-05-29' },
+            { id: 'TMW-268', task: 'DPDP client data layer + in-app legal surfaces. Per S141 readiness Q5/Q6-L3/Q9: backend implements DPDP §6/§11/§12(2) (tested) but Flutter has NO consent/export/erasure repository and NO in-app Terms…', owner: 'Rohan + Anshul B + Claude', department: 'Legal / Engineering', completed: '2026-05-31' },
+            { id: 'TMW-282', task: 'In-app product analytics — dual-sink (PostHog + Firebase GA4) behind a vendor-agnostic AnalyticsService. Net-new: app has ZERO analytics today (no SDK in pubspec, no NavigatorObserver, no event code;…', owner: 'Rohan + Claude', department: 'Engineering / Product', completed: '2026-06-02' },
             { id: 'TMW-283', task: 'AWS backend deployment — the launch keystone. Stand up V1_Backend on AWS: ECS (Fargate) + RDS Postgres + the ingestion pipeline (adsb.lol live per DEC-177) + AWS SES (transactional email) + secrets m…', owner: 'Rohan + Claude', department: 'Engineering / Operations', completed: '2026-06-02' },
             { id: 'TMW-294', task: 'CDK cutover (DEC-179 end state). CDK app authored + cdk synth-validated at Engineering/Codebase/infra/ (NetworkStack[NAT-instance] / DataStack / AppStack / CicdStack; cost-opt, no-Fargate). Cutover =…', owner: 'Rohan + Claude', department: 'Engineering', completed: '2026-06-04' },
+            { id: 'TMW-295', task: 'Backend repo-commit + remaining hardening. Commit cmd/server/main.go connectWithRetry + reconciled deploy/task-definition.json to trackmywings/backend (currently only deployed manually, not in repo).…', owner: 'Rohan + Claude', department: 'Engineering', completed: '2026-06-04' },
             { id: '~~TMW-248-prior~~', task: 'Path C Implementation umbrella — adopt trackmywings/backend scaffold + 53 pending tasks + our additions · S128. Per Operations/AI System/Plans/TMW-226_Path_C_Implementation_Plan.md v1.0 (4,362 words…', owner: 'Rohan + Claude + Amol (advisory)', department: 'Engineering', completed: 'unknown' },
             { id: '~~TMW-249-prior~~', task: 'Staging website end-to-end revamp · design + UX + connectivity sync to app · S128 founder direction — Completely revamp staging.trackmywings.com (V0_NextJS) end-to-end. Pull V1_Flutter Aero Nocturne…', owner: 'Rohan + Claude', department: 'Design / Engineering', completed: 'unknown' },
             { id: '~~TMW-247-prior~~', task: 'W3 Group 3 Wave 1 (4 of 14 screens) shipped via 4-parallel Sonnets · S127. Dispatched 4 background Sonnets per Multi-Agent Pattern (each independent screen folder · no shared files · LocalSeed per DE…', owner: 'Rohan + Claude', department: 'Engineering', completed: 'unknown' },
@@ -1072,8 +1072,8 @@ const analyticsData = {
                         },
                         {
                                     "date": "2026-05-31",
-                                    "completed": 2,
-                                    "added": 3
+                                    "completed": 3,
+                                    "added": 2
                         },
                         {
                                     "date": "2026-06-01",
@@ -1082,8 +1082,8 @@ const analyticsData = {
                         },
                         {
                                     "date": "2026-06-02",
-                                    "completed": 6,
-                                    "added": 3
+                                    "completed": 7,
+                                    "added": 2
                         },
                         {
                                     "date": "2026-06-03",
@@ -1092,8 +1092,8 @@ const analyticsData = {
                         },
                         {
                                     "date": "2026-06-04",
-                                    "completed": 17,
-                                    "added": 1
+                                    "completed": 18,
+                                    "added": 0
                         },
                         {
                                     "date": "2026-06-05",
@@ -1103,7 +1103,7 @@ const analyticsData = {
                         {
                                     "date": "2026-06-06",
                                     "completed": 6,
-                                    "added": 295
+                                    "added": 298
                         }
             ],
             "weeklyVelocity": [
@@ -1119,13 +1119,13 @@ const analyticsData = {
                         },
                         {
                                     "week": "2026-05-25",
-                                    "completed": 20,
-                                    "added": 4
+                                    "completed": 21,
+                                    "added": 3
                         },
                         {
                                     "week": "2026-06-01",
-                                    "completed": 45,
-                                    "added": 303
+                                    "completed": 47,
+                                    "added": 304
                         }
             ],
             "statusDistribution": [
@@ -1134,7 +1134,7 @@ const analyticsData = {
                                     "count": 4
                         },
                         {
-                                    "status": "**WIP (S154) \u2014 integration_test suite BUILT** \u2014 `integration_test/sign_up_flow_test.dart` (10 tests / 4 groups; flutter commit `44f3f80`, local). Run: `flutter test integration_test/sign_up_flow_test.dart -d chrome` (needs chromedriver:4444). Compiles clean (analyze 0). Full-UI drive-through now exists (was the deferred piece).",
+                                    "status": "**WIP (S156) \u2014 web-smoke env FIXED, run inconclusive at close.** Root-caused: `flutter test -d chrome` does NOT support integration tests \u2192 must use `flutter drive`; added `test_driver/integration_test.dart` harness. brew chromedriver = v149 (mismatch vs Chrome 148) \u2192 fetched matching **chromedriver 148.0.7778.178** (Chrome-for-Testing). App CONFIRMED compiles + boots on web (Chrome launched debug-mode). Full `flutter drive` run was still executing at S156 close \u2014 confirm green next session. Cmd: `flutter drive --driver=test_driver/integration_test.dart --target=integration_test/sign_up_flow_test.dart -d chrome` + chromedriver 148 on :4444.",
                                     "count": 1
                         },
                         {
@@ -1218,10 +1218,6 @@ const analyticsData = {
                                     "count": 1
                         },
                         {
-                                    "status": "**Not Started**",
-                                    "count": 1
-                        },
-                        {
                                     "status": "**WIP (S154) \u2014 provider/live-tracking legal draft prepped:** `Legal/Policies/Drafts/V0_TrackMyWings/Data_Provider_Attribution_LiveTracking_Legal_Draft_2026-06-05.md` (\u26a0\ufe0f docx-render before share). 3 HIGH launch-gating. **Decisions (founder S154 \u00b7 DEC candidates): D2-A Planespotters \u2014 KEEP USING in build + get Anshul clearance read (interim risk-accepted, fallback prepped); D4-B adsb.lol ODbL \u2014 PROCEED attribution-only, remediate if challenged (risk-accepted).** 6 Qs for Anshul.",
                                     "count": 1
                         },
@@ -1231,14 +1227,6 @@ const analyticsData = {
                         },
                         {
                                     "status": "**Deferred \u2014 dedicated end-of-week session**",
-                                    "count": 1
-                        },
-                        {
-                                    "status": "**Not Started \u2014 logged S146 for later (founder dual-sink decision)**",
-                                    "count": 1
-                        },
-                        {
-                                    "status": "**WIP (S154) \u2014 5 security findings HARDENED in CDK** (Redis TLS+authToken+at-rest \u00b7 SGs scoped \u00b7 OIDC sub pinned+least-priv \u00b7 client_web SES\u2192task-role \u00b7 `rediss://`). infra commit `2f4df56` (local). cdk synth 0. **D7-A (founder S154): write paired changes \u2014 backend reads `REDIS_AUTH_TOKEN` (`rediss://:token@host`) + client_web SES via task-role \u2014 making hardening deploy-ready (QUEUED).** Then founder runs `cdk deploy` at cutover.",
                                     "count": 1
                         },
                         {
@@ -1257,7 +1245,7 @@ const analyticsData = {
             "ownerWorkload": [
                         {
                                     "owner": "Anshul B",
-                                    "active": 7,
+                                    "active": 6,
                                     "high_priority": 2,
                                     "overdue": 0
                         },
@@ -1275,7 +1263,7 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Claude",
-                                    "active": 22,
+                                    "active": 19,
                                     "high_priority": 6,
                                     "overdue": 0
                         },
@@ -1299,7 +1287,7 @@ const analyticsData = {
                         },
                         {
                                     "owner": "Rohan",
-                                    "active": 32,
+                                    "active": 29,
                                     "high_priority": 11,
                                     "overdue": 0
                         },
@@ -1319,21 +1307,21 @@ const analyticsData = {
             "departmentHealth": [
                         {
                                     "department": "Engineering",
-                                    "active": 4,
+                                    "active": 3,
                                     "wip": 0,
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 18
+                                    "avg_age_days": 23
                         },
                         {
                                     "department": "Engineering / Product",
-                                    "active": 2,
+                                    "active": 1,
                                     "wip": 0,
                                     "not_started": 0,
                                     "overdue": 0,
                                     "stale": 0,
-                                    "avg_age_days": 5
+                                    "avg_age_days": 6
                         },
                         {
                                     "department": "Engineering / Product / Operations",
@@ -1388,15 +1376,6 @@ const analyticsData = {
                                     "overdue": 0,
                                     "stale": 0,
                                     "avg_age_days": 36
-                        },
-                        {
-                                    "department": "Legal / Engineering",
-                                    "active": 1,
-                                    "wip": 0,
-                                    "not_started": 0,
-                                    "overdue": 0,
-                                    "stale": 0,
-                                    "avg_age_days": 6
                         },
                         {
                                     "department": "Legal / Ops",
@@ -1465,37 +1444,37 @@ const analyticsData = {
             "staleTasks": [],
             "deadlineStats": {
                         "overdue": 0,
-                        "due_3days": 32,
+                        "due_3days": 29,
                         "deadline_hit_rate": "0%"
             },
             "burndownData": [
                         {
                                     "date": "2026-06-06",
-                                    "remaining": 34
-                        },
-                        {
-                                    "date": "2026-06-05",
-                                    "remaining": 34
-                        },
-                        {
-                                    "date": "2026-06-04",
-                                    "remaining": 34
-                        },
-                        {
-                                    "date": "2026-06-03",
-                                    "remaining": 33
-                        },
-                        {
-                                    "date": "2026-06-02",
                                     "remaining": 31
                         },
                         {
+                                    "date": "2026-06-05",
+                                    "remaining": 31
+                        },
+                        {
+                                    "date": "2026-06-04",
+                                    "remaining": 31
+                        },
+                        {
+                                    "date": "2026-06-03",
+                                    "remaining": 31
+                        },
+                        {
+                                    "date": "2026-06-02",
+                                    "remaining": 29
+                        },
+                        {
                                     "date": "2026-06-01",
-                                    "remaining": 28
+                                    "remaining": 27
                         },
                         {
                                     "date": "2026-05-31",
-                                    "remaining": 26
+                                    "remaining": 25
                         },
                         {
                                     "date": "2026-05-30",
@@ -1528,7 +1507,7 @@ const analyticsData = {
             ],
             "velocity": {
                         "today": 6,
-                        "this_week": 45,
+                        "this_week": 47,
                         "overdue": 0,
                         "stale": 0
             }

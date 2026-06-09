@@ -85,7 +85,7 @@
   </form>
 </div>
 
-<div class="fc-truth">T-67 launch · Bank ✅ 2026-05-14 · INC-20A T-4 · Phase 3 99% · ₹100,000 cash / ₹138,656 receivable · 22 priorities · 2 overdue · last sync 60m ago</div>
+<div class="fc-truth">T-67 launch · Bank ✅ 2026-05-14 · INC-20A T-4 · Phase 3 99% · ₹100,000 cash / ₹138,656 receivable · 22 priorities · 2 overdue · last sync 59m ago</div>
 
 <div class="ds-wrap">
   <header class="ds-top">
@@ -356,7 +356,7 @@
         <div class="ds-metric ds-metric-lead">
           <div class="ds-metric-lbl">Claude burn (Opus output)</div>
           <div class="ds-metric-val num">19.30M</div>
-          <div class="ds-metric-sub">235 sessions · last 1.0h ago.</div>
+          <div class="ds-metric-sub">235 sessions · last 2.0h ago.</div>
         </div>
         <div class="ds-metric">
           <div class="ds-metric-lbl">Tasks completed</div>
@@ -458,7 +458,7 @@
         <tbody>
         <tr>
           <td><code>tasks</code></td>
-          <td class="num">2026-06-09 22:05</td>
+          <td class="num">2026-06-09 23:05</td>
           <td>5m ago</td>
           <td><span class="ds-badge ds-badge-pri-low">✓ ok</span></td>
           <td class="num"><span class="num" style="color:var(--ink-low);">0</span></td>
@@ -466,7 +466,7 @@
         
         <tr>
           <td><code>founder-control-panel</code></td>
-          <td class="num">2026-06-09 21:10</td>
+          <td class="num">2026-06-09 22:10</td>
           <td>59m ago</td>
           <td><span class="ds-badge ds-badge-pri-low">✓ ok</span></td>
           <td class="num"><span class="num" style="color:var(--ink-low);">0</span></td>
@@ -475,7 +475,7 @@
         <tr>
           <td><code>claude-usage</code></td>
           <td class="num">2026-06-09 11:15</td>
-          <td>10.9h ago</td>
+          <td>11.9h ago</td>
           <td><span class="ds-badge ds-badge-pri-critical">✗ fail</span></td>
           <td class="num"><span class="num" style="color:var(--ink-low);">0</span></td>
         </tr>
@@ -483,14 +483,14 @@
         <tr>
           <td><code>finance-mis</code></td>
           <td class="num">2026-06-09 11:10</td>
-          <td>11.0h ago</td>
+          <td>12.0h ago</td>
           <td><span class="ds-badge ds-badge-pri-critical">✗ fail</span></td>
           <td class="num"><span class="num" style="color:var(--ink-low);">0</span></td>
         </tr>
         
         <tr>
           <td><code>folder-map-generator</code></td>
-          <td class="num">2026-06-09 21:55</td>
+          <td class="num">2026-06-09 22:55</td>
           <td>15m ago</td>
           <td><span class="ds-badge ds-badge-pri-medium">◉ stale</span></td>
           <td class="num"><span class="num">136</span></td>
@@ -498,7 +498,7 @@
         
         <tr>
           <td><code>file-watcher</code></td>
-          <td class="num">2026-06-09 21:15</td>
+          <td class="num">2026-06-09 22:15</td>
           <td>55m ago</td>
           <td><span class="ds-badge ds-badge-pri-low">✓ ok</span></td>
           <td class="num"><span class="num" style="color:var(--ink-low);">0</span></td>
@@ -507,7 +507,7 @@
         <tr>
           <td><code>calendar-sync</code></td>
           <td class="num">2026-06-09 21:00</td>
-          <td>1.2h ago</td>
+          <td>2.2h ago</td>
           <td><span class="ds-badge ds-badge-pri-medium">◉ stale</span></td>
           <td class="num"><span class="num">66</span></td>
         </tr>
@@ -533,7 +533,7 @@
   </div>
 
   <div class="ds-meta">
-    <span>Generated <span id="generatedAt">2026-06-09T22:10:12</span></span>
+    <span>Generated <span id="generatedAt">2026-06-09T23:10:11</span></span>
     <span>Founder Control v1 · launchd hourly</span>
   </div>
 </div>
@@ -565,7 +565,7 @@ document.getElementById('loginForm').addEventListener('submit', async e => {
 });
 
 // --- Stale banner: warn if >150 min old (hourly @ :15 schedule) ---
-const GENERATED_EPOCH = 1781023212;
+const GENERATED_EPOCH = 1781026811;
 (function(){
   const ageMin = (Date.now()/1000 - GENERATED_EPOCH) / 60;
   if (ageMin > 150) {

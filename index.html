@@ -85,7 +85,7 @@
   </form>
 </div>
 
-<div class="fc-truth">T-63 launch · Bank ✅ 2026-05-14 · INC-20A T-0 · Phase 3 99% · ₹100,000 cash / ₹138,656 receivable · 22 priorities · 2 overdue · last sync 58m ago</div>
+<div class="fc-truth">T-63 launch · Bank ✅ 2026-05-14 · INC-20A T-0 · Phase 3 99% · ₹100,000 cash / ₹138,656 receivable · 22 priorities · 2 overdue · last sync 63m ago</div>
 
 <div class="ds-wrap">
   <header class="ds-top">
@@ -356,7 +356,7 @@
         <div class="ds-metric ds-metric-lead">
           <div class="ds-metric-lbl">Claude burn (Opus output)</div>
           <div class="ds-metric-val num">2.71M</div>
-          <div class="ds-metric-sub">83 sessions · last 5.9h ago.</div>
+          <div class="ds-metric-sub">83 sessions · last 7.0h ago.</div>
         </div>
         <div class="ds-metric">
           <div class="ds-metric-lbl">Tasks completed</div>
@@ -458,16 +458,16 @@
         <tbody>
         <tr>
           <td><code>tasks</code></td>
-          <td class="num">2026-06-13 14:05</td>
-          <td>7m ago</td>
+          <td class="num">2026-06-13 15:16</td>
+          <td>0m ago</td>
           <td><span class="ds-badge ds-badge-pri-low">✓ ok</span></td>
           <td class="num"><span class="num" style="color:var(--ink-low);">0</span></td>
         </tr>
         
         <tr>
           <td><code>founder-control-panel</code></td>
-          <td class="num">2026-06-13 13:14</td>
-          <td>58m ago</td>
+          <td class="num">2026-06-13 14:13</td>
+          <td>1.1h ago</td>
           <td><span class="ds-badge ds-badge-pri-low">✓ ok</span></td>
           <td class="num"><span class="num" style="color:var(--ink-low);">0</span></td>
         </tr>
@@ -475,7 +475,7 @@
         <tr>
           <td><code>claude-usage</code></td>
           <td class="num">2026-06-13 11:30</td>
-          <td>2.7h ago</td>
+          <td>3.8h ago</td>
           <td><span class="ds-badge ds-badge-pri-medium">◉ stale</span></td>
           <td class="num"><span class="num" style="color:var(--ink-low);">0</span></td>
         </tr>
@@ -483,14 +483,14 @@
         <tr>
           <td><code>finance-mis</code></td>
           <td class="num">2026-06-13 08:36</td>
-          <td>5.6h ago</td>
-          <td><span class="ds-badge ds-badge-pri-medium">◉ stale</span></td>
+          <td>6.7h ago</td>
+          <td><span class="ds-badge ds-badge-pri-critical">✗ fail</span></td>
           <td class="num"><span class="num" style="color:var(--ink-low);">0</span></td>
         </tr>
         
         <tr>
           <td><code>folder-map-generator</code></td>
-          <td class="num">2026-06-13 14:12</td>
+          <td class="num">2026-06-13 15:16</td>
           <td>0m ago</td>
           <td><span class="ds-badge ds-badge-pri-medium">◉ stale</span></td>
           <td class="num"><span class="num">136</span></td>
@@ -498,8 +498,8 @@
         
         <tr>
           <td><code>file-watcher</code></td>
-          <td class="num">2026-06-13 13:30</td>
-          <td>42m ago</td>
+          <td class="num">2026-06-13 15:16</td>
+          <td>0m ago</td>
           <td><span class="ds-badge ds-badge-pri-low">✓ ok</span></td>
           <td class="num"><span class="num" style="color:var(--ink-low);">0</span></td>
         </tr>
@@ -507,7 +507,7 @@
         <tr>
           <td><code>calendar-sync</code></td>
           <td class="num">2026-06-13 08:16</td>
-          <td>5.9h ago</td>
+          <td>7.0h ago</td>
           <td><span class="ds-badge ds-badge-pri-medium">◉ stale</span></td>
           <td class="num"><span class="num">78</span></td>
         </tr>
@@ -533,7 +533,7 @@
   </div>
 
   <div class="ds-meta">
-    <span>Generated <span id="generatedAt">2026-06-13T14:12:58</span></span>
+    <span>Generated <span id="generatedAt">2026-06-13T15:16:30</span></span>
     <span>Founder Control v1 · launchd hourly</span>
   </div>
 </div>
@@ -565,7 +565,7 @@ document.getElementById('loginForm').addEventListener('submit', async e => {
 });
 
 // --- Stale banner: warn if >150 min old (hourly @ :15 schedule) ---
-const GENERATED_EPOCH = 1781340178;
+const GENERATED_EPOCH = 1781343990;
 (function(){
   const ageMin = (Date.now()/1000 - GENERATED_EPOCH) / 60;
   if (ageMin > 150) {
